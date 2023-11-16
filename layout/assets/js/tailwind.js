@@ -22,13 +22,15 @@ tailwind.config = {
         colors: {
           primary: '#302828',
           secondary: '#ffffff',
+          detail:'#E6DFD7',
           box: '#EBEBEB',
+          customGray: '#828282'
         },
         fontSize: {
             p:'16px',
             h1: '36px',
-            h2: '20px',
-            h3: '26px',
+            h3: '20px',
+            h2: '26px',
             button:'18px',
             small:'14px',
         },
