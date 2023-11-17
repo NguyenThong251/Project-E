@@ -7,6 +7,31 @@
       "label": "Run sass",
       "type": "shell",
       "command": "sass layout/assets/sass/app.scss  layout/assets/css/app.css --watch"
+    },
+    {
+      "label": "Run pug-account",
+      "type": "shell",
+      "command": "pug layout/account.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run pug-address",
+      "type": "shell",
+      "command": "pug layout/address.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run pug-address-ship",
+      "type": "shell",
+      "command": "pug layout/address-ship.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run pug-dashboard",
+      "type": "shell",
+      "command": "pug layout/dashboard.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run pug-order",
+      "type": "shell",
+      "command": "pug layout/order.pug --watch --pretty --watch"
     }
   ]
 }

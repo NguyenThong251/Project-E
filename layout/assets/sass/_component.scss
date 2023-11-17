@@ -1,0 +1,8 @@
+.banner-container {
+  background: url(/layout/assets/img/bg-banner.png) no-repeat 100% / cover;
+}
+input:focus ~ .input-text {
+  color: blue;
+  background-color: white;
+  transform: translate(4px, -20px);
+}
