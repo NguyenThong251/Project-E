@@ -102,10 +102,10 @@
       <navbar></navbar>
       <ul class="p-5 flex flex-col gap-3">
         <li class="group list-none flex items-center gap-5 py-3 px-6 rounded-lg transition duration hover:bg-white">
-          <ion-icon class="text-white text-lg group-hover:text-primary" name="gird"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Dashboad</a>
+          <ion-icon class="text-white text-lg group-hover:text-primary" name="grid"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Dashboad</a>
         </li>
         <li class="list-none flex items-center gap-5 py-3 px-6 bg-white rounded-lg">
-          <ion-icon class="text-primary text-xs" name="cart"></ion-icon><a class="text-primary text-xs fw-500" href="">Order</a>
+          <ion-icon class="text-primary text-lg" name="cart"></ion-icon><a class="text-primary text-xs fw-500" href="">Order</a>
         </li>
         <li class="group list-none flex items-center gap-5 py-3 px-6 rounded-lg transition duration hover:bg-white">
           <ion-icon class="text-white text-lg group-hover:text-primary" name="home"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Addresses</a>
@@ -122,20 +122,22 @@
       <table class="table-fixed w-full">
         <thead> 
           <tr class="grid grid-cols-5">
-            <th class="flex justify-end">ttt</th>
-            <th class="flex justify-end">ttt</th>
-            <th class="flex justify-end">ttt</th>
-            <th class="flex justify-end">ttt</th>
-            <th class="flex justify-end">ttt</th>
+            <th class="flex justify-center font-semibold">Order</th>
+            <th class="flex justify-center font-semibold">Date</th>
+            <th class="flex justify-center font-semibold">Status</th>
+            <th class="flex justify-center font-semibold">Total</th>
+            <th class="flex justify-center font-semibold">Actions</th>
           </tr>
         </thead>
         <tbody> 
           <tr class="grid grid-cols-5">
-            <td class="flex justify-end">      </td>
-            <td class="flex justify-end">        </td>
-            <td class="flex justify-end">      </td>
-            <td class="flex justify-end">      </td>
-            <td class="flex justify-end">      </td>
+            <td class="flex justify-center text-red-600">#6523      </td>
+            <td class="flex justify-center">October 16, 2023     </td>
+            <td class="flex justify-center">Processing      </td>
+            <td class="flex justify-center">$326.63 for 1 items      </td>
+            <td class="flex justify-center"> 
+              <ion-icon class="text-h2" name="eye-outline">     </ion-icon>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -211,6 +213,7 @@
 </div>
 </footer></body> 
 <script src="/layout/assets/js/tailwind.js"></script>
+<script src="/layout/assets/js/index.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>

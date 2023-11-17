@@ -32,6 +32,11 @@
       "label": "Run pug-order",
       "type": "shell",
       "command": "pug layout/order.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run signup",
+      "type": "shell",
+      "command": "pug layout/signup.pug --watch --pretty --watch"
     }
   ]
 }
