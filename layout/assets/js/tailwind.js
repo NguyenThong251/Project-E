@@ -26,9 +26,11 @@ tailwind.config = {
         gray: "#B1B5C3",
         third: "#292930",
         box: "#EBEBEB",
+
         detail:'#E6DFD7',
-       
+      
           customGray: '#828282'
+
       },
       fontSize: {
         span: "12px",

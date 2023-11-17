@@ -92,40 +92,36 @@
 </div>
 </div>
 </section>
-<section class="container pb-40"> 
-  <div class="profile flex flex-col gap-1">
-    <div class="profile-img rounded-full w-24"><img class="rounded-full" src="./images/profile.jpg" alt="alt"/></div>
-    <p class="profile-title text-third font-bold">Hello A3KHIA </p><span class="text-gray font-bold">eTrade Member Since Sep 2020</span>
-  </div>
-  <div class="grid grid-flow-row-dense grid-cols-8 gap-10 pt-5">
-    <div class="navbar col-span-2 bg-primary rounded-xl">
-      <navbar></navbar>
-      <ul class="p-5 flex flex-col gap-3">
-        <li class="list-none flex items-center gap-5 py-3 px-6 bg-white rounded-lg">
-          <ion-icon class="text-primary text-lg" name="grid"></ion-icon><a class="text-primary text-xs fw-500" href="">Dashboad</a>
-        </li>
-        <li class="group list-none flex items-center gap-5 py-3 px-6 rounded-lg transition duration hover:bg-white">
-          <ion-icon class="text-white text-lg group-hover:text-primary" name="cart"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Order</a>
-        </li>
-        <li class="group list-none flex items-center gap-5 py-3 px-6 rounded-lg transition duration hover:bg-white">
-          <ion-icon class="text-white text-lg group-hover:text-primary" name="home"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Addresses</a>
-        </li>
-        <li class="group list-none flex items-center gap-5 py-3 px-6 rounded-lg transition duration hover:bg-white">
-          <ion-icon class="text-white text-lg group-hover:text-primary" name="person"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Account Details</a>
-        </li>
-        <li class="group list-none flex items-center gap-5 py-3 px-6 rounded-lg transition duration hover:bg-white">
-          <ion-icon class="text-white text-lg group-hover:text-primary" name="log-out"></ion-icon><a class="text-white text-xs fw-500 group-hover:text-primary" href="">Logout</a>
-        </li>
-      </ul>
-    </div>
-    <div class="sesion-address col-span-6">
-      <div class="title pb-4">
-        <p class="text-third font-normal">Hello Hasan (not Hasan? <a class="font-bold" href="">Log Out )</a></p>
+<div>
+  <div>
+    <div class="container grid grid-cols-2 bg-detail">
+      <div class="flex items-center justify-center p-16">
+        <form class="h-fit w-fit" action="" method="method">
+          <div class="py-12 px-16 h-fit w-fit flex flex-col gap-2 bg-detail border rounded-lg border-white shadow-primary">
+            <div class="images"> <img class="w-6/12" src="/layout/assets/img/logo.png" alt=""/></div>
+            <h1 class="text-h1 color-primary font-bold">LOGIN</h1>
+            <label class="flex flex-col gap-2" for="email"><span class="text-small">Email</span>
+              <input class="bg-white w-full border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm .focus:outline-none.focus:border-sky-500.focus:ring-sky-500.focus:ring-1.sm:text-sm" type="email" id="email" name="email" placeholder="Email"/>
+            </label>
+            <label class="flex flex-col gap-2" for="password"><span class="text-small">Password</span>
+              <div class="input-field bg-white w-full border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm flex items-center justify-between">
+                <input type="password" name="password" placeholder="Password" id="passwordInput"/>
+                <ion-icon name="eye-outline" id="togglePassword"></ion-icon>
+              </div>
+            </label><a class="text-span pb-4" href="">Fogot password?</a>
+            <button class="bg-primary py-2 rounded-lg font-bold w-100 inline-block px-8 text-white text-center transition duration border-hover hover:bg-detail hover:text-primary">Sign in</button><span class="text-span font-normal text-primary text-center pt-4">or continue with     </span>
+            <div class="social grid grid-cols-3 gap-2"><a class="social-item rounded-full bg-white flex items-center justify-center" href=""> <img class="p-2" src="./images/google.svg" alt="alt"/></a><a class="social-item rounded-full bg-white flex items-center justify-center" href=""> <img class="p-2" src="./images/github.svg" alt="alt"/></a><a class="social-item rounded-full bg-white flex items-center justify-center" href=""> <img class="p-2" src="./images/facebook.svg" alt="alt"/></a></div>
+          </div>
+        </form>
       </div>
-      <p class="text-third tracking-wide">From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.</p>
+      <div class="flex items-center justify-center">
+        <div class="images">
+          <div class="images-item"><img src="./images/thaytu.png" alt="alt"/></div>
+        </div>
+      </div>
     </div>
   </div>
-</section>
+</div>
 <!-- BANNER-->
 <div>
   <div class="container banner-container p-16">

@@ -12,7 +12,7 @@ block main
                 ul.p-5.flex.flex-col.gap-3
                     +list("grid","Dashboad")
                     li.list-none.flex.items-center.gap-5.py-3.px-6.bg-white.rounded-lg
-                        ion-icon(name="cart").text-primary.text-xs
+                        ion-icon(name="cart").text-primary.text-lg
                         a(href="").text-primary.text-xs.fw-500 Order
                     +list("home","Addresses")
                     +list("person","Account Details")
@@ -21,15 +21,16 @@ block main
                 table.table-fixed.w-full
                     thead 
                         tr.grid.grid-cols-5
-                            th.flex.justify-end ttt
-                            th.flex.justify-end ttt
-                            th.flex.justify-end ttt
-                            th.flex.justify-end ttt
-                            th.flex.justify-end ttt
+                            th.flex.justify-center.font-semibold Order
+                            th.flex.justify-center.font-semibold Date
+                            th.flex.justify-center.font-semibold Status
+                            th.flex.justify-center.font-semibold Total
+                            th.flex.justify-center.font-semibold Actions
                     tbody 
                         tr.grid.grid-cols-5
-                            td.flex.justify-end       
-                            td.flex.justify-end         
-                            td.flex.justify-end       
-                            td.flex.justify-end       
-                            td.flex.justify-end       
+                            td.flex.justify-center.text-red-600 #6523      
+                            td.flex.justify-center October 16, 2023     
+                            td.flex.justify-center Processing      
+                            td.flex.justify-center $326.63 for 1 items      
+                            td.flex.justify-center 
+                                ion-icon(name="eye-outline").text-h2      
