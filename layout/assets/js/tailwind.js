@@ -17,7 +17,6 @@ tailwind.config = {
         xl: "1280px",
         "2xl": "1740px",
       },
-
     },
     extend: {
       colors: {
@@ -26,11 +25,10 @@ tailwind.config = {
         gray: "#B1B5C3",
         third: "#292930",
         box: "#EBEBEB",
+        pink: "#FF497C",
+        detail: "#E6DFD7",
 
-        detail:'#E6DFD7',
-      
-          customGray: '#828282'
-
+        customGray: "#828282",
       },
       fontSize: {
         span: "12px",
@@ -50,5 +48,3 @@ tailwind.config = {
     },
   },
 };
-
-
