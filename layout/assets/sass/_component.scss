@@ -6,3 +6,8 @@ input:focus ~ .input-text {
   background-color: white;
   transform: translate(4px, -20px);
 }
+textarea:focus ~ .input-text {
+  color: blue;
+  background-color: white;
+  transform: translate(4px, -20px);
+}

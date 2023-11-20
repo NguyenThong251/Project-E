@@ -37,6 +37,26 @@
       "label": "Run signup",
       "type": "shell",
       "command": "pug layout/signup.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run signin",
+      "type": "shell",
+      "command": "pug layout/signin.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run about",
+      "type": "shell",
+      "command": "pug layout/about.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run contact",
+      "type": "shell",
+      "command": "pug layout/contact.pug --watch --pretty --watch"
+    },
+    {
+      "label": "Run blog",
+      "type": "shell",
+      "command": "pug layout/blog.pug --watch --pretty --watch"
     }
   ]
 }
