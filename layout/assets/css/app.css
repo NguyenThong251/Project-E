@@ -85,4 +85,50 @@ textarea:focus ~ .input-text {
   border: 2px solid #302828;
 }
 
+div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
+  color: #302828;
+}
+
+
+
+/* CATEGORIES */
+.cate-big {
+  height: 350px;
+  width: 300px;
+}
+
+.cate-small {
+  height: 250px;
+  width: 300px;
+}
+
+.cate-laptop {
+  background: url(/layout/assets/img/bg-lap.png) no-repeat 100%/cover;
+}
+
+.cate-phone {
+  background: url(/layout/assets/img/bg-phone.png) no-repeat 100%/cover;
+}
+
+.cate-keyboard {
+  background: url(/layout//assets/img/bg-keyboard.png) no-repeat 100%/cover;
+}
+
+.cate-headphone {
+  background: url(/layout/assets/img/bg-headphone.png) no-repeat 100%/cover;
+}
+
+.cate-mouse {
+  background: url(/layout/assets/img/bg-mouse.png) no-repeat 100%/cover;
+}
+
+/* BANNER */
+.sale-banner-img {
+  width: 600px;
+}
+
+.sale-banner-img-container {
+  margin-top: -200px;
+}
+
 /*# sourceMappingURL=app.css.map */
