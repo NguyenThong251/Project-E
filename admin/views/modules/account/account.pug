@@ -1,0 +1,39 @@
+table.account.table 
+  thead.table-head  
+    tr
+      th 
+        ion-icon(name="image-outline")
+      th Fullname
+      th Username
+      th Phone
+      th Email 
+      th Status 
+      th Action 
+  tbody.table-body 
+    each val in [1,2,3,4,5,6,7,8,9,10]
+      tr
+        td 
+          .account-image 
+            img(srcset="./images/user.png 2x", alt="account")
+        td 
+          .account-fullname 
+            p Tao Dep Trai
+        td
+          .account-username 
+            p guest101
+        td
+          .account-phone 
+            p 0123456789
+        td
+          .account-email 
+            p meomeo@gmail.com
+        td
+          .account-status 
+            p Active
+        td
+          .account-action 
+            a(href="#")
+              ion-icon(name="create-outline")
+            span |
+            a(href="#")
+              ion-icon(name="trash-outline")

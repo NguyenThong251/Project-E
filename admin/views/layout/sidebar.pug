@@ -1,0 +1,5 @@
+.sidebar 
+  ul.sidebar-list
+    each item in [{href: '/', icon: 'bar-chart-outline', text: 'Home'},{href: '/category.html', icon: 'albums-outline', text: 'Category'}, {href: '/product.html', icon: 'cube-outline', text: 'Product'}, {href: '/account.html', icon: 'people-circle-outline', text: 'Account'},{href: '/order.html', icon: 'cart-outline', text: 'Order'}, {href: '/comment.html', icon: 'chatbubble-ellipses-outline', text: 'Comment'}, {href: '/', icon: 'log-out-outline', text: 'Logout'}]
+      +sidebarItem(item.href, item.icon, item.text)
+    

@@ -1,0 +1,29 @@
+table.comment.table 
+  thead.table-head  
+    tr
+      th 
+        ion-icon(name="image-outline")
+      th Product
+      th Almost Full
+      th Count
+      th Action 
+  tbody.table-body 
+    each val in [1,2,3,4,5,6,7,8,9,10]
+      tr
+        td 
+          .comment-image 
+            img(srcset="./images/product.png 2x", alt="product")
+        td 
+          .comment-name 
+            p Product Name
+        td
+          .comment-almost
+            span 2021-05-20 
+            span 12:00:00
+        td
+          .comment-count
+            p 12
+        td
+          .comment-action 
+            a(href="/comment-dt.html")
+              ion-icon(name="ellipsis-horizontal-circle-outline")

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="./js/app.js"> </script>
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/category.css">
+  </head>
+  <body> 
+    <header class="header">
+      <div class="header-image"> <img srcSet="./images/logo.png 2x" alt="logo"></div>
+    </header>
+    <div class="wrapper" id="wrapper">
+      <div class="sidebar"> 
+        <ul class="sidebar-list">
+          <li class="sidebar-item"><a class="sidebar-link" href="/">
+              <ion-icon name="bar-chart-outline"></ion-icon><span>Home</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/category.html">
+              <ion-icon name="albums-outline"></ion-icon><span>Category</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/product.html">
+              <ion-icon name="cube-outline"></ion-icon><span>Product</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/account.html">
+              <ion-icon name="people-circle-outline"></ion-icon><span>Account</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/order.html">
+              <ion-icon name="cart-outline"></ion-icon><span>Order</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/comment.html">
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Comment</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/">
+              <ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+        </ul>
+      </div>
+      <main class="main">
+        <h1 class="title">Category</h1>
+        <table class="category table"> 
+          <thead class="table-head">
+            <tr> 
+              <th>Category Name </th>
+              <th>Quantity Of Products</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="table-body">
+            <tr> 
+              <td> <span>Headphones</span></td>
+              <td> <span>10</span></td>
+              <td> <a class="category-action category-update" href="#">
+                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" href="#">
+                  <ion-icon name="trash-outline"></ion-icon></a></td>
+            </tr>
+            <tr> 
+              <td> <span>Headphones</span></td>
+              <td> <span>10</span></td>
+              <td> <a class="category-action category-update" href="#">
+                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" href="#">
+                  <ion-icon name="trash-outline"></ion-icon></a></td>
+            </tr>
+            <tr> 
+              <td> <span>Headphones</span></td>
+              <td> <span>10</span></td>
+              <td> <a class="category-action category-update" href="#">
+                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" href="#">
+                  <ion-icon name="trash-outline"></ion-icon></a></td>
+            </tr>
+            <tr> 
+              <td> <span>Headphones</span></td>
+              <td> <span>10</span></td>
+              <td> <a class="category-action category-update" href="#">
+                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" href="#">
+                  <ion-icon name="trash-outline"></ion-icon></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="table-button button category-add">
+          <p>Add Category</p>
+        </button>
+        <div class="category-form">
+          <div class="category-form-container">
+            <h2 class="sub-title category-form-title">Add Category</h2><a class="category-form-close" href="#">
+              <ion-icon name="close-circle-outline"></ion-icon></a>
+            <div class="category-form-table">
+              <form>
+                <table class="category-form-group table">
+                  <thead class="table-head">
+                    <tr>
+                      <th>Category Name</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body category-form-body">
+                    <tr>
+                      <td> 
+                        <input id="category-name" type="text" placeholder="Enter Category Name">
+                      </td>
+                      <td>
+                        <button class="button" id="category-submit" type="submit">Submit</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="category-form">
+          <div class="category-form-container">
+            <h2 class="sub-title category-form-title">Edit Category</h2><a class="category-form-close" href="#">
+              <ion-icon name="close-circle-outline"></ion-icon></a>
+            <div class="category-form-table">
+              <form>
+                <table class="category-form-group table">
+                  <thead class="table-head">
+                    <tr>
+                      <th>Category Name</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body category-form-body">
+                    <tr>
+                      <td> 
+                        <input id="category-name" type="text" placeholder="Headphones">
+                      </td>
+                      <td>
+                        <button class="button" id="category-submit" type="submit">Submit</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer"> 
+      <div class="footer-copyright"> 
+        <p>© 2023. All rights reserved</p>
+      </div>
+      <div class="footer-brand"> <span>Accept For</span>
+        <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
+        <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
+        <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
+        <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
+      </div>
+    </footer>
+    <script src="./js/dashboard.js"> </script>
+    <script src="./js/category.js"> </script>
+  </body>
+</html>

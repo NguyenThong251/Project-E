@@ -1,0 +1,32 @@
+table.order.table 
+  thead.table-head  
+    tr
+      th Username
+      th Fullname
+      th Time
+      th Total 
+      th Status 
+      th Action 
+  tbody.table-body 
+    each val in [1,2,3,4,5,6,7,8,9,10]
+      tr
+        td
+          .order-username 
+            p guest101
+        td 
+          .order-fullname 
+            p Tao Dep Trai
+        td
+          .order-time 
+            span 2021-05-20 
+            span 12:00:00
+        td
+          .order-Total 
+            p 299.000$
+        td
+          .order-status 
+            p Succesfully
+        td
+          .order-action 
+            a(href="#")
+              ion-icon(name="ellipsis-horizontal-circle-outline")

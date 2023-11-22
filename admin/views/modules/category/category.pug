@@ -1,0 +1,21 @@
+table.category.table 
+  thead.table-head
+    tr 
+      th Category Name 
+      th Quantity Of Products
+      th Action
+  tbody.table-body
+    each val in [1,2,3,4]
+      tr 
+        td 
+          span Headphones
+        td 
+          span 10
+        td 
+          a(href="#").category-action.category-update
+            ion-icon(name="create-outline")
+          span |
+          a(href="#").category-action.category-remove
+            ion-icon(name="trash-outline")
+button.table-button.button.category-add
+  p Add Category

@@ -1,0 +1,11 @@
+extend ./views/layout/dashboard
+block title
+  title Account
+append stylesheet
+  link(rel="stylesheet", href="./css/account.css")
+block main
+  h1.title Account
+  +filter()
+  include ./views/modules/account/account
+  //- include ./views/modules/category/up_category
+

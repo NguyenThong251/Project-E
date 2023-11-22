@@ -1,0 +1,12 @@
+extend ./views/layout/dashboard
+block title
+  title Product
+append stylesheet
+  link(rel="stylesheet", href="./css/product.css")
+block main
+  h1.title Product
+  +filter()
+  include ./views/modules/product/product
+  //- include ./views/modules/category/add_category
+  //- include ./views/modules/category/up_category
+

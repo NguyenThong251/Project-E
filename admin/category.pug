@@ -1,0 +1,11 @@
+extend ./views/layout/dashboard
+block title
+  title Category
+append stylesheet
+  link(rel="stylesheet", href="./css/category.css")
+block main
+  h1.title Category
+  include ./views/modules/category/category
+  include ./views/modules/category/add_category
+  include ./views/modules/category/up_category
+
