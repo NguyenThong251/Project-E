@@ -131,4 +131,11 @@ div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
   margin-top: -200px;
 }
 
+.banner-1 {
+  background: url(/layout/assets/img/banner-1.png) no-repeat 10%/cover;
+}
+
+.banner-2 {
+  background: url(/layout/assets/img/banner-2.png) no-repeat 100%/cover;
+}
 /*# sourceMappingURL=app.css.map */
