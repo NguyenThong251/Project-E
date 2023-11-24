@@ -18,6 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/iconfont.min.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 </head>
 
@@ -55,19 +56,19 @@
                     <ul class="flex gap-3 items-center">
                         <li>
                             <a href="#">
-                                <img src="./assets/img/icon-search.png" alt="">
+                                <ion-icon name="search-outline" class="text-2xl"></ion-icon>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
-                                <img src="./assets/img/icon-cart.png" alt="">
+                            <a href="#" class="text-2xl">
+                                <ion-icon name="cart-outline" class="mt-"></ion-icon>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="relative heart-container">
-                                <div class="heart-1 "></div>
-                                <div class="heart-2 top-0 absolute"></div>
+                            <a href="#" class="group relative heart-container block text-center rounded-full">
+                                <div class="absolute -z-10 top-0 -translate-x-1 rounded-full scale-0 group-hover:scale-100 transition duration-300 bg-primary w-7 h-7 "></div>
+                                <i class="fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300"></i>
                             </a>
                         </li>
                         <li>
@@ -153,9 +154,8 @@
             </div>
         </div>
     </header>
-
     <section>
-        <div class="bg-detail -translate-y-36 relative -z-10 py-80">
+        <div class="bg-detail -translate-y-36 relative -z-20 py-40">
             <div class="container flex items-center gap-2">
               <!-- INFOR -->
               <div class="w-1/4">
@@ -211,61 +211,118 @@
 
     <section>
         <div>
-            <div class="container flex grid grid-cols-4">
+
+            <div class="container">
                 <!-- SINGLE PRODUCT -->
-                <div class="p-6 w-80 bg-box rounded-box overflow-hidden">
-                    <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="">
+                <h1 class="text-h3 font-bold mb-4">Relate Product</h1>
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
+                        <div>
+                            <img src="./assets/img/image-removebg-preview 3.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
+                            <p class="text-center">Headphone</p>
+                        </div>
+                        <div class="flex justify-center items-center group mt-8 ">
+                            <p class="py-2 px-4 border-primary border-2 translate-x-28 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
+                            <div class="flex group-hover:-translate-x-10 translate-x-72 transition duration-500">
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+                                </div>
+
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <div class="py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary duration-500 transition cursor-pointer hover:text-white">
+                                    <i class="fa-regular fa-heart text-xl"></i>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div>
-                        <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
-                        <p class="text-center">Headphone</p>
+                    <!-- SINGLE PRODUCT -->
+                    <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
+                        <div>
+                            <img src="./assets/img/image-removebg-preview 3.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
+                            <p class="text-center">Headphone</p>
+                        </div>
+                        <div class="flex justify-center items-center group mt-8 ">
+                            <p class="py-2 px-4 border-primary border-2 translate-x-28 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
+                            <div class="flex group-hover:-translate-x-10 translate-x-72 transition duration-500">
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+                                </div>
+
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <div class="py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary duration-500 transition cursor-pointer hover:text-white">
+                                    <i class="fa-regular fa-heart text-xl"></i>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="flex justify-center items-center group mt-4">
-                        <p class="py-2 px-4 border-primary border-2 translate-x-20 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
-                        <div class="py-2 px-4 w-fit border-2 border-primary group-hover:-translate-x-10 translate-x-60 rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">ADD TO CART</div>
+                    <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
+                        <div>
+                            <img src="./assets/img/image-removebg-preview 3.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
+                            <p class="text-center">Headphone</p>
+                        </div>
+                        <div class="flex justify-center items-center group mt-8 ">
+                            <p class="py-2 px-4 border-primary border-2 translate-x-28 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
+                            <div class="flex group-hover:-translate-x-10 translate-x-72 transition duration-500">
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+                                </div>
+
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <div class="py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary duration-500 transition cursor-pointer hover:text-white">
+                                    <i class="fa-regular fa-heart text-xl"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
+                        <div>
+                            <img src="./assets/img/image-removebg-preview 3.png" alt="">
+                        </div>
+                        <div>
+                            <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
+                            <p class="text-center">Headphone</p>
+                        </div>
+                        <div class="flex justify-center items-center group mt-8 ">
+                            <p class="py-2 px-4 border-primary border-2 translate-x-28 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
+                            <div class="flex group-hover:-translate-x-10 translate-x-72 transition duration-500">
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+                                </div>
+
+                                <div class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <div class="py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary duration-500 transition cursor-pointer hover:text-white">
+                                    <i class="fa-regular fa-heart text-xl"></i>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <!-- SINGLE PRODUCT -->
-                <div class="p-6 w-80 bg-box rounded-box overflow-hidden">
-                    <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="">
-                    </div>
-                    <div>
-                        <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
-                        <p class="text-center">Headphone</p>
-                    </div>
-                    <div class="flex justify-center items-center group mt-4">
-                        <p class="py-2 px-4 border-primary border-2 translate-x-20 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
-                        <div class="py-2 px-4 w-fit border-2 border-primary group-hover:-translate-x-10 translate-x-60 rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">ADD TO CART</div>
-                    </div>
-                </div>
-                <div class="p-6 w-80 bg-box rounded-box overflow-hidden">
-                    <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="">
-                    </div>
-                    <div>
-                        <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
-                        <p class="text-center">Headphone</p>
-                    </div>
-                    <div class="flex justify-center items-center group mt-4">
-                        <p class="py-2 px-4 border-primary border-2 translate-x-20 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
-                        <div class="py-2 px-4 w-fit border-2 border-primary group-hover:-translate-x-10 translate-x-60 rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">ADD TO CART</div>
-                    </div>
-                </div>
-                <div class="p-6 w-80 bg-box rounded-box overflow-hidden">
-                    <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="">
-                    </div>
-                    <div>
-                        <h1 class="text-center text-h3 font-bold">3D™ wireless headset</h1>
-                        <p class="text-center">Headphone</p>
-                    </div>
-                    <div class="flex justify-center items-center group mt-4">
-                        <p class="py-2 px-4 border-primary border-2 translate-x-20 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold  mr-2">$499</p>
-                        <div class="py-2 px-4 w-fit border-2 border-primary group-hover:-translate-x-10 translate-x-60 rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">ADD TO CART</div>
-                    </div>
-                </div>
+
                 <!-- IMG -->
 
             </div>
