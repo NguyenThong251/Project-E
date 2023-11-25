@@ -52,102 +52,104 @@
                 </div>
                 <!-- SITE LINK -->
                 <div>
-                    <ul class="flex gap-3 items-center">
+                    <ul class="flex items-center gap-6">
                         <li>
-                            <a href="#">
-                                <img src="./assets/img/icon-search.png" alt="">
+                            <a href="#" class="group flex relative site-container items-center">
+                                <ion-icon name="search-outline" class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#">
-                                <img src="./assets/img/icon-cart.png" alt="">
+                            <a href="#" class="group text-2xl relative site-container flex items-center">
+                                <ion-icon name="cart-outline" class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="group relative heart-container block text-center rounded-full">
-                                <div class="absolute -z-10 top-0 -translate-x-1 rounded-full scale-0 group-hover:scale-100 transition duration-300 bg-primary w-7 h-7 "></div>
-                                <i class="fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300"></i>
+                            <a href="#" class="group relative site-container block flex items-center rounded-full">
+                                <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
+                                <ion-icon name="heart-outline" class="site-link_heart text-2xl group-hover:text-white transition duration-300"></ion-icon>
+                                <!-- <i class="mb-px fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300 site-link_heart"></i> -->
                             </a>
                         </li>
-                        <li>
 
-                            <div class=" flex justify-center items-center z-10">
-                                <div x-data="{ open: false }" class="">
-                                    <div @click="open = !open" class="relative border-b-4 border-transparent py-3"
-                                        :class="{'.$html_user. ': open}"
-                                        x-transition:enter-end="transform opacity-100 scale-100"
-                                        x-transition:leave="transition ease-in duration-75"
-                                        x-transition:leave-start="transform opacity-100 scale-100">
-                                        <div class="flex justify-center items-center space-x-3 cursor-pointer">
-                                            <div class="w-6 h-6 rounded-full overflow-hidden border-2  border-gray-900">
-                                                <img src="/layout/assets/img/icon-user.png" alt=""
-                                                    class="w-full h-full object-cover">
-                                            </div>
-                                        </div>
-                                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                                            x-transition:enter-start="transform opacity-0 scale-95"
+                            <li>
+                                <div class="flex justify-center  z-10 mt-1">
+                                    <div x-data="{ open: false }" class="">
+                                        <div @click="open = !open" class="relative border-b-4 border-transparent"
+                                            :class="{'.$html_user. ': open}"
                                             x-transition:enter-end="transform opacity-100 scale-100"
                                             x-transition:leave="transition ease-in duration-75"
-                                            x-transition:leave-start="transform opacity-100 scale-100"
-                                            x-transition:leave-end="transform opacity-0 scale-95"
-                                            class="absolute w-60 px-5 py-3 -800 bg-white rounded-lg shadow border  mt-5">
-                                            <ul class="space-y-3 ">
-                                                <li class="font-medium">
-                                                    <a href="index.php?pg=user"
-                                                        class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
-                                                        <div class="mr-3">
-                                                            <svg class="w-6 h-6" fill="none" stroke="currentColor"
-                                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z">
-                                                                </path>
-                                                            </svg>
-                                                        </div>
-                                                        datphan99
-                                                    </a>
-                                                </li>
-                                                <li class="font-medium">
-                                                    <a href="#"
-                                                        class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
-                                                        <div class="mr-3">
-                                                            <svg class="w-6 h-6" fill="none" stroke="currentColor"
-                                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
-                                                                </path>
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                                            </svg>
-                                                        </div>
-                                                        Setting
-                                                    </a>
-                                                </li>
-                                                <hr class="">
-                                                <li class="font-medium">
-                                                    <a href="index.php?pg=logout"
-                                                        class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-red-600">
-                                                        <div class="mr-3 text-red-600">
-                                                            <svg class="w-6 h-6" fill="none" stroke="currentColor"
-                                                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                    stroke-width="2"
-                                                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
-                                                                </path>
-                                                            </svg>
-                                                        </div>
-                                                        Đăng xuất
-                                                    </a>
-                                                </li>
-                                            </ul>
+                                            x-transition:leave-start="transform opacity-100 scale-100">
+                                            <div class="flex justify-center items-center space-x-3 cursor-pointer">
+                                                <div class="w-6 h-6 rounded-full overflow-hidden border-2  border-gray-900">
+                                                    <img src="/layout/assets/img/icon-user.png" alt=""
+                                                        class="w-full h-full object-cover">
+                                                </div>
+                                            </div>
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                                x-transition:enter-start="transform opacity-0 scale-95"
+                                                x-transition:enter-end="transform opacity-100 scale-100"
+                                                x-transition:leave="transition ease-in duration-75"
+                                                x-transition:leave-start="transform opacity-100 scale-100"
+                                                x-transition:leave-end="transform opacity-0 scale-95"
+                                                class="absolute w-60 px-5 py-3 -800 bg-white rounded-lg shadow border  mt-5">
+                                                <ul class="space-y-3 ">
+                                                    <li class="font-medium">
+                                                        <a href="index.php?pg=user"
+                                                            class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
+                                                            <div class="mr-3">
+                                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                            datphan99
+                                                        </a>
+                                                    </li>
+                                                    <li class="font-medium">
+                                                        <a href="#"
+                                                            class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
+                                                            <div class="mr-3">
+                                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                                                    </path>
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                                </svg>
+                                                            </div>
+                                                            Setting
+                                                        </a>
+                                                    </li>
+                                                    <hr class="">
+                                                    <li class="font-medium">
+                                                        <a href="index.php?pg=logout"
+                                                            class="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-red-600">
+                                                            <div class="mr-3 text-red-600">
+                                                                <svg class="w-6 h-6" fill="none" stroke="currentColor"
+                                                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                                                    </path>
+                                                                </svg>
+                                                            </div>
+                                                            Đăng xuất
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
+
                     </ul>
                 </div>
             </div>
@@ -201,32 +203,33 @@
                     SHOP BY CATEGORIES
                     <h1 class="text-h1 font-bold">TECH COLLECTION</h1>
                 </div>
-                <div class="mt-8 grid grid-cols-5 place-items-center	">
-                    <div class="cate-big cate-laptop flex justify-center py-2">
+                <div class="mt-8 grid grid-cols-5 place-items-center gap-12">
+                    <div class="cate-big w-full cate-laptop flex justify-center py-2">
                         <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                             <h1>Laptop</h1>
                             <span class="text-customGray">12 Items</span>
                         </div>
                     </div>
-                    <div class="cate-small cate-phone flex justify-center py-2">
+
+                    <div class="cate-small w-full  cate-phone flex justify-center py-2">
                         <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                             <h1>Phone</h1>
                             <span class="text-customGray">12 Items</span>
                         </div>
                     </div>
-                    <div class="cate-big cate-keyboard flex justify-center py-2">
+                    <div class="cate-big w-full cate-keyboard flex justify-center py-2">
                         <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                             <h1>Keyboard</h1>
                             <span class="text-customGray">12 Items</span>
                         </div>
                     </div>
-                    <div class="cate-small cate-headphone flex justify-center py-2">
+                    <div class="cate-small w-full  cate-headphone flex justify-center py-2">
                         <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                             <h1>Headphone</h1>
                             <span class="text-customGray">12 Items</span>
                         </div>
                     </div>
-                    <div class="cate-big cate-mouse flex justify-center py-2">
+                    <div class="cate-big  w-full cate-mouse flex justify-center py-2">
                         <div class=" mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                             <h1>Mouse</h1>
                             <span class="text-customGray">12 Items</span>

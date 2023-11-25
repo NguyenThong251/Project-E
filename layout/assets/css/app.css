@@ -90,17 +90,40 @@ div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
 }
 
 
+/* HEADER */
+.site-link_cart, .site-link_heart, .site-link_search {
+  width: 26px;
+  height: 26px;
+}
+
+.site-container::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #302828;
+  top: -6px;
+  right: -7px;
+  border-radius: 50%;
+  z-index: -1;
+  scale: 0;
+  transition: .3s ease;
+}
+
+.site-container:hover.site-container::before {
+  scale: 1;
+}
 
 
 /* CATEGORIES */
 .cate-big {
-  height: 350px;
-  width: 300px;
+  height: 400px;
+  border-radius: 10px;
 }
 
 .cate-small {
-  height: 250px;
-  width: 300px;
+  height: 280px;
+  border-radius: 10px;
 }
 
 .cate-laptop {
