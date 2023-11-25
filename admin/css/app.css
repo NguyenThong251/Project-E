@@ -255,7 +255,7 @@ body {
   width: 12px;
   height: 12px;
   content: "";
-  background: url(../../views/icons/icon-up.png) center/cover no-repeat;
+  background: url(../../images/icons/icon-up.png) center/cover no-repeat;
   position: absolute;
   top: -12px;
   right: 0;
@@ -265,7 +265,7 @@ body {
   width: 12px;
   height: 12px;
   content: "";
-  background: url(../../views/icons/icon-down.png) center/cover no-repeat;
+  background: url(../../images/icons/icon-down.png) center/cover no-repeat;
   position: absolute;
   bottom: -12px;
   right: 0;
