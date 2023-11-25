@@ -5,8 +5,10 @@ var cataForms = document.querySelectorAll(".category-form");
 for (let index = 0; index < cataForms.length; index++) {
   const cataForm = cataForms[index];
   if (index == 0) {
-    var cataFormContainer = cataForm.querySelector(".category-form-container");
     function openForm() {
+      var cataFormContainer = cataForm.querySelector(
+        ".category-form-container"
+      );
       cataFormContainer.classList.remove("remove-form");
       cataForm.style.display = "block";
       cataFormContainer.classList.add("open-form");

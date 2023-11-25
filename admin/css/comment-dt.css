@@ -1,5 +1,5 @@
 .comment tr {
-  grid-template-columns: 1fr 1.5fr 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr 1.5fr 1fr;
 }
 .comment ion-icon {
   font-size: 24px;
@@ -21,7 +21,10 @@
 .comment th:nth-child(2),
 .comment td:nth-child(2) {
   justify-content: flex-start;
-  padding-left: 32px;
+  padding: 0 12px;
+}
+.comment td:nth-child(4) {
+  gap: 4px;
 }
 .comment-image {
   width: 120px;
@@ -32,6 +35,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
+}
+.comment-time {
+  font-style: italic;
 }
 .comment-action {
   display: flex;

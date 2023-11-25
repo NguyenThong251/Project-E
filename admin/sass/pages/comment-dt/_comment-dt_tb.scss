@@ -1,7 +1,7 @@
 @use "../../abstracts" as *;
 .comment {
   tr {
-    grid-template-columns: 1fr 1.5fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1.5fr 1fr;
   }
   ion-icon {
     font-size: 24px;
@@ -23,7 +23,10 @@
   th:nth-child(2),
   td:nth-child(2) {
     justify-content: flex-start;
-    padding-left: 32px;
+    padding: 0 12px;
+  }
+  td:nth-child(4) {
+    gap: 4px;
   }
   &-image {
     width: 120px;
@@ -34,6 +37,9 @@
       object-fit: cover;
       border-radius: 4px;
     }
+  }
+  &-time {
+    font-style: italic;
   }
   &-action {
     display: flex;

@@ -50,4 +50,18 @@
       }
     }
   }
+  &-quantity {
+    font-weight: 700;
+  }
+  &-price {
+    font-weight: 700;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    del {
+      opacity: 0.5;
+    }
+  }
 }

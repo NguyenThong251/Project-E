@@ -1,11 +1,20 @@
 @use "../../abstracts" as *;
-.product-form {
+.account-form {
   position: fixed;
   inset: 0;
   background-color: $color-subtext;
   display: none;
   span {
     color: $color-quaternary;
+  }
+  &-password {
+    p {
+      font-style: italic;
+      opacity: 0.5;
+    }
+    hr {
+      margin: 8px 0 24px;
+    }
   }
   &-container {
     height: 100vh;
@@ -44,7 +53,7 @@
     }
   }
   &-image {
-    width: 400px;
+    width: 160px;
     border-radius: 8px;
     margin-bottom: 24px;
     img {

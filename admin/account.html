@@ -10,6 +10,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor5/40.0.0/ckeditor.min.js" integrity="sha512-Zyl/SvrviD3rEMVNCPN+m5zV0PofJYlGHnLDzol2kM224QpmWj9p5z7hQYppmnLFhZwqif5Fugjjouuk5l1lgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/app.js"> </script>
     <link rel="stylesheet" href="./css/app.css">
     <link rel="stylesheet" href="./css/account.css">
@@ -113,7 +114,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -148,7 +149,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -183,7 +184,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -218,7 +219,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -253,7 +254,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -288,7 +289,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -323,7 +324,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -358,7 +359,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -393,7 +394,7 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
@@ -428,13 +429,52 @@
                 </div>
               </td>
               <td>
-                <div class="account-action"> <a href="#">
+                <div class="account-action"> <a class="account-edit" href="#">
                     <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
                     <ion-icon name="trash-outline"></ion-icon></a></div>
               </td>
             </tr>
           </tbody>
         </table>
+        <div class="account-form">
+          <div class="account-form-container">
+            <h2 class="sub-title account-form-title">Edit Account </h2><a class="account-form-close" href="#">
+              <ion-icon name="close-circle-outline"></ion-icon></a>
+            <div class="account-form-content"> 
+              <label>Avatar: </label>
+              <div class="account-form-image"> <img src="./images/user.png" alt="product image"></div>
+              <label>User Name: <span> *</span></label>
+              <input class="account-form-input" type="text" value="Lang Tu" disabled>
+              <label for="account-fullname">Full Name:<span>*</span></label>
+              <input class="account-form-input" type="text" value="Tiến Bịp" id="account-fullname">
+              <label for="account-email">Email:<span>*</span></label>
+              <input class="account-form-input" type="email" value="meomeo@gmail.com" id="account-email">
+              <label for="account-phone">Phone:<span>*</span></label>
+              <input class="account-form-input" type="text" value="0123456789" id="account-phone">
+              <label for="account-address">Address:<span>*</span></label>
+              <input class="account-form-input" type="text" value="Hà Nội" id="account-address">
+              <label>Status: <span>*</span></label>
+              <select class="account-form-select">
+                <option value="1">Active</option>
+                <option value="0">Restricted</option>
+              </select>
+              <label>Role:<span>*</span></label>
+              <select class="account-form-select">
+                <option value="1">Admin</option>
+                <option value="0">User</option>
+              </select>
+              <div class="account-form-password">
+                <p>Change Password</p>
+                <hr>
+                <label for="account-password">New password (leave blank if unchanged):</label>
+                <input class="account-form-input" type="password" value="123456" id="account-password">
+                <label for="account-password-confirm">Confirm new password:</label>
+                <input class="account-form-input" type="password" value="123456" id="account-password-confirm">
+              </div>
+              <button class="account-form-button button" type="submit">Add Account</button>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer"> 
@@ -450,5 +490,8 @@
     </footer>
     <script src="./js/dashboard.js"> </script>
     <script src="./js/category.js"> </script>
+    <script src="./js/product.js"> </script>
+    <script src="./js/account.js"> </script>
+    <script src="./js/order.js"></script>
   </body>
 </html>

@@ -1,11 +1,33 @@
 @use "../../abstracts" as *;
-.product-form {
+.order-form {
   position: fixed;
   inset: 0;
   background-color: $color-subtext;
   display: none;
   span {
     color: $color-quaternary;
+  }
+  textarea {
+    padding: 12px 16px;
+    border-radius: 4px;
+    border: 1px solid $color;
+    margin-bottom: 24px;
+    font-size: 16px;
+    width: 100%;
+    min-height: 160px;
+    &:focus {
+      outline: none;
+      border-color: $color-tertiary;
+    }
+  }
+  &-password {
+    p {
+      font-style: italic;
+      opacity: 0.5;
+    }
+    hr {
+      margin: 8px 0 24px;
+    }
   }
   &-container {
     height: 100vh;
@@ -44,7 +66,7 @@
     }
   }
   &-image {
-    width: 400px;
+    width: 160px;
     border-radius: 8px;
     margin-bottom: 24px;
     img {
@@ -74,6 +96,50 @@
     div {
       width: 100%;
     }
+  }
+}
+.order-detail-form {
+  table {
+    border: none !important;
+  }
+  td:first-child {
+    justify-content: flex-start;
+    padding-left: 24px;
+  }
+  thead {
+    border: none !important;
+    tr {
+      background-color: $color-table !important;
+      &:hover {
+        background-color: $color-table;
+      }
+    }
+  }
+  tr {
+    border: none !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: $color-secondary;
+    &:nth-child(odd) {
+      background-color: $color-secondary;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: $color-table;
+  }
+  td {
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+  }
+  &-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    font-size: 24px;
+    font-weight: 700;
   }
 }
 .ck-blurred.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline {

@@ -40,3 +40,12 @@ a {
 ul {
   list-style: none;
 }
+input,
+select {
+  display: block;
+  width: 100%;
+}
+label {
+  display: inline-block;
+  cursor: pointer;
+}

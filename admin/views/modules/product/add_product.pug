@@ -1,0 +1,59 @@
+.product-form
+  .product-form-container
+    block sub-title
+      h2.sub-title.product-form-title Add New Product 
+    a(href="#").product-form-close
+      ion-icon(name="close-circle-outline")
+    .product-form-content 
+      label Choose Category: 
+      select.product-form-select
+        option(default) -- Select Category --
+        option(value="Headphone") Headphone
+        option(value="Smartphone") Smartphone
+        option(value="Laptop") Laptop
+        option(value="Camera") Camera
+      label Choose Brand:
+      select.product-form-select
+        option(default) -- Select Brand --
+        option(value="Apple") Apple
+        option(value="Samsung") Samsung
+        option(value="Sony") Sony
+        option(value="Canon") Canon
+      label Product Image:
+      input.product-form-input(type="file")
+      block product-image
+        
+      label Product Name:
+      input.product-form-input(type="text", placeholder="Enter product name")
+      label Virtual selling price: (Display Sale! if greater than the actual price):
+      input.product-form-input(type="text", placeholder="Enter product price")
+      label Actual selling price: 
+      input.product-form-input(type="text", placeholder="Enter product price")
+      label Product Quantity:
+      input.product-form-input(type="text", placeholder="Enter product quantity")
+      label Sale:
+      .product-form-radio-container
+        div 
+          input(type="radio" name="sale" id="sale-y" value="yes" checked)
+          label(for="sale-y") Yes!
+        div 
+          input(type="radio" name="sale" id="sale-n" value="no")
+          label(for="sale-n") No!
+      label Hot:
+      .product-form-radio-container 
+        div 
+          input(type="radio" name="hot" id="hot-y" value="yes" checked)
+          label(for="hot-y") Yes!
+        div
+          input(type="radio" name="hot" id="hot-n" value="no")
+          label(for="hot-n") No!
+      .product-form-input-container 
+        div 
+          label(for="entry-date") Entry date:
+          input(type="text" name="entry-date" placeholder="Entry-date")
+        div
+          label(for="quantity") Quantity:
+          input(type="text" name="quantity" placeholder="Quantity")
+      label Product Description:
+      <textarea id="editor" name="description"></textarea>
+      button.product-form-button.button(type="submit") Add Product

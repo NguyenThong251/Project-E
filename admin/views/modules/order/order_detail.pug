@@ -1,0 +1,79 @@
+.order-form
+  .order-form-container
+    h2.sub-title.order-form-title Order Detail
+    a(href="#").order-form-close
+      ion-icon(name="close-circle-outline")
+    .order-form-content 
+      label Avatar: 
+      .order-form-image 
+        img(src="./images/guest.png" alt="product image")
+      label User Name: 
+        span  *
+      input.order-form-input(type="text", value="Lang Tu", disabled)
+      label Status: 
+        span  *
+      select.order-form-select
+        option(value="1") Pending
+        option(value="2") Shipping
+        option(value="3") Completed
+        option(value="4") Cancelled
+      .order-form-input-container
+        div
+          label(for="order-fullname") Full Name:
+            span *
+          input.order-form-input(type="text", value="Tiến Bịp", id="order-fullname")
+        div
+          label(for="receiver-fullname") Receiver Full Name:
+            span *
+          input.order-form-input(type="text", value="Tiến Bịp", id="receiver-fullname")
+      .order-form-input-container
+        div
+          label(for="order-email") Email:
+            span *
+          input.order-form-input(type="email", value="meomeo@gmail.com", id="order-email")
+        div
+          label(for="receiver-email") Receiver Email:
+            span *
+          input.order-form-input(type="email", value="leuleu@gmail.com", id="receiver-email")
+      .order-form-input-container
+        div
+          label(for="order-phone") Phone:
+            span *
+          input.order-form-input(type="text", value="0123456789", id="order-phone")
+        div
+          label(for="receiver-phone") Receiver Phone:
+            span *
+          input.order-form-input(type="text", value="0123456789", id="receiver-phone")
+      .order-form-input-container
+        div
+          label(for="order-address") Address:
+            span *
+          input.order-form-input(type="text", value="Hà Nội", id="order-address")
+        div
+          label(for="receiver-address") Receiver Address:
+            span *
+          input.order-form-input(type="text", value="Hà Nội", id="receiver-address")
+      label Note: 
+      textarea.order-form-textarea
+      .order-detail-form
+        table.table
+          thead.table-head
+              th Product Name
+              th Price
+              th Quantity
+              th Subtotal
+          tbody.table-body
+            each val in [1,2,3,4,5]
+              tr
+                td 
+                  p.order-detail-form-name Apple Airpod Max
+                td
+                  p.order-detail-form-price $499
+                td
+                  p.order-detail-form-quantity 2
+                td 
+                  p.order-detail-form-subtotal $998
+        .order-detail-form-total
+          p.order-detail-form-total-title Total:
+          p.order-detail-form-total-price $998
+      button.order-form-button.button(type="submit") Save Changes
