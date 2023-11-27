@@ -31,6 +31,7 @@
     }
   }
   &-item:last-child {
+    color: $color-quaternary;
     .sidebar-animation {
       &::after {
         width: 12px;
