@@ -34,7 +34,7 @@
 
 .overview-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 40px;
 }
 .overview-item {
@@ -54,7 +54,7 @@
   opacity: 0.5;
 }
 .overview-count {
-  margin-top: 4px;
+  margin-top: 8px;
   font-size: 24px;
   font-weight: 700;
   color: #000;

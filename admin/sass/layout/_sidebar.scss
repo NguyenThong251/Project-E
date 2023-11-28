@@ -4,6 +4,7 @@
   --fz-medium: 18px;
 }
 .sidebar {
+  flex-shrink: 0;
   width: fit-content;
   font-size: var(--fz-medium);
   font-weight: var(--fw-medium);

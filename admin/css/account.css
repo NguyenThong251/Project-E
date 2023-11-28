@@ -89,6 +89,7 @@
   overflow: scroll;
 }
 .account-form-content label {
+  line-height: 24px;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 8px;

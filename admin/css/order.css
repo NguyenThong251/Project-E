@@ -24,7 +24,7 @@
 .order th:nth-child(2),
 .order td:nth-child(2) {
   justify-content: flex-start;
-  padding-left: 32px;
+  padding: 8px 16px;
 }
 .order td:nth-child(3) {
   gap: 4px;

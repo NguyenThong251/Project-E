@@ -1,10 +1,13 @@
 extend ./add_category
 
 block sub-title
-  h2.sub-title.category-form-title Edit Category
+  h2.sub-title.category-form-title Chỉnh sửa danh mục
 
 block category-placeholder
-  input#category-name(type="text", placeholder="Headphones")
+  input#category-name(type="text", placeholder="Tai nghe")
+
+block category-button
+  button#category-submit.button(type="submit") Chỉnh sửa danh mục
 //- .category-formU
 //-   .category-formU-container
 //-     h2.sub-title.category-formU-title Edit Category

@@ -23,7 +23,10 @@
   th:nth-child(2),
   td:nth-child(2) {
     justify-content: flex-start;
-    padding-left: 32px;
+    padding: 8px 16px;
+  }
+  td:nth-child(3) {
+    gap: 4px;
   }
   &-image {
     width: 120px;
@@ -34,6 +37,9 @@
       object-fit: cover;
       border-radius: 4px;
     }
+  }
+  &-time {
+    font-style: italic;
   }
   &-action {
     display: flex;

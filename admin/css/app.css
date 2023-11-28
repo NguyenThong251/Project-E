@@ -27,6 +27,9 @@
 .table tr:hover {
   background-color: #ebebeb;
 }
+.table td {
+  padding: 8px 16px;
+}
 
 .filter {
   display: flex;
@@ -67,6 +70,11 @@
   color: #fff;
   transition: all 0.2s linear;
   margin: 0;
+}
+
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-blurred,
+.ck.ck-content.ck-editor__editable.ck-rounded-corners.ck-editor__editable_inline.ck-focused {
+  min-height: 240px;
 }
 
 *,
@@ -185,7 +193,6 @@ body {
   border-radius: 12px;
   border-top-left-radius: 11px;
   border-bottom-left-radius: 11px;
-  overflow: hidden;
   padding: 40px;
   background-color: #fff;
 }
@@ -212,6 +219,7 @@ body {
 }
 
 .sidebar {
+  flex-shrink: 0;
   width: fit-content;
   font-size: var(--fz-medium);
   font-weight: var(--fw-medium);
