@@ -114,9 +114,24 @@ div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
   scale: 1;
 }
 
-.nav-links {
-  
+.svgContainer {
+  width: 50px;
 }
+
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #302828;
+}
+
+#path-top,
+#path-middle,
+#path-bottom {
+  fill: none;
+  stroke: #302828;
+  stroke-miterlimit: 10;
+  stroke-width: 2;
+}
+
 
 /* CATEGORIES */
 .cate-big {
@@ -166,3 +181,4 @@ div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
   background: url(/layout/assets/img/banner-2.png) no-repeat 100%/cover;
 }
 /*# sourceMappingURL=app.css.map */
+
