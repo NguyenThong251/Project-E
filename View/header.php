@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/app.css" />
+    <link rel="stylesheet" href="view/layout/assets/css/app.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+
 </head>
 
 <body>
@@ -154,7 +155,7 @@
                             </div>
                         </li>
 
-                        <li class="block md:hidden mt-2">
+                        <li class="block xl:hidden mt-2">
                             <div class="svgContainer">
                                 <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70"
                                     xmlns="http://www.w3.org/2000/svg"
