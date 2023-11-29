@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/layout/assets/js/tailwind.js"></script>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
+    <!-- ICON -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+
+    <!-- HEADER -->
+
+
+    <!-- BREADCRUMB -->
+    <section class="my-16">
+        <div class="banner-content bg-primary">
+            <div class="container py-4 flex justify-between items-center">
+                <div>
+                    <!-- UPPER -->
+                    <div class="flex text-white">
+                        <a class="mr-4 text-grey-500 relative after:content-[''] after:absolute after:top-1/4 after:-right-2 after:w-px after:px-px after:h-4 after:bg-gray-500 after:block"
+                            href="#">Home</a>
+                        <p class="text-white">Shop</p>
+                    </div>
+                    <!-- LOWER -->
+                    <div>
+                        <h1 class="banner-text text-h1 text-white font-bold mt-2">Explore All Products</h1>
+                    </div>
+                </div>
+                <!-- IMG -->
+                <div class="w-2/12">
+                    <img src="/layout/assets/img/cucShit.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <div id="content">
+        <div class="cart-container flex flex-col justify-between md:flex-row max-[640px]:m-6">
+            <!-- CART -->
+            <div class="cart py-8 px-8 md:flex-row mx-n max-[600px]:w-full max-[600px]:py-4 max-[600px]:px-4">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl">Your Cart</h2>
+                    <span class="opacity-70 text-sm"><i class='bx bx-x'></i> Clear cart</span>
+                </div>
+
+                <!--START: cart item -->
+                <div class="cart-item flex justify-between items-center px-4 py-4 mt-5 max-[640px]:block">
+                    <div class="flex items-center py-4 max-[640px]:items-start ">
+                        <div class="flex items-center justify-center w-28 h-26">
+                                <img src="./assets/img/headphone-img.png" alt="">
+                        </div>
+
+                        <p class="font-bold ml-4">Apple Airpod Max <br>
+                            <span class="text-sm font-normal opacity-70">White</span>
+                        </p>
+                    </div>
+
+                    <!-- count -->
+                    <div class="btn-container flex justify-between items-center max-[600px]:mt-6">
+                        <div>
+                            <a class="decrease text-xl px-3 pb-1 cursor-pointer">-</a>
+                            <a class="quantity mx-2 max-[600px]:mx-0">1</a>
+                            <a class="increase text-xl px-3 pb-1 cursor-pointer">+</a>
+                        </div>
+
+                        <div class="price mx-24 max-[600px]:mx-2">
+                            <span class="font-bold text-2xl">$400</span>
+                        </div>
+
+                        <div class="del-icon">
+                            <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--START: cart item -->
+                <div class="cart-item flex justify-between items-center border-2 rounded-lg px-5 py-5 mt-5">
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center w-28 h-26">
+                                <img src="./assets/img/ip15-prm.png" alt="">
+                        </div>
+
+                        <p class="font-bold ml-4">Apple Airpod Max <br>
+                            <span class="text-sm font-normal opacity-70">White</span>
+                        </p>
+                    </div>
+
+                    <!-- count -->
+                    <div class="btn-container flex items-center">
+                        <a class="decrease text-xl border-2 rounded-full px-3 pb-1">-</a>
+                        <a class="quantity mx-4">1</a>
+                        <a class="increase text-xl border-2 rounded-full px-3 pb-1">+</a>
+                    </div>
+
+                    <span class="font-bold text-2xl">$400</span>
+
+                    <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
+                </div>
+
+                <!--START: cart item -->
+                <div class="cart-item flex justify-between items-center border-2 rounded-lg px-5 py-5 mt-5">
+                    <div class="flex items-center">
+                        <div class="flex items-center justify-center w-28 h-26">
+                            <img src="./assets/img/macbook.png" alt="">
+                        </div>
+
+                        <p class="font-bold ml-4">Apple Airpod Max <br>
+                            <span class="text-sm font-normal opacity-70">White</span>
+                        </p>
+                    </div>
+
+                    <!-- count -->
+                    <div class="btn-container flex items-center">
+                        <a class="btn decrease text-xl border-2 rounded-full px-3 pb-1 cursor-pointer">-</a>
+                        <a class="quantity mx-4">1</a>
+                        <a class="btn increase text-xl border-2 rounded-full px-3 pb-1 cursor-pointer">+</a>
+                    </div>
+
+                    <span class="font-bold text-2xl">$400</span>
+
+                    <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
+                </div>
+            </div>
+
+            <!-- TOTAL BOARD -->
+            <div class="checkout w-80">
+                <p class="font-semibold text-lg">Promo code</p>
+                <input class="border-2 rounded-2xl px-4 py-1 mt-4" type="text" placeholder="Type here...">
+
+                <div class="border-t-2 pt-6 mt-6">
+                    <div class="flex justify-between items-center text-sm opacity-70">
+                        <p>Subtotal</p>
+                        <p>$1200</p>
+                    </div>
+
+                    <div class="flex justify-between items-center text-sm opacity-70 my-5">
+                        <p>Discount</p>
+                        <p>$0</p>
+                    </div>
+
+                    <div class="flex justify-between items-center text-lg font-bold">
+                        <p>Total</p>
+                        <p>$1200</p>
+                    </div>
+                </div>
+
+                <p class="border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7"><a
+                        href="#">CHECK OUT</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- BANNER -->
+    <div>
+        <div class="container banner-container p-16 mt-24 mb-28">
+            <div>
+                <!-- UPPER -->
+                <div class="text-white flex items-center gap-3 font-bold">
+                    <div class=" w-12  rounded-full flex items-center justify-center h-12 bg-primary  text-white">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                    </div>
+                    <p>Newsletter</p>
+                </div>
+                <h1 class="text-primary text-h1 font-bold">Get weekly update</h1>
+
+                <!-- LOWER -->
+                <div class="mt-4 flex gap-2">
+                    <div class="flex gap-3 bg-white w-fit px-6 py-3 rounded-button">
+                        <i class="fa-solid fa-envelope text-xl"></i>
+                        <input type="text" placeholder="example@gmail.com">
+                    </div>
+                    <div class="w-fit px-6 py-4 bg-primary text-white rounded-button cursor-pointer">
+                        Subcribe
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- START: FOOTER -->
+    <!-- END: FOOTER -->
+
+    <style>
+        @layer utilities {
+            .checkout-width {
+                width: 327px;
+                /* Adjust the width value based on your needs */
+            }
+        }
+    </style>
+</body>
+
+
+</html>
