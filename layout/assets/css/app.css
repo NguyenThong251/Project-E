@@ -114,6 +114,24 @@ div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
   scale: 1;
 }
 
+.svgContainer {
+  width: 50px;
+}
+
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #302828;
+}
+
+#path-top,
+#path-middle,
+#path-bottom {
+  fill: none;
+  stroke: #302828;
+  stroke-miterlimit: 10;
+  stroke-width: 2;
+}
+
 
 /* CATEGORIES */
 .cate-big {
@@ -164,8 +182,9 @@ div, p ,h1 ,h2 ,h3 ,h4 ,h5, span {
 }
 /*# sourceMappingURL=app.css.map */
 
+<<<<<<< HEAD
 /* SHOP */
-.content {
+.shop-content {
   margin: 0 72px;
 }
 
@@ -278,3 +297,5 @@ footer {
 .bg-bl {
   background-color: #302828;
 }
+=======
+>>>>>>> a1873c2f419bda265a7c642c1542d3ec7df25cf0

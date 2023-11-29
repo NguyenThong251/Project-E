@@ -3,10 +3,10 @@ table.comment.table
     tr
       th 
         ion-icon(name="image-outline")
-      th Product
-      th Almost Full
-      th Count
-      th Action 
+      th Sản phẩm
+      th Bình luận gần đây
+      th Số lượng
+      th Hành động
   tbody.table-body 
     each val in [1,2,3,4,5,6,7,8,9,10]
       tr
@@ -15,11 +15,11 @@ table.comment.table
             img(srcset="./images/product.png 2x", alt="product")
         td 
           .comment-name 
-            p Product Name
+            p Airpod Max
         td
-          .comment-almost
-            span 2021-05-20 
-            span 12:00:00
+          span.comment-time 12:00:00
+          span -
+          span 2021-05-20 
         td
           .comment-count
             p 12

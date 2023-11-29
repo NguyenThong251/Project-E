@@ -1,17 +1,17 @@
 // Chart
 var xValues = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Tháng 1",
+  "Tháng 2",
+  "Tháng 3",
+  "Tháng 4",
+  "Tháng 5",
+  "Tháng 6",
+  "Tháng 7",
+  "Tháng 8",
+  "Tháng 9",
+  "Tháng 10",
+  "Tháng 11",
+  "Tháng 12",
 ];
 var yValues = [55, 49, 44, 24, 15, 12, 35, 90, 100, 120, 150, 200];
 var barColors = "#3577F0";
@@ -31,7 +31,7 @@ var chart = new Chart("chartStatistic", {
     legend: { display: false },
     title: {
       display: true,
-      text: "The revenue for the year 2023",
+      text: "Biểu đồ doanh thu trong năm 2023",
       fontFamily: "Plus Jakarta Sans, sans-serif",
       fontSize: 20,
       fontStyle: "italic",

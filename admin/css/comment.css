@@ -21,7 +21,10 @@
 .comment th:nth-child(2),
 .comment td:nth-child(2) {
   justify-content: flex-start;
-  padding-left: 32px;
+  padding: 8px 16px;
+}
+.comment td:nth-child(3) {
+  gap: 4px;
 }
 .comment-image {
   width: 120px;
@@ -32,6 +35,9 @@
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
+}
+.comment-time {
+  font-style: italic;
 }
 .comment-action {
   display: flex;

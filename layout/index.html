@@ -5,66 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/app.css">
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <header>
         <div>
-            <div class=" w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
+            <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
                 <!-- LOGO -->
-                <div>
+                <div class="w-32 md:w-auto">
                     <img src="assets/img/logo.png" alt="Logo Web">
                 </div>
                 <!-- NAV -->
-                <div>
+                <div class="hidden xl:block">
                     <ul class="flex text-h2 gap-12">
-                        <li>
-                            <a href="#">Home</a>
+                        <li class="nav-items group">
+                            <a class="nav-links relative before:content[''] before:absolute before:w-0  before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500
+                             before:bg-primary" href="#">Home</a>
                         </li>
-                        <li>
-                            <a href="#">Product</a>
+                        <li class="nav-items group">
+                            <a class="nav-links relative before:content[''] before:absolute before:w-0  before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500
+                             before:bg-primary" href="#">Product</a>
                         </li>
-                        <li>
-                            <a href="#">Contact</a>
+                        <li class="nav-items group">
+                            <a class="nav-links relative before:content[''] before:absolute before:w-0  before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500
+                             before:bg-primary" href="#">Contact</a>
                         </li>
-                        <li>
-                            <a href="#">About</a>
+                        <li class="nav-items group">
+                            <a class="nav-links relative before:content[''] before:absolute before:w-0  before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500
+                             before:bg-primary" href="#">About</a>
                         </li>
-                        <li>
-                            <a href="#">Blog</a>
+                        <li class="nav-items group">
+                            <a class="nav-links relative before:content[''] before:absolute before:w-0  before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500
+                             before:bg-primary" href="#">Blog</a>
                         </li>
                     </ul>
                 </div>
                 <!-- SITE LINK -->
                 <div>
-                    <ul class="flex items-center gap-6">
-                        <li>
+                    <ul class="flex items-center gap-2 md:gap-6">
+                        <li class="w-6">
                             <a href="#" class="group flex relative site-container items-center">
                                 <ion-icon name="search-outline" class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
                             </a>
                         </li>
 
-                        <li>
-                            <a href="#" class="group text-2xl relative site-container flex items-center">
-                                <ion-icon name="cart-outline" class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
-                            </a>
-                        </li>
-                        <li>
+                        <li class="w-6">
                             <a href="#" class="group relative site-container block flex items-center rounded-full">
                                 <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
                                 <ion-icon name="heart-outline" class="site-link_heart text-2xl group-hover:text-white transition duration-300"></ion-icon>
@@ -72,8 +68,14 @@
                             </a>
                         </li>
 
-                            <li>
-                                <div class="flex justify-center  z-10 mt-1">
+                        <li class="w-6">
+                            <a href="#" class="group text-2xl relative site-container flex items-center">
+                                <ion-icon name="cart-outline" class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
+                            </a>
+                        </li>
+
+                            <li class="">
+                                <div class="flex justify-center  z-10 mt-1 -mr-2">
                                     <div x-data="{ open: false }" class="">
                                         <div @click="open = !open" class="relative border-b-4 border-transparent"
                                             :class="{'.$html_user. ': open}"
@@ -92,7 +94,7 @@
                                                 x-transition:leave="transition ease-in duration-75"
                                                 x-transition:leave-start="transform opacity-100 scale-100"
                                                 x-transition:leave-end="transform opacity-0 scale-95"
-                                                class="absolute w-60 px-5 py-3 -800 bg-white rounded-lg shadow border  mt-5">
+                                                class="right-0 absolute w-40 md:w-60 px-5 py-3 bg-white rounded-lg shadow border mt-5">
                                                 <ul class="space-y-3 ">
                                                     <li class="font-medium">
                                                         <a href="index.php?pg=user"
@@ -150,6 +152,21 @@
                                 </div>
                             </li>
 
+                            <li class="block md:hidden mt-2">
+                                <div class="svgContainer">
+                                    <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg"
+                                      data-zanim-lg="{&quot;from&quot;:{&quot;opacity&quot;:0,&quot;x&quot;:45},&quot;to&quot;:{&quot;opacity&quot;:1,&quot;x&quot;:0},&quot;ease&quot;:&quot;CubicBezier&quot;,&quot;duration&quot;:0.8,&quot;delay&quot;:0.5}"
+                                      style="transform: translate(0px, 0px); opacity: 1;">
+                                      <path id="path-top" d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"
+                                        style="stroke-dasharray: 30px, 88px; stroke-dashoffset: 0px;"></path>
+                                      <path id="path-middle" d="M20,32h30" style="stroke-dasharray: 30px, 30px; stroke-dashoffset: 0px;"></path>
+                                      <path id="path-bottom"
+                                        d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"
+                                        style="stroke-dasharray: 30px, 88.1px; stroke-dashoffset: -88px;"></path>
+                                    </svg>
+                                  </div>
+                            </li>
+
                     </ul>
                 </div>
             </div>
@@ -159,23 +176,61 @@
     <section class="mt-12">
         <div>
             <div class="container grid grid-cols-12">
-                <div class="col-span-6">
+                <div class="md:col-span-6 col-span-12">
                     <div>
-                        <h1 class="text-h1 font-bold text-primary">BE SKILLED AND PROFESSIONAL</h1>
-                        <p class="w-1/2 my-4 text-primary">Gear Up Your Adventure: Quality gear for every journey,
+                        <h1 class="text-h1 md:text-h3  text-center md:text-left font-bold text-primary">BE SKILLED BE PROFESSIONAL</h1>
+                        <p class="hidden md:block w-1/2 my-4 text-primary">Gear Up Your Adventure: Quality gear for every journey,
                             ensuring durability and style. Elevate your experience with our curated collection</p>
-                        <button class="px-20 py-4 text-h2 bg-primary text-white font-bold w-fit rounded-button">SHOP
-                            NOW</button>
+
+                            <div class="md:hidden block swiper heroSwiper w-80">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide bg-box rounded-box py-4">
+                                        <img class="" src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold mt-4">Airpod Max</p>
+                                        <p class="text-center font-bold mb-6">59.9$</p>
+                                      </div>
+                                      <div class="swiper-slide bg-box rounded-box py-4">
+                                        <img class="" src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold mt-4">Airpod Max</p>
+                                        <p class="text-center font-bold mb-6">59.9$</p>
+                                      </div>
+                                      <div class="swiper-slide bg-box rounded-box py-4">
+                                        <img class="" src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold mt-4">Airpod Max</p>
+                                        <p class="text-center font-bold mb-6">59.9$</p>
+                                      </div>
+                                      <div class="swiper-slide bg-box rounded-box py-4">
+                                        <img class="" src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold mt-4">Airpod Max</p>
+                                        <p class="text-center font-bold mb-6">59.9$</p>
+                                      </div>
+                                      <div class="swiper-slide bg-box rounded-box py-4">
+                                        <img class="" src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold mt-4">Airpod Max</p>
+                                        <p class="text-center font-bold mb-6">59.9$</p>
+                                      </div>
+                                </div>
+                                <div class="swiper-pagination hero-swiper-pagination"></div>
+                              </div>
+
+
+
+                        <a hred="#" class=" cursor-pointer 
+                        border-2 hover:bg-transparent hover:text-primary 
+                        hover:border-primary transition duration-300  
+                        px-20 py-4 text-h2 bg-primary text-white font-bold
+                         w-fit rounded-button mx-auto md:mx-0 block mt-4">SHOP NOW</a>
                     </div>
+
                     <div>
-                        <div class="rounded-box bg-box flex items-center justify-center mt-8 py-24">
+                        <div class="hidden w-full rounded-box bg-box md:flex items-center justify-center mt-8 md:py-24">
                             <img src="/layout/assets/img/image 182.png" alt="">
                         </div>
                     </div>
                 </div>
 
                 <!-- RIGHT -->
-                <div class="col-start-8 col-span-5">
+                <div class="col-start-8 col-span-5 hidden md:block">
                     <div class="bg-box rounded-box py-8 flex flex-col items-center gap-8">
                         <div class="flex justify-center items-center">
                             <img class="" src="/layout/assets/img/airpod.png" alt="">
@@ -277,8 +332,8 @@
                             </div>
                         </div>
 
-                        <button class="px-6 py-4 bg-primary text-white font-bold rounded-button mt-8">CHECK IT
-                            OUT</button>
+                        <a href="#" class=" block  w-fit hover:text-primary hover:bg-transparent hover:border-primary  border-2 transition duration-300  px-6 py-4 bg-primary text-white font-bold rounded-button mt-8">CHECK IT
+                            OUT</a>
                     </div>
 
                     <div class="col-start-8 col-span-5 sale-banner-img-container">
@@ -425,131 +480,232 @@
 
     <section class="mt-24">
         <div>
-            <div class="container bg-box p-12 overflow-hidden">
+            <div class="container bg-box p-12">
                 <div class="">
                     <!-- TITLE -->
-                    <div>
-                        <h1 class="text-h1 font-bold text-primary">Happy customer words </h1>
+                    <div class="flex flex-col gap-4 md:flex-row items-center justify-between">
+                        <h1 class="text-xl font-bold text-primary">Happy customer words </h1>
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-arrow-left review-slider-prev"></i>
+                            <i class="fa-solid fa-arrow-right review-slider-next"></i>
+                        </div>
                     </div>
 
-                    <div class="flex justify-evenly gap-4 ">
-                        <!-- BOX -->
-                        <div>
-                            <div class="flex bg-white mt-8 shadow-2xl rounded-box justify-between">
-                                <!-- CONTENT -->
-                                <div class="px-4 py-4 flex flex-col justify-center">
-                                    <!-- STAR -->
-                                        <div>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <p class="w-80 my-4 text-customGray">
-                                            Look at the stars lighting up the sky: no one of them stays in the same place.
-                                        </p>
-                                        <div>
-                                            <h3 class="font-bold text-h2">Anhbakhia</h3>
-                                            <span class="text-small text-customGray">19/11/2023</span>
-                                        </div>
-                                </div>
-                                <!-- IMG -->
-                                <div class="bg-box w-60 ">
-                                    <img src="/layout/assets/img/airpod.png" alt="">
-                                    <p class="text-center font-bold my-4">Airpod Max</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- BOX -->
-                        <div>
-                            <div class="flex bg-white mt-8 shadow-2xl rounded-box justify-between">
-                                <!-- CONTENT -->
-                                <div class="px-4 py-4 flex flex-col justify-center">
-                                    <!-- STAR -->
-                                        <div>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <p class="w-80 my-4 text-customGray">
-                                            Look at the stars lighting up the sky: no one of them stays in the same place.
-                                        </p>
-                                        <div>
-                                            <h3 class="font-bold text-h2">Anhbakhia</h3>
-                                            <span class="text-small text-customGray">19/11/2023</span>
-                                        </div>
-                                </div>
-                                <!-- IMG -->
-                                <div class="bg-box w-60 ">
-                                    <img src="/layout/assets/img/airpod.png" alt="">
-                                    <p class="text-center font-bold my-4">Airpod Max</p>
+                    <div class="container swiper mySwiper">
+                        <div class="swiper-wrapper ">
+                            <!-- BOX -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- BOX -->
-                        <div>
-                            <div class="flex bg-white mt-8 shadow-2xl rounded-box justify-between">
-                                <!-- CONTENT -->
-                                <div class="px-4 py-4 flex flex-col justify-center">
-                                    <!-- STAR -->
-                                        <div>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <p class="w-80 my-4 text-customGray">
-                                            Look at the stars lighting up the sky: no one of them stays in the same place.
-                                        </p>
-                                        <div>
-                                            <h3 class="font-bold text-h2">Anhbakhia</h3>
-                                            <span class="text-small text-customGray">19/11/2023</span>
-                                        </div>
-                                </div>
-                                <!-- IMG -->
-                                <div class="bg-box w-60 ">
-                                    <img src="/layout/assets/img/airpod.png" alt="">
-                                    <p class="text-center font-bold my-4">Airpod Max</p>
+                            <!-- BOX -->
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- BOX -->
-                        <div>
-                            <div class="flex bg-white mt-8 shadow-2xl rounded-box justify-between">
-                                <!-- CONTENT -->
-                                <div class="px-4 py-4 flex flex-col justify-center">
-                                    <!-- STAR -->
-                                        <div>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                            <i class="fa-solid fa-star"></i>
-                                        </div>
-                                        <p class="w-80 my-4 text-customGray">
-                                            Look at the stars lighting up the sky: no one of them stays in the same place.
-                                        </p>
-                                        <div>
-                                            <h3 class="font-bold text-h2">Anhbakhia</h3>
-                                            <span class="text-small text-customGray">19/11/2023</span>
-                                        </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
                                 </div>
-                                <!-- IMG -->
-                                <div class="bg-box w-60 ">
-                                    <img src="/layout/assets/img/airpod.png" alt="">
-                                    <p class="text-center font-bold my-4">Airpod Max</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col md:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                    <!-- CONTENT -->
+                                    <div class="px-4 py-4 flex flex-col justify-center">
+                                        <!-- STAR -->
+                                            <div>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                            <p class="w-50 my-4 text-customGray text-sm md:w-80">
+                                                Look at the stars lighting up the sky: no one of them stays in the same place.
+                                            </p>
+                                            <div>
+                                                <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                                <span class="text-small text-customGray">19/11/2023</span>
+                                            </div>
+                                    </div>
+                                    <!-- IMG -->
+                                    <div class="bg-white md:bg-box md:w-60 w-full  ">
+                                        <img src="/layout/assets/img/airpod.png" alt="">
+                                        <p class="text-center font-bold my-4">Airpod Max</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+    
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+      </div> -->
+
 
     <section class="mt-24">
         <div>
@@ -792,18 +948,18 @@
     <section class="mt-24">
         <div>
             <div class="container">
-                <div class="grid grid-cols-2 gap-8">
-                    <div class="banner-1 px-80 py-32">
-                        <div class="ml-32">
-                            <p class="text-white text-h3 font-bold w-40">Rich sound, for less..</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="banner-1 w-80 md:w-full mx-auto py-12 md:px-80 md:py-32">
+                        <div class="ml-40 md:ml-32">
+                            <p class="text-white text-md md:text-h3 font-bold w-40">Rich sound, for less..</p>
                             <p class="text-customGray w-32">Conllection <i class="fa-solid fa-arrow-right"></i></p>
                         </div>
 
                     </div>
 
-                    <div class="banner-2 py-32">
-                        <div class="ml-32 md:ml-12">
-                            <p class="text-white text-h3 font-bold w-40">Rich sound, for less..</p>
+                    <div class="banner-2 w-80 md:w-full mx-auto py-12 md:py-32">
+                        <div class="ml-2 md:ml-12">
+                            <p class="text-white text-md md:text-h3 font-bold w-36">Rich sound, for less..</p>
                             <p class="text-customGray">Conllection <i class="fa-solid fa-arrow-right"></i></p>
                         </div>
 
@@ -825,15 +981,15 @@
                     </div>
                     <p>Newsletter</p>
                 </div>
-                <h1 class="text-primary text-h1 font-bold">Get weekly update</h1>
+                <h1 class="text-primary md:text-h1 font-bold text-xl my-8">Get weekly update</h1>
 
                 <!-- LOWER -->
-                <div class="mt-4 flex gap-2">
-                    <div class="flex gap-3 bg-white w-fit px-6 py-3 rounded-button">
-                        <i class="fa-solid fa-envelope text-xl"></i>
+                <div class="mt-4 flex flex-col items-center md:flex-row gap-2">
+                    <div class="flex gap-3 bg-white w-46 md:w-fit px-4 py-3 rounded-button">
+                        <i class="fa-solid fa-envelope text-xl mt-1"></i>
                         <input type="text" placeholder="example@gmail.com">
                     </div>
-                    <div class="w-fit px-6 py-4 bg-primary text-white rounded-button">
+                    <div class="w-full text-center md:w-fit px-6 py-4 bg-primary text-white rounded-button">
                         Subcribe
                     </div>
                 </div>
@@ -846,45 +1002,45 @@
 
 
     <footer class="mt-12">
-        <div class="container mb-8 mt-24 policy flex items-center place-content-between mt-22">
-            <div class="flex items-center">
-                <div class="img w-16 h-16"><img src="./assets/img/delivery.png" alt=""></div>
+        <div class="container mb-8 mt-24  grid grid-cols-1 mx-auto  md:grid-cols-4  mt-22">
+            <div class="flex items-center  md:mx-0">
+                <div class="img w-24 h-24"><img src="./assets/img/delivery.png" alt=""></div>
     
                 <div class="info ml-4 mb-2">
-                    <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                    <p class="font-extrabold text-xl">Fast & Secure delivery</p>
                     <p class="text-sm">Tell about your service</p>
                 </div>
             </div>
     
-            <div class="flex items-center">
-                <div class="img w-16 h-16"><img src="./assets/img/money back.png" alt=""></div>
+            <div class="flex items-center  md:mx-0">
+                <div class="img w-24 h-24"><img src="./assets/img/money back.png" alt=""></div>
     
                 <div class="info ml-4 mb-2">
-                    <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                    <p class="font-extrabold text-xl">Fast & Secure delivery</p>
                     <p class="text-sm">Within 10 days.</p>
                 </div>
             </div>
     
-            <div class="flex items-center">
-                <div class="img w-16 h-16"><img src="./assets/img/return.png" alt=""></div>
+            <div class="flex items-center  md:mx-0">
+                <div class="img w-24 h-24"><img src="./assets/img/return.png" alt=""></div>
     
                 <div class="info ml-4 mb-2">
-                    <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                    <p class="font-extrabold text-xl">Fast & Secure delivery</p>
                     <p class="text-sm">No question ask.</p>
                 </div>
             </div>
     
-            <div class="flex items-center">
-                <div class="img w-16 h-16"><img src="./assets/img/support.png" alt=""></div>
+            <div class="flex items-center  md:mx-0">
+                <div class="img w-24 h-24"><img src="./assets/img/support.png" alt=""></div>
     
                 <div class="info ml-4 mb-2">
-                    <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                    <p class="font-extrabold text-xl">Fast & Secure delivery</p>
                     <p class="text-sm">24/7 Live support.</p>
                 </div>
             </div>
         </div>
         <div>
-            <div class="container grid-cols-4 grid border-y-2 py-10 border-gray">
+            <div class="container grid-cols-1 md:grid-cols-4 grid border-y-2 py-10 border-gray">
                 <div class="flex flex-col justify-between">
                     <h1 class="font-bold text-h2 text-lg">Support</h1>
                     <p class="w-56 color-777">QTSC 9 Building, To Ky Street Ho Chi Minh City</p>
@@ -950,6 +1106,15 @@
         </div>
     </footer>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="/layout/assets/js/swiper.js"></script>
 <script src="/layout/assets/js/tailwind.js"></script>
+<script src="/layout/assets/js/index.js"></script>
 
 </html>

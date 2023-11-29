@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Bảng điều khiển</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
@@ -23,31 +23,35 @@
       <div class="sidebar"> 
         <ul class="sidebar-list">
           <li class="sidebar-item"><a class="sidebar-link" href="/">
-              <ion-icon name="bar-chart-outline"></ion-icon><span>Home</span></a>
+              <ion-icon name="bar-chart-outline"></ion-icon><span>Bảng điều khiển</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/category.html">
-              <ion-icon name="albums-outline"></ion-icon><span>Category</span></a>
+              <ion-icon name="albums-outline"></ion-icon><span>Danh mục</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/product.html">
-              <ion-icon name="cube-outline"></ion-icon><span>Product</span></a>
+              <ion-icon name="cube-outline"></ion-icon><span>Sản phẩm</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/account.html">
-              <ion-icon name="people-circle-outline"></ion-icon><span>Account</span></a>
+              <ion-icon name="people-circle-outline"></ion-icon><span>Tài khoản</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/order.html">
-              <ion-icon name="cart-outline"></ion-icon><span>Order</span></a>
+              <ion-icon name="cart-outline"></ion-icon><span>Đơn hàng</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/comment.html">
-              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Comment</span></a>
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Bình luận</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/news.html">
+              <ion-icon name="newspaper-outline"></ion-icon><span>Tin tức</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/">
-              <ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              <ion-icon name="log-out-outline"></ion-icon><span>Đăng xuất</span></a>
             <div class="sidebar-animation"></div>
           </li>
         </ul>
@@ -59,19 +63,19 @@
             <div class="db-account-container">
               <div class="db-account-info-name">Tien Bip</div><span>-</span>
               <div class="db-account-info-email">Email: meomeo@gmail.com</div><span>-</span>
-              <div class="db-account-info-phone">Phone: 0123456789</div>
+              <div class="db-account-info-phone">Số điện thoại: 0123456789</div>
             </div>
-            <div class="db-account-role"> <span>Admin</span></div>
+            <div class="db-account-role"> <span>Người quản lí</span></div>
           </div>
         </div>
-        <h1 class="title">Dashboard</h1>
+        <h1 class="title">Bảng điều khiển</h1>
         <canvas id="chartStatistic" style="width:100%;max-width:100%;"></canvas>
         <div class="overview container">
           <div class="overview-list"> 
             <div class="overview-item">
               <div class="overview-content">
                 <div class="overview-title"> 
-                  <p>Total Users</p>
+                  <p>Tổng người dùng</p>
                 </div>
                 <div class="overview-count"> <span>100</span></div>
               </div>
@@ -80,7 +84,7 @@
             <div class="overview-item">
               <div class="overview-content">
                 <div class="overview-title"> 
-                  <p>Total Users</p>
+                  <p>Tổng người dùng</p>
                 </div>
                 <div class="overview-count"> <span>100</span></div>
               </div>
@@ -89,7 +93,7 @@
             <div class="overview-item">
               <div class="overview-content">
                 <div class="overview-title"> 
-                  <p>Total Users</p>
+                  <p>Tổng người dùng</p>
                 </div>
                 <div class="overview-count"> <span>100</span></div>
               </div>
@@ -98,7 +102,7 @@
             <div class="overview-item">
               <div class="overview-content">
                 <div class="overview-title"> 
-                  <p>Total Users</p>
+                  <p>Tổng người dùng</p>
                 </div>
                 <div class="overview-count"> <span>100</span></div>
               </div>
@@ -111,53 +115,53 @@
             <div class="statistic-item">
               <div class="statistic-content">
                 <div class="statistic-title">
-                  <p>Product Statistics</p>
+                  <p>Thống kê sản phẩm</p>
                 </div>
                 <div class="statistic-icon">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>
               </div>
               <div class="statistic-dropdown">
-                <p>5 products have been added this month!</p>
+                <p>5 sản phẩm mới được thêm trong tháng này!</p>
               </div>
             </div>
             <div class="statistic-item">
               <div class="statistic-content">
                 <div class="statistic-title">
-                  <p>Product Statistics</p>
+                  <p>Thống kê sản phẩm</p>
                 </div>
                 <div class="statistic-icon">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>
               </div>
               <div class="statistic-dropdown">
-                <p>5 products have been added this month!</p>
+                <p>5 sản phẩm mới được thêm trong tháng này!</p>
               </div>
             </div>
             <div class="statistic-item">
               <div class="statistic-content">
                 <div class="statistic-title">
-                  <p>Product Statistics</p>
+                  <p>Thống kê sản phẩm</p>
                 </div>
                 <div class="statistic-icon">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>
               </div>
               <div class="statistic-dropdown">
-                <p>5 products have been added this month!</p>
+                <p>5 sản phẩm mới được thêm trong tháng này!</p>
               </div>
             </div>
             <div class="statistic-item">
               <div class="statistic-content">
                 <div class="statistic-title">
-                  <p>Product Statistics</p>
+                  <p>Thống kê sản phẩm</p>
                 </div>
                 <div class="statistic-icon">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </div>
               </div>
               <div class="statistic-dropdown">
-                <p>5 products have been added this month!</p>
+                <p>5 sản phẩm mới được thêm trong tháng này!</p>
               </div>
             </div>
           </div>
@@ -166,9 +170,9 @@
     </div>
     <footer class="footer"> 
       <div class="footer-copyright"> 
-        <p>© 2023. All rights reserved</p>
+        <p>© 2023. Mọi bản quyền được bảo lưu.</p>
       </div>
-      <div class="footer-brand"> <span>Accept For</span>
+      <div class="footer-brand"> <span>Chấp nhận cho</span>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>

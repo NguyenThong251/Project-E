@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comment</title>
+    <title>Bình luận</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
@@ -23,47 +23,51 @@
       <div class="sidebar"> 
         <ul class="sidebar-list">
           <li class="sidebar-item"><a class="sidebar-link" href="/">
-              <ion-icon name="bar-chart-outline"></ion-icon><span>Home</span></a>
+              <ion-icon name="bar-chart-outline"></ion-icon><span>Bảng điều khiển</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/category.html">
-              <ion-icon name="albums-outline"></ion-icon><span>Category</span></a>
+              <ion-icon name="albums-outline"></ion-icon><span>Danh mục</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/product.html">
-              <ion-icon name="cube-outline"></ion-icon><span>Product</span></a>
+              <ion-icon name="cube-outline"></ion-icon><span>Sản phẩm</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/account.html">
-              <ion-icon name="people-circle-outline"></ion-icon><span>Account</span></a>
+              <ion-icon name="people-circle-outline"></ion-icon><span>Tài khoản</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/order.html">
-              <ion-icon name="cart-outline"></ion-icon><span>Order</span></a>
+              <ion-icon name="cart-outline"></ion-icon><span>Đơn hàng</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/comment.html">
-              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Comment</span></a>
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Bình luận</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/news.html">
+              <ion-icon name="newspaper-outline"></ion-icon><span>Tin tức</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/">
-              <ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              <ion-icon name="log-out-outline"></ion-icon><span>Đăng xuất</span></a>
             <div class="sidebar-animation"></div>
           </li>
         </ul>
       </div>
       <main class="main">
-        <h1 class="title">Comment</h1>
+        <h1 class="title">Bình luận</h1>
         <div class="filter">
           <div class="filter-select"> 
             <select id="filter-select">
-              <option value="all">All</option>
-              <option value="new">New</option>
-              <option value="sale">Sale</option>
+              <option value="all">Tất cả</option>
+              <option value="new">Mới nhất</option>
+              <option value="sale">Giảm giá</option>
             </select>
           </div>
           <div class="filter-search"> 
-            <input id="filter-search" type="text" placeholder="Enter Keywords"/>
+            <input id="filter-search" type="text" placeholder="Nhập từ khoá"/>
             <button class="button">
               <ion-icon name="search"></ion-icon>
             </button>
@@ -75,10 +79,10 @@
               <th> 
                 <ion-icon name="image-outline"></ion-icon>
               </th>
-              <th>Product</th>
-              <th>Almost Full</th>
-              <th>Count</th>
-              <th>Action </th>
+              <th>Sản phẩm</th>
+              <th>Bình luận gần đây</th>
+              <th>Số lượng</th>
+              <th>Hành động</th>
             </tr>
           </thead>
           <tbody class="table-body"> 
@@ -88,12 +92,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -110,12 +112,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -132,12 +132,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -154,12 +152,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -176,12 +172,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -198,12 +192,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -220,12 +212,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -242,12 +232,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -264,12 +252,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -286,12 +272,10 @@
               </td>
               <td> 
                 <div class="comment-name"> 
-                  <p>Product Name</p>
+                  <p>Airpod Max</p>
                 </div>
               </td>
-              <td>
-                <div class="comment-almost"><span>2021-05-20 </span><span>12:00:00</span></div>
-              </td>
+              <td><span class="comment-time">12:00:00</span><span>-</span><span>2021-05-20 </span></td>
               <td>
                 <div class="comment-count">
                   <p>12</p>
@@ -308,9 +292,9 @@
     </div>
     <footer class="footer"> 
       <div class="footer-copyright"> 
-        <p>© 2023. All rights reserved</p>
+        <p>© 2023. Mọi bản quyền được bảo lưu.</p>
       </div>
-      <div class="footer-brand"> <span>Accept For</span>
+      <div class="footer-brand"> <span>Chấp nhận cho</span>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>

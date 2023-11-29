@@ -1,14 +1,14 @@
 table.category.table 
   thead.table-head
     tr 
-      th Category Name 
-      th Quantity Of Products
-      th Action
+      th Tên thể loại
+      th Số lượng sản phẩm
+      th Hành động
   tbody.table-body
     each val in [1,2,3,4]
       tr 
         td 
-          span Headphones
+          span Tai nghe
         td 
           span 10
         td 
@@ -18,4 +18,4 @@ table.category.table
           a(href="#").category-action.category-remove
             ion-icon(name="trash-outline")
 button.table-button.button.category-add
-  p Add Category
+  p Thêm danh mục

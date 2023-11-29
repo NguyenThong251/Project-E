@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Sản phẩm</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&amp;display=swap" rel="stylesheet">
@@ -23,566 +23,568 @@
       <div class="sidebar"> 
         <ul class="sidebar-list">
           <li class="sidebar-item"><a class="sidebar-link" href="/">
-              <ion-icon name="bar-chart-outline"></ion-icon><span>Home</span></a>
+              <ion-icon name="bar-chart-outline"></ion-icon><span>Bảng điều khiển</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/category.html">
-              <ion-icon name="albums-outline"></ion-icon><span>Category</span></a>
+              <ion-icon name="albums-outline"></ion-icon><span>Danh mục</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/product.html">
-              <ion-icon name="cube-outline"></ion-icon><span>Product</span></a>
+              <ion-icon name="cube-outline"></ion-icon><span>Sản phẩm</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/account.html">
-              <ion-icon name="people-circle-outline"></ion-icon><span>Account</span></a>
+              <ion-icon name="people-circle-outline"></ion-icon><span>Tài khoản</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/order.html">
-              <ion-icon name="cart-outline"></ion-icon><span>Order</span></a>
+              <ion-icon name="cart-outline"></ion-icon><span>Đơn hàng</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/comment.html">
-              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Comment</span></a>
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Bình luận</span></a>
+            <div class="sidebar-animation"></div>
+          </li>
+          <li class="sidebar-item"><a class="sidebar-link" href="/news.html">
+              <ion-icon name="newspaper-outline"></ion-icon><span>Tin tức</span></a>
             <div class="sidebar-animation"></div>
           </li>
           <li class="sidebar-item"><a class="sidebar-link" href="/">
-              <ion-icon name="log-out-outline"></ion-icon><span>Logout</span></a>
+              <ion-icon name="log-out-outline"></ion-icon><span>Đăng xuất</span></a>
             <div class="sidebar-animation"></div>
           </li>
         </ul>
       </div>
       <main class="main">
-        <h1 class="title">Product</h1>
+        <h1 class="title">Sản phẩm</h1>
         <div class="filter">
           <div class="filter-select"> 
             <select id="filter-select">
-              <option value="all">All</option>
-              <option value="new">New</option>
-              <option value="sale">Sale</option>
+              <option value="all">Tất cả</option>
+              <option value="new">Mới nhất</option>
+              <option value="sale">Giảm giá</option>
             </select>
           </div>
           <div class="filter-search"> 
-            <input id="filter-search" type="text" placeholder="Enter Keywords"/>
+            <input id="filter-search" type="text" placeholder="Nhập từ khoá"/>
             <button class="button">
               <ion-icon name="search"></ion-icon>
             </button>
           </div>
         </div>
-        <table class="product table"> 
-          <thead class="table-head"> 
-            <tr>
-              <th> 
-                <ion-icon name="image-outline"></ion-icon>
-              </th>
-              <th>Product Name</th>
-              <th>Entry Date </th>
-              <th>Quantity </th>
-              <th>Price </th>
-              <th>Category </th>
-              <th>Action </th>
-            </tr>
-          </thead>
-          <tbody class="table-body"> 
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
-              </td>
-              <td> 
-                <div class="product-name"> 
-                  <p>Product Name</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-entry-date"> 
-                  <p>12/12/2020</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-quantity"> 
-                  <p>99</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-price"> 
-                  <del>400$</del>
-                  <p>99$</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-category"> 
-                  <p>Headphone</p>
-                </div>
-              </td>
-              <td>
-                <div class="product-action"> <a class="product-update" href="#">
-                    <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
-                    <ion-icon name="trash-outline"></ion-icon></a></div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div>
+          <table class="product table"> 
+            <thead class="table-head"> 
+              <tr>
+                <th> 
+                  <ion-icon name="image-outline"></ion-icon>
+                </th>
+                <th>Tên sản phẩm</th>
+                <th>Thời gian nhập</th>
+                <th>Số lượng</th>
+                <th>Giá</th>
+                <th>Danh mục</th>
+                <th>Hàng động</th>
+              </tr>
+            </thead>
+            <tbody class="table-body"> 
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 1</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 2</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 3</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 4</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 5</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 6</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 7</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 8</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 9</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+              <tr>
+                <td> 
+                  <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+                </td>
+                <td> 
+                  <div class="product-name"> 
+                    <p>Sản phẩm 10</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-entry-date"> 
+                    <p>12/12/2020</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-quantity"> 
+                    <p>99</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-price"> 
+                    <del>400$</del>
+                    <p>99$</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-category"> 
+                    <p>Tai nghe</p>
+                  </div>
+                </td>
+                <td>
+                  <div class="product-action"> <a class="product-update" href="#">
+                      <ion-icon name="create-outline"></ion-icon></a><span>|</span><a href="#">
+                      <ion-icon name="trash-outline"></ion-icon></a></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <button class="table-button button product-add">
-          <p>Add Product</p>
+          <p>Thêm sản phẩm</p>
         </button>
         <div class="product-form">
           <div class="product-form-container">
-            <h2 class="sub-title product-form-title">Add New Product </h2><a class="product-form-close" href="#">
+            <h2 class="sub-title product-form-title">Thêm mới sản phẩm</h2><a class="product-form-close" href="#">
               <ion-icon name="close-circle-outline"></ion-icon></a>
             <div class="product-form-content"> 
-              <label>Choose Category: </label>
+              <label>Chọn danh mục:</label>
               <select class="product-form-select">
-                <option default>-- Select Category --</option>
-                <option value="Headphone">Headphone</option>
-                <option value="Smartphone">Smartphone</option>
-                <option value="Laptop">Laptop</option>
-                <option value="Camera">Camera</option>
+                <option default>-- Danh mục --</option>
+                <option value="Headphone">Tai nghe</option>
+                <option value="Smartphone">Điện thoại</option>
+                <option value="Laptop">Máy tính</option>
+                <option value="Camera">Thiết bị quay</option>
               </select>
-              <label>Choose Brand:</label>
+              <label>Chọn thương hiệu:</label>
               <select class="product-form-select">
-                <option default>-- Select Brand --</option>
+                <option default>-- Thương hiệu --</option>
                 <option value="Apple">Apple</option>
                 <option value="Samsung">Samsung</option>
                 <option value="Sony">Sony</option>
                 <option value="Canon">Canon</option>
               </select>
-              <label>Product Image:</label>
+              <label>Hình ảnh sản phẩm:</label>
               <input class="product-form-input" type="file">
-              <label>Product Name:</label>
-              <input class="product-form-input" type="text" placeholder="Enter product name">
-              <label>Virtual selling price: (Display Sale! if greater than the actual price):</label>
-              <input class="product-form-input" type="text" placeholder="Enter product price">
-              <label>Actual selling price: </label>
-              <input class="product-form-input" type="text" placeholder="Enter product price">
-              <label>Product Quantity:</label>
-              <input class="product-form-input" type="text" placeholder="Enter product quantity">
-              <label>Sale:</label>
+              <label>Tên sản phẩm:</label>
+              <input class="product-form-input" type="text" placeholder="Nhập tên sản phẩm">
+              <label>Giá bán ảo (Hiển thị khi lớn hơn giá bán thực tế):</label>
+              <input class="product-form-input" type="text" placeholder="Nhập giá sản phẩm">
+              <label>Giá bán thực tế: </label>
+              <input class="product-form-input" type="text" placeholder="Nhập giá sản phẩm">
+              <label>Giảm giá:</label>
               <div class="product-form-radio-container">
                 <div> 
                   <input type="radio" name="sale" id="sale-y" value="yes" checked>
-                  <label for="sale-y">Yes!</label>
+                  <label for="sale-y">Có!</label>
                 </div>
                 <div> 
                   <input type="radio" name="sale" id="sale-n" value="no">
-                  <label for="sale-n">No!</label>
+                  <label for="sale-n">Không!</label>
                 </div>
               </div>
-              <label>Hot:</label>
+              <label>Bán chạy:</label>
               <div class="product-form-radio-container"> 
                 <div> 
                   <input type="radio" name="hot" id="hot-y" value="yes" checked>
-                  <label for="hot-y">Yes!</label>
+                  <label for="hot-y">Có!</label>
                 </div>
                 <div>
                   <input type="radio" name="hot" id="hot-n" value="no">
-                  <label for="hot-n">No!</label>
+                  <label for="hot-n">Không!</label>
                 </div>
               </div>
               <div class="product-form-input-container"> 
                 <div> 
-                  <label for="entry-date">Entry date:</label>
-                  <input type="text" name="entry-date" placeholder="Entry-date">
+                  <label for="entry-date">Ngày nhập hàng:</label>
+                  <input type="date" name="entry-date" placeholder="Entry-date">
                 </div>
                 <div>
-                  <label for="quantity">Quantity:</label>
-                  <input type="text" name="quantity" placeholder="Quantity">
+                  <label for="quantity">Số lượng:</label>
+                  <input type="text" name="quantity" placeholder="Nhập số lượng">
                 </div>
               </div>
-              <label>Product Description:</label><textarea id="editor" name="description"></textarea>
-              <button class="product-form-button button" type="submit">Add Product</button>
+              <label>Mô tả sản phẩm:</label><textarea id="editor" name="description"></textarea>
+              <button class="product-form-button button" type="submit">Thêm sản phẩm</button>
             </div>
           </div>
         </div>
         <div class="product-form">
           <div class="product-form-container">
-            <h2 class="sub-title product-form-title">Edit Product</h2><a class="product-form-close" href="#">
+            <h2 class="sub-title product-form-title">Chỉnh sửa sản phẩm</h2><a class="product-form-close" href="#">
               <ion-icon name="close-circle-outline"></ion-icon></a>
             <div class="product-form-content"> 
-              <label>Choose Category: </label>
+              <label>Chọn danh mục:</label>
               <select class="product-form-select">
-                <option default>-- Select Category --</option>
-                <option value="Headphone">Headphone</option>
-                <option value="Smartphone">Smartphone</option>
-                <option value="Laptop">Laptop</option>
-                <option value="Camera">Camera</option>
+                <option default>-- Danh mục --</option>
+                <option value="Headphone">Tai nghe</option>
+                <option value="Smartphone">Điện thoại</option>
+                <option value="Laptop">Máy tính</option>
+                <option value="Camera">Thiết bị quay</option>
               </select>
-              <label>Choose Brand:</label>
+              <label>Chọn thương hiệu:</label>
               <select class="product-form-select">
-                <option default>-- Select Brand --</option>
+                <option default>-- Thương hiệu --</option>
                 <option value="Apple">Apple</option>
                 <option value="Samsung">Samsung</option>
                 <option value="Sony">Sony</option>
                 <option value="Canon">Canon</option>
               </select>
-              <label>Product Image:</label>
+              <label>Hình ảnh sản phẩm:</label>
               <input class="product-form-input" type="file">
-              <div class="product-form-image"> <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image"></div>
-              <label>Product Name:</label>
-              <input class="product-form-input" type="text" placeholder="Enter product name">
-              <label>Virtual selling price: (Display Sale! if greater than the actual price):</label>
-              <input class="product-form-input" type="text" placeholder="Enter product price">
-              <label>Actual selling price: </label>
-              <input class="product-form-input" type="text" placeholder="Enter product price">
-              <label>Product Quantity:</label>
-              <input class="product-form-input" type="text" placeholder="Enter product quantity">
-              <label>Sale:</label>
+              <div class="product-form-image"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image"></div>
+              <label>Tên sản phẩm:</label>
+              <input class="product-form-input" type="text" placeholder="Nhập tên sản phẩm">
+              <label>Giá bán ảo (Hiển thị khi lớn hơn giá bán thực tế):</label>
+              <input class="product-form-input" type="text" placeholder="Nhập giá sản phẩm">
+              <label>Giá bán thực tế: </label>
+              <input class="product-form-input" type="text" placeholder="Nhập giá sản phẩm">
+              <label>Giảm giá:</label>
               <div class="product-form-radio-container">
                 <div> 
                   <input type="radio" name="sale" id="sale-y" value="yes" checked>
-                  <label for="sale-y">Yes!</label>
+                  <label for="sale-y">Có!</label>
                 </div>
                 <div> 
                   <input type="radio" name="sale" id="sale-n" value="no">
-                  <label for="sale-n">No!</label>
+                  <label for="sale-n">Không!</label>
                 </div>
               </div>
-              <label>Hot:</label>
+              <label>Bán chạy:</label>
               <div class="product-form-radio-container"> 
                 <div> 
                   <input type="radio" name="hot" id="hot-y" value="yes" checked>
-                  <label for="hot-y">Yes!</label>
+                  <label for="hot-y">Có!</label>
                 </div>
                 <div>
                   <input type="radio" name="hot" id="hot-n" value="no">
-                  <label for="hot-n">No!</label>
+                  <label for="hot-n">Không!</label>
                 </div>
               </div>
               <div class="product-form-input-container"> 
                 <div> 
-                  <label for="entry-date">Entry date:</label>
-                  <input type="text" name="entry-date" placeholder="Entry-date">
+                  <label for="entry-date">Ngày nhập hàng:</label>
+                  <input type="date" name="entry-date" placeholder="Entry-date">
                 </div>
                 <div>
-                  <label for="quantity">Quantity:</label>
-                  <input type="text" name="quantity" placeholder="Quantity">
+                  <label for="quantity">Số lượng:</label>
+                  <input type="text" name="quantity" placeholder="Nhập số lượng">
                 </div>
               </div>
-              <label>Product Description:</label><textarea id="editor" name="description"></textarea>
-              <button class="product-form-button button" type="submit">Add Product</button>
+              <label>Mô tả sản phẩm:</label><textarea id="editor" name="description"></textarea>
+              <button class="product-form-button button" type="submit">Thêm sản phẩm</button>
             </div>
           </div>
         </div>
@@ -590,9 +592,9 @@
     </div>
     <footer class="footer"> 
       <div class="footer-copyright"> 
-        <p>© 2023. All rights reserved</p>
+        <p>© 2023. Mọi bản quyền được bảo lưu.</p>
       </div>
-      <div class="footer-brand"> <span>Accept For</span>
+      <div class="footer-brand"> <span>Chấp nhận cho</span>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
         <div class="footer-item"><img srcset="./images/footer/1.png 2x" alt="brand"></div>
