@@ -10,13 +10,24 @@ function raf(time) {
 }
 requestAnimationFrame(raf)
 
+ 
+// FOOTER
+const footerBtnShow = document.querySelectorAll('.footer-btn-show');
+const footerShow = document.querySelectorAll('.footer-show');
+
+footerBtnShow.forEach((button,index) => {
+  button.addEventListener('click',() => {
+    footerShow[index].classList.toggle('h-44');
+  })
+})
 
 
+
+
+
+// PASSWORD TOGGLE
 const passwordInput = document.getElementById("passwordInput");
 const togglePassword = document.getElementById("togglePassword");
-
-
-
 
 togglePassword.addEventListener("click", () => {
   if (passwordInput.type === "password") {
@@ -27,4 +38,6 @@ togglePassword.addEventListener("click", () => {
     togglePassword.setAttribute("name", "eye-outline");
   }
 });
+
+
 
