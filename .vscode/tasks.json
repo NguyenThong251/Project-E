@@ -57,6 +57,18 @@
       "label": "Run blog",
       "type": "shell",
       "command": "pug layout/blog.pug --watch --pretty --watch"
+    },
+    {
+      "type": "java (build)",
+      "paths": ["${workspace}"],
+      "isFullBuild": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "label": "java (build): Build Workspace",
+      "detail": "$(tools) Build all the Java projects in workspace."
     }
   ]
 }
