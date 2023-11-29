@@ -1,6 +1,7 @@
 <?php
     session_start();
     ob_start();
+include "View/global.php";
 include "View/header.php";
 if (!isset($_GET['pg'])) {
     include "View/home.php";                                                
