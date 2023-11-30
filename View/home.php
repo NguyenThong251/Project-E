@@ -15,27 +15,27 @@
                     <div class="md:hidden block swiper heroSwiper w-80">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide bg-box rounded-box py-4">
-                                <img class="" src="/layout/assets/img/airpod.png" alt="" />
+                                <img class="" src="./layout/assets/img/airpod.png" alt="" />
                                 <p class="text-center font-bold mt-4">Airpod Max</p>
                                 <p class="text-center font-bold mb-6">59.9$</p>
                             </div>
                             <div class="swiper-slide bg-box rounded-box py-4">
-                                <img class="" src="/layout/assets/img/airpod.png" alt="" />
+                                <img class="" src="./layout/assets/img/airpod.png" alt="" />
                                 <p class="text-center font-bold mt-4">Airpod Max</p>
                                 <p class="text-center font-bold mb-6">59.9$</p>
                             </div>
                             <div class="swiper-slide bg-box rounded-box py-4">
-                                <img class="" src="/layout/assets/img/airpod.png" alt="" />
+                                <img class="" src="./layout/assets/img/airpod.png" alt="" />
                                 <p class="text-center font-bold mt-4">Airpod Max</p>
                                 <p class="text-center font-bold mb-6">59.9$</p>
                             </div>
                             <div class="swiper-slide bg-box rounded-box py-4">
-                                <img class="" src="/layout/assets/img/airpod.png" alt="" />
+                                <img class="" src="./layout/assets/img/airpod.png" alt="" />
                                 <p class="text-center font-bold mt-4">Airpod Max</p>
                                 <p class="text-center font-bold mb-6">59.9$</p>
                             </div>
                             <div class="swiper-slide bg-box rounded-box py-4">
-                                <img class="" src="/layout/assets/img/airpod.png" alt="" />
+                                <img class="" src="./layout/assets/img/airpod.png" alt="" />
                                 <p class="text-center font-bold mt-4">Airpod Max</p>
                                 <p class="text-center font-bold mb-6">59.9$</p>
                             </div>
@@ -50,7 +50,7 @@
 
                 <div>
                     <div class="hidden w-full rounded-box bg-box md:flex items-center justify-center mt-8 md:py-24">
-                        <img src="/layout/assets/img/image 182.png" alt="" />
+                        <img src="./layout/assets/img/image 182.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -59,19 +59,19 @@
             <div class="col-start-8 col-span-5 hidden md:block">
                 <div class="bg-box rounded-box py-8 flex flex-col items-center gap-8">
                     <div class="flex justify-center items-center">
-                        <img class="" src="/layout/assets/img/airpod.png" alt="" />
+                        <img class="" src="./layout/assets/img/airpod.png" alt="" />
                     </div>
                     <div class="flex gap-8 mt-4 items-center">
                         <div class="px-12 py-4 text-h3 bg-primary rounded-button text-white font-bold">
                             NEW ARRIVAL
                         </div>
                         <button class="p-6 rounded-full bg-primary">
-                            <img src="/layout/assets/img/Vector.png" alt="" />
+                            <img src="./layout/assets/img/Vector.png" alt="" />
                         </button>
                     </div>
                 </div>
                 <div class="rounded-box bg-box mt-4 flex justify-center items-center h-80">
-                    <img class="" src="assets/img/image-removebg-preview (1) 1.png" alt="" />
+                    <img class="" src="./layout/assets/img/image-removebg-preview (1) 1.png" alt="" />
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@
 
                 <div class="col-start-8 col-span-5 sale-banner-img-container">
                     <div>
-                        <img class="sale-banner-img" src="/layout/assets/img/image-removebg-preview 3.png" alt="" />
+                        <img class="sale-banner-img" src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                 <!-- SINGLE PRODUCT -->
                 <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                     <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                        <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                     </div>
                     <div>
                         <h1 class="text-center text-h3 font-bold">
@@ -221,7 +221,7 @@
                 <!-- SINGLE PRODUCT -->
                 <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                     <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                        <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                     </div>
                     <div>
                         <h1 class="text-center text-h3 font-bold">
@@ -255,7 +255,7 @@
                 <!-- SINGLE PRODUCT -->
                 <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                     <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                        <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                     </div>
                     <div>
                         <h1 class="text-center text-h3 font-bold">
@@ -289,7 +289,7 @@
                 <!-- SINGLE PRODUCT -->
                 <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                     <div>
-                        <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                        <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                     </div>
                     <div>
                         <h1 class="text-center text-h3 font-bold">
@@ -373,7 +373,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -402,7 +402,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -430,7 +430,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -458,7 +458,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -486,7 +486,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -514,7 +514,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -542,7 +542,7 @@
                                 </div>
                                 <!-- IMG -->
                                 <div class="bg-white md:bg-box md:w-60 w-full">
-                                    <img src="/layout/assets/img/airpod.png" alt="" />
+                                    <img src="./layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -586,7 +586,7 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">
@@ -619,41 +619,7 @@
                     </div>
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
-                        </div>
-                        <div>
-                            <h1 class="text-center text-h3 font-bold">
-                                3D™ wireless headset
-                            </h1>
-                            <p class="text-center">Headphone</p>
-                        </div>
-                        <div class="flex justify-center items-center group mt-8">
-                            <p
-                                class="py-2 px-4 border-primary border-2 translate-x-28 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold mr-2">
-                                $499
-                            </p>
-                            <div class="flex group-hover:-translate-x-10 translate-x-72 transition duration-500">
-                                <div
-                                    class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
-                                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
-                                </div>
-
-                                <div
-                                    class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
-                                    <ion-icon name="eye-outline"></ion-icon>
-                                </div>
-
-                                <div
-                                    class="py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary duration-500 transition cursor-pointer hover:text-white">
-                                    <i class="fa-regular fa-heart text-xl"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- SINGLE PRODUCT -->
-                    <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
-                        <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">
@@ -687,7 +653,7 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">
@@ -721,7 +687,7 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">
@@ -755,7 +721,7 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">
@@ -789,7 +755,7 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">
@@ -823,7 +789,41 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
                         <div>
-                            <img src="./assets/img/image-removebg-preview 3.png" alt="" />
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
+                        </div>
+                        <div>
+                            <h1 class="text-center text-h3 font-bold">
+                                3D™ wireless headset
+                            </h1>
+                            <p class="text-center">Headphone</p>
+                        </div>
+                        <div class="flex justify-center items-center group mt-8">
+                            <p
+                                class="py-2 px-4 border-primary border-2 translate-x-28 w-fit group-hover:-translate-x-32 transition duration-500 rounded-button font-bold mr-2">
+                                $499
+                            </p>
+                            <div class="flex group-hover:-translate-x-10 translate-x-72 transition duration-500">
+                                <div
+                                    class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="cart-outline" class="text-xl"></ion-icon>
+                                </div>
+
+                                <div
+                                    class="text-2xl py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary hover:text-white duration-500 transition cursor-pointer">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </div>
+
+                                <div
+                                    class="py-2 px-4 w-fit border-2 border-primary rounded-button mr-4 hover:bg-primary duration-500 transition cursor-pointer hover:text-white">
+                                    <i class="fa-regular fa-heart text-xl"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SINGLE PRODUCT -->
+                    <div class="px-6 py-12 w-4/4 bg-box rounded-box overflow-hidden">
+                        <div>
+                            <img src="./layout/assets/img/image-removebg-preview 3.png" alt="" />
                         </div>
                         <div>
                             <h1 class="text-center text-h3 font-bold">

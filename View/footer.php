@@ -2,7 +2,7 @@
     <div class="container mb-8 mt-24 grid grid-cols-1 mx-auto md:grid-cols-4 mt-22">
         <div class="flex items-center md:mx-0">
             <div class="img w-24 h-24">
-                <img src="./assets/img/delivery.png" alt="" />
+                <img src="./layout/assets/img/delivery.png" alt="" />
             </div>
 
             <div class="info ml-4 mb-2">
@@ -13,7 +13,7 @@
 
         <div class="flex items-center md:mx-0">
             <div class="img w-24 h-24">
-                <img src="./assets/img/money back.png" alt="" />
+                <img src="./layout/assets/img/money back.png" alt="" />
             </div>
 
             <div class="info ml-4 mb-2">
@@ -24,7 +24,7 @@
 
         <div class="flex items-center md:mx-0">
             <div class="img w-24 h-24">
-                <img src="./assets/img/return.png" alt="" />
+                <img src="./layout/assets/img/return.png" alt="" />
             </div>
 
             <div class="info ml-4 mb-2">
@@ -35,7 +35,7 @@
 
         <div class="flex items-center md:mx-0">
             <div class="img w-24 h-24">
-                <img src="./assets/img/support.png" alt="" />
+                <img src="./layout/assets/img/support.png" alt="" />
             </div>
 
             <div class="info ml-4 mb-2">
@@ -54,12 +54,12 @@
 
                 <div class="">
                     <div>
-                        <img class="inline-block mr-4" src="assets/img/mail.png" alt="" />
+                        <img class="inline-block mr-4" src="./layout/assets/img/mail.png" alt="" />
                         <span class="color-777">example@domain.com</span>
                     </div>
 
                     <div>
-                        <img class="inline-block mr-4" src="assets/img/telephone.png" alt="" />
+                        <img class="inline-block mr-4" src="./layout/assets/img/telephone.png" alt="" />
                         <span class="color-777">(84+) 123 456 78</span>
                     </div>
                 </div>
@@ -95,9 +95,9 @@
                 <h1 class="font-bold text-h2 text-lg">Follow Us</h1>
                 <div class="mt-2">
                     <div class="flex gap-4 cursor-pointer">
-                        <img class="w-10 h-10 mr-2" src="./assets/img/facebook (2).png" alt="" />
-                        <img class="w-10 h-10 mr-2" src="./assets/img/instagram.png" alt="" />
-                        <img class="w-10 h-10 mr-2" src="./assets/img/linkedin.png" alt="" />
+                        <img class="w-10 h-10 mr-2" src="./layout/assets/img/facebook (2).png" alt="" />
+                        <img class="w-10 h-10 mr-2" src="./layout/assets/img/instagram.png" alt="" />
+                        <img class="w-10 h-10 mr-2" src="./layout/assets/img/linkedin.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -109,10 +109,10 @@
                 <p class="color-777">Accept For</p>
 
                 <div class="payment_img flex justify-between items-center ml-4">
-                    <img class="mr-2 w-6 h-6" src="./assets/img/paypal.png" alt="" />
-                    <img class="mr-2 w-14 h-14" src="./assets/img/pay-1.png" alt="" />
-                    <img class="mr-2 w-12 h-12" src="./assets/img/visa.png" alt="" />
-                    <img class="mr-2 w-12 h-12" src="./assets/img/momo.png" alt="" />
+                    <img class="mr-2 w-6 h-6" src="./layout/assets/img/paypal.png" alt="" />
+                    <img class="mr-2 w-14 h-14" src="./layout/assets/img/pay-1.png" alt="" />
+                    <img class="mr-2 w-12 h-12" src="./layout/assets/img/visa.png" alt="" />
+                    <img class="mr-2 w-12 h-12" src="./layout/assets/img/momo.png" alt="" />
                 </div>
             </div>
         </div>
@@ -126,8 +126,8 @@
 <script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="/layout/assets/js/swiper.js"></script>
-<script src="/layout/assets/js/tailwind.js"></script>
-<script src="/layout/assets/js/index.js"></script>
+<script src="./layout/assets/js/swiper.js"></script>
+<script src="./layout/assets/js/tailwind.js"></script>
+<script src="./layout/assets/js/index.js"></script>
 
 </html>
