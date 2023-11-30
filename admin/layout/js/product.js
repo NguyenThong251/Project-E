@@ -50,4 +50,9 @@ prodForms.forEach((prodForm) => {
     }, 250);
   }
   prodFormClose.addEventListener("click", closeForm);
+  prodForm.addEventListener("click", (e) => {
+    if (e.target == prodForm) {
+      closeForm();
+    }
+  });
 });

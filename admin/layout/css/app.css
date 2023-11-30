@@ -4,8 +4,12 @@
 
 .table {
   width: 100%;
+  min-width: max-content;
   border-collapse: collapse;
   border: 1px solid #000;
+}
+.table-container {
+  overflow-x: auto;
 }
 .table-head {
   font-size: 18px;
@@ -188,6 +192,7 @@ body {
 }
 
 .main {
+  overflow: auto;
   position: relative;
   z-index: 999;
   flex: 1;

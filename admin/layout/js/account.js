@@ -19,3 +19,8 @@ function closeForm() {
   }, 250);
 }
 closeBtn.addEventListener("click", closeForm);
+form.addEventListener("click", (e) => {
+  if (e.target == form) {
+    closeForm();
+  }
+});

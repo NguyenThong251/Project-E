@@ -20,3 +20,8 @@ function closeForm() {
   }, 250);
 }
 orderFormClose.addEventListener("click", closeForm);
+orderForm.addEventListener("click", (e) => {
+  if (e.target == orderForm) {
+    closeForm();
+  }
+});

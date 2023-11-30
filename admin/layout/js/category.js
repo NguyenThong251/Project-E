@@ -40,4 +40,9 @@ cataForms.forEach((cataForm) => {
     }, 250);
   }
   cataFormClose.addEventListener("click", closeForm);
+  cataForm.addEventListener("click", (e) => {
+    if (e.target == cataForm) {
+      closeForm();
+    }
+  });
 });

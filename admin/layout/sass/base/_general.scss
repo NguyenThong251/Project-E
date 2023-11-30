@@ -4,7 +4,12 @@
   padding: 40px 0;
 }
 .table {
+  &-container {
+    overflow-x: auto;
+    // max-height: 600px;
+  }
   width: 100%;
+  min-width: max-content;
   border-collapse: collapse;
   border: 1px solid $color;
   // border-radius: 12px;
