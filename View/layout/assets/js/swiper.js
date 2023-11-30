@@ -23,7 +23,7 @@ var swiper = new Swiper(".heroSwiper", {
   
   
     breakpoints: {
-      640: {
+      340: {
         slidesPerView: 1,
         spaceBetween: 30,
       },

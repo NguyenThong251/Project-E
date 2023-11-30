@@ -24,7 +24,7 @@ tailwind.config = {
         secondary: "#ffffff",
         gray: "#B1B5C3",
         third: "#292930",
-        box: "#EBEBEB",
+        box: "#edf1f0",
         pink: "#FF497C",
         detail: "#E6DFD7",
 

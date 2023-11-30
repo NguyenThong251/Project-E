@@ -25,7 +25,7 @@
             <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
                 <!-- LOGO -->
                 <div class="w-32 md:w-auto">
-                    <img src="assets/img/logo.png" alt="Logo Web" />
+                    <img src="view/layout/assets/img/logo.png" alt="Logo Web" />
                 </div>
                 <!-- NAV -->
                 <div class="hidden xl:block">

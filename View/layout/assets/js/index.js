@@ -17,6 +17,7 @@ const footerShow = document.querySelectorAll('.footer-show');
 
 footerBtnShow.forEach((button,index) => {
   button.addEventListener('click',() => {
+    button.classList.toggle('rotate-180');
     footerShow[index].classList.toggle('h-44');
   })
 })

@@ -78,12 +78,12 @@
             <div class="ml-3 lg:ml-6">
                 <div class="flex gap-2">
                     <h1 class="font-bold text-h2 text-lg">Account</h1>
-                    <button class="block lg:hidden footer-btn-show">
+                    <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </div>
 
-                <div class="mt-2 leading-9 cursor-pointer h-0 footer-show overflow-hidden">
+                <div class="mt-2 leading-9 cursor-pointer h-0 footer-show overflow-hidden ">
                     <p class="color-777">My Account</p>
                     <p class="color-777">Login</p>
                     <p class="color-777">Cart</p>
@@ -95,7 +95,7 @@
             <div class="ml-3 lg:ml-12">
                 <div class="flex gap-2">
                 <h1 class="font-bold text-h2 text-lg ">Quick Link</h1>
-                <button class="block lg:hidden footer-btn-show">
+                <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </div>
