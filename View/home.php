@@ -36,6 +36,7 @@
                             </div>
                             <div class="swiper-slide bg-box rounded-box py-4 flex flex-col items-center">
                                 <img class="" src="view/layout/assets/img/airpod.png" alt="" />
+
                                 <p class="text-center font-bold mt-4">Airpod Max</p>
                                 <p class="text-center font-bold mb-6">59.9$</p>
                             </div>
@@ -51,8 +52,10 @@
                 </div>
 
                 <div>
+
                     <div class="hidden w-full rounded-box bg-box lg:flex items-center justify-center mt-8 md:py-24">
                         <img src="view/layout/assets/img/image 182.png" alt="" />
+
                     </div>
                 </div>
             </div>
@@ -61,19 +64,23 @@
             <div class="col-start-8 col-span-5 hidden lg:block">
                 <div class="bg-box rounded-box py-8 flex flex-col items-center gap-8">
                     <div class="flex justify-center items-center">
-                        <img class="" src="view/layout/assets/img/airpod.png" alt="" />
+          <img class="" src="./layout/assets/img/airpod.png" alt="" />
+
                     </div>
                     <div class="flex gap-8 mt-4 items-center">
                         <div class="px-12 py-4 text-h3 bg-primary rounded-button text-white font-bold">
                             NEW ARRIVAL
                         </div>
                         <button class="p-6 rounded-full bg-primary">
-                            <img src="view/layout/assets/img/Vector.png" alt="" />
+               <img src="./layout/assets/img/Vector.png" alt="" />
+
                         </button>
                     </div>
                 </div>
                 <div class="rounded-box bg-box mt-4 flex justify-center items-center h-80">
-                    <img class="" src="view/layout/assets/img/image-removebg-preview (1) 1.png" alt="" />
+
+                    <img class="" src="./layout/assets/img/image-removebg-preview (1) 1.png" alt="" />
+
                 </div>
             </div>
         </div>
@@ -166,7 +173,9 @@
 
                 <div class="col-start-8 col-span-5 sale-banner-img-container lg:-mt-44">
                     <div>
+
                         <img class="sale-banner-img " src="view/layout/assets/img/image-removebg-preview 3.png" alt="" />
+
                     </div>
                 </div>
             </div>
@@ -186,6 +195,7 @@
             <h2 class="text-h3 font-bold my-4 ">Explore our Products</h2>
             <div class="grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
                 <!-- SINGLE PRODUCT -->
+
                 <div class="overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16">
                         <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -193,6 +203,7 @@
                             <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
+
                             </div>
                             <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
@@ -203,12 +214,14 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </div>
+
                     <!-- DES -->
                     <p class="text-center font-bold">AirPod Pro</p>
                     <p class="text-center text-sm">Apple</p>
                     <div class="flex justify-center gap-4">
                         <del class="font-del">$59.99</del>
                         <p>$59.99</p>
+
                     </div>
                 </div>
                 <div class="overflow-hidden h-fit w-fit group">
@@ -228,6 +241,7 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </div>
+
                     <!-- DES -->
                     <p class="text-center font-bold">AirPod Pro</p>
                     <p class="text-center text-sm">Apple</p>
@@ -243,6 +257,7 @@
                             <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
+
                             </div>
                             <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
@@ -261,6 +276,7 @@
                         <p>$59.99</p>
                     </div>
                 </div>
+
                 <div class="overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16">
                         <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -277,6 +293,7 @@
                         <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
+
                     </div>
                     <!-- DES -->
                     <p class="text-center font-bold">AirPod Pro</p>
@@ -389,8 +406,10 @@
                                     </div>
                                 </div>
                                 <!-- IMG -->
+
                                 <div class="bg-white lg:bg-box lg:w-60 w-full">
                                     <img src="view/layout/assets/img/airpod.png" alt="" />
+
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -446,6 +465,67 @@
                                     </div>
                                 </div>
                                 <!-- IMG -->
+
+                                <div class="bg-white lg:bg-box lg:w-60 w-full">
+                                    <img src="view/layout/assets/img/airpod.png" alt="" />
+
+                                    <p class="text-center font-bold my-4">Airpod Max</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col lg:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                <!-- CONTENT -->
+                                <div class="px-4 py-4 flex flex-col justify-center">
+                                    <!-- STAR -->
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="w-50 my-4 text-customGray text-sm lg:w-80">
+                                        Look at the stars lighting up the sky: no one of them
+                                        stays in the same place.
+                                    </p>
+                                    <div>
+                                        <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                        <span class="text-small text-customGray">19/11/2023</span>
+                                    </div>
+                                </div>
+                                <!-- IMG -->
+
+                                <div class="bg-white lg:bg-box lg:w-60 w-full">
+                                    <img src="view/layout/assets/img/airpod.png" alt="" />
+
+                                    <p class="text-center font-bold my-4">Airpod Max</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col lg:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
+                                <!-- CONTENT -->
+                                <div class="px-4 py-4 flex flex-col justify-center">
+                                    <!-- STAR -->
+                                    <div>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p class="w-50 my-4 text-customGray text-sm lg:w-80">
+                                        Look at the stars lighting up the sky: no one of them
+                                        stays in the same place.
+                                    </p>
+                                    <div>
+                                        <h3 class="font-bold text-h2">Anhbakhia</h3>
+                                        <span class="text-small text-customGray">19/11/2023</span>
+                                    </div>
+                                </div>
+                                <!-- IMG -->
+
                                 <div class="bg-white lg:bg-box lg:w-60 w-full">
                                     <img src="view/layout/assets/img/airpod.png" alt="" />
                                     <p class="text-center font-bold my-4">Airpod Max</p>
@@ -474,8 +554,10 @@
                                     </div>
                                 </div>
                                 <!-- IMG -->
+
                                 <div class="bg-white lg:bg-box lg:w-60 w-full">
                                     <img src="view/layout/assets/img/airpod.png" alt="" />
+
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -502,8 +584,10 @@
                                     </div>
                                 </div>
                                 <!-- IMG -->
+
                                 <div class="bg-white lg:bg-box lg:w-60 w-full">
                                     <img src="view/layout/assets/img/airpod.png" alt="" />
+
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -530,64 +614,10 @@
                                     </div>
                                 </div>
                                 <!-- IMG -->
+
                                 <div class="bg-white lg:bg-box lg:w-60 w-full">
                                     <img src="view/layout/assets/img/airpod.png" alt="" />
-                                    <p class="text-center font-bold my-4">Airpod Max</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex flex-col lg:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
-                                <!-- CONTENT -->
-                                <div class="px-4 py-4 flex flex-col justify-center">
-                                    <!-- STAR -->
-                                    <div>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <p class="w-50 my-4 text-customGray text-sm lg:w-80">
-                                        Look at the stars lighting up the sky: no one of them
-                                        stays in the same place.
-                                    </p>
-                                    <div>
-                                        <h3 class="font-bold text-h2">Anhbakhia</h3>
-                                        <span class="text-small text-customGray">19/11/2023</span>
-                                    </div>
-                                </div>
-                                <!-- IMG -->
-                                <div class="bg-white lg:bg-box lg:w-60 w-full">
-                                    <img src="view/layout/assets/img/airpod.png" alt="" />
-                                    <p class="text-center font-bold my-4">Airpod Max</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="flex flex-col lg:flex-row bg-white mt-8 shadow-2xl rounded-box justify-between">
-                                <!-- CONTENT -->
-                                <div class="px-4 py-4 flex flex-col justify-center">
-                                    <!-- STAR -->
-                                    <div>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <p class="w-50 my-4 text-customGray text-sm lg:w-80">
-                                        Look at the stars lighting up the sky: no one of them
-                                        stays in the same place.
-                                    </p>
-                                    <div>
-                                        <h3 class="font-bold text-h2">Anhbakhia</h3>
-                                        <span class="text-small text-customGray">19/11/2023</span>
-                                    </div>
-                                </div>
-                                <!-- IMG -->
-                                <div class="bg-white lg:bg-box lg:w-60 w-full">
-                                    <img src="view/layout/assets/img/airpod.png" alt="" />
+
                                     <p class="text-center font-bold my-4">Airpod Max</p>
                                 </div>
                             </div>
@@ -619,6 +649,7 @@
             <div>
                 <div class="mt-12 hidden justify-center justify-items-center lg:grid md:grid-cols-3 xl:grid-cols-4 gap-4">
                     <!-- SINGLE PRODUCT -->
+
                     <div class="overflow-hidden h-fit w-fit group">
                         <div class="bg-box relative flex justify-center py-16">
                             <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -626,6 +657,7 @@
                                 <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
+
                                 </div>
                                 <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
@@ -636,12 +668,14 @@
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
+
                         <!-- DES -->
                         <p class="text-center font-bold">AirPod Pro</p>
                         <p class="text-center text-sm">Apple</p>
                         <div class="flex justify-center gap-4">
                             <del class="font-del">$59.99</del>
                             <p>$59.99</p>
+
                         </div>
                     </div>
                     <div class="overflow-hidden h-fit w-fit group">
@@ -669,6 +703,7 @@
                             <p>$59.99</p>
                         </div>
                     </div>
+
                     <div class="overflow-hidden h-fit w-fit group">
                         <div class="bg-box relative flex justify-center py-16">
                             <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -676,6 +711,7 @@
                                 <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
+
                                 </div>
                                 <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
@@ -694,6 +730,7 @@
                             <p>$59.99</p>
                         </div>
                     </div>
+
                     <div class="overflow-hidden h-fit w-fit group">
                         <div class="bg-box relative flex justify-center py-16">
                             <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -701,6 +738,7 @@
                                 <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
+
                                 </div>
                                 <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
@@ -719,6 +757,7 @@
                             <p>$59.99</p>
                         </div>
                     </div>
+
                     <div class="block xl:hidden overflow-hidden h-fit w-fit group">
                         <div class="bg-box relative flex justify-center py-16">
                             <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -726,6 +765,7 @@
                                 <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
+
                                 </div>
                                 <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
@@ -744,6 +784,7 @@
                             <p>$59.99</p>
                         </div>
                     </div>
+
                     <div class="block xl:hidden overflow-hidden h-fit w-fit group">
                         <div class="bg-box relative flex justify-center py-16">
                             <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
@@ -751,6 +792,7 @@
                                 <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
+
                                 </div>
                                 <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
@@ -769,6 +811,8 @@
                             <p>$59.99</p>
                         </div>
                     </div>
+
+
 
                 </div>
 
@@ -793,6 +837,7 @@
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
                                 </div>
+
                                 <!-- DES -->
                                 <p class="text-center font-bold">AirPod Pro</p>
                                 <p class="text-center text-sm">Apple</p>
@@ -819,6 +864,7 @@
                                     <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
+
                                 </div>
                                 <!-- DES -->
                                 <p class="text-center font-bold">AirPod Pro</p>
