@@ -18,3 +18,17 @@ mixin filter()
       input#filter-search(type='text' placeholder='Nhập từ khoá')
       button.button
         ion-icon(name='search')
+
+//- Table page
+mixin tablePage()
+  .table-page
+    a(href="#").button.table-page-button
+      ion-icon(name="chevron-back-outline")
+    a(href="#").button.table-page-button
+      span 1
+    a(href="#").button.table-page-button
+      span 2
+    a(href="#").button.table-page-button
+      span 3
+    a(href="#").button.table-page-button
+      ion-icon(name="chevron-forward-outline")

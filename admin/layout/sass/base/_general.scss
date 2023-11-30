@@ -36,6 +36,26 @@
   td {
     padding: 8px 16px;
   }
+  &-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    & .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      & ion-icon {
+        scale: 2;
+      }
+      // &:first-child,
+      // &:last-child {
+      //   font-size: 24px;
+      // }
+    }
+  }
 }
 .filter {
   display: flex;

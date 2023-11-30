@@ -34,6 +34,22 @@
 .table td {
   padding: 8px 16px;
 }
+.table-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.table-page .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.table-page .button ion-icon {
+  scale: 2;
+}
 
 .filter {
   display: flex;
