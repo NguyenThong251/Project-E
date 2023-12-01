@@ -32,23 +32,23 @@
                     <ul class="flex text-h2 gap-12">
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="#">Home</a>
+                                href="index.php?pg=home">Trang chủ</a>
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="#">Product</a>
+                                href="index.php?pg=product">Sản phẩm</a>
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="#">Contact</a>
+                                href="index.php?pg=contact">Liên hệ</a>
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="#">About</a>
+                                href="index.php?pg=about">Về chúng tôi</a>
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="#">Blog</a>
+                                href="index.php?pg=blog">Tin tức</a>
                         </li>
                     </ul>
                 </div>

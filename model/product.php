@@ -28,33 +28,37 @@ function get_product_all(){
     return pdo_query($sql);
 }
 function get_product_hot($limi){
-    $sql = "SELECT * FROM product WHERE hot = 1 ORDER BY id ASC LIMIT ".$limi;
+    $sql = "SELECT p.*, b.name as brand_name 
+        FROM product p
+        JOIN brand b ON p.id_brand = b.id
+        WHERE p.hot = 1
+        ORDER BY p.id ASC
+        LIMIT ".$limi;
     return pdo_query($sql);
 }
 function get_product_new($limi){
     $sql = "SELECT * FROM product WHERE new = 1 ORDER BY id ASC LIMIT ".$limi;
+    return pdo_query($sql);
+}
+function get_product_sale($limi){
+    $sql = "SELECT * FROM product WHERE sale = 1 ORDER BY id ASC LIMIT ".$limi;
+    return pdo_query($sql);
+}
+function get_product_view($limi){
+    $sql = "SELECT * FROM product WHERE view > 100 ORDER BY id ASC LIMIT ".$limi;
+    return pdo_query($sql);
+}
 
-    return pdo_query($sql);
-}
-function get_product_sale(){
-    $sql = "SELECT * FROM product";
-    return pdo_query($sql);
-}
-function get_product_view(){
-    $sql = "SELECT * FROM product";
-    return pdo_query($sql);
-}
-
-function hang_hoa_select_by_id($ma_hh){
-    $sql = "SELECT * FROM hang_hoa WHERE ma_hh=?";
-    return pdo_query_one($sql, $ma_hh);
-}
+// function hang_hoa_select_by_id($ma_hh){
+//     $sql = "SELECT * FROM hang_hoa WHERE ma_hh=?";
+//     return pdo_query_one($sql, $ma_hh);
+// }
 //function product_primary
 function show_product($dssp){
     $html_dssp='';
 foreach ($dssp as $sp) {
     extract($sp);
-    if ($sale > 10 && $sale < 100) {
+    if ($sale > 0 && $sale < 100) {
         $item_sale = '<div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
         Sale '.$sale.'%
     </div>';
@@ -63,9 +67,9 @@ foreach ($dssp as $sp) {
     }
     if($img!="") $img=PATH_IMG.$img;
     $link="index.php?pg=sanphamchitiet&idpro=".$id;
-    $html_dssp.='  <a href="'.$link.'" class="overflow-hidden h-fit w-fit group">
-    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+    $html_dssp.='  <a href="'.$link.'" class=" block overflow-hidden group">
+    <div class="bg-box relative flex items-center h-4/4 h-42 lg:h-96  justify-center pb-20">
+        <img class="group-hover:scale-125  group-hover:blur-sm transition duration-500" 
             src="'.$img.'" alt="">
         <div
             class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
@@ -90,7 +94,7 @@ foreach ($dssp as $sp) {
 
     <!-- DES -->
     <p class="text-center font-bold mt-4 text-sm lg:text-xl">'.$name.'</p>
-    <p class="text-center text-sm">'.$id_brand.'</p>
+    <p class="text-center text-sm">'.$brand_name.'</p>
     <div class="flex justify-center gap-4">
         <del class="font-del text-sm lg:text-lg">'.$price.'VNĐ</del>
         <p class="text-sm lg:text-lg">'.$price_sale.'VNĐ</p>
