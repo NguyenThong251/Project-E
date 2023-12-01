@@ -11,19 +11,155 @@ $html_product_hot = show_product($product_hot);
 
 <section class="mt-12">
     <div>
-        <div class="container grid grid-cols-12">
-            <div class="lg:col-span-6 col-span-12">
-                <div>
-                    <h1 class="text-h1 lg:text-h3 text-center lg:text-left font-bold text-primary">
-                        BE SKILLED BE PROFESSIONAL
-                    </h1>
-                    <p class="hidden lg:block w-1/2 my-4 text-primary">
-                        Gear Up Your Adventure: Quality gear for every journey, ensuring
-                        durability and style. Elevate your experience with our curated
-                        collection
-                    </p>
+        <div class="">
+            <div class="">
+                <div class="">
+                    <div class="hidden lg:block swiper swiperXL bg-box py-24">
+                        <div class="swiper-wrapper mx-auto">
+                            <div class="swiper-slide relative flex justify-center items-center">
+                                <div class="">
+                                    <div>
+                                        <div class="flex gap-2 items-center">
+                                            <div class="w-8 h-8 grid place-content-center rounded-full bg-primary ">
+                                                <i class="fa-solid fa-fire text-white"></i>
+                                            </div>
+                                            Hot deal this week
+                                        </div>
+                                        <h1 class="text-5xl font-bold mt-4">Airpod Pro</h1>
+                                        <!-- <p class="text-md">Apple</p> -->
+                                    </div>
+                                    <p class="w-2/4 my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Mollitia, sapiente commodi optio autem ullam odio?</p>
+                                    <div class="mt-4">
+                                        <del class="text-h2 mr-2">$69.99</del>
+                                        <span class="text-h2 font-bold">$59.99</span>
+                                    </div>
 
-                    <div class="lg:hidden block swiper heroSwiper w-full">
+                                    <a hred="#" class="cursor-pointer border-2 hover:bg-transparent 
+                                                        hover:text-primary hover:border-primary transition 
+                                                        duration-300 px-20 py-4 text-h2 bg-primary text-white 
+                                                        font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">SHOP
+                                        NOW
+                                    </a>
+                                </div>
+                                <img class="" src="View/layout/assets/img/airpod.png" alt="">
+                            </div>
+                            <div class="swiper-slide relative flex justify-center items-center">
+                                <div class="">
+                                    <div>
+                                        <div class="flex gap-2 items-center">
+                                            <div class="w-8 h-8 grid place-content-center rounded-full bg-primary ">
+                                                <i class="fa-solid fa-fire text-white"></i>
+                                            </div>
+                                            Hot deal this week
+                                        </div>
+                                        <h1 class="text-5xl font-bold mt-4">Airpod Pro</h1>
+                                        <!-- <p class="text-md">Apple</p> -->
+                                    </div>
+                                    <p class="w-2/4 my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Mollitia, sapiente commodi optio autem ullam odio?</p>
+                                    <div class="mt-4">
+                                        <del class="text-h2 mr-2">$69.99</del>
+                                        <span class="text-h2 font-bold">$59.99</span>
+                                    </div>
+
+                                    <a hred="#" class="cursor-pointer border-2 hover:bg-transparent 
+                                                        hover:text-primary hover:border-primary transition 
+                                                        duration-300 px-20 py-4 text-h2 bg-primary text-white 
+                                                        font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">SHOP
+                                        NOW
+                                    </a>
+                                </div>
+                                <img class="" src="View/layout/assets/img/airpod.png" alt="">
+                            </div>
+                            <div class="swiper-slide relative flex justify-center items-center">
+                                <div class="">
+                                    <div>
+                                        <div class="flex gap-2 items-center">
+                                            <div class="w-8 h-8 grid place-content-center rounded-full bg-primary ">
+                                                <i class="fa-solid fa-fire text-white"></i>
+                                            </div>
+                                            Hot deal this week
+                                        </div>
+                                        <h1 class="text-5xl font-bold mt-4">Airpod Pro</h1>
+                                        <!-- <p class="text-md">Apple</p> -->
+                                    </div>
+                                    <p class="w-2/4 my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Mollitia, sapiente commodi optio autem ullam odio?</p>
+                                    <div class="mt-4">
+                                        <del class="text-h2 mr-2">$69.99</del>
+                                        <span class="text-h2 font-bold">$59.99</span>
+                                    </div>
+
+                                    <a hred="#" class="cursor-pointer border-2 hover:bg-transparent 
+                                                        hover:text-primary hover:border-primary transition 
+                                                        duration-300 px-20 py-4 text-h2 bg-primary text-white 
+                                                        font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">SHOP
+                                        NOW
+                                    </a>
+                                </div>
+                                <img class="" src="View/layout/assets/img/airpod.png" alt="">
+                            </div>
+                            <div class="swiper-slide relative flex justify-center items-center">
+                                <div class="">
+                                    <div>
+                                        <div class="flex gap-2 items-center">
+                                            <div class="w-8 h-8 grid place-content-center rounded-full bg-primary ">
+                                                <i class="fa-solid fa-fire text-white"></i>
+                                            </div>
+                                            Hot deal this week
+                                        </div>
+                                        <h1 class="text-5xl font-bold mt-4">Airpod Pro</h1>
+                                        <!-- <p class="text-md">Apple</p> -->
+                                    </div>
+                                    <p class="w-2/4 my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Mollitia, sapiente commodi optio autem ullam odio?</p>
+                                    <div class="mt-4">
+                                        <del class="text-h2 mr-2">$69.99</del>
+                                        <span class="text-h2 font-bold">$59.99</span>
+                                    </div>
+
+                                    <a hred="#" class="cursor-pointer border-2 hover:bg-transparent 
+                                                        hover:text-primary hover:border-primary transition 
+                                                        duration-300 px-20 py-4 text-h2 bg-primary text-white 
+                                                        font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">SHOP
+                                        NOW
+                                    </a>
+                                </div>
+                                <img class="" src="View/layout/assets/img/airpod.png" alt="">
+                            </div>
+                            <div class="swiper-slide relative flex justify-center items-center">
+                                <div class="">
+                                    <div>
+                                        <div class="flex gap-2 items-center">
+                                            <div class="w-8 h-8 grid place-content-center rounded-full bg-primary ">
+                                                <i class="fa-solid fa-fire text-white"></i>
+                                            </div>
+                                            Hot deal this week
+                                        </div>
+                                        <h1 class="text-5xl font-bold mt-4">Airpod Pro</h1>
+                                        <!-- <p class="text-md">Apple</p> -->
+                                    </div>
+                                    <p class="w-2/4 my-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                        Mollitia, sapiente commodi optio autem ullam odio?</p>
+                                    <div class="mt-4">
+                                        <del class="text-h2 mr-2">$69.99</del>
+                                        <span class="text-h2 font-bold">$59.99</span>
+                                    </div>
+
+                                    <a hred="#" class="cursor-pointer border-2 hover:bg-transparent 
+                                                        hover:text-primary hover:border-primary transition 
+                                                        duration-300 px-20 py-4 text-h2 bg-primary text-white 
+                                                        font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">SHOP
+                                        NOW
+                                    </a>
+                                </div>
+                                <img class="" src="View/layout/assets/img/airpod.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:hidden block swiper heroSwiper w-full p-8">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide bg-box rounded-box py-4 flex flex-col items-center">
                                 <img class="" src="view/layout/assets/img/airpod.png" alt="" />
@@ -55,7 +191,7 @@ $html_product_hot = show_product($product_hot);
                         <div class="swiper-pagination hero-swiper-pagination"></div>
                     </div>
 
-                    <a hred="#" class="cursor-pointer border-2 hover:bg-transparent 
+                    <a hred="#" class="block lg:hidden cursor-pointer border-2 hover:bg-transparent 
                         hover:text-primary hover:border-primary transition 
                         duration-300 px-20 py-4 text-h2 bg-primary text-white 
                         font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">SHOP
@@ -63,37 +199,10 @@ $html_product_hot = show_product($product_hot);
                 </div>
 
                 <div>
-
-                    <div class="hidden w-full rounded-box bg-box lg:flex items-center justify-center mt-8 md:py-24">
-                        <img src="view/layout/assets/img/image 182.png" alt="" />
-
-                    </div>
                 </div>
             </div>
 
             <!-- RIGHT -->
-            <div class="col-start-8 col-span-5 hidden lg:block">
-                <div class="bg-box rounded-box py-8 flex flex-col items-center gap-8">
-                    <div class="flex justify-center items-center">
-                        <img class="" src="View/layout/assets/img/airpod.png" alt="" />
-
-                    </div>
-                    <div class="flex gap-8 mt-4 items-center">
-                        <div
-                            class="px-12 py-4 text-h3 bg-secondary rounded-button border-2 cursor-pointer border-primary font-bold">
-                            NEW ARRIVAL
-                        </div>
-                        <button class="group p-6 rounded-full bg-primary hover:scale-125 transition duration-300 ">
-                            <img class="" src="View/layout/assets/img/Vector.png" alt="" />
-                        </button>
-                    </div>
-                </div>
-                <div class="rounded-box bg-box mt-4 flex justify-center items-center h-80">
-
-                    <img class="" src="View/layout/assets/img/image-removebg-preview (1) 1.png" alt="" />
-
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -102,8 +211,8 @@ $html_product_hot = show_product($product_hot);
     <div>
         <div class="container">
             <div class="text-center text-h2">
-                SHOP BY CATEGORIES
-                <h1 class="text-h2 lg:text-h1 font-bold">TECH COLLECTION</h1>
+                Mua sản phẩm theo danh mục
+                <h1 class="text-h2 lg:text-h1 font-bold pt-2">BỘ SƯU TẬP CÔNG NGHỆ</h1>
             </div>
             <div
                 class="mt-8 xl:grid flex flex-wrap items-center justify-center xl:grid-cols-5 place-items-center gap-12">
@@ -157,7 +266,7 @@ $html_product_hot = show_product($product_hot);
                         <div class="h-12 w-12 grid place-content-center bg-primary text-white rounded-full">
                             <i class="fa-solid fa-headphones"></i>
                         </div>
-                        <span class="font-bold">Don't Miss !!</span>
+                        <span class="font-bold">Đừng bỏ lỡ !!</span>
                     </div>
 
                     <h1 class="text-h3 mx-auto lg:mx-0 text-center lg:text-left md:text-h1 font-bold w-4/5  mt-8">
