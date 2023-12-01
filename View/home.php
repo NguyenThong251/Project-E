@@ -64,21 +64,22 @@
             <div class="col-start-8 col-span-5 hidden lg:block">
                 <div class="bg-box rounded-box py-8 flex flex-col items-center gap-8">
                     <div class="flex justify-center items-center">
-                        <img class="" src="./layout/assets/img/airpod.png" alt="" />
+                        <img class="" src="View/layout/assets/img/airpod.png" alt="" />
 
                     </div>
                     <div class="flex gap-8 mt-4 items-center">
-                        <div class="px-12 py-4 text-h3 bg-secondary rounded-button border-2 cursor-pointer border-primary font-bold">
+                        <div
+                            class="px-12 py-4 text-h3 bg-secondary rounded-button border-2 cursor-pointer border-primary font-bold">
                             NEW ARRIVAL
                         </div>
                         <button class="group p-6 rounded-full bg-primary hover:scale-125 transition duration-300 ">
-                            <img class="" src="./layout/assets/img/Vector.png" alt="" />
+                            <img class="" src="View/layout/assets/img/Vector.png" alt="" />
                         </button>
                     </div>
                 </div>
                 <div class="rounded-box bg-box mt-4 flex justify-center items-center h-80">
 
-                    <img class="" src="./layout/assets/img/image-removebg-preview (1) 1.png" alt="" />
+                    <img class="" src="View/layout/assets/img/image-removebg-preview (1) 1.png" alt="" />
 
                 </div>
             </div>
@@ -93,7 +94,8 @@
                 SHOP BY CATEGORIES
                 <h1 class="text-h2 lg:text-h1 font-bold">TECH COLLECTION</h1>
             </div>
-            <div class="mt-8 xl:grid flex flex-wrap items-center justify-center xl:grid-cols-5 place-items-center gap-12">
+            <div
+                class="mt-8 xl:grid flex flex-wrap items-center justify-center xl:grid-cols-5 place-items-center gap-12">
                 <div class="cate-big h-96 rounded-button w-3/4 lg:w-1/4 xl:w-full cate-laptop flex justify-center py-2">
                     <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                         <h1>Laptop</h1>
@@ -101,7 +103,8 @@
                     </div>
                 </div>
 
-                <div class="cate-small h-96 xl:h-64 w-3/4 lg:w-1/4 xl:w-full rounded-button cate-phone flex justify-center py-2">
+                <div
+                    class="cate-small h-96 xl:h-64 w-3/4 lg:w-1/4 xl:w-full rounded-button cate-phone flex justify-center py-2">
                     <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                         <h1>Phone</h1>
                         <span class="text-customGray">12 Items</span>
@@ -113,7 +116,8 @@
                         <span class="text-customGray">12 Items</span>
                     </div>
                 </div>
-                <div class="cate-small h-96 xl:h-64 rounded-box w-3/4 xl:w-full lg:w-1/4 cate-headphone flex justify-center py-2">
+                <div
+                    class="cate-small h-96 xl:h-64 rounded-box w-3/4 xl:w-full lg:w-1/4 cate-headphone flex justify-center py-2">
                     <div class="mb-2 py-4 px-4 rounded-box flex gap-4 bg-box self-end">
                         <h1>Headphone</h1>
                         <span class="text-customGray">12 Items</span>
@@ -134,7 +138,8 @@
 <section class="mt-56">
     <div>
         <div class="container bg-box rounded-box w-5/6 lg:w-full mx-auto">
-            <div class="flex flex-col lg:grid lg:grid-cols-12 lg:px-12 py-8 lg:justify-between items-center justify-center">
+            <div
+                class="flex flex-col lg:grid lg:grid-cols-12 lg:px-12 py-8 lg:justify-between items-center justify-center">
                 <div class=" lg:col-start-1 lg:col-span-4">
                     <!-- ICON -->
                     <div class="flex items-center gap-2 font-medium justify-center lg:justify-start">
@@ -148,32 +153,38 @@
                         Enhance Your Music Experience
                     </h1>
                     <div class="mt-4 flex gap-2 justify-center lg:justify-start	">
-                        <div class="bg-white w-14 h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center rounded-full">
+                        <div
+                            class="bg-white w-14 h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center rounded-full">
                             <span class="lg:text-h3 font-bold">16</span>
                             <p class="text-sm lg:text-md">Days</p>
                         </div>
-                        <div class="bg-white w-14 h-14 lg:w-20 w-14 h-14 lg:h-20 flex flex-col justify-center items-center rounded-full">
+                        <div
+                            class="bg-white w-14 h-14 lg:w-20 w-14 h-14 lg:h-20 flex flex-col justify-center items-center rounded-full">
                             <span class="lg:text-h3 font-bold">16</span>
                             <p>Days</p>
                         </div>
-                        <div class="bg-white w-14 h-14 lg:w-20 w-14 h-14 lg:h-20 flex flex-col justify-center items-center rounded-full">
+                        <div
+                            class="bg-white w-14 h-14 lg:w-20 w-14 h-14 lg:h-20 flex flex-col justify-center items-center rounded-full">
                             <span class="lg:text-h3 font-bold">16</span>
                             <p>Days</p>
                         </div>
-                        <div class="bg-white w-14 h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center rounded-full">
+                        <div
+                            class="bg-white w-14 h-14 lg:w-20 lg:h-20 flex flex-col justify-center items-center rounded-full">
                             <span class="lg:text-h3 font-bold">16</span>
                             <p>Days</p>
                         </div>
                     </div>
 
-                    <a href="#" class="block w-fit mx-auto lg:mx-0 hover:text-primary hover:bg-transparent hover:border-primary border-2 transition duration-300 px-6 py-4 bg-primary text-white font-bold rounded-button mt-8">CHECK
+                    <a href="#"
+                        class="block w-fit mx-auto lg:mx-0 hover:text-primary hover:bg-transparent hover:border-primary border-2 transition duration-300 px-6 py-4 bg-primary text-white font-bold rounded-button mt-8">CHECK
                         IT OUT</a>
                 </div>
 
                 <div class="col-start-8 col-span-5 sale-banner-img-container lg:-mt-44">
                     <div>
 
-                        <img class="sale-banner-img " src="view/layout/assets/img/image-removebg-preview 3.png" alt="" />
+                        <img class="sale-banner-img " src="view/layout/assets/img/image-removebg-preview 3.png"
+                            alt="" />
 
                     </div>
                 </div>
@@ -192,23 +203,28 @@
                 <span class="font-bold text-h2 ">Our Products</span>
             </div>
             <h2 class="text-h3 font-bold my-4 ">Explore our Products</h2>
-            <div class="p-4 grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
+            <div class="p-4 lg:p-0 grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
                 <!-- SINGLE PRODUCT -->
                 <div class="overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                        <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                            src="view/layout/assets/img/airpod.png" alt="">
+                        <div
+                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
 
                             </div>
-                            <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                            <div
+                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
                                 <p class="text-white hidden xl:block">View Product</p>
                             </div>
                         </div>
-                        <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                        <div
+                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -227,19 +243,24 @@
                 </div>
                 <div class="overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                        <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                            src="view/layout/assets/img/airpod.png" alt="">
+                        <div
+                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
 
                             </div>
-                            <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                            <div
+                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
                                 <p class="text-white hidden xl:block">View Product</p>
                             </div>
                         </div>
-                        <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                        <div
+                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -258,19 +279,24 @@
                 </div>
                 <div class="overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                        <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                            src="view/layout/assets/img/airpod.png" alt="">
+                        <div
+                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
 
                             </div>
-                            <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                            <div
+                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
                                 <p class="text-white hidden xl:block">View Product</p>
                             </div>
                         </div>
-                        <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                        <div
+                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -289,19 +315,24 @@
                 </div>
                 <div class="overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                        <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                            src="view/layout/assets/img/airpod.png" alt="">
+                        <div
+                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
 
                             </div>
-                            <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                            <div
+                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
                                 <p class="text-white hidden xl:block">View Product</p>
                             </div>
                         </div>
-                        <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                        <div
+                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -320,19 +351,24 @@
                 </div>
                 <div class="block xl:hidden overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                        <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                            src="view/layout/assets/img/airpod.png" alt="">
+                        <div
+                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
 
                             </div>
-                            <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                            <div
+                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
                                 <p class="text-white hidden xl:block">View Product</p>
                             </div>
                         </div>
-                        <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                        <div
+                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -351,19 +387,24 @@
                 </div>
                 <div class="block xl:hidden overflow-hidden h-fit w-fit group">
                     <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                        <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                            src="view/layout/assets/img/airpod.png" alt="">
+                        <div
+                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                            <div
+                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <p class="text-white hidden xl:block">Add To cart</p>
 
                             </div>
-                            <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                            <div
+                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                 <i class="fa-regular fa-eye"></i>
                                 <p class="text-white hidden xl:block">View Product</p>
                             </div>
                         </div>
-                        <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                        <div
+                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
                             <i class="fa-regular fa-heart"></i>
                         </div>
                         <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -381,16 +422,18 @@
                     </div>
                 </div>
 
-                
+
 
 
 
 
             </div>
 
-            <a href="#" class="relative group text-white transition duration-300 w-fit block px-6 py-4 hover:text-primary cursor-pointer text-primary font-bold rounded-button mx-auto mt-12 overflow-hidden border-2 border-primary">
+            <a href="#"
+                class="relative group text-white transition duration-300 w-fit block px-6 py-4 hover:text-primary cursor-pointer text-primary font-bold rounded-button mx-auto mt-12 overflow-hidden border-2 border-primary">
                 VIEW ALL
-                <div class="absolute top-0 left-0 w-32 h-20 bg-primary -z-10 group-hover:bg-transparent transition duration-300">
+                <div
+                    class="absolute top-0 left-0 w-32 h-20 bg-primary -z-10 group-hover:bg-transparent transition duration-300">
                 </div>
             </a>
         </div>
@@ -677,23 +720,29 @@
             </div>
 
             <div>
-                <div class="mt-12 hidden justify-center justify-items-center lg:grid md:grid-cols-3 xl:grid-cols-4 gap-4">
+                <div
+                    class="mt-12 hidden justify-center justify-items-center lg:grid md:grid-cols-3 xl:grid-cols-4 gap-4">
                     <!-- SINGLE PRODUCT -->
                     <div class="overflow-hidden h-fit w-fit group rounded-box">
                         <div class="bg-box relative flex justify-center pb-16">
-                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                            <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                src="view/layout/assets/img/airpod.png" alt="">
+                            <div
+                                class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                <div
+                                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
 
                                 </div>
-                                <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                <div
+                                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
                                     <p class="text-white hidden xl:block">View Product</p>
                                 </div>
                             </div>
-                            <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                            <div
+                                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                         </div>
@@ -710,51 +759,24 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="overflow-hidden h-fit w-fit group rounded-box">
                         <div class="bg-box relative flex justify-center pb-16">
-                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                            <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                src="view/layout/assets/img/airpod.png" alt="">
+                            <div
+                                class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                <div
+                                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
 
                                 </div>
-                                <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                <div
+                                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
                                     <p class="text-white hidden xl:block">View Product</p>
                                 </div>
                             </div>
-                            <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                                Sale 20%
-                            </div>
-                        </div>
-
-                        <!-- DES -->
-                        <p class="text-center font-bold mt-4">AirPod Pro</p>
-                        <p class="text-center text-sm">Apple</p>
-                        <div class="flex justify-center gap-4">
-                            <del class="font-del">$59.99</del>
-                            <p>$59.99</p>
-
-                        </div>
-                    </div>
-                    <!-- SINGLE PRODUCT -->
-                    <div class="overflow-hidden h-fit w-fit group rounded-box">
-                        <div class="bg-box relative flex justify-center pb-16">
-                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                            <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    <p class="text-white hidden xl:block">Add To cart</p>
-
-                                </div>
-                                <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                    <i class="fa-regular fa-eye"></i>
-                                    <p class="text-white hidden xl:block">View Product</p>
-                                </div>
-                            </div>
-                            <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                            <div
+                                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -774,19 +796,61 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="overflow-hidden h-fit w-fit group rounded-box">
                         <div class="bg-box relative flex justify-center pb-16">
-                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                            <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                src="view/layout/assets/img/airpod.png" alt="">
+                            <div
+                                class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                <div
+                                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
 
                                 </div>
-                                <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                <div
+                                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
                                     <p class="text-white hidden xl:block">View Product</p>
                                 </div>
                             </div>
-                            <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                            <div
+                                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                            <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+                                Sale 20%
+                            </div>
+                        </div>
+
+                        <!-- DES -->
+                        <p class="text-center font-bold mt-4">AirPod Pro</p>
+                        <p class="text-center text-sm">Apple</p>
+                        <div class="flex justify-center gap-4">
+                            <del class="font-del">$59.99</del>
+                            <p>$59.99</p>
+
+                        </div>
+                    </div>
+                    <!-- SINGLE PRODUCT -->
+                    <div class="overflow-hidden h-fit w-fit group rounded-box">
+                        <div class="bg-box relative flex justify-center pb-16">
+                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                src="view/layout/assets/img/airpod.png" alt="">
+                            <div
+                                class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                <div
+                                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    <p class="text-white hidden xl:block">Add To cart</p>
+
+                                </div>
+                                <div
+                                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <i class="fa-regular fa-eye"></i>
+                                    <p class="text-white hidden xl:block">View Product</p>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -806,19 +870,24 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="block lg:hidden overflow-hidden h-fit w-fit group rounded-box">
                         <div class="bg-box relative flex justify-center pb-16">
-                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                            <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                src="view/layout/assets/img/airpod.png" alt="">
+                            <div
+                                class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                <div
+                                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
 
                                 </div>
-                                <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                <div
+                                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
                                     <p class="text-white hidden xl:block">View Product</p>
                                 </div>
                             </div>
-                            <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                            <div
+                                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -838,19 +907,24 @@
                     <!-- SINGLE PRODUCT -->
                     <div class="block lg:hidden overflow-hidden h-fit w-fit group rounded-box">
                         <div class="bg-box relative flex justify-center pb-16">
-                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                            <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                src="view/layout/assets/img/airpod.png" alt="">
+                            <div
+                                class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                <div
+                                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-solid fa-basket-shopping"></i>
                                     <p class="text-white hidden xl:block">Add To cart</p>
 
                                 </div>
-                                <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                <div
+                                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                     <i class="fa-regular fa-eye"></i>
                                     <p class="text-white hidden xl:block">View Product</p>
                                 </div>
                             </div>
-                            <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                            <div
+                                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
                             <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
@@ -879,22 +953,28 @@
                             <!-- SINGLE PRODUCT -->
                             <div class="overflow-hidden h-fit w-fit group rounded-box">
                                 <div class="bg-box relative flex justify-center pb-16">
-                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                                    <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                        <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                        src="view/layout/assets/img/airpod.png" alt="">
+                                    <div
+                                        class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                        <div
+                                            class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-solid fa-basket-shopping"></i>
                                             <p class="text-white hidden xl:block">Add To cart</p>
 
                                         </div>
-                                        <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                        <div
+                                            class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-regular fa-eye"></i>
                                             <p class="text-white hidden xl:block">View Product</p>
                                         </div>
                                     </div>
-                                    <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                                    <div
+                                        class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
-                                    <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+                                    <div
+                                        class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
                                         Sale 20%
                                     </div>
                                 </div>
@@ -914,22 +994,28 @@
                             <!-- SINGLE PRODUCT -->
                             <div class="overflow-hidden h-fit w-fit group rounded-box">
                                 <div class="bg-box relative flex justify-center pb-16">
-                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                                    <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                        <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                        src="view/layout/assets/img/airpod.png" alt="">
+                                    <div
+                                        class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                        <div
+                                            class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-solid fa-basket-shopping"></i>
                                             <p class="text-white hidden xl:block">Add To cart</p>
 
                                         </div>
-                                        <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                        <div
+                                            class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-regular fa-eye"></i>
                                             <p class="text-white hidden xl:block">View Product</p>
                                         </div>
                                     </div>
-                                    <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                                    <div
+                                        class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
-                                    <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+                                    <div
+                                        class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
                                         Sale 20%
                                     </div>
                                 </div>
@@ -949,22 +1035,28 @@
                             <!-- SINGLE PRODUCT -->
                             <div class="overflow-hidden h-fit w-fit group rounded-box">
                                 <div class="bg-box relative flex justify-center pb-16">
-                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                                    <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                        <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                        src="view/layout/assets/img/airpod.png" alt="">
+                                    <div
+                                        class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                        <div
+                                            class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-solid fa-basket-shopping"></i>
                                             <p class="text-white hidden xl:block">Add To cart</p>
 
                                         </div>
-                                        <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                        <div
+                                            class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-regular fa-eye"></i>
                                             <p class="text-white hidden xl:block">View Product</p>
                                         </div>
                                     </div>
-                                    <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                                    <div
+                                        class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
-                                    <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+                                    <div
+                                        class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
                                         Sale 20%
                                     </div>
                                 </div>
@@ -984,22 +1076,28 @@
                             <!-- SINGLE PRODUCT -->
                             <div class="overflow-hidden h-fit w-fit group rounded-box">
                                 <div class="bg-box relative flex justify-center pb-16">
-                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                                    <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                        <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                        src="view/layout/assets/img/airpod.png" alt="">
+                                    <div
+                                        class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                        <div
+                                            class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-solid fa-basket-shopping"></i>
                                             <p class="text-white hidden xl:block">Add To cart</p>
 
                                         </div>
-                                        <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                        <div
+                                            class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-regular fa-eye"></i>
                                             <p class="text-white hidden xl:block">View Product</p>
                                         </div>
                                     </div>
-                                    <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                                    <div
+                                        class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
-                                    <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+                                    <div
+                                        class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
                                         Sale 20%
                                     </div>
                                 </div>
@@ -1019,22 +1117,28 @@
                             <!-- SINGLE PRODUCT -->
                             <div class="overflow-hidden h-fit w-fit group rounded-box">
                                 <div class="bg-box relative flex justify-center pb-16">
-                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 " src="view/layout/assets/img/airpod.png" alt="">
-                                    <div class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                                        <div class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                                    <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
+                                        src="view/layout/assets/img/airpod.png" alt="">
+                                    <div
+                                        class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+                                        <div
+                                            class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-solid fa-basket-shopping"></i>
                                             <p class="text-white hidden xl:block">Add To cart</p>
 
                                         </div>
-                                        <div class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                                        <div
+                                            class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                                             <i class="fa-regular fa-eye"></i>
                                             <p class="text-white hidden xl:block">View Product</p>
                                         </div>
                                     </div>
-                                    <div class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                                    <div
+                                        class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
                                         <i class="fa-regular fa-heart"></i>
                                     </div>
-                                    <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+                                    <div
+                                        class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
                                         Sale 20%
                                     </div>
                                 </div>
@@ -1060,30 +1164,34 @@
     <div>
         <div class="container">
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 p-4 lg:p-0">
-            <div class="relative group overflow-hidden rounded-box ">
-                        <div class="group-hover:scale-125 transition duration-300 ">
-                            <img class="w-full" src="view/layout/assets/img/banner-1.png" alt="">
-                        </div>
-                        <div class="text-white absolute bottom-1/2 translate-x-1/2 translate-y-1/2 left-1/4 xl:right-1/4 text-sm md:text-h3 ">
-                            Âm thanh phong phú
-                            <div class="flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
-                                <p class="text-gray">Bộ sưu tập</p>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
+                <div class="relative group overflow-hidden rounded-box ">
+                    <div class="group-hover:scale-125 transition duration-300 ">
+                        <img class="w-full" src="view/layout/assets/img/banner-1.png" alt="">
+                    </div>
+                    <div
+                        class="text-white absolute bottom-1/2 translate-x-1/2 translate-y-1/2 left-1/4 xl:right-1/4 text-sm md:text-h3 ">
+                        Âm thanh phong phú
+                        <div
+                            class="flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
+                            <p class="text-gray">Bộ sưu tập</p>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
-                    <div class="relative group overflow-hidden rounded-box">
-                        <div class="group-hover:scale-125 transition duration-300">
-                            <img class="w-full" src="view/layout/assets/img/banner-2.png" alt="">
-                        </div>
-                        <div class="text-white absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/4 text-sm md:text-h3">
-                            Âm thanh phong phú
-                            <div class="flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
-                                <p class="text-gray">Bộ sưu tập</p>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-box">
+                    <div class="group-hover:scale-125 transition duration-300">
+                        <img class="w-full" src="view/layout/assets/img/banner-2.png" alt="">
+                    </div>
+                    <div
+                        class="text-white absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/4 text-sm md:text-h3">
+                        Âm thanh phong phú
+                        <div
+                            class="flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
+                            <p class="text-gray">Bộ sưu tập</p>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1108,9 +1216,10 @@
             <div class="mt-4 flex flex-col md:flex-row gap-2 items-center">
                 <div class="text-sm lg:text-xl flex gap-3 bg-white  md:w-fit p-4 py-3 rounded-button">
                     <i class="fa-solid fa-envelope text-sm lg:text-xl  mt-1"></i>
-                    <input  type="text" placeholder="example@gmail.com" />
+                    <input type="text" placeholder="example@gmail.com" />
                 </div>
-                <div class="hover:bg-transparent hover:text-primary  font-bold cursor-pointer border-2 border-primary transition duration-300 w-52 text-center md:w-fit h-full px-0 md:px-4 py-2 xl:py-3 bg-primary text-white rounded-button">
+                <div
+                    class="hover:bg-transparent hover:text-primary  font-bold cursor-pointer border-2 border-primary transition duration-300 w-52 text-center md:w-fit h-full px-0 md:px-4 py-2 xl:py-3 bg-primary text-white rounded-button">
                     Subcribe
                 </div>
             </div>
