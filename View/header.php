@@ -89,7 +89,7 @@
                                         x-transition:leave-start="transform opacity-100 scale-100">
                                         <div class="flex justify-center items-center space-x-3 cursor-pointer">
                                             <div class="w-6 h-6 rounded-full overflow-hidden border-2 border-gray-900">
-                                                <img src="/layout/assets/img/icon-user.png" alt=""
+                                                <img src="view/layout/assets/img/icon-user.png" alt=""
                                                     class="w-full h-full object-cover" />
                                             </div>
                                         </div>

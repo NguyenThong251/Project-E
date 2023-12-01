@@ -1,3 +1,14 @@
+<?php 
+//product_hot
+$html_product_hot = show_product($product_hot);
+//product_new
+// //product_sale
+// $html_product_sale=show_product($product_sale);
+// //product_view
+// $html_product_view=show_product($product_view);
+
+?>
+
 <section class="mt-12">
     <div>
         <div class="container grid grid-cols-12">
@@ -200,229 +211,12 @@
                 <div class="h-12 w-12 bg-primary rounded-full text-white grid place-content-center">
                     <i class="fa-solid fa-basket-shopping"></i>
                 </div>
-                <span class="font-bold text-h2 ">Our Products</span>
+                <span class="font-bold text-h2 ">Sản phẩm</span>
             </div>
-            <h2 class="text-h3 font-bold my-4 ">Explore our Products</h2>
+            <h2 class="text-h3 font-bold my-4 ">Nổi bật nhất của Etrade </h2>
             <div class="p-4 lg:p-0 grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center">
                 <!-- SINGLE PRODUCT -->
-                <div class="overflow-hidden h-fit w-fit group">
-                    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                            src="view/layout/assets/img/airpod.png" alt="">
-                        <div
-                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div
-                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <p class="text-white hidden xl:block">Add To cart</p>
-
-                            </div>
-                            <div
-                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-regular fa-eye"></i>
-                                <p class="text-white hidden xl:block">View Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                            Sale 20%
-                        </div>
-                    </div>
-
-                    <!-- DES -->
-                    <p class="text-center font-bold mt-4 text-sm lg:text-xl">AirPod Pro</p>
-                    <p class="text-center text-sm">Apple</p>
-                    <div class="flex justify-center gap-4">
-                        <del class="font-del text-sm lg:text-lg">$59.99</del>
-                        <p class="text-sm lg:text-lg">$59.99</p>
-
-                    </div>
-                </div>
-                <div class="overflow-hidden h-fit w-fit group">
-                    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                            src="view/layout/assets/img/airpod.png" alt="">
-                        <div
-                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div
-                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <p class="text-white hidden xl:block">Add To cart</p>
-
-                            </div>
-                            <div
-                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-regular fa-eye"></i>
-                                <p class="text-white hidden xl:block">View Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                            Sale 20%
-                        </div>
-                    </div>
-
-                    <!-- DES -->
-                    <p class="text-center font-bold mt-4 text-sm lg:text-xl">AirPod Pro</p>
-                    <p class="text-center text-sm">Apple</p>
-                    <div class="flex justify-center gap-4">
-                        <del class="font-del text-sm lg:text-lg">$59.99</del>
-                        <p class="text-sm lg:text-lg">$59.99</p>
-
-                    </div>
-                </div>
-                <div class="overflow-hidden h-fit w-fit group">
-                    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                            src="view/layout/assets/img/airpod.png" alt="">
-                        <div
-                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div
-                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <p class="text-white hidden xl:block">Add To cart</p>
-
-                            </div>
-                            <div
-                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-regular fa-eye"></i>
-                                <p class="text-white hidden xl:block">View Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                            Sale 20%
-                        </div>
-                    </div>
-
-                    <!-- DES -->
-                    <p class="text-center font-bold mt-4 text-sm lg:text-xl">AirPod Pro</p>
-                    <p class="text-center text-sm">Apple</p>
-                    <div class="flex justify-center gap-4">
-                        <del class="font-del text-sm lg:text-lg">$59.99</del>
-                        <p class="text-sm lg:text-lg">$59.99</p>
-
-                    </div>
-                </div>
-                <div class="overflow-hidden h-fit w-fit group">
-                    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                            src="view/layout/assets/img/airpod.png" alt="">
-                        <div
-                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div
-                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <p class="text-white hidden xl:block">Add To cart</p>
-
-                            </div>
-                            <div
-                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-regular fa-eye"></i>
-                                <p class="text-white hidden xl:block">View Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                            Sale 20%
-                        </div>
-                    </div>
-
-                    <!-- DES -->
-                    <p class="text-center font-bold mt-4 text-sm lg:text-xl">AirPod Pro</p>
-                    <p class="text-center text-sm">Apple</p>
-                    <div class="flex justify-center gap-4">
-                        <del class="font-del text-sm lg:text-lg">$59.99</del>
-                        <p class="text-sm lg:text-lg">$59.99</p>
-
-                    </div>
-                </div>
-                <div class="block xl:hidden overflow-hidden h-fit w-fit group">
-                    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                            src="view/layout/assets/img/airpod.png" alt="">
-                        <div
-                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div
-                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <p class="text-white hidden xl:block">Add To cart</p>
-
-                            </div>
-                            <div
-                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-regular fa-eye"></i>
-                                <p class="text-white hidden xl:block">View Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                            Sale 20%
-                        </div>
-                    </div>
-
-                    <!-- DES -->
-                    <p class="text-center font-bold mt-4 text-sm lg:text-xl">AirPod Pro</p>
-                    <p class="text-center text-sm">Apple</p>
-                    <div class="flex justify-center gap-4">
-                        <del class="font-del text-sm lg:text-lg">$59.99</del>
-                        <p class="text-sm lg:text-lg">$59.99</p>
-
-                    </div>
-                </div>
-                <div class="block xl:hidden overflow-hidden h-fit w-fit group">
-                    <div class="bg-box relative flex justify-center pb-16 rounded-box">
-                        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                            src="view/layout/assets/img/airpod.png" alt="">
-                        <div
-                            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                            <div
-                                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                <p class="text-white hidden xl:block">Add To cart</p>
-
-                            </div>
-                            <div
-                                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
-                                <i class="fa-regular fa-eye"></i>
-                                <p class="text-white hidden xl:block">View Product</p>
-                            </div>
-                        </div>
-                        <div
-                            class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                        <div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-                            Sale 20%
-                        </div>
-                    </div>
-
-                    <!-- DES -->
-                    <p class="text-center font-bold mt-4 text-sm lg:text-xl">AirPod Pro</p>
-                    <p class="text-center text-sm">Apple</p>
-                    <div class="flex justify-center gap-4">
-                        <del class="font-del text-sm lg:text-lg">$59.99</del>
-                        <p class="text-sm lg:text-lg">$59.99</p>
-
-                    </div>
-                </div>
-
-
+                <?=$html_product_hot?>
 
 
 
