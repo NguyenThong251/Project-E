@@ -14,10 +14,54 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor5/40.0.0/ckeditor.min.js" integrity="sha512-Zyl/SvrviD3rEMVNCPN+m5zV0PofJYlGHnLDzol2kM224QpmWj9p5z7hQYppmnLFhZwqif5Fugjjouuk5l1lgA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./layout/js/app.js"> </script>
   <link rel="stylesheet" href="./layout/css/app.css">
-  <link rel="stylesheet" href="./layout/css/dashboard.css">
 </head>
 
 <body>
   <header class="header">
     <div class="header-image"> <img srcSet="./layout/images/logo.png 2x" alt="logo"></div>
   </header>
+  <div class="wrapper" id="wrapper">
+    <div class="sidebar">
+      <ul class="sidebar-list">
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php">
+            <ion-icon name="bar-chart-outline"></ion-icon><span>Bảng điều khiển</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=category">
+            <ion-icon name="albums-outline"></ion-icon><span>Danh mục</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=product">
+            <ion-icon name="cube-outline"></ion-icon><span>Sản phẩm</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=user">
+            <ion-icon name="people-circle-outline"></ion-icon><span>Tài khoản</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=order">
+            <ion-icon name="cart-outline"></ion-icon><span>Đơn hàng</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=comment">
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon><span>Bình luận</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=news">
+            <ion-icon name="newspaper-outline"></ion-icon><span>Tin tức</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=brand">
+            <ion-icon name="business-outline"></ion-icon><span>Thương hiệu</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=voucher">
+            <ion-icon name="wallet-outline"></ion-icon><span>Mã giảm giá</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-link" href="index.php?page=logout">
+            <ion-icon name="log-out-outline"></ion-icon><span>Đăng xuất</span></a>
+          <div class="sidebar-animation"></div>
+        </li>
+      </ul>
+    </div>

@@ -1,4 +1,6 @@
 <?php
+include_once('../model/pdo.php');
+include_once('../model/category.php');
 session_start();
 ob_start();
 
@@ -18,6 +20,8 @@ if (!isset($_GET['page'])) {
   $page = $_GET['page'];
   switch ($page) {
     case 'category':
+      $categories = category_select_all();
+      // echo var_dump($categories);
       include_once('./public/category.php');
       break;
     case 'logout':
