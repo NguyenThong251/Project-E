@@ -83,7 +83,7 @@
                     </button>
                 </div>
 
-                <div class="mt-2 leading-9 cursor-pointer h-0 footer-show overflow-hidden ">
+                <div class="mt-2 leading-9 cursor-pointer h-0 lg:h-fit footer-show overflow-hidden ">
                     <p class="color-777">My Account</p>
                     <p class="color-777">Login</p>
                     <p class="color-777">Cart</p>
@@ -100,7 +100,7 @@
                     </button>
                 </div>
 
-                <div class="mt-2 leading-9 cursor-pointer h-0 footer-show overflow-hidden">
+                <div class="mt-2 leading-9 cursor-pointer h-0 lg:h-fit footer-show overflow-hidden">
                     <p class="color-777">About Us</p>
                     <p class="color-777">Privacy Policy</p>
                     <p class="color-777">Terms Of Use</p>
@@ -146,7 +146,7 @@
 <script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="./layout/assets/js/swiper.js"></script>
-<script src="./layout/assets/js/tailwind.js"></script>
-<script src="./layout/assets/js/index.js"></script>
+<script src="view/layout/assets/js/swiper.js"></script>
+<script src="view/layout/assets/js/tailwind.js"></script>
+<script src="view/layout/assets/js/index.js"></script>
 </html>
