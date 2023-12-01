@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="./layout/assets/css/app.css" />
+    <link rel="stylesheet" href="view/layout/assets/css/app.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -25,7 +25,7 @@
             <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
                 <!-- LOGO -->
                 <div class="w-32 md:w-auto">
-                    <img src="assets/img/logo.png" alt="Logo Web" />
+                    <img src="view/layout/assets/img/logo.png" alt="Logo Web" />
                 </div>
                 <!-- NAV -->
                 <div class="hidden xl:block">
@@ -89,7 +89,7 @@
                                         x-transition:leave-start="transform opacity-100 scale-100">
                                         <div class="flex justify-center items-center space-x-3 cursor-pointer">
                                             <div class="w-6 h-6 rounded-full overflow-hidden border-2 border-gray-900">
-                                                <img src="/layout/assets/img/icon-user.png" alt=""
+                                                <img src="view/layout/assets/img/icon-user.png" alt=""
                                                     class="w-full h-full object-cover" />
                                             </div>
                                         </div>

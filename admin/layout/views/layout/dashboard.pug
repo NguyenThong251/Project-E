@@ -18,8 +18,9 @@ html(lang="en")
       link(rel="stylesheet", href="./css/app.css")
   body  
     include ./header
-    #wrapper.wrapper
-      include ./sidebar
-      main.main
-        block main
+    block login
+      #wrapper.wrapper
+        include ./sidebar
+        main.main
+          block main
     include ./footer

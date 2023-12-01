@@ -3,7 +3,7 @@
         <div class="flex items-center lg:mx-0 md:mx-0">
             <div class="img w-24 h-24">
 
-                <img src="./layout/assets/img/delivery.png" alt="" />
+                <img src="view/layout/assets/img/delivery.png" alt="" />
 
             </div>
 
@@ -16,7 +16,7 @@
         <div class="flex items-center lg:mx-0">
             <div class="img w-24 h-24">
 
-                <img src="./layout/assets/img/money back.png" alt="" />
+                <img src="view/layout/assets/img/money back.png" alt="" />
 
             </div>
 
@@ -29,7 +29,7 @@
         <div class="flex items-center lg:mx-0">
             <div class="img w-24 h-24">
 
-                <img src="./layout/assets/img/return.png" alt="" />
+                <img src="view/layout/assets/img/return.png" alt="" />
 
             </div>
 
@@ -42,7 +42,7 @@
         <div class="flex items-center lg:mx-0">
             <div class="img w-24 h-24">
 
-                <img src="./layout/assets/img/support.png" alt="" />
+                <img src="view/layout/assets/img/support.png" alt="" />
 
             </div>
 
@@ -63,12 +63,12 @@
                 <div class="mt-4 lg:mt-0">
                     <div>
 
-                        <img class="inline-block mr-4" src="./layout/assets/img/mail.png" alt="" />
+                        <img class="inline-block mr-4" src="view/layout/assets/img/mail.png" alt="" />
                         <span class="color-777">example@domain.com</span>
                     </div>
 
                     <div>
-                        <img class="inline-block mr-4" src="./layout/assets/img/telephone.png" alt="" />
+                        <img class="inline-block mr-4" src="view/layout/assets/img/telephone.png" alt="" />
 
                         <span class="color-777">(84+) 123 456 78</span>
                     </div>
@@ -78,12 +78,12 @@
             <div class="ml-3 lg:ml-6">
                 <div class="flex gap-2">
                     <h1 class="font-bold text-h2 text-lg">Account</h1>
-                    <button class="block lg:hidden footer-btn-show">
+                    <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </div>
 
-                <div class="mt-2 leading-9 cursor-pointer h-0 footer-show overflow-hidden">
+                <div class="mt-2 leading-9 cursor-pointer h-0 lg:h-fit footer-show overflow-hidden ">
                     <p class="color-777">My Account</p>
                     <p class="color-777">Login</p>
                     <p class="color-777">Cart</p>
@@ -94,13 +94,13 @@
 
             <div class="ml-3 lg:ml-12">
                 <div class="flex gap-2">
-                <h1 class="font-bold text-h2 text-lg ">Quick Link</h1>
-                <button class="block lg:hidden footer-btn-show">
+                    <h1 class="font-bold text-h2 text-lg ">Quick Link</h1>
+                    <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </div>
 
-                <div class="mt-2 leading-9 cursor-pointer h-0 footer-show overflow-hidden">
+                <div class="mt-2 leading-9 cursor-pointer h-0 lg:h-fit footer-show overflow-hidden">
                     <p class="color-777">About Us</p>
                     <p class="color-777">Privacy Policy</p>
                     <p class="color-777">Terms Of Use</p>
@@ -113,9 +113,9 @@
                 <div class="mt-2">
                     <div class="flex gap-4 cursor-pointer">
 
-                        <img class="w-10 h-10 mr-2" src="./layout/assets/img/facebook (2).png" alt="" />
-                        <img class="w-10 h-10 mr-2" src="./layout/assets/img/instagram.png" alt="" />
-                        <img class="w-10 h-10 mr-2" src="./layout/assets/img/linkedin.png" alt="" />
+                        <img class="w-10 h-10 mr-2" src="view/layout/assets/img/facebook (2).png" alt="" />
+                        <img class="w-10 h-10 mr-2" src="view/layout/assets/img/instagram.png" alt="" />
+                        <img class="w-10 h-10 mr-2" src="view/layout/assets/img/linkedin.png" alt="" />
 
                     </div>
                 </div>
@@ -129,10 +129,10 @@
 
                 <div class="payment_img flex justify-between items-center ml-4">
 
-                    <img class="mr-2 w-6 h-6" src="./layout/assets/img/paypal.png" alt="" />
-                    <img class="mr-2 w-14 h-14" src="./layout/assets/img/pay-1.png" alt="" />
-                    <img class="mr-2 w-12 h-12" src="./layout/assets/img/visa.png" alt="" />
-                    <img class="mr-2 w-12 h-12" src="./layout/assets/img/momo.png" alt="" />
+                    <img class="mr-2 w-6 h-6" src="view/layout/assets/img/paypal.png" alt="" />
+                    <img class="mr-2 w-14 h-14" src="view/layout/assets/img/pay-1.png" alt="" />
+                    <img class="mr-2 w-12 h-12" src="view/layout/assets/img/visa.png" alt="" />
+                    <img class="mr-2 w-12 h-12" src="view/layout/assets/img/momo.png" alt="" />
 
                 </div>
             </div>
@@ -146,7 +146,8 @@
 <script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="./layout/assets/js/swiper.js"></script>
-<script src="./layout/assets/js/tailwind.js"></script>
-<script src="./layout/assets/js/index.js"></script>
+<script src="view/layout/assets/js/swiper.js"></script>
+<script src="view/layout/assets/js/tailwind.js"></script>
+<script src="view/layout/assets/js/index.js"></script>
+
 </html>

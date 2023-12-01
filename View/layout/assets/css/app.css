@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -176,9 +177,6 @@ span {
   width: 600px;
 }
 
-.sale-banner-img-container {
-  margin-top: -200px;
-}
 
 .banner-1 {
 

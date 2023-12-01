@@ -33,6 +33,7 @@ function get_product_hot($limi){
 }
 function get_product_new($limi){
     $sql = "SELECT * FROM product WHERE new = 1 ORDER BY id ASC LIMIT ".$limi;
+
     return pdo_query($sql);
 }
 function get_product_sale(){

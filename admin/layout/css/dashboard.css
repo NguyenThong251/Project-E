@@ -21,6 +21,10 @@
   flex-direction: column;
   gap: 8px;
 }
+.db-account-info-name b {
+  font-weight: 700;
+  font-style: italic;
+}
 .db-account-container {
   display: flex;
   align-items: center;
