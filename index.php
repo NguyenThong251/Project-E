@@ -5,9 +5,10 @@ include "View/global.php";
 include "model/pdo.php";
 include "model/product.php";
 $product_hot = get_product_hot(4);
-// $product_new = get_product_new(1);
+$product_new = get_product_new(4);
+$product_view = get_product_view(4);
+
 // $product_sale = get_product_sale(4);
-// $product_view = get_product_view(4);
 include "View/header.php";
 if (!isset($_GET['pg'])) {
     include "View/home.php";                                                
