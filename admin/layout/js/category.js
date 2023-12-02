@@ -1,34 +1,20 @@
+// open form add
 var cataAdd = document.querySelector(".category-add");
-var cataUps = document.querySelectorAll(".category-update");
 
 var cataForms = document.querySelectorAll(".category-form");
-for (let index = 0; index < cataForms.length; index++) {
-  const cataForm = cataForms[index];
-  if (index == 0) {
-    function openForm() {
-      var cataFormContainer = cataForm.querySelector(
-        ".category-form-container"
-      );
-      cataFormContainer.classList.remove("remove-form");
-      cataForm.style.display = "block";
-      cataFormContainer.classList.add("open-form");
-    }
-    cataAdd.addEventListener("click", openForm);
+if (cataForms[0]) {
+  function openForm() {
+    var cataFormContainer = cataForms[0].querySelector(
+      ".category-form-container"
+    );
+    cataFormContainer.classList.remove("remove-form");
+    cataForms[0].style.display = "block";
+    cataFormContainer.classList.add("open-form");
   }
-  if (index == 1) {
-    cataUps.forEach((cataUp) => {
-      function openForm() {
-        var cataFormContainer = cataForm.querySelector(
-          ".category-form-container"
-        );
-        cataFormContainer.classList.remove("remove-form");
-        cataForm.style.display = "block";
-        cataFormContainer.classList.add("open-form");
-      }
-      cataUp.addEventListener("click", openForm);
-    });
-  }
+  cataAdd.addEventListener("click", openForm);
 }
+
+// close the form
 cataForms.forEach((cataForm) => {
   var cataFormContainer = cataForm.querySelector(".category-form-container");
   var cataFormClose = cataForm.querySelector(".category-form-close");
@@ -46,3 +32,252 @@ cataForms.forEach((cataForm) => {
     }
   });
 });
+
+// show
+$(document).ready(function () {
+  $.ajax({
+    url: "http://localhost/Project-E/admin/ajax/category.php?func=show",
+    dataType: "json",
+    success: function (data) {
+      // console.log(data);
+      $(".category-form-show").html("");
+      for (i = 0; i < data.length; i++) {
+        category = data[i];
+        if (category["hidden"] == 1) {
+          hide = "checked";
+        } else {
+          hide = "";
+        }
+        var lt_str = `<tr>
+                      <td> <span>${category["name"]}</span></td>
+                      <td>
+                        <input type="checkbox" id="${category["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                        <label for="${category["id"]}" class="switch"></label>
+                      </td>
+                      <td> <a class="category-action category-update" href="#" category_id="${category["id"]}" onclick="upID(this)">
+                          <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" category_id="${category["id"]}" onclick=delID(this) href="#">
+                          <ion-icon name="trash-outline"></ion-icon></a></td>
+                    </tr>`;
+        $(".category-form-show").append(lt_str);
+      }
+    },
+  });
+});
+
+// add
+$(document).ready(function () {
+  $(".btnAddCategory").click(function () {
+    var url = "http://localhost/Project-E/admin/ajax/category.php?func=add";
+    $.ajax({
+      url: url,
+      data: $("#formAddCategory").serialize(),
+      // dataType: 'json',
+      method: "post",
+      cache: false,
+      success: function (data) {
+        data = JSON.parse(data);
+        // console.log(data);
+
+        if (data.result == "success") {
+          // Close form
+          $(".category-form-container").removeClass("open-form");
+          $(".category-form-container").addClass("remove-form");
+          setTimeout(() => {
+            $(".category-form").css("display", "none");
+          }, 250);
+          // Show alert
+          Swal.fire({
+            icon: "success",
+            title: "Thêm thành công!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          // Reset form
+          $("#category_add").val("");
+          // Load data
+          $.ajax({
+            url: "http://localhost/Project-E/admin/ajax/category.php?func=show",
+            dataType: "json",
+            success: function (data) {
+              // console.log(data);
+              $(".category-form-show").html("");
+              for (i = 0; i < data.length; i++) {
+                category = data[i];
+                if (category["hidden"] == 1) {
+                  hide = "checked";
+                } else {
+                  hide = "";
+                }
+                var lt_str = `<tr>
+                              <td> <span>${category["name"]}</span></td>
+                              <td>
+                                <input type="checkbox" id="${category["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                                <label for="${category["id"]}" class="switch" ></label>
+                              </td>
+                              <td> <a class="category-action category-update" href="#" category_id="${category["id"]}" onclick="upID(this)">
+                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" category_id="${category["id"]}" onclick=delID(this) href="#">
+                                  <ion-icon name="trash-outline"></ion-icon></a></td>
+                            </tr>`;
+                $(".category-form-show").append(lt_str);
+              }
+            },
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Thêm thất bại!",
+            text: "Có lẽ bạn đã thêm trùng tên danh mục.",
+          });
+        }
+      },
+    });
+  });
+});
+
+// xoa
+function delID(obj) {
+  var category_id = obj.getAttribute("category_id");
+  var url =
+    "http://localhost/Project-E/admin/ajax/category.php?func=del&id=" +
+    category_id;
+  $.get(url, "", function (d) {
+    data = JSON.parse(d);
+    // console.log(data);
+    if (data.result == "success") {
+      obj.parentNode.parentNode.remove();
+      Swal.fire({
+        icon: "success",
+        title: "Xóa thành công!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Xóa thất bại!",
+        text: "Có lỗi xảy ra khi xóa danh mục.",
+      });
+    }
+  });
+}
+
+// open form up and up
+if (cataForms[1]) {
+  function upID(obj) {
+    var cataFormContainer = cataForms[1].querySelector(
+      ".category-form-container"
+    );
+    cataFormContainer.classList.remove("remove-form");
+    cataForms[1].style.display = "block";
+    cataFormContainer.classList.add("open-form");
+    var category_id = obj.getAttribute("category_id");
+    var category_name =
+      obj.parentNode.parentNode.querySelector("span").textContent;
+    var category_input = cataForms[1].querySelector("#category_up");
+    category_input.value = category_name;
+    $(document).ready(function () {
+      $("#btnUpCategory").click(function () {
+        var url =
+          "http://localhost/Project-E/admin/ajax/category.php?func=up&id=" +
+          category_id;
+        $.ajax({
+          url: url,
+          data: $("#formUpCategory").serialize(),
+          // dataType: 'json',
+          method: "post",
+          cache: false,
+          success: function (data) {
+            data = JSON.parse(data);
+            console.log(data);
+            if (data.result == "success") {
+              // Close form
+              $(".category-form-container").removeClass("open-form");
+              $(".category-form-container").addClass("remove-form");
+              setTimeout(() => {
+                $(".category-form").css("display", "none");
+              }, 250);
+              // Show alert
+              Swal.fire({
+                icon: "success",
+                title: "Chỉnh sửa thành công!",
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              // Reset form
+              $("#category_add").val("");
+              // Load data
+              $.ajax({
+                url: "http://localhost/Project-E/admin/ajax/category.php?func=show",
+                dataType: "json",
+                success: function (data) {
+                  console.log(data);
+                  $(".category-form-show").html("");
+                  for (i = 0; i < data.length; i++) {
+                    category = data[i];
+                    if (category["hidden"] == 1) {
+                      hide = "checked";
+                    } else {
+                      hide = "";
+                    }
+                    var lt_str = `<tr>
+                                <td> <span>${category["name"]}</span></td>
+                                <td>
+                                  <input type="checkbox" id="${category["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                                  <label for="${category["id"]}" class="switch" ></label>
+                                  </td>
+                                  <td> <a class="category-action category-update" href="#" category_id="${category["id"]}" onclick="upID(this)">
+                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" category_id="${category["id"]}" onclick=delID(this) href="#">
+                                  <ion-icon name="trash-outline"></ion-icon></a></td>
+                                  </tr>`;
+                    $(".category-form-show").append(lt_str);
+                  }
+                },
+              });
+            } else {
+              Swal.fire({
+                icon: "error",
+                title: "Chỉnh sửa thất bại!",
+                text: "Có lẽ bạn đã thêm trùng tên danh mục.",
+              });
+            }
+          },
+        });
+      });
+    });
+  }
+}
+
+// up status
+function upStatus(obj) {
+  var category_id = obj.getAttribute("id");
+  var url =
+    "http://localhost/Project-E/admin/ajax/category.php?func=upStatus&id=" +
+    category_id;
+  $.ajax({
+    url: url,
+    data: { hidden: obj.checked },
+    method: "post",
+    cache: false,
+    success: function (data) {
+      data = JSON.parse(data);
+      console.log(data);
+      if (data.result == "success") {
+        Swal.fire({
+          icon: "success",
+          title: "Thay đổi thành công!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Thay đổi thất bại!",
+          text: "Có lỗi xảy ra khi thay đổi trạng thái.",
+        });
+      }
+    },
+    error: function (error) {
+      console.error("Error updating status:", error);
+    },
+  });
+}

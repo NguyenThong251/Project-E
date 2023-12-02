@@ -1,5 +1,8 @@
 <?php
 extract($admin);
+if ($user_img == '' || $user_img == null) {
+  $user_img = 'guest.png';
+}
 if ($phone == '' || $phone == null) {
   $phone = 'Chưa cập nhật';
 }
@@ -124,3 +127,4 @@ if ($role == 1) {
     </div>
   </div>
 </main>
+<script src="./layout/js/dashboard.js"> </script>

@@ -191,7 +191,49 @@ body {
 .button:hover {
   background-color: #ebebeb;
   color: #000;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* button toggle */
+.switch {
+  position: relative;
+  cursor: pointer;
+  width: 47px;
+  height: 26px;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background: #000;
+  border-radius: 100rem;
+  transition: background-color 0.25s linear;
+}
+
+.switch:after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  top: 5px;
+  left: 5px;
+  transition: background-color 0.25s linear, transform 0.25s linear;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch {
+  background-color: #ff497c;
+}
+
+.switch-input:checked + .switch:after {
+  transform: translateX(21px);
+  background-color: white;
 }
 
 .wrapper {
