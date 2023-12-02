@@ -7,7 +7,9 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/layout/assets/js/tailwind.js"></script>
+    <script src="/view/layout/assets/js/tailwind.js"></script>
+
+
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +26,62 @@
 
 <body>
     <!-- HEADER -->
+    <header>
+        <div>
+            <div class=" w-3/4 px-8 container bg-box rounded-15 mt-8 flex items-center justify-between">
+                <!-- LOGO -->
+                <div>
+                    <img src="assets/img/logo.png" alt="Logo Web">
+                </div>
+                <!-- NAV -->
+                <div>
+                    <ul class="flex text-base gap-8">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Product</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SITE LINK -->
+                <div>
+                    <ul class="flex gap-3 text-xl">
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-search'></i>
+                            </a>
+                        </li>
 
-    <!-- HEADER -->
-
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-user'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-cart'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='bx bx-heart'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <!-- BREADCRUMB -->
     <section class="my-16">
@@ -54,19 +109,21 @@
 
     <!-- CONTENT -->
     <div id="content">
-        <div class="cart-container flex flex-col justify-between md:flex-row max-[640px]:m-6">
+        <div class="cart-container flex flex-col justify-between lg:flex-row max-[640px]:m-4 md:m-4 lg:mx-16 ">
             <!-- CART -->
-            <div class="cart py-8 px-8 md:flex-row mx-n max-[600px]:w-full max-[600px]:py-4 max-[600px]:px-4">
+            <div
+                class="cart lg:w-2/3 py-8 px-8 mx-n max-[600px]:w-full max-[600px]:py-4 max-[600px]:px-4 md:w-full md:mx-0">
                 <div class="flex justify-between items-center mb-6">
                     <h2 class="text-2xl">Your Cart</h2>
                     <span class="opacity-70 text-sm"><i class='bx bx-x'></i> Clear cart</span>
                 </div>
 
-                <!--START: cart item -->
-                <div class="cart-item flex justify-between items-center px-4 py-4 mt-5 max-[640px]:block">
-                    <div class="flex items-center py-4 max-[640px]:items-start ">
+                <!--START: SINGLE PRODUCT -->
+                <div
+                    class="cart-item flex justify-between items-center px-4 py-4 mt-5 h-40 max-[640px]:block max-[640px]:h-60">
+                    <div class="flex items-center py-4 max-[640px]:items-center ">
                         <div class="flex items-center justify-center w-28 h-26">
-                                <img src="./assets/img/headphone-img.png" alt="">
+                            <img src="./assets/img/headphone-img.png" alt="">
                         </div>
 
                         <p class="font-bold ml-4">Apple Airpod Max <br>
@@ -75,14 +132,14 @@
                     </div>
 
                     <!-- count -->
-                    <div class="btn-container flex justify-between items-center max-[600px]:mt-6">
-                        <div>
+                    <div class="btn-container flex justify-between items-center max-[600px]:mt-6 md:ml-12">
+                        <div class="md:w-28">
                             <a class="decrease text-xl px-3 pb-1 cursor-pointer">-</a>
                             <a class="quantity mx-2 max-[600px]:mx-0">1</a>
                             <a class="increase text-xl px-3 pb-1 cursor-pointer">+</a>
                         </div>
 
-                        <div class="price mx-24 max-[600px]:mx-2">
+                        <div class="price xl:mx-24 max-[600px]:mx-2 md:mx-6">
                             <span class="font-bold text-2xl">$400</span>
                         </div>
 
@@ -92,11 +149,12 @@
                     </div>
                 </div>
 
-                <!--START: cart item -->
-                <div class="cart-item flex justify-between items-center border-2 rounded-lg px-5 py-5 mt-5">
-                    <div class="flex items-center">
+                <!--START: SINGLE PRODUCT -->
+                <div
+                    class="cart-item flex justify-between items-center px-4 py-4 mt-5 h-40 max-[640px]:block max-[640px]:h-60">
+                    <div class="flex items-center py-4 max-[640px]:items-center ">
                         <div class="flex items-center justify-center w-28 h-26">
-                                <img src="./assets/img/ip15-prm.png" alt="">
+                            <img src="./assets/img/headphone-img.png" alt="">
                         </div>
 
                         <p class="font-bold ml-4">Apple Airpod Max <br>
@@ -105,22 +163,29 @@
                     </div>
 
                     <!-- count -->
-                    <div class="btn-container flex items-center">
-                        <a class="decrease text-xl border-2 rounded-full px-3 pb-1">-</a>
-                        <a class="quantity mx-4">1</a>
-                        <a class="increase text-xl border-2 rounded-full px-3 pb-1">+</a>
+                    <div class="btn-container flex justify-between items-center max-[600px]:mt-6 md:ml-12">
+                        <div class="md:w-28">
+                            <a class="decrease text-xl px-3 pb-1 cursor-pointer">-</a>
+                            <a class="quantity mx-2 max-[600px]:mx-0">1</a>
+                            <a class="increase text-xl px-3 pb-1 cursor-pointer">+</a>
+                        </div>
+
+                        <div class="price xl:mx-24 max-[600px]:mx-2 md:mx-6">
+                            <span class="font-bold text-2xl">$400</span>
+                        </div>
+
+                        <div class="del-icon">
+                            <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
+                        </div>
                     </div>
-
-                    <span class="font-bold text-2xl">$400</span>
-
-                    <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
                 </div>
 
-                <!--START: cart item -->
-                <div class="cart-item flex justify-between items-center border-2 rounded-lg px-5 py-5 mt-5">
-                    <div class="flex items-center">
+                <!--START: SINGLE PRODUCT -->
+                <div
+                    class="cart-item flex justify-between items-center px-4 py-4 mt-5 h-40 max-[640px]:block max-[640px]:h-60">
+                    <div class="flex items-center py-4 max-[640px]:items-center ">
                         <div class="flex items-center justify-center w-28 h-26">
-                            <img src="./assets/img/macbook.png" alt="">
+                            <img src="./assets/img/headphone-img.png" alt="">
                         </div>
 
                         <p class="font-bold ml-4">Apple Airpod Max <br>
@@ -129,42 +194,53 @@
                     </div>
 
                     <!-- count -->
-                    <div class="btn-container flex items-center">
-                        <a class="btn decrease text-xl border-2 rounded-full px-3 pb-1 cursor-pointer">-</a>
-                        <a class="quantity mx-4">1</a>
-                        <a class="btn increase text-xl border-2 rounded-full px-3 pb-1 cursor-pointer">+</a>
+                    <div class="btn-container flex justify-between items-center max-[600px]:mt-6 md:ml-12">
+                        <div class="md:w-28">
+                            <a class="decrease text-xl px-3 pb-1 cursor-pointer">-</a>
+                            <a class="quantity mx-2 max-[600px]:mx-0">1</a>
+                            <a class="increase text-xl px-3 pb-1 cursor-pointer">+</a>
+                        </div>
+
+                        <div class="price xl:mx-24 max-[600px]:mx-2 md:mx-6">
+                            <span class="font-bold text-2xl">$400</span>
+                        </div>
+
+                        <div class="del-icon">
+                            <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
+                        </div>
                     </div>
-
-                    <span class="font-bold text-2xl">$400</span>
-
-                    <a href="#" class="close-btn"><i class='bx bx-x opacity-70'></i></a>
                 </div>
+
+
             </div>
 
             <!-- TOTAL BOARD -->
-            <div class="checkout w-80">
-                <p class="font-semibold text-lg">Promo code</p>
-                <input class="border-2 rounded-2xl px-4 py-1 mt-4" type="text" placeholder="Type here...">
+            <div class="mt-8 lg:flex lg:items-start lg:w-1/3 lg:ml-8 ">
+                <div class="checkout max-[640px]:w-auto lg:w-full">
+                    <p class="font-semibold text-lg">Promo code</p>
+                    <input class="border-2 rounded-2xl px-4 py-1 mt-4" type="text" placeholder="Type here...">
 
-                <div class="border-t-2 pt-6 mt-6">
-                    <div class="flex justify-between items-center text-sm opacity-70">
-                        <p>Subtotal</p>
-                        <p>$1200</p>
+                    <div class="border-t-2 pt-6 mt-6">
+                        <div class="flex justify-between items-center text-sm opacity-70">
+                            <p>Subtotal</p>
+                            <p>$1200</p>
+                        </div>
+
+                        <div class="flex justify-between items-center text-sm opacity-70 my-5">
+                            <p>Discount</p>
+                            <p>$0</p>
+                        </div>
+
+                        <div class="flex justify-between items-center text-lg font-bold">
+                            <p>Total</p>
+                            <p>$1200</p>
+                        </div>
                     </div>
 
-                    <div class="flex justify-between items-center text-sm opacity-70 my-5">
-                        <p>Discount</p>
-                        <p>$0</p>
-                    </div>
-
-                    <div class="flex justify-between items-center text-lg font-bold">
-                        <p>Total</p>
-                        <p>$1200</p>
-                    </div>
+                    <p class="border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7"><a
+                            href="#">CHECK OUT</a></p>
                 </div>
 
-                <p class="border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7"><a
-                        href="#">CHECK OUT</a></p>
             </div>
         </div>
 
@@ -197,7 +273,114 @@
         </div>
     </div>
 
-    <!-- START: FOOTER -->
+    <!-- POLICY -->
+    <div class="policy flex items-center place-content-between mt-22">
+        <div class="flex items-center">
+            <div class="img w-16 h-16"><img src="./assets/img/delivery.png" alt=""></div>
+
+            <div class="info ml-4 mb-2">
+                <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                <p class="text-sm">Tell about your service</p>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <div class="img w-16 h-16"><img src="./assets/img/money back.png" alt=""></div>
+
+            <div class="info ml-4 mb-2">
+                <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                <p class="text-sm">Within 10 days.</p>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <div class="img w-16 h-16"><img src="./assets/img/return.png" alt=""></div>
+
+            <div class="info ml-4 mb-2">
+                <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                <p class="text-sm">No question ask.</p>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <div class="img w-16 h-16"><img src="./assets/img/support.png" alt=""></div>
+
+            <div class="info ml-4 mb-2">
+                <p class="font-extrabold text-lg">Fast & Secure delivery</p>
+                <p class="text-sm">24/7 Live support.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="mt-12">
+        <div>
+            <div class="container grid-cols-4 grid border-y-2 py-10">
+                <div class="flex flex-col justify-between">
+                    <h1 class="font-bold text-h2 text-lg">Support</h1>
+                    <p class="w-56 color-777">QTSC 9 Building, To Ky Street Ho Chi Minh City</p>
+
+                    <div class="">
+                        <div>
+                            <img class="inline-block mr-4" src="assets/img/mail.png" alt="">
+                            <span class="color-777">example@domain.com</span>
+                        </div>
+
+                        <div>
+                            <img class="inline-block mr-4" src="assets/img/telephone.png" alt="">
+                            <span class="color-777">(84+) 123 456 78</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ml-6">
+                    <h1 class="font-bold text-h2 text-lg">Account</h1>
+                    <div class="mt-2 leading-9 cursor-pointer">
+                        <p class="color-777">My Account</p>
+                        <p class="color-777">Login</p>
+                        <p class="color-777">Cart</p>
+                        <p class="color-777">Wislish</p>
+                        <p class="color-777">Shop</p>
+                    </div>
+                </div>
+
+                <div class="ml-12">
+                    <h1 class="font-bold text-h2 text-lg">Quick Link</h1>
+                    <div class="mt-2 leading-9 cursor-pointer">
+                        <p class="color-777">About Us</p>
+                        <p class="color-777">Privacy Policy</p>
+                        <p class="color-777">Terms Of Use</p>
+                        <p class="color-777">Contact</p>
+                    </div>
+                </div>
+
+                <div class="ml-16">
+                    <h1 class="font-bold text-h2 text-lg">Follow Us</h1>
+                    <div class="mt-2">
+                        <div class="flex gap-4 cursor-pointer">
+                            <img class="w-10 h-10 mr-2" src="./assets/img/facebook (2).png" alt="">
+                            <img class="w-10 h-10 mr-2" src="./assets/img/instagram.png" alt="">
+                            <img class="w-10 h-10 mr-2" src="./assets/img/linkedin.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arr flex justify-between items-center py-4 text-sm">
+                <p class="color-777">© 2023. All rights reserved</p>
+
+                <div class="payment">
+                    <p class="color-777">Accept For</p>
+
+                    <div class="payment_img flex justify-between items-center ml-4">
+                        <img class="mr-2 w-6 h-6" src="./assets/img/paypal.png" alt="">
+                        <img class="mr-2 w-14 h-14" src="./assets/img/pay-1.png" alt="">
+                        <img class="mr-2 w-12 h-12" src="./assets/img/visa.png" alt="">
+                        <img class="mr-2 w-12 h-12" src="./assets/img/momo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- END: FOOTER -->
 
     <style>
