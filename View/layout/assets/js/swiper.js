@@ -28,7 +28,7 @@ var swiper = new Swiper(".heroSwiper", {
 // REVIEW
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
-  spaceBetween: 10,
+  spaceBetween: 30,
   loop: true,
 
   navigation: {
