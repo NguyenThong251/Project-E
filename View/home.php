@@ -461,7 +461,7 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
 
             <div>
                 <div
-                    class="mt-12 hidden justify-center justify-items-center lg:grid md:grid-cols-3 xl:grid-cols-4 gap-4">
+                    class="mt-12 hidden justify-center lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-4">
                     <!-- SINGLE PRODUCT -->
                     <?=$html_product_view?>
 
@@ -532,13 +532,13 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
             </h1>
 
             <!-- LOWER -->
-            <div class="mt-4 flex flex-col md:flex-row gap-2 items-center">
-                <div class="text-sm lg:text-xl flex gap-3 bg-white  md:w-fit p-4 py-3 rounded-button">
+            <div class="mt-4 flex flex-col lg:flex-row gap-2 items-center w-fit mx-auto lg:mx-0">
+                <div class="text-sm lg:text-xl flex gap-3 bg-white  lg:w-fit p-4 py-3 rounded-button">
                     <i class="fa-solid fa-envelope text-sm lg:text-xl  mt-1"></i>
                     <input type="text" placeholder="example@gmail.com" />
                 </div>
                 <div
-                    class="hover:bg-transparent hover:text-primary  font-bold cursor-pointer border-2 border-primary transition duration-300 w-52 text-center md:w-fit h-full px-0 md:px-4 py-2 xl:py-3 bg-primary text-white rounded-button">
+                    class="hover:bg-transparent hover:text-primary  font-bold cursor-pointer border-2 border-primary transition duration-300 w-full text-center lg:w-fit h-full px-0 md:px-4 py-2 xl:py-3 bg-primary text-white rounded-button">
                     Subcribe
                 </div>
             </div>

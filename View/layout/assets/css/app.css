@@ -301,3 +301,11 @@ footer {
 .bg-bl {
   background-color: #302828;
 }
+
+.slider-box-hero {
+  height: 500px !important;
+}
+
+.slider-box {
+  height: 400px !important;
+}
