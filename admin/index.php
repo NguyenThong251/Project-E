@@ -22,6 +22,9 @@ if (!isset($_GET['page'])) {
     case 'category':
       include_once('./public/category.php');
       break;
+    case 'product':
+      include_once('./public/product.php');
+      break;
     case 'logout':
       if (isset($_SESSION['admin'])) {
         unset($_SESSION['admin']);

@@ -260,7 +260,7 @@ function upStatus(obj) {
     cache: false,
     success: function (data) {
       data = JSON.parse(data);
-      console.log(data);
+      // console.log(data);
       if (data.result == "success") {
         Swal.fire({
           icon: "success",
