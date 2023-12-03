@@ -1,11 +1,21 @@
+<?php
+$show_option = "";
+foreach ($category as $item) {
+  extract($item);
+  $show_option .= '<option value="' . $name . '">' . $name . '</option>';
+}
+?>
+
+<head>
+  <link rel="stylesheet" href="./layout/css/product.css">
+</head>
 <main class="main">
   <h1 class="title">Sản phẩm</h1>
   <div class="filter">
     <div class="filter-select">
-      <select id="filter-select">
+      <select id="filter-select" onchange="filter(this)">
         <option value="all">Tất cả</option>
-        <option value="new">Mới nhất</option>
-        <option value="sale">Giảm giá</option>
+        <?= $show_option ?>
       </select>
     </div>
     <div class="filter-search">
@@ -33,7 +43,7 @@
       <tbody class="table-body">
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -69,7 +79,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -105,7 +115,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -141,7 +151,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -177,7 +187,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -213,7 +223,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -249,7 +259,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -285,7 +295,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -321,7 +331,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -357,7 +367,7 @@
         </tr>
         <tr>
           <td>
-            <div class="product-image"> <img srcset="./images/product.png 2x" alt="product"></div>
+            <div class="product-image"> <img srcset="./layout/images/product.png 2x" alt="product"></div>
           </td>
           <td>
             <div class="product-name">
@@ -423,6 +433,41 @@
         </select>
         <label>Hình ảnh sản phẩm:</label>
         <input class="product-form-input" type="file">
+        <div class="show-image">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+          <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+        </div>
+        <label for="">Ảnh phụ:</label>
+        <div class="product-form-subimg">
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+        </div>
         <label>Tên sản phẩm:</label>
         <input class="product-form-input" type="text" placeholder="Nhập tên sản phẩm">
         <label>Giá bán ảo (Hiển thị khi lớn hơn giá bán thực tế):</label>
@@ -489,7 +534,41 @@
         </select>
         <label>Hình ảnh sản phẩm:</label>
         <input class="product-form-input" type="file">
-        <div class="product-form-image"><img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image"></div>
+        <div class="show-image">
+          <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+          <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+        </div>
+        <label for="">Ảnh phụ:</label>
+        <div class="product-form-subimg">
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+          <div class="product-form-subimg-container">
+            <input type="file" name="" id="">
+            <div class="show-image">
+              <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg" alt="product image">
+              <div class="remove-img"><ion-icon name="trash-outline"></ion-icon></div>
+            </div>
+          </div>
+        </div>
         <label>Tên sản phẩm:</label>
         <input class="product-form-input" type="text" placeholder="Nhập tên sản phẩm">
         <label>Giá bán ảo (Hiển thị khi lớn hơn giá bán thực tế):</label>
@@ -534,3 +613,4 @@
     </div>
   </div>
 </main>
+<script src="./layout/js/product.js"></script>

@@ -1,28 +1,28 @@
 <?php
 include_once('../../model/pdo.php');
-include_once('../../model/category.php');
+include_once('../../model/brand.php');
 
 if ($_GET['func'] == "show") {
-  $categories = category_select_all();
+  $categories = brand_select_all();
   echo json_encode($categories);
 }
 if ($_GET['func'] == "add") {
-  $category_name = $_POST['category_name'];
-  $category = category_exist($category_name);
-  if ($category != 1) {
-    category_insert($category_name);
+  $brand_name = $_POST['brand_name'];
+  $brand = brand_exist($brand_name);
+  if ($brand != 1) {
+    brand_insert($brand_name);
     echo json_encode(['result' => "success"]);
   } else {
     echo json_encode(['result' => "error"]);
   }
 }
 if ($_GET['func'] == "up") {
-  if (isset($_GET['id']) && isset($_POST['category_name'])) {
-    $category_id = $_GET['id'];
-    $category_name = $_POST['category_name'];
-    $category = category_exist($category_name);
-    if ($category != 1) {
-      category_update($category_id, $category_name);
+  if (isset($_GET['id']) && isset($_POST['brand_name'])) {
+    $brand_id = $_GET['id'];
+    $brand_name = $_POST['brand_name'];
+    $brand = brand_exist($brand_name);
+    if ($brand != 1) {
+      brand_update($brand_id, $brand_name);
       echo json_encode(['result' => "success"]);
     } else {
       echo json_encode(['result' => "error"]);
@@ -33,21 +33,21 @@ if ($_GET['func'] == "up") {
 }
 if ($_GET['func'] == "upStatus") {
   if (isset($_GET['id']) && isset($_POST['hidden'])) {
-    $category_id = $_GET['id'];
+    $brand_id = $_GET['id'];
     if ($_POST['hidden'] == "true") {
-      $category_hidden = 1;
+      $brand_hidden = 1;
     } else {
-      $category_hidden = 0;
+      $brand_hidden = 0;
     }
-    category_update_hide($category_id, $category_hidden);
+    brand_update_hide($brand_id, $brand_hidden);
     echo json_encode(['result' => "success"]);
   } else {
     echo json_encode(['result' => "error"]);
   }
 }
 if ($_GET['func'] == "del") {
-  // print_r($_POST);
-  $category_id = $_GET['id'];
-  category_delete($category_id);
+  // print_r($_GET);
+  $brand_id = $_GET['id'];
+  brand_delete($brand_id);
   echo json_encode(['result' => "success"]);
 }

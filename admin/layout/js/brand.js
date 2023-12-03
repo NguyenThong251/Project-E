@@ -1,12 +1,10 @@
 // open form add
-var cataAdd = document.querySelector(".category-add");
+var cataAdd = document.querySelector(".brand-add");
 
-var cataForms = document.querySelectorAll(".category-form");
+var cataForms = document.querySelectorAll(".brand-form");
 if (cataForms[0]) {
   function openForm() {
-    var cataFormContainer = cataForms[0].querySelector(
-      ".category-form-container"
-    );
+    var cataFormContainer = cataForms[0].querySelector(".brand-form-container");
     cataFormContainer.classList.remove("remove-form");
     cataForms[0].style.display = "block";
     cataFormContainer.classList.add("open-form");
@@ -16,8 +14,8 @@ if (cataForms[0]) {
 
 // close the form
 cataForms.forEach((cataForm) => {
-  var cataFormContainer = cataForm.querySelector(".category-form-container");
-  var cataFormClose = cataForm.querySelector(".category-form-close");
+  var cataFormContainer = cataForm.querySelector(".brand-form-container");
+  var cataFormClose = cataForm.querySelector(".brand-form-close");
   function closeForm() {
     cataFormContainer.classList.remove("open-form");
     cataFormContainer.classList.add("remove-form");
@@ -36,29 +34,29 @@ cataForms.forEach((cataForm) => {
 // show
 $(document).ready(function () {
   $.ajax({
-    url: "http://localhost/Project-E/admin/ajax/category.php?func=show",
+    url: "http://localhost/Project-E/admin/ajax/brand.php?func=show",
     dataType: "json",
     success: function (data) {
       // console.log(data);
-      $(".category-form-show").html("");
+      $(".brand-form-show").html("");
       for (i = 0; i < data.length; i++) {
-        category = data[i];
-        if (category["hidden"] == 1) {
+        brand = data[i];
+        if (brand["hidden"] == 1) {
           hide = "checked";
         } else {
           hide = "";
         }
         var lt_str = `<tr>
-                      <td> <span>${category["name"]}</span></td>
+                      <td> <span>${brand["name"]}</span></td>
                       <td>
-                        <input type="checkbox" id="${category["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
-                        <label for="${category["id"]}" class="switch"></label>
+                        <input type="checkbox" id="${brand["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                        <label for="${brand["id"]}" class="switch"></label>
                       </td>
-                      <td> <a class="category-action category-update" href="#" category_id="${category["id"]}" onclick="upID(this)">
-                          <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" category_id="${category["id"]}" onclick=delID(this) href="#">
+                      <td> <a class="brand-action brand-update" href="#" brand_id="${brand["id"]}" onclick="upID(this)">
+                          <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="brand-action brand-remove" brand_id="${brand["id"]}" onclick=delID(this) href="#">
                           <ion-icon name="trash-outline"></ion-icon></a></td>
                     </tr>`;
-        $(".category-form-show").append(lt_str);
+        $(".brand-form-show").append(lt_str);
       }
     },
   });
@@ -66,11 +64,11 @@ $(document).ready(function () {
 
 // add
 $(document).ready(function () {
-  $(".btnAddCategory").click(function () {
-    var url = "http://localhost/Project-E/admin/ajax/category.php?func=add";
+  $(".btnAddbrand").click(function () {
+    var url = "http://localhost/Project-E/admin/ajax/brand.php?func=add";
     $.ajax({
       url: url,
-      data: $("#formAddCategory").serialize(),
+      data: $("#formAddbrand").serialize(),
       // dataType: 'json',
       method: "post",
       cache: false,
@@ -80,10 +78,10 @@ $(document).ready(function () {
 
         if (data.result == "success") {
           // Close form
-          $(".category-form-container").removeClass("open-form");
-          $(".category-form-container").addClass("remove-form");
+          $(".brand-form-container").removeClass("open-form");
+          $(".brand-form-container").addClass("remove-form");
           setTimeout(() => {
-            $(".category-form").css("display", "none");
+            $(".brand-form").css("display", "none");
           }, 250);
           // Show alert
           Swal.fire({
@@ -93,32 +91,32 @@ $(document).ready(function () {
             timer: 1500,
           });
           // Reset form
-          $("#category_add").val("");
+          $("#brand_add").val("");
           // Load data
           $.ajax({
-            url: "http://localhost/Project-E/admin/ajax/category.php?func=show",
+            url: "http://localhost/Project-E/admin/ajax/brand.php?func=show",
             dataType: "json",
             success: function (data) {
               // console.log(data);
-              $(".category-form-show").html("");
+              $(".brand-form-show").html("");
               for (i = 0; i < data.length; i++) {
-                category = data[i];
-                if (category["hidden"] == 1) {
+                brand = data[i];
+                if (brand["hidden"] == 1) {
                   hide = "checked";
                 } else {
                   hide = "";
                 }
                 var lt_str = `<tr>
-                              <td> <span>${category["name"]}</span></td>
+                              <td> <span>${brand["name"]}</span></td>
                               <td>
-                                <input type="checkbox" id="${category["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
-                                <label for="${category["id"]}" class="switch" ></label>
+                                <input type="checkbox" id="${brand["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                                <label for="${brand["id"]}" class="switch" ></label>
                               </td>
-                              <td> <a class="category-action category-update" href="#" category_id="${category["id"]}" onclick="upID(this)">
-                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" category_id="${category["id"]}" onclick=delID(this) href="#">
+                              <td> <a class="brand-action brand-update" href="#" brand_id="${brand["id"]}" onclick="upID(this)">
+                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="brand-action brand-remove" brand_id="${brand["id"]}" onclick=delID(this) href="#">
                                   <ion-icon name="trash-outline"></ion-icon></a></td>
                             </tr>`;
-                $(".category-form-show").append(lt_str);
+                $(".brand-form-show").append(lt_str);
               }
             },
           });
@@ -136,10 +134,9 @@ $(document).ready(function () {
 
 // xoa
 function delID(obj) {
-  var category_id = obj.getAttribute("category_id");
+  var brand_id = obj.getAttribute("brand_id");
   var url =
-    "http://localhost/Project-E/admin/ajax/category.php?func=del&id=" +
-    category_id;
+    "http://localhost/Project-E/admin/ajax/brand.php?func=del&id=" + brand_id;
   $.get(url, "", function (d) {
     data = JSON.parse(d);
     // console.log(d);
@@ -164,25 +161,23 @@ function delID(obj) {
 // open form up and up
 if (cataForms[1]) {
   function upID(obj) {
-    var cataFormContainer = cataForms[1].querySelector(
-      ".category-form-container"
-    );
+    var cataFormContainer = cataForms[1].querySelector(".brand-form-container");
     cataFormContainer.classList.remove("remove-form");
     cataForms[1].style.display = "block";
     cataFormContainer.classList.add("open-form");
-    var category_id = obj.getAttribute("category_id");
-    var category_name =
+    var brand_id = obj.getAttribute("brand_id");
+    var brand_name =
       obj.parentNode.parentNode.querySelector("span").textContent;
-    var category_input = cataForms[1].querySelector("#category_up");
-    category_input.value = category_name;
+    var brand_input = cataForms[1].querySelector("#brand_up");
+    brand_input.value = brand_name;
     $(document).ready(function () {
-      $("#btnUpCategory").click(function () {
+      $("#btnUpbrand").click(function () {
         var url =
-          "http://localhost/Project-E/admin/ajax/category.php?func=up&id=" +
-          category_id;
+          "http://localhost/Project-E/admin/ajax/brand.php?func=up&id=" +
+          brand_id;
         $.ajax({
           url: url,
-          data: $("#formUpCategory").serialize(),
+          data: $("#formUpbrand").serialize(),
           // dataType: 'json',
           method: "post",
           cache: false,
@@ -191,10 +186,10 @@ if (cataForms[1]) {
             console.log(data);
             if (data.result == "success") {
               // Close form
-              $(".category-form-container").removeClass("open-form");
-              $(".category-form-container").addClass("remove-form");
+              $(".brand-form-container").removeClass("open-form");
+              $(".brand-form-container").addClass("remove-form");
               setTimeout(() => {
-                $(".category-form").css("display", "none");
+                $(".brand-form").css("display", "none");
               }, 250);
               // Show alert
               Swal.fire({
@@ -204,32 +199,32 @@ if (cataForms[1]) {
                 timer: 1500,
               });
               // Reset form
-              $("#category_add").val("");
+              $("#brand_add").val("");
               // Load data
               $.ajax({
-                url: "http://localhost/Project-E/admin/ajax/category.php?func=show",
+                url: "http://localhost/Project-E/admin/ajax/brand.php?func=show",
                 dataType: "json",
                 success: function (data) {
                   console.log(data);
-                  $(".category-form-show").html("");
+                  $(".brand-form-show").html("");
                   for (i = 0; i < data.length; i++) {
-                    category = data[i];
-                    if (category["hidden"] == 1) {
+                    brand = data[i];
+                    if (brand["hidden"] == 1) {
                       hide = "checked";
                     } else {
                       hide = "";
                     }
                     var lt_str = `<tr>
-                                <td> <span>${category["name"]}</span></td>
+                                <td> <span>${brand["name"]}</span></td>
                                 <td>
-                                  <input type="checkbox" id="${category["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
-                                  <label for="${category["id"]}" class="switch" ></label>
+                                  <input type="checkbox" id="${brand["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                                  <label for="${brand["id"]}" class="switch" ></label>
                                   </td>
-                                  <td> <a class="category-action category-update" href="#" category_id="${category["id"]}" onclick="upID(this)">
-                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="category-action category-remove" category_id="${category["id"]}" onclick=delID(this) href="#">
+                                  <td> <a class="brand-action brand-update" href="#" brand_id="${brand["id"]}" onclick="upID(this)">
+                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="brand-action brand-remove" brand_id="${brand["id"]}" onclick=delID(this) href="#">
                                   <ion-icon name="trash-outline"></ion-icon></a></td>
                                   </tr>`;
-                    $(".category-form-show").append(lt_str);
+                    $(".brand-form-show").append(lt_str);
                   }
                 },
               });
@@ -249,10 +244,10 @@ if (cataForms[1]) {
 
 // up status
 function upStatus(obj) {
-  var category_id = obj.getAttribute("id");
+  var brand_id = obj.getAttribute("id");
   var url =
-    "http://localhost/Project-E/admin/ajax/category.php?func=upStatus&id=" +
-    category_id;
+    "http://localhost/Project-E/admin/ajax/brand.php?func=upStatus&id=" +
+    brand_id;
   $.ajax({
     url: url,
     data: { hidden: obj.checked },
