@@ -55,8 +55,8 @@
     <div>
         <div class="container grid-cols-1 lg:grid-cols-4 grid border-y-2 py-10 border-gray px-2 gap-4 lg:gap-0">
             <div class="flex flex-col justify-between">
-                <h1 class="font-bold text-h2 text-lg ml-4 lg:ml-0">Support</h1>
-                <p class="ml-4 lg:ml-0 mt-2 lg:mt-0 w-56 color-777">
+                <h1 class="font-bold text-h2 text-lg ">Support</h1>
+                <p class=" mt-2 lg:mt-0 w-56 color-777">
                     QTSC 9 Building, To Ky Street Ho Chi Minh City
                 </p>
 
@@ -75,7 +75,7 @@
                 </div>
 
             </div>
-            <div class="ml-3 lg:ml-6">
+            <div class="">
                 <div class="flex gap-2">
                     <h1 class="font-bold text-h2 text-lg">Account</h1>
                     <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="ml-3 lg:ml-12">
+            <div class="">
                 <div class="flex gap-2">
                     <h1 class="font-bold text-h2 text-lg ">Quick Link</h1>
                     <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
@@ -108,7 +108,7 @@
                 </div>
             </div>
 
-            <div class="ml-3 lg:ml-16">
+            <div class="">
                 <h1 class="font-bold text-h2 text-lg">Follow Us</h1>
                 <div class="mt-2">
                     <div class="flex gap-4 cursor-pointer">
@@ -140,6 +140,7 @@
     </div>
 </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>

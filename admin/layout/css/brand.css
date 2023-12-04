@@ -1,40 +1,40 @@
-.category tr {
+.brand tr {
   grid-template-columns: 2fr 1fr 1fr;
   grid-template-rows: 48px;
 }
-.category td {
+.brand td {
   padding: 16px 32px;
 }
-.category td:nth-child(2) {
+.brand td:nth-child(2) {
   padding: 12px 0;
   text-align: center;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
 }
-.category td:last-child {
+.brand td:last-child {
   display: flex;
   align-items: center;
   justify-self: center;
   gap: 16px;
   font-size: 24px;
 }
-.category td:last-child span {
+.brand td:last-child span {
   opacity: 0.5;
 }
-.category-action {
+.brand-action {
   transition: all 0.2s linear;
 }
-.category-action:hover {
+.brand-action:hover {
   transform: scale(1.2);
 }
 
-.category-form {
+.brand-form {
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
-.category-form-container {
+.brand-form-container {
   background-color: #fff;
   height: 100vh;
   margin-left: 240px;
@@ -46,35 +46,35 @@
   border-top-left-radius: 320px;
   border-bottom-left-radius: 540px;
 }
-.category-form-close {
+.brand-form-close {
   position: absolute;
   top: 40px;
   right: 40px;
   font-size: 24px;
 }
-.category-form-group tr {
+.brand-form-group tr {
   grid-template-columns: 2fr 1fr;
 }
-.category-form-group td {
+.brand-form-group td {
   padding: 16px 32px;
 }
-.category-form-group td:nth-child(2) {
+.brand-form-group td:nth-child(2) {
   text-align: center;
   border-left: 1px solid #000;
 }
-.category-form-body tr:hover {
+.brand-form-body tr:hover {
   background-color: #fff;
 }
-.category-form-body input {
+.brand-form-body input {
   width: 100%;
   border: 1px solid #000;
   border-radius: 12px;
   padding: 13px 16px;
 }
-.category-form-body input:focus {
+.brand-form-body input:focus {
   border-color: #3577f0;
 }
-.category-form-body button {
+.brand-form-body button {
   margin: 0;
 }
 
@@ -102,11 +102,11 @@
     transform: translateX(0);
   }
 }
-.sidebar-item:nth-child(2) {
+.sidebar-item:nth-child(8) {
   color: #000;
 }
-.sidebar-item:nth-child(2) .sidebar-animation {
+.sidebar-item:nth-child(8) .sidebar-animation {
   transform: translateX(0);
 }
 
-/*# sourceMappingURL=category.css.map */
+/*# sourceMappingURL=brand.css.map */

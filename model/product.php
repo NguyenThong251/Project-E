@@ -23,41 +23,45 @@ require_once 'pdo.php';
 //     }
 // }
 
-function get_product_all(){
+function get_product_all()
+{
     $sql = "SELECT * FROM product";
     return pdo_query($sql);
 }
-function get_product_hot($limi){
+function get_product_hot($limi)
+{
     $sql = "SELECT p.*, b.name as brand_name 
         FROM product p
         JOIN brand b ON p.id_brand = b.id
         WHERE p.hot = 1
         ORDER BY p.id ASC
-        LIMIT ".$limi;
+        LIMIT " . $limi;
     return pdo_query($sql);
 }
-function get_product_new($limi){
+function get_product_new($limi)
+{
     $sql = "SELECT p.*, b.name as brand_name 
     FROM product p
     JOIN brand b ON p.id_brand = b.id
     WHERE p.new = 1
     ORDER BY p.id ASC
-    LIMIT ".$limi;
+    LIMIT " . $limi;
     return pdo_query($sql);
 }
-function get_product_sale($limi){
-    $sql = "SELECT * FROM product WHERE sale = 1 ORDER BY id ASC LIMIT ".$limi;
+function get_product_sale($limi)
+{
+    $sql = "SELECT * FROM product WHERE sale = 1 ORDER BY id ASC LIMIT " . $limi;
     return pdo_query($sql);
 }
-function get_product_view($limi){
+function get_product_view($limi)
+{
     $sql = "SELECT p.*, b.name as brand_name 
     FROM product p
     JOIN brand b ON p.id_brand = b.id
     WHERE p.view > 99
     ORDER BY p.id ASC
-    LIMIT ".$limi;
+    LIMIT " . $limi;
     return pdo_query($sql);
-   
 }
 
 // function hang_hoa_select_by_id($ma_hh){
@@ -65,61 +69,70 @@ function get_product_view($limi){
 //     return pdo_query_one($sql, $ma_hh);
 // }
 //function product_primary
-function show_product($dssp){
-    $html_dssp='';
-foreach ($dssp as $sp) {
-    extract($sp);
-    // Tính phần trăm giảm giá
-    $percent_discount = ($price - $price_sale) / $price * 100;
-    if ($sale > 0 && $sale < 100) {
-        $item_sale = '<div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-        Sale '. round($percent_discount).'%
+function show_product($dssp)
+{
+    $html_dssp = '';
+    foreach ($dssp as $sp) {
+        extract($sp);
+        // Tính phần trăm giảm giá
+        $percent_discount = ($price - $price_sale) / $price * 100;
+        if ($sale > 0 && $sale < 100) {
+            $item_sale = '<div class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
+        Sale ' . round($percent_discount) . '%
     </div>';
-    } else {
-        $item_sale ='';
-    }
-    if($img!="") $img=PATH_IMG.$img;
-    $link="index.php?pg=sanphamchitiet&idpro=".$id;
-    $html_dssp.=
-    ' <a href="'.$link.'" class="overflow-hidden group">
-    <div class="bg-box relative flex items-center  h-3/4 lg:h-96  justify-center pb-20">
-        <img class="group-hover:scale-125  group-hover:blur-sm transition duration-500" 
-            src="'.$img.'" alt="">
+        } else {
+            $item_sale = '';
+        }
+        if ($img != "") $img = PATH_IMG . $img;
+        $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
+        $html_dssp .=
+            ' <div class="overflow-hidden group">
+
+    <div class="bg-box relative z-10 flex items-center  h-3/4 lg:h-96  justify-center pb-20">
+    <input type="hidden" class="inputImg" name="img" value="'.$img.'">
+    <input type="hidden" name="name" value="'.$name.'">
+    <input type="hidden" name="price" value="'.$price.'">
+    <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
+        <a href="' . $link . '" >
+                <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
+        src="' . $img . '" alt="">
+        </a>
         <div
-            class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
+            class="absolute z-99 bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
             <div
-                class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                class="cursor-pointer hover:scale-125 transition duration-300 addToCart flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <p class="text-white hidden xl:block">Add To cart</p>
             </div>
             <div
-                class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                class="hover:scale-125 transition duration-300 flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-regular fa-eye"></i>
-                <p class="text-white hidden xl:block">View Product</p>
+                <a href="' . $link . '"  class=" text-white hidden xl:block">View Product</a>
             </div>
         </div>
         <div
             class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-2 right-0 bg-primary text-white px-2 py-1 rounded-box">
             <i class="fa-regular fa-heart"></i>
         </div>
-        '.$item_sale.'
+        ' . $item_sale . '
     </div>
 
     <!-- DES -->
-    <p class="text-center font-bold mt-4 text-sm lg:text-xl">'.$name.'</p>
-    <p class="text-center text-sm">'.$brand_name.'</p>
-    <div class="flex flex-col lg:flex-row justify-center gap-4  items-center">
-        <del class="font-del text-sm lg:text-lg ">'.$price.'VNĐ</del>
-        <p class="text-sm lg:text-lg">'.$price_sale.'VNĐ</p>
+    <p class="text-center font-bold mt-2 text-sm lg:text-xl">' . $name . '</p>
+    <p class="my-2 text-center text-sm">' . $brand_name . '</p>
+    <div class="flex flex-col lg:flex-row justify-center gap-1 lg:gap-4  items-center">
+        <del class="font-del text-sm lg:text-lg ">' . $price . 'VNĐ</del>
+        <p class="text-sm lg:text-lg font-bold">' . $price_sale . 'VNĐ</p>
 
     </div>
-</a>';
-}
-return $html_dssp;
+</div>';
+    }
+    return $html_dssp;
 }
 // show_product_new
-function show_product_new($pr_new){
-    $html_pr_new ='';
+function show_product_new($pr_new)
+{
+    $html_pr_new = '';
     foreach ($pr_new as $sp) {
         extract($sp);
         // $percent_discount = ($price - $price_sale) / $price * 100;
@@ -130,9 +143,9 @@ function show_product_new($pr_new){
         // } else {
         //     $item_sale ='';
         // }
-        if($img!="") $img=PATH_IMG.$img;
-        $link="index.php?pg=sanphamchitiet&idpro=".$id;
-        $html_pr_new .='<div class=" swiper-slide relative flex justify-center items-center gap-40">
+        if ($img != "") $img = PATH_IMG . $img;
+        $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
+        $html_pr_new .= '<div class=" swiper-slide relative flex justify-center items-center gap-60">
         <div class="">
             <div>
                 <div class="flex gap-2 items-center">
@@ -141,29 +154,32 @@ function show_product_new($pr_new){
                     </div>
                     Hot deal this week
                 </div>
-                <h1 class="text-5xl font-bold mt-4">'.$name.'</h1>
-                 <h3 class="text-3xl font-bold mt-4 text-md">'.$brand_name.'</h3> 
+                <h1 class="text-6xl font-bold mt-4">' . $name . '</h1>
+                 <h3 class="text-3xl font-bold mt-4 text-md">' . $brand_name . '</h3> 
             </div>
-            <p class="w-2/4 my-4">'.$des.'</p>
+            <p class="w-2/4 my-4">' . $des . '</p>
             <div class="mt-4">
-                <del class="text-h2 mr-2">'.$price.'VNĐ</del>
-                <span class="text-h2 font-bold">'.$price_sale.'VNĐ</span>
+                <del class="text-h2 mr-2">' . $price . 'VNĐ</del>
+                <span class="text-h2 font-bold">' . $price_sale . 'VNĐ</span>
             </div>
 
-            <a hred="'.$link.'" class="cursor-pointer border-2 hover:bg-transparent 
+            <a href="' . $link . '"class="cursor-pointer border-2 hover:bg-transparent 
                                 hover:text-primary hover:border-primary transition 
                                 duration-300 px-20 py-4 text-h2 bg-primary text-white 
                                 font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">MUA NGAY
             </a>
         </div>
-        <img class="" src="'.$img.'" alt="">
+        <a href="' . $link . '" >
+          <img class="w-96 object-contain" src="' . $img . '" alt="">
+        </a>
     </div>';
     }
-return $html_pr_new;
+    return $html_pr_new;
 }
 // show_product_new
-function show_product_new_secondary($pr_new){
-    $html_pr_new ='';
+function show_product_new_secondary($pr_new)
+{
+    $html_pr_new = '';
     foreach ($pr_new as $sp) {
         extract($sp);
         $percent_discount = ($price - $price_sale) / $price * 100;
@@ -174,74 +190,84 @@ function show_product_new_secondary($pr_new){
         // } else {
         //     $item_sale ='';
         // }
-        if($img!="") $img=PATH_IMG.$img;
-        $link="index.php?pg=sanphamchitiet&idpro=".$id;
-        $html_pr_new .=' <div class="swiper-slide bg-box rounded-box py-4 flex flex-col items-center">
-        <img class="" src="'.$img.'" alt="" />
+        if ($img != "") $img = PATH_IMG . $img;
+        $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
+        $html_pr_new .= ' <div class="swiper-slide justify-between slider-box-hero bg-box rounded-box py-4 flex flex-col items-center">
+        <img class="w-80 object-cover" src="' . $img . '" alt="" />
+            <div>
+            <p class="text-center font-bold mt-4">' . $name . '</p>
+            <p class="text-center font-bold mb-6">' . $price_sale . '</p>
+            </div>
 
-        <p class="text-center font-bold mt-4">'.$name.'</p>
-        <p class="text-center font-bold mb-6">'.$price_sale.'</p>
     </div>';
     }
-return $html_pr_new;
+    return $html_pr_new;
 }
 //product_view_2
-function show_product_view_secondary($dssp){
-    $html_dssp='';
-foreach ($dssp as $sp) {
-    extract($sp);
-    // Tính phần trăm giảm giá
-    $percent_discount = ($price - $price_sale) / $price * 100;
-    if ($sale > 0 && $sale < 100) {
-        $item_sale = '<div
+function show_product_view_secondary($dssp)
+{
+    $html_dssp = '';
+    foreach ($dssp as $sp) {
+        extract($sp);
+        // Tính phần trăm giảm giá
+        $percent_discount = ($price - $price_sale) / $price * 100;
+        if ($sale > 0 && $sale < 100) {
+            $item_sale = '<div
         class="absolute top-2 text-sm left-2 bg-primary w-fit rounded-box text-white p-2">
-        Sale '. round($percent_discount).'%
+        Sale ' . round($percent_discount) . '%
     </div>';
-    } else {
-        $item_sale ='';
-    }
-    if($img!="") $img=PATH_IMG.$img;
-    $link="index.php?pg=sanphamchitiet&idpro=".$id;
-    $html_dssp.=
-    ' <div class="swiper-slide flex items-center justify-center">
+        } else {
+            $item_sale = '';
+        }
+        if ($img != "") $img = PATH_IMG . $img;
+        $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
+        $html_dssp .=
+        ' <div class="swiper-slide flex items-center justify-center">
     <!-- SINGLE PRODUCT -->
-    <div class="overflow-hidden h-fit w-fit group rounded-box">
-        <div class="bg-box relative flex justify-center pb-16">
-            <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500 "
-                src="'.$img.'" alt="">
+    <div class="overflow-hidden w-full group rounded-box">
+        <div class="bg-box relative slider-box flex justify-center pb-16">
+        <input type="hidden" name="img" value="'.$img.'">
+        <input type="hidden" name="name" value="'.$name.'">
+        <input type="hidden" name="price" value="'.$price.'">
+        <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
+        <a href="' . $link . '" >
+        <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
+src="' . $img . '" alt="">
+</a>
+
             <div
                 class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
                 <div
-                    class="flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                    class="addToCart cursor-pointer flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-solid fa-basket-shopping"></i>
                     <p class="text-white hidden xl:block">Add To cart</p>
 
                 </div>
                 <div
-                    class="flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
+                    class="cursor-pointer flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-regular fa-eye"></i>
-                    <p class="text-white hidden xl:block">View Product</p>
+                    <a href="'.$link.'" class="text-white hidden xl:block">View Product</a>
                 </div>
             </div>
             <div
-                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-0 bg-primary text-white px-2 py-1 rounded-box">
+                class="absolute xl:group-hover:-translate-x-2 xl:group-hover:opacity-100 xl:opacity-0  transition duration-300 delay-75 top-1 right-2 bg-primary text-white px-2 py-1 rounded-box">
                 <i class="fa-regular fa-heart"></i>
             </div>
-            '.$item_sale.'
+            ' . $item_sale . '
         </div>
 
         <!-- DES -->
-        <p class="text-center font-bold mt-4">'.$name.'</p>
-        <p class="text-center text-sm">'.$brand_name.'</p>
+        <p class="text-center font-bold mt-4">' . $name . '</p>
+        <p class="text-center text-sm">' . $brand_name . '</p>
         <div class="flex justify-center gap-4">
-            <del class="font-del">'.$price.'VNĐ</del>
-            <p>'.$price_sale.'VNĐ</p>
+            <del class="font-del">' . $price . 'VNĐ</del>
+            <p>' . $price_sale . 'VNĐ</p>
 
         </div>
     </div>
 </div>';
-}
-return $html_dssp;
+    }
+    return $html_dssp;
 }
 
 // function hang_hoa_exist($ma_hh){
@@ -296,3 +322,9 @@ return $html_dssp;
 //     $sql = "SELECT * FROM hang_hoa ORDER BY ma_hh LIMIT ".$_SESSION['page_no'].", 10";
 //     return pdo_query($sql);
 // }
+
+function product_count_all()
+{
+    $sql = "SELECT COUNT(*) FROM product";
+    return pdo_query_value($sql);
+}

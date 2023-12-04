@@ -21,7 +21,6 @@
 .product th:nth-child(2),
 .product td:nth-child(2) {
   justify-content: flex-start;
-  padding-left: 32px;
 }
 .product-image {
   width: 120px;
@@ -95,6 +94,7 @@
 }
 .product-form-content input,
 .product-form-content select {
+  line-height: 20px;
   padding: 12px 16px;
   border-radius: 4px;
   border: 1px solid #000;
@@ -116,6 +116,42 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.product-form-subimg {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.show-image {
+  width: 100%;
+  max-width: 400px;
+  max-height: 320px;
+  margin-bottom: 24px;
+  position: relative;
+  display: none;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.show-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.remove-img {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 24px;
+  color: #ff497c;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  padding: 4px;
+  border-radius: 100rem;
+}
+.remove-img:hover {
+  background-color: #fff;
+  transform: scale(1.2);
 }
 .product-form-radio-container {
   display: flex;
