@@ -29,7 +29,7 @@
                 </div>
                 <!-- NAV -->
                 <div class="hidden xl:block">
-                    <ul class="flex text-h2 gap-12">
+                    <ul class="flex text-lg gap-12">
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
                                 href="index.php?pg=home">Trang chủ</a>
@@ -80,7 +80,7 @@
                         </li>
 
                         <li class="">
-                            <div class="flex justify-center z-10 mt-1 -mr-2">
+                            <div class="flex justify-center relative z-10 mt-1 -mr-2">
                                 <div x-data="{ open: false }" class="">
                                     <div @click="open = !open" class="relative border-b-4 border-transparent"
                                         :class="{'.$html_user. ': open}"
