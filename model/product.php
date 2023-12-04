@@ -322,3 +322,9 @@ src="' . $img . '" alt="">
 //     $sql = "SELECT * FROM hang_hoa ORDER BY ma_hh LIMIT ".$_SESSION['page_no'].", 10";
 //     return pdo_query($sql);
 // }
+
+function product_count_all()
+{
+    $sql = "SELECT COUNT(*) FROM product";
+    return pdo_query_value($sql);
+}
