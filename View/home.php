@@ -23,6 +23,8 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
                         <div class="swiper-wrapper mx-auto">
                             <?=$html_product_new?>
                         </div>
+                        <div class="swiper-button-prev text-primary"></div>
+                        <div class="swiper-button-next text-primary"></div>
                     </div>
 
                     <div class="lg:hidden block swiper heroSwiper w-full p-8">
@@ -163,7 +165,7 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
                 </div>
                 <span class="font-bold text-h2 ">Sản phẩm</span>
             </div>
-            <h2 class="text-h3 font-bold my-4 ">Nổi bật nhất của Etrade </h2>
+            <h2 class="text-h3 font-bold my-4 ml-4 md:ml-0 ">Nổi bật nhất của Etrade </h2>
             <div class="p-4 lg:p-0 grid grid-cols-2  xl:grid-cols-4 gap-4 ">
                 <!-- SINGLE PRODUCT -->
                 <?=$html_product_hot?>

@@ -22,6 +22,33 @@ footerBtnShow.forEach((button,index) => {
   })
 })
 
+// CART
+  const cartBtn = $(".addToCart");
+cartBtn.click(function() {
+  let productImg = $(this).parent().parent().children().eq(0).val();
+  let productName = $(this).parent().parent().children().eq(1).val();
+  let productPrice = $(this).parent().parent().children().eq(2).val();
+  let productSalePrice = $(this).parent().parent().children().eq(3).val();
+
+  $.ajax({
+    type: 'POST',
+    url: 'view/addtocart.php',
+    data: {
+      img: productImg,
+      name: productName,
+      price: productPrice,
+      saleprice: productSalePrice
+    },
+    success: function(response) {
+      alert('ccccc')
+    },
+    error: function(error) {
+      console.log(error);
+    }
+  })
+})
+
+
 
 
 
