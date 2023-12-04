@@ -125,9 +125,12 @@
 .show-image {
   width: 100%;
   max-width: 400px;
+  max-height: 320px;
   margin-bottom: 24px;
   position: relative;
   display: none;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .show-image img {
   width: 100%;

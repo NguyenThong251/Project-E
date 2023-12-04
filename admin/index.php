@@ -1,6 +1,7 @@
 <?php
 include_once('../model/pdo.php');
 include_once('../model/category.php');
+include_once('../model/brand.php');
 include_once('../model/product.php');
 session_start();
 ob_start();
@@ -28,6 +29,7 @@ if (!isset($_GET['page'])) {
       break;
     case 'product':
       $category = category_select_all();
+      $brand = brand_select_all();
       include_once('./public/product.php');
       break;
     case 'logout':

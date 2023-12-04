@@ -34,7 +34,7 @@ cataForms.forEach((cataForm) => {
 // show
 $(document).ready(function () {
   $.ajax({
-    url: "http://localhost/Project-E/admin/ajax/brand.php?func=show",
+    url: "http://localhost/Project-E/admin/data/brand.php?func=show",
     dataType: "json",
     success: function (data) {
       // console.log(data);
@@ -64,8 +64,15 @@ $(document).ready(function () {
 
 // add
 $(document).ready(function () {
-  $(".btnAddbrand").click(function () {
-    var url = "http://localhost/Project-E/admin/ajax/brand.php?func=add";
+  $(".btnAddbrand").click(brandAdd);
+  $("#formAddbrand").on("keypress", function (e) {
+    if (e.which === 13) {
+      e.preventDefault();
+      brandAdd();
+    }
+  });
+  function brandAdd() {
+    var url = "http://localhost/Project-E/admin/data/brand.php?func=add";
     $.ajax({
       url: url,
       data: $("#formAddbrand").serialize(),
@@ -94,7 +101,7 @@ $(document).ready(function () {
           $("#brand_add").val("");
           // Load data
           $.ajax({
-            url: "http://localhost/Project-E/admin/ajax/brand.php?func=show",
+            url: "http://localhost/Project-E/admin/data/brand.php?func=show",
             dataType: "json",
             success: function (data) {
               // console.log(data);
@@ -129,14 +136,14 @@ $(document).ready(function () {
         }
       },
     });
-  });
+  }
 });
 
 // xoa
 function delID(obj) {
   var brand_id = obj.getAttribute("brand_id");
   var url =
-    "http://localhost/Project-E/admin/ajax/brand.php?func=del&id=" + brand_id;
+    "http://localhost/Project-E/admin/data/brand.php?func=del&id=" + brand_id;
   $.get(url, "", function (d) {
     data = JSON.parse(d);
     // console.log(d);
@@ -171,74 +178,81 @@ if (cataForms[1]) {
     var brand_input = cataForms[1].querySelector("#brand_up");
     brand_input.value = brand_name;
     $(document).ready(function () {
-      $("#btnUpbrand").click(function () {
-        var url =
-          "http://localhost/Project-E/admin/ajax/brand.php?func=up&id=" +
-          brand_id;
-        $.ajax({
-          url: url,
-          data: $("#formUpbrand").serialize(),
-          // dataType: 'json',
-          method: "post",
-          cache: false,
-          success: function (data) {
-            data = JSON.parse(data);
-            console.log(data);
-            if (data.result == "success") {
-              // Close form
-              $(".brand-form-container").removeClass("open-form");
-              $(".brand-form-container").addClass("remove-form");
-              setTimeout(() => {
-                $(".brand-form").css("display", "none");
-              }, 250);
-              // Show alert
-              Swal.fire({
-                icon: "success",
-                title: "Chỉnh sửa thành công!",
-                showConfirmButton: false,
-                timer: 1500,
-              });
-              // Reset form
-              $("#brand_add").val("");
-              // Load data
-              $.ajax({
-                url: "http://localhost/Project-E/admin/ajax/brand.php?func=show",
-                dataType: "json",
-                success: function (data) {
-                  console.log(data);
-                  $(".brand-form-show").html("");
-                  for (i = 0; i < data.length; i++) {
-                    brand = data[i];
-                    if (brand["hidden"] == 1) {
-                      hide = "checked";
-                    } else {
-                      hide = "";
-                    }
-                    var lt_str = `<tr>
-                                <td> <span>${brand["name"]}</span></td>
-                                <td>
-                                  <input type="checkbox" id="${brand["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
-                                  <label for="${brand["id"]}" class="switch" ></label>
-                                  </td>
-                                  <td> <a class="brand-action brand-update" href="#" brand_id="${brand["id"]}" onclick="upID(this)">
-                                  <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="brand-action brand-remove" brand_id="${brand["id"]}" onclick=delID(this) href="#">
-                                  <ion-icon name="trash-outline"></ion-icon></a></td>
-                                  </tr>`;
-                    $(".brand-form-show").append(lt_str);
-                  }
-                },
-              });
-            } else {
-              Swal.fire({
-                icon: "error",
-                title: "Chỉnh sửa thất bại!",
-                text: "Có lẽ bạn đã thêm trùng tên danh mục.",
-              });
-            }
-          },
-        });
+      $("#formUpbrand").on("keypress", function (e) {
+        if (e.which === 13) {
+          e.preventDefault();
+          brandUp();
+        }
       });
+      $("#btnUpbrand").click(brandUp);
     });
+    function brandUp() {
+      var url =
+        "http://localhost/Project-E/admin/data/brand.php?func=up&id=" +
+        brand_id;
+      $.ajax({
+        url: url,
+        data: $("#formUpbrand").serialize(),
+        // dataType: 'json',
+        method: "post",
+        cache: false,
+        success: function (data) {
+          data = JSON.parse(data);
+          console.log(data);
+          if (data.result == "success") {
+            // Close form
+            $(".brand-form-container").removeClass("open-form");
+            $(".brand-form-container").addClass("remove-form");
+            setTimeout(() => {
+              $(".brand-form").css("display", "none");
+            }, 250);
+            // Show alert
+            Swal.fire({
+              icon: "success",
+              title: "Chỉnh sửa thành công!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            // Reset form
+            $("#brand_add").val("");
+            // Load data
+            $.ajax({
+              url: "http://localhost/Project-E/admin/data/brand.php?func=show",
+              dataType: "json",
+              success: function (data) {
+                console.log(data);
+                $(".brand-form-show").html("");
+                for (i = 0; i < data.length; i++) {
+                  brand = data[i];
+                  if (brand["hidden"] == 1) {
+                    hide = "checked";
+                  } else {
+                    hide = "";
+                  }
+                  var lt_str = `<tr>
+                              <td> <span>${brand["name"]}</span></td>
+                              <td>
+                                <input type="checkbox" id="${brand["id"]}" class="switch-input" name="hidden" ${hide} onchange="upStatus(this)"/>
+                                <label for="${brand["id"]}" class="switch" ></label>
+                                </td>
+                                <td> <a class="brand-action brand-update" href="#" brand_id="${brand["id"]}" onclick="upID(this)">
+                                <ion-icon name="create-outline"></ion-icon></a><span>|</span><a class="brand-action brand-remove" brand_id="${brand["id"]}" onclick=delID(this) href="#">
+                                <ion-icon name="trash-outline"></ion-icon></a></td>
+                                </tr>`;
+                  $(".brand-form-show").append(lt_str);
+                }
+              },
+            });
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Chỉnh sửa thất bại!",
+              text: "Có lẽ bạn đã thêm trùng tên danh mục.",
+            });
+          }
+        },
+      });
+    }
   }
 }
 
@@ -246,7 +260,7 @@ if (cataForms[1]) {
 function upStatus(obj) {
   var brand_id = obj.getAttribute("id");
   var url =
-    "http://localhost/Project-E/admin/ajax/brand.php?func=upStatus&id=" +
+    "http://localhost/Project-E/admin/data/brand.php?func=upStatus&id=" +
     brand_id;
   $.ajax({
     url: url,

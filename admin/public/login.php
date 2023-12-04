@@ -60,7 +60,7 @@ if (isset($_POST['login'])) {
       <h3 class="title">Đăng nhập</h3>
     </div>
     <div class="login-container">
-      <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
+      <form id="form-login" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" onsubmit="return validate()">
         <div class="form-group">
           <label for="username">Tên đăng nhập:</label>
           <input class="form-control" id="username" type="text" name="username" placeholder="Nhập tên người dùng của bạn">
@@ -85,11 +85,7 @@ if (isset($_POST['login'])) {
       <div class="footer-item"><img srcset="../layout/images/footer-4.png 2x" alt="brand"></div>
     </div>
   </footer>
-  <script src="../layout/js/dashboard.js"> </script>
-  <script src="../layout/js/category.js"> </script>
-  <script src="../layout/js/product.js"> </script>
-  <script src="../layout/js/account.js"> </script>
-  <script src="../layout/js/order.js"></script>
+  <script src="../layout/js/login.js"> </script>
 </body>
 
 </html>

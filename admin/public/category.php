@@ -25,7 +25,7 @@
       <h2 class="sub-title category-form-title">Thêm danh mục</h2><button class="category-form-close" href="#">
         <ion-icon name="close-circle-outline"></ion-icon></button>
       <div class="category-form-table">
-        <form method="post" id="formAddCategory">
+        <form action="#" method="post" id="formAddCategory">
           <table class="category-form-group table">
             <thead class="table-head">
               <tr>
@@ -53,7 +53,7 @@
       <h2 class="sub-title category-form-title">Chỉnh sửa danh mục</h2><a class="category-form-close" href="#">
         <ion-icon name="close-circle-outline"></ion-icon></a>
       <div class="category-form-table">
-        <form id="formUpCategory">
+        <form action="#" id="formUpCategory">
           <table class="category-form-group table">
             <thead class="table-head">
               <tr>

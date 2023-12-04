@@ -57,7 +57,7 @@
           <table class="brand-form-group table">
             <thead class="table-head">
               <tr>
-                <th>Tên thể loại</th>
+                <th>Tên thương hiệu</th>
                 <th>Hàng động</th>
               </tr>
             </thead>
