@@ -94,7 +94,7 @@ function show_product($dssp)
     <input type="hidden" name="price" value="'.$price.'">
     <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
         <a href="' . $link . '" >
-                <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
+                <img class="group-hover:scale-125 h-64 object-contain group-hover:blur-sm  transition duration-500" 
         src="' . $img . '" alt="">
         </a>
         <div
@@ -154,23 +154,17 @@ function show_product_new($pr_new)
                     </div>
                     Hot deal this week
                 </div>
-                <h1 class="text-6xl font-bold mt-4">' . $name . '</h1>
-                 <h3 class="text-3xl font-bold mt-4 text-md">' . $brand_name . '</h3> 
+                <h1 class="text-8xl font-bold mt-4 w-96">' . $name . '</h1>
             </div>
-            <p class="w-2/4 my-4">' . $des . '</p>
-            <div class="mt-4">
-                <del class="text-h2 mr-2">' . $price . 'VNĐ</del>
-                <span class="text-h2 font-bold">' . $price_sale . 'VNĐ</span>
-            </div>
-
-            <a href="' . $link . '"class="cursor-pointer border-2 hover:bg-transparent 
+            <p class="w-2/4 my-8">' . $des . '</p>
+            <a href="' . $link . '"class=" mt-4 cursor-pointer border-2 hover:bg-transparent 
                                 hover:text-primary hover:border-primary transition 
                                 duration-300 px-20 py-4 text-h2 bg-primary text-white 
                                 font-bold w-fit rounded-button mx-auto lg:mx-0 block mt-4">MUA NGAY
             </a>
         </div>
         <a href="' . $link . '" >
-          <img class="w-96 object-contain" src="' . $img . '" alt="">
+          <img class="w-96 object-contain " src="' . $img . '" alt="">
         </a>
     </div>';
     }
@@ -230,8 +224,8 @@ function show_product_view_secondary($dssp)
         <input type="hidden" name="name" value="'.$name.'">
         <input type="hidden" name="price" value="'.$price.'">
         <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
-        <a href="' . $link . '" >
-        <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
+        <a  href="' . $link . '" >
+        <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500" 
 src="' . $img . '" alt="">
 </a>
 
