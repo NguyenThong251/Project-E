@@ -112,6 +112,10 @@ span {
 }
 
 
+.cart-hide {
+  translate: 100% 0%;
+}
+
 .nav-active-top {
   stroke-dashoffset: -81px !important;
   
@@ -345,4 +349,25 @@ footer {
 
 .slider-box {
   height: 400px !important;
+}
+
+/* LENIS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
