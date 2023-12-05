@@ -74,6 +74,7 @@ function show_product($dssp)
     $html_dssp = '';
     foreach ($dssp as $sp) {
         extract($sp);
+
         // Tính phần trăm giảm giá
         $percent_discount = ($price - $price_sale) / $price * 100;
         if ($sale > 0 && $sale < 100) {
@@ -91,6 +92,7 @@ function show_product($dssp)
     <div class="bg-box relative z-10 flex items-center  h-3/4 lg:h-96  justify-center pb-20">
     <input type="hidden" class="inputImg" name="img" value="'.$img.'">
     <input type="hidden" name="name" value="'.$name.'">
+    <input type="hidden" name="brand" value="'.$brand_name.'">
     <input type="hidden" name="price" value="'.$price.'">
     <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
         <a href="' . $link . '" >
@@ -121,9 +123,8 @@ function show_product($dssp)
     <p class="text-center font-bold mt-2 text-sm lg:text-xl">' . $name . '</p>
     <p class="my-2 text-center text-sm">' . $brand_name . '</p>
     <div class="flex flex-col lg:flex-row justify-center gap-1 lg:gap-4  items-center">
-        <del class="font-del text-sm lg:text-lg ">' . $price . 'VNĐ</del>
-        <p class="text-sm lg:text-lg font-bold">' . $price_sale . 'VNĐ</p>
-
+    <p class="text-sm lg:text-lg font-bold">' . $price_sale . 'VNĐ</p>
+    <del class="font-del text-sm lg:text-lg ">' . $price . 'VNĐ</del>
     </div>
 </div>';
     }
@@ -203,7 +204,9 @@ function show_product_view_secondary($dssp)
     $html_dssp = '';
     foreach ($dssp as $sp) {
         extract($sp);
+
         // Tính phần trăm giảm giá
+
         $percent_discount = ($price - $price_sale) / $price * 100;
         if ($sale > 0 && $sale < 100) {
             $item_sale = '<div
@@ -222,8 +225,9 @@ function show_product_view_secondary($dssp)
         <div class="bg-box relative slider-box flex justify-center pb-16">
         <input type="hidden" name="img" value="'.$img.'">
         <input type="hidden" name="name" value="'.$name.'">
-        <input type="hidden" name="price" value="'.$price.'">
-        <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
+        <input type="hidden" name="brand" value="'.$brand_name.'">
+        <input type="hidden" name="price" value="'.$price_sale.'">
+        <input type="hidden" name="price_sale" value="'.$price.'"> 
         <a  href="' . $link . '" >
         <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500" 
 src="' . $img . '" alt="">
@@ -254,9 +258,8 @@ src="' . $img . '" alt="">
         <p class="text-center font-bold mt-4">' . $name . '</p>
         <p class="text-center text-sm">' . $brand_name . '</p>
         <div class="flex justify-center gap-4">
-            <del class="font-del">' . $price . 'VNĐ</del>
-            <p>' . $price_sale . 'VNĐ</p>
-
+        <p>' . $price_sale . 'VNĐ</p>
+        <del class="font-del">' . $price . 'VNĐ</del>
         </div>
     </div>
 </div>';
