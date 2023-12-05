@@ -112,6 +112,27 @@ span {
 }
 
 
+.nav-active-top {
+  stroke-dashoffset: -81px !important;
+  
+}
+
+.nav-active-middle {
+  stroke-dasharray: 0.1px, 30px !important;
+}
+
+.nav-active-bottom {
+  stroke-dashoffset: -6px !important;
+}
+
+.text-new-slider {
+  width: 9ch;
+}
+
+.new-slider-img {
+  width: 42rem;
+}
+
 .site-container::before {
   content: "";
   position: absolute;
@@ -319,7 +340,7 @@ footer {
 }
 
 .slider-box-hero {
-  height: 500px !important;
+  height: 28rem !important;
 }
 
 .slider-box {

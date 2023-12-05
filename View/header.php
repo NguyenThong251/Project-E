@@ -74,6 +74,9 @@
 
                         <li class="w-6">
                             <a href="#" class="group text-2xl relative site-container flex items-center">
+                                <div class="items-cart text-sm absolute -top-2 -right-3 bg-box w-5 h-5 rounded-full text-center">
+                                    <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
+                                </div>
                                 <ion-icon name="cart-outline"
                                     class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
                             </a>
@@ -158,22 +161,22 @@
                         </li>
 
                         <li class="block xl:hidden mt-2">
-                            <div class="svgContainer">
+                            <div class="svgContainer cursor-pointer">
                                 <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70"
                                     xmlns="http://www.w3.org/2000/svg"
                                     data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}'
                                     style="transform: translate(0px, 0px); opacity: 1">
-                                    <path id="path-top"
+                                    <path id="path-top" class="transition-all duration-500 delay-75"
                                         d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"
                                         style="
                         stroke-dasharray: 30px, 88px;
                         stroke-dashoffset: 0px;
                       "></path>
-                                    <path id="path-middle" d="M20,32h30" style="
+                                    <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 " style="
                         stroke-dasharray: 30px, 30px;
                         stroke-dashoffset: 0px;
                       "></path>
-                                    <path id="path-bottom"
+                                    <path id="path-bottom" class="transition-all duration-500 delay-125"
                                         d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"
                                         style="
                         stroke-dasharray: 30px, 88.1px;

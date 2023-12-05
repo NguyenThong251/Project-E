@@ -1,4 +1,5 @@
 <?php 
+// session_unset();
 //product_hot
 $html_product_hot = show_product($product_hot);
 //product_new
