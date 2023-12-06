@@ -24,5 +24,106 @@
 .border-hover {
   border: 2px solid #302828;
 }
+//toast
+#toast {
+  position: fixed;
+  z-index: 9999;
+  top: 15px;
+  right: 10px;
+}
 
+.toast {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 18px 25px;
+  font-size: 20px;
+  color: black;
+  border-radius: 5px;
+  overflow: hidden;
 
+  animation: showToast ease 3s forwards;
+}
+
+/* animtion for toast */
+@keyframes showToast {
+  0% {
+    transform: translateX(100%);
+  }
+
+  25% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes hideToast {
+  0% {
+    transform: translateX(0%);
+  }
+
+  25% {
+    transform: translateX(-10%);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.toast.success {
+  background-color: rgb(250, 250, 250);
+  border-left: 6px solid green;
+}
+
+.cout-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 4px solid green;
+  animation: loading ease 4s forwards;
+}
+
+/* animation for coutdown (border-bottom)*/
+@keyframes loading {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+.toast.success .cout-down {
+  border-bottom: 4px solid green;
+}
+
+.toast i {
+  font-size: 25px;
+  margin-right: 10px;
+}
+.toast.error {
+  background-color: rgb(254, 151, 151);
+  border-left: 6px solid red;
+}
+.toast.error .cout-down {
+  border-bottom: 4px solid red;
+}
+.text-toast {
+  color: white !important;
+  font-weight: 500;
+}

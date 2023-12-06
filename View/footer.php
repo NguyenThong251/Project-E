@@ -140,7 +140,9 @@
     </div>
 </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="View/layout/assets/js/toast.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -150,5 +152,45 @@
 <script src="view/layout/assets/js/swiper.js"></script>
 <script src="view/layout/assets/js/tailwind.js"></script>
 <script src="view/layout/assets/js/index.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".select-box").change(function() {
+        // console.log('hello')
+        // console.log('Click event triggered!');
+        $("#loader").show();
+        var action = 'data';
+        let category = $(this).parent().parent().children().children().val();
+        let filterdata = $(this).val();
+        let brand = $(this).parent().parent().children().eq(1).children().val();
+
+        $.ajax({
+            url: './View/filter.php',
+            method: 'POST',
+            data: {
+                action: action,
+                brand: brand,
+                category: category
+            },
+            success: function(response) {
+                // console.log(response);
+                $("#result_filter").html(response);
+                $("#loader").show();
+                $("#change-text").text("Filter Products");
+                // handleShowAndHideToast("success");
+            }
+        })
+
+    })
+
+
+    // function get_filter_text(text_id) {
+    //     var filterData = [];
+    //     $('#' + text_id + ' option:selected').each(function() {
+    //         filterData.push($(this).val());
+    //     });
+    //     return filterData;
+    // }
+})
+</script>
 
 </html>

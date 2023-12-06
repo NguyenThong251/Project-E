@@ -22,10 +22,43 @@ require_once 'pdo.php';
 //         pdo_execute($sql, $ma_hh);
 //     }
 // }
-
-function get_product_all()
+function get_brand_namee()
 {
-    $sql = "SELECT * FROM product";
+    $sql = "SELECT p.*, b.name as brand_name 
+            FROM product p
+            JOIN brand b ON p.id_brand = b.id
+            ORDER BY p.id ASC";
+
+    return pdo_query($sql);
+}
+
+
+function get_brand_name()
+{
+    $sql = "SELECT DISTINCT b.name as brand_name 
+        FROM product p
+        JOIN brand b ON p.id_brand = b.id
+        ORDER BY p.id ASC";
+    return pdo_query($sql);
+}
+
+function get_category_name()
+{
+    $sql = "SELECT c.name as category_name
+        FROM product p
+        JOIN category c ON p.id_category = c.id
+        ORDER BY p.id ASC";
+    return pdo_query($sql);
+}
+function get_product_all($kyw, $limi)
+{
+    $sql = "SELECT p.*, b.name as brand_name 
+            FROM product p
+            JOIN brand b ON p.id_brand = b.id
+            WHERE p.name LIKE '%".$kyw."%'
+            ORDER BY p.id ASC
+            LIMIT " . $limi;
+
     return pdo_query($sql);
 }
 function get_product_hot($limi)
@@ -321,4 +354,4 @@ function product_count_all()
 {
     $sql = "SELECT COUNT(*) FROM product";
     return pdo_query_value($sql);
-}
+};
