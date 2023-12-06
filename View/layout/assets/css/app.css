@@ -40,7 +40,7 @@ body {
 }
 
 .banner-container {
-  background: url(/layout/assets/img/bg-banner.png) no-repeat 100%/cover;
+  background: url(../img/bg-banner.png) no-repeat 100%/cover;
 }
 
 input:focus ~ .input-text {
@@ -91,7 +91,8 @@ textarea:focus ~ .input-text {
   z-index: 9999;
   top: 15px;
   right: 10px;
-=======
+}
+
 div,
 p,
 h1,
@@ -115,6 +116,25 @@ span {
   transition: .3s ease;
 }
 
+.cate-laptop {
+  background: url(../img/bg-lap.png) no-repeat 100%/cover ;
+}
+
+.cate-phone {
+  background: url(../img/bg-phone.png) no-repeat 100%/cover ;
+}
+
+.cate-keyboard {
+  background: url(../img/bg-keyboard.png) no-repeat 100%/cover ;
+}
+
+.cate-headphone {
+  background: url(../img/bg-headphone.png) no-repeat 100%/cover ;
+}
+
+.cate-mouse {
+  background: url(../img/bg-mouse.png) no-repeat 100%/cover ;
+}
 
 .cart-hide {
   translate: 100% 0%;
@@ -229,7 +249,6 @@ span {
 
 
 /*# sourceMappingURL=app.css.map */
-=======
 .slider-box {
   height: 400px !important;
 }
