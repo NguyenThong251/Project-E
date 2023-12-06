@@ -89,10 +89,10 @@ function show_product($dssp)
             ' <div class="overflow-hidden group">
 
     <div class="bg-box relative z-10 flex items-center  h-3/4 lg:h-96  justify-center pb-20">
-    <input type="hidden" class="inputImg" name="img" value="'.$img.'">
-    <input type="hidden" name="name" value="'.$name.'">
-    <input type="hidden" name="price" value="'.$price.'">
-    <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
+    <input type="hidden" class="inputImg" name="img" value="' . $img . '">
+    <input type="hidden" name="name" value="' . $name . '">
+    <input type="hidden" name="price" value="' . $price . '">
+    <input type="hidden" name="price_sale" value="' . $price_sale . '"> 
         <a href="' . $link . '" >
                 <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
         src="' . $img . '" alt="">
@@ -222,14 +222,14 @@ function show_product_view_secondary($dssp)
         if ($img != "") $img = PATH_IMG . $img;
         $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
         $html_dssp .=
-        ' <div class="swiper-slide flex items-center justify-center">
+            ' <div class="swiper-slide flex items-center justify-center">
     <!-- SINGLE PRODUCT -->
     <div class="overflow-hidden w-full group rounded-box">
         <div class="bg-box relative slider-box flex justify-center pb-16">
-        <input type="hidden" name="img" value="'.$img.'">
-        <input type="hidden" name="name" value="'.$name.'">
-        <input type="hidden" name="price" value="'.$price.'">
-        <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
+        <input type="hidden" name="img" value="' . $img . '">
+        <input type="hidden" name="name" value="' . $name . '">
+        <input type="hidden" name="price" value="' . $price . '">
+        <input type="hidden" name="price_sale" value="' . $price_sale . '"> 
         <a href="' . $link . '" >
         <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
 src="' . $img . '" alt="">
@@ -246,7 +246,7 @@ src="' . $img . '" alt="">
                 <div
                     class="cursor-pointer flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-regular fa-eye"></i>
-                    <a href="'.$link.'" class="text-white hidden xl:block">View Product</a>
+                    <a href="' . $link . '" class="text-white hidden xl:block">View Product</a>
                 </div>
             </div>
             <div
@@ -327,4 +327,52 @@ function product_count_all()
 {
     $sql = "SELECT COUNT(*) FROM product";
     return pdo_query_value($sql);
+}
+function product_detail($id)
+{
+    $sql = "SELECT p.*, d.* 
+    FROM product p 
+    JOIN product_detail d ON p.id = d.id_product
+    WHERE p.id = " . $id;
+    return pdo_query_one($sql);
+}
+function product_select_by_id($id)
+{
+    $sql = "SELECT * FROM product WHERE id = " . $id;
+    return pdo_query_one($sql);
+}
+function product_detail_select_by_id($id)
+{
+    $sql = "SELECT * FROM product_detail WHERE id_product = " . $id;
+    return pdo_query_one($sql);
+}
+function product_update($id, $img, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity)
+{
+    $sql = "UPDATE `product` SET `img` = ?, `name` = ?, `price` = ?, `price_sale` = ?, `sale` = ?, `hot` = ?, `status` = ?, `view` = ?, `id_category` = ?, `id_brand` = ?, `des` = ?, `entry_date` = ?, `quantity` = ? WHERE `product`.`id` = ?";
+    pdo_execute($sql, $img, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity, $id);
+}
+function product_detail_update($img_1, $img_2, $img_3, $img_4, $id_product)
+{
+    $sql = "UPDATE `product_detail` SET `img_1` = ?, `img_2` = ?, `img_3` = ?, `img_4` = ? WHERE `product_detail`.`id_product` = ?";
+    pdo_execute($sql, $img_1, $img_2, $img_3, $img_4, $id_product);
+}
+function product_insert($id, $img, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity)
+{
+    $sql = "INSERT INTO `product` (`id`, `img`, `name`, `price`, `price_sale`, `sale`, `hot`, `status`, `view`, `id_category`, `id_brand`, `des`, `entry_date`, `quantity`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    pdo_execute($sql, $id, $img, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity);
+}
+function product_detail_insert($img_1, $img_2, $img_3, $img_4, $id_product)
+{
+    $sql = "INSERT INTO `product_detail` (`img_1`, `img_2`, `img_3`, `img_4`, `id_product`) VALUES (?, ?, ?, ?, ?)";
+    pdo_execute($sql, $img_1, $img_2, $img_3, $img_4, $id_product);
+}
+function product_delete($id)
+{
+    $sql = "DELETE FROM `product` WHERE `product`.`id` = ?";
+    pdo_execute($sql, $id);
+}
+function product_detail_delete($id)
+{
+    $sql = "DELETE FROM `product_detail` WHERE `product_detail`.`id_product` = ?";
+    pdo_execute($sql, $id);
 }
