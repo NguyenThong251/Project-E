@@ -58,8 +58,8 @@ else $title='Tất cả sản phẩm'
         <div class="filter-container lg:flex lg:justify-between lg:items-center">
             <div class="letf-filter sm:flex sm:justify-between sm:items-center sm:gap-4 sm:mb-4 lg:mb-0 lg:w-2/4">
                 <!-- SELECT OPTIONS -->
-                <div class="select-container w-full">
-                    <select class="select-box">
+                <div class="  select-container w-full">
+                    <select class="select-box border-2 border-primary w-full p-4 rounded-box w-1/2">
                         <?=$html_dm?>
                     </select>
 
@@ -68,8 +68,8 @@ else $title='Tất cả sản phẩm'
                     </div>
                 </div>
                 <!-- SELECT OPTIONS -->
-                <div class="select-container w-full mt-4 sm:mt-0 ">
-                    <select class="select-box">
+                <div class="select-container w-full">
+                    <select class="select-box border-2 border-primary w-full p-4 rounded-box">
                         <?=$html_brand?>
                     </select>
 

@@ -61,20 +61,31 @@
                 <!-- SITE LINK -->
                 <div>
                     <ul class="flex items-center gap-2 md:gap-6">
-                        <li class="w-6">
-                            <a href="#" class="group flex relative site-container items-center">
-                                <ion-icon name="search-outline" class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
-                            </a>
-                        </li>
+                    <li class="w-6">
+                <a
+                  href="#"
+                  class="group flex relative site-container items-center"
+                >
+                  <ion-icon
+                    name="search-outline"
+                    class="site-link_search group-hover:text-white transition duration-300"
+                  ></ion-icon>
+                </a>
+              </li>
 
-                        <li class="w-6">
-                            <a href="#" class="group relative site-container block flex items-center rounded-full">
-                                <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
-                                <ion-icon name="heart-outline" class="site-link_heart text-2xl group-hover:text-white transition duration-300">
-                                </ion-icon>
-                                <!-- <i class="mb-px fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300 site-link_heart"></i> -->
-                            </a>
-                        </li>
+              <li class="w-6">
+                <a
+                  href="#"
+                  class="group relative site-container block flex items-center rounded-full"
+                >
+                  <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
+                  <ion-icon
+                    name="heart-outline"
+                    class="site-link_heart text-2xl group-hover:text-white transition duration-300"
+                  ></ion-icon>
+                  <!-- <i class="mb-px fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300 site-link_heart"></i> -->
+                </a>
+              </li>
 
                         <li class="w-6">
 
