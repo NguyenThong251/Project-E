@@ -67,7 +67,7 @@
                   <input id="brand_up" name="brand_name" type="text" placeholder="Nhập tên thương hiệu">
                 </td>
                 <td>
-                  <button class="button" id="btnUpbrand" type="button">Chỉnh sửa thương hiệu</button>
+                  <button class="button" id="btnUpbrand" type="button" onclick=brandUp(this)>Chỉnh sửa thương hiệu</button>
                 </td>
               </tr>
             </tbody>

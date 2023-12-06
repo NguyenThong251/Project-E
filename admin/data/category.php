@@ -18,6 +18,8 @@ if ($_GET['func'] == "add") {
 }
 if ($_GET['func'] == "up") {
   if (isset($_GET['id']) && isset($_POST['category_name'])) {
+    // print_r($_POST);
+    // print_r($_GET);
     $category_id = $_GET['id'];
     $category_name = $_POST['category_name'];
     $category = category_exist($category_name);
