@@ -2,9 +2,11 @@
 session_start();
 ob_start();
 
+
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $productImg = $_POST['img'];
     $productName = $_POST['name'];
+    $productBrand = $_POST['brand'];
     $productPrice = $_POST['price'];
     $productSalePrice = $_POST['saleprice'];
 
@@ -18,15 +20,22 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         $product = [
             'img' => $productImg,
             'name' => $productName,
+            'brand' => $productBrand,
             'price' => $productPrice,
             'saleprice' => $productSalePrice, 
             'quantity' => 1
         ];
         $_SESSION['cart'][] = $product;
     };
-    echo count($_SESSION['cart']);
+
+   // Trả về dữ liệu session dưới dạng JSON
+//    header('Content-Type: application/json');
+//    echo json_encode($_SESSION['cart']);
 
 }
     
+
+header('Content-Type: application/json');
+echo json_encode($_SESSION['cart']);
 
 ?>
