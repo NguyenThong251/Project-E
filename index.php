@@ -24,11 +24,20 @@ if (!isset($_GET['pg'])) {
 else {
     switch ($_GET['pg']) {
 
-        case 'sanpham':
-           include "View/sanpham.php";
+        case 'product':
+            //search
+                $kyw="";
+                $titlepage="";
+            if (isset($_POST["timkiem"])&&($_POST["timkiem"])) {
+                $kyw=$_POST["kyw"];
+                $titlepage="Kết quả tìm kiếm với từ khóa: ".$kyw;
+            }
+            $dssp = get_product_all($kyw,12);
+            $dsdm = get_category_name();
+            $dsbrand =  get_brand_name();
+            include "View/shop.php";
             break;
-        
-        
+    
         
             default:
         include "View/home.php";

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="view/layout/assets/css/app.css" />
+    <link rel="stylesheet" href="View/layout/assets/css/app.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -19,6 +19,18 @@
 </head>
 
 <body>
+    <!-- SEARCH -->
+    <div class="model">
+        <form action="index.php?pg=product" method="post">
+            <input type="text" name="kyw" id="" placeholder="Nhập sản phẩm muốn tìm kiếm">
+            <input class="InputSearch" type="submit" name="timkiem" value="Tìm kiếm">
+        </form>
+    </div>
+    <!-- Toast Message  -->
+    <div id="toast">
+
+    </div>
+    <!-- SEARCH -->
     <header>
         <div>
             <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
@@ -65,8 +77,10 @@
                         </li>
 
                         <li class="w-6">
+
                             <a href="#" class="open-cart group text-2xl relative site-container flex items-center">
                                 <div class="items-cart text-sm absolute -top-2 -right-3 bg-box w-5 h-5 rounded-full text-center">
+
                                     <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
                                 </div>
                                 <ion-icon name="cart-outline" class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
@@ -133,7 +147,8 @@
                         stroke-dasharray: 30px, 88px;
                         stroke-dashoffset: 0px;
                       "></path>
-                                    <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 " style="
+                                    <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 "
+                                        style="
                         stroke-dasharray: 30px, 30px;
                         stroke-dashoffset: 0px;
                       "></path>
