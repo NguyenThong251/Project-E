@@ -15,6 +15,7 @@ if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
+// USER
 if (!isset($_SESSION['user'])) {
     $_SESSION['user'] = [
         'id' => NULL,
@@ -27,6 +28,16 @@ if (!isset($_SESSION['user'])) {
         'phone' => "",
         'active' => "",
         'role' => ""
+    ];
+}
+// LOGGED
+if(!isset($_SESSION['logged'])) {
+    $_SESSION['logged'] = 0;
+}
+
+if(!isset($_SESSION['voucherSalePercent'])) {
+    $_SESSION['voucherSalePercent'] = [
+        'sale' => 0,
     ];
 }
 

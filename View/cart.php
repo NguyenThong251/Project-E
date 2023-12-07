@@ -1,7 +1,10 @@
 <?php
+
 $html_cart = "";
 $lastprice = 0;
 $totalPrice = 0;
+$priceAfterSale = 0;
+$salePercent = $_SESSION['voucherSalePercent']['sale'];
 $VND = "";
 
 
@@ -56,6 +59,8 @@ foreach ($_SESSION['cart'] as $key) {
            </div>
     ';
 }
+
+
 
 ?>
 
@@ -115,17 +120,20 @@ foreach ($_SESSION['cart'] as $key) {
 
                     <div class="border-t-2 pt-6 mt-6">
 
-                        <div class="flex justify-between items-center text-sm opacity-70 my-5">
+                        <div class="text-lg font-bold flex justify-between items-center  my-5">
                             <p>Giảm giá</p>
-                            <p class="priceDiscount">a</p>
+                            <div class="flex">
+                                <p class="priceDiscount mr-1 "></p>
+                                <p>VND</p>
+                            </div>
                         </div>
 
                         <div class="flex justify-between items-center text-lg font-bold ">
                             <p>Tổng</p>
                             <div class="flex w-fit  items-center">
                                 <div class="overflow-y-hidden text-right">
-                                <p class="total-cart-discounted -translate-y-8 mr-2">450000</p>
-                                <p class="totalCart  -translate-y-3.5 mr-2"></p>
+                                <p class="total-cart-discounted -translate-y-8 mr-1">450000</p>
+                                <p class="totalCart  -translate-y-3.5 mr-1"><?=$totalPrice?></p>
                                 </div>
                             <span class=" top-0 right-0">VND</span>
                             </div>
