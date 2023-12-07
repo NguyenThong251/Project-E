@@ -447,6 +447,16 @@ if ($_GET['func'] == 'delProd') {
         }
       }
     }
+    $sql = "SELECT product.*, category.name AS category_name, brand.name AS brand_name
+    FROM product
+    JOIN category ON product.id_category = category.id
+    JOIN brand ON product.id_brand = brand.id
+    ORDER BY product.id DESC
+    LIMIT 8 OFFSET 0;
+    ";
+
+    $products = pdo_query($sql);
+    $response['html'] = show_table_product($products);
   }
   echo json_encode($response);
 }

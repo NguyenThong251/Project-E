@@ -1,7 +1,10 @@
 <?php
+include_once('../model/global.php');
 extract($admin);
-if ($user_img == '' || $user_img == null) {
-  $user_img = 'guest.png';
+if (is_file(PATH_ACCOUNT_ADMIN . $user_img)) {
+  $user_img = PATH_ACCOUNT_ADMIN . $user_img;
+} else {
+  $user_img = PATH_ACCOUNT_ADMIN . 'user.png';
 }
 if ($phone == '' || $phone == null) {
   $phone = 'Chưa cập nhật';
@@ -18,7 +21,7 @@ if ($role == 1) {
 </head>
 <main class="main">
   <div class="db-account">
-    <div class="db-account-image"><img srcset="./layout/images/<?= $user_img ?> 2x" alt="user-image"></div>
+    <div class="db-account-image"><img srcset="<?= $user_img ?> 2x" alt="user-image"></div>
     <div class="db-account-info">
       <div class="db-account-container">
         <div class="db-account-info-name"><b>Xin chào</b> <?= $full_name ?></div><span>-</span>

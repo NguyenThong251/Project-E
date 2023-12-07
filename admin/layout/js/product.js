@@ -123,7 +123,7 @@ $(document).ready(function () {
     dataType: "",
     success: function (data) {
       // console.log(data);
-      $(".table-page").html(data);
+      $(".table-page").html(data.html);
     },
   });
 });
@@ -309,16 +309,18 @@ function deleteProduct(e) {
           id,
         method: "POST",
         cache: false,
-        dataType: "",
+        dataType: "json",
         success: function (data) {
           // console.log(data);
-          e.parentNode.parentNode.parentNode.remove();
-          Swal.fire({
-            icon: "success",
-            title: "Xóa thành công!",
-            showConfirmButton: false,
-            timer: 1500,
-          });
+          if (data.result == "success") {
+            Swal.fire({
+              icon: "success",
+              title: "Xóa thành công!",
+              showConfirmButton: false,
+              timer: 1500,
+            });
+            $(".table-body").html(data.html);
+          }
         },
       });
     }

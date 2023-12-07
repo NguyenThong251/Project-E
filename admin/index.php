@@ -32,6 +32,9 @@ if (!isset($_GET['page'])) {
       $brand = brand_select_all();
       include_once('./public/product.php');
       break;
+    case 'user':
+      include_once('./public/account.php');
+      break;
     case 'logout':
       if (isset($_SESSION['admin'])) {
         unset($_SESSION['admin']);

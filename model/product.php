@@ -55,7 +55,7 @@ function get_product_all($kyw, $limi)
     $sql = "SELECT p.*, b.name as brand_name 
             FROM product p
             JOIN brand b ON p.id_brand = b.id
-            WHERE p.name LIKE '%".$kyw."%'
+            WHERE p.name LIKE '%" . $kyw . "%'
             ORDER BY p.id ASC
             LIMIT " . $limi;
 
@@ -124,11 +124,11 @@ function show_product($dssp)
 
     <div class="bg-box relative z-10 flex items-center  h-3/4 lg:h-96  justify-center pb-20">
 <<<<<<< HEAD
-    <input type="hidden" class="inputImg" name="img" value="'.$img.'">
-    <input type="hidden" name="name" value="'.$name.'">
-    <input type="hidden" name="brand" value="'.$brand_name.'">
-    <input type="hidden" name="price" value="'.$price.'">
-    <input type="hidden" name="price_sale" value="'.$price_sale.'"> 
+    <input type="hidden" class="inputImg" name="img" value="' . $img . '">
+    <input type="hidden" name="name" value="' . $name . '">
+    <input type="hidden" name="brand" value="' . $brand_name . '">
+    <input type="hidden" name="price" value="' . $price . '">
+    <input type="hidden" name="price_sale" value="' . $price_sale . '"> 
 =======
     <input type="hidden" class="inputImg" name="img" value="' . $img . '">
     <input type="hidden" name="name" value="' . $name . '">
@@ -264,11 +264,11 @@ function show_product_view_secondary($dssp)
     <div class="overflow-hidden w-full group rounded-box">
         <div class="bg-box relative slider-box flex justify-center pb-16">
 <<<<<<< HEAD
-        <input type="hidden" name="img" value="'.$img.'">
-        <input type="hidden" name="name" value="'.$name.'">
-        <input type="hidden" name="brand" value="'.$brand_name.'">
-        <input type="hidden" name="price" value="'.$price_sale.'">
-        <input type="hidden" name="price_sale" value="'.$price.'"> 
+        <input type="hidden" name="img" value="' . $img . '">
+        <input type="hidden" name="name" value="' . $name . '">
+        <input type="hidden" name="brand" value="' . $brand_name . '">
+        <input type="hidden" name="price" value="' . $price_sale . '">
+        <input type="hidden" name="price_sale" value="' . $price . '"> 
         <a  href="' . $link . '" >
         <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500" 
 =======
@@ -373,9 +373,6 @@ function product_count_all()
 {
     $sql = "SELECT COUNT(*) FROM product";
     return pdo_query_value($sql);
-<<<<<<< HEAD
-};
-=======
 }
 function product_detail($id)
 {
@@ -425,4 +422,3 @@ function product_detail_delete($id)
     $sql = "DELETE FROM `product_detail` WHERE `product_detail`.`id_product` = ?";
     pdo_execute($sql, $id);
 }
->>>>>>> Lang
