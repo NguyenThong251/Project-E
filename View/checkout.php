@@ -23,7 +23,7 @@ foreach ($_SESSION['cart'] as $key) {
 
     $html_cart .= '
     <div class="flex flex-col rounded-lg sm:flex-row">
-    <img class="bg-box m-2 h-24 w-28 rounded-md object-cover object-center" src="' . $img . '"" />
+    <img class="bg-box m-2 h-24 w-1/5 rounded-md object-contain object-center" src="' . $img . '"" />
     <div class="flex w-full flex-col px-4">
         <div class="flex justify-between">
             <span class="font-semibold text-h2 text-white">' . $name . '</span>
@@ -31,8 +31,11 @@ foreach ($_SESSION['cart'] as $key) {
         <p class="text-white">' . $brand . '</p>
         <p class="text-white text-sm my-1" >Số lượng: ' . $quantity . '</p>
         <div class="flex gap-4">
+        
             <span class="text-sm font-bold text-white ">' . $lastprice . ' VND</span>
             <del class="font-bold text-white text-sm">' . $price . " " . $VND . '</del>
+            <p class="text-white ml-auto text-sm ">Tổng: '.$quantity * $lastprice.'</p>
+
         </div>
 
 
@@ -106,7 +109,7 @@ if($_SESSION['logged'] == 0) {
             </div>
           </label>
         </div>
-        <div class="relative">
+        <div class="relative mt-4">
           <input class="peer hidden" id="radio_2" type="radio" name="radio" value="1" />
           <span class="peer-checked:opacity-100 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-primary opacity-50 bg-white"></span>
           <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_2">

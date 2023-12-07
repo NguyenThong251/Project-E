@@ -79,7 +79,7 @@ if (isset($_POST['discard'])) {
 
     // Voucher is valid, you can apply it here
      $discountPercentage = $row['discount'];
-     $_SESSION['voucherSalePercent']['sale'] = $discountedAmount;
+     $_SESSION['voucherSalePercent']['sale'] = $discountPercentage;
      $totalCartAfterDiscount  = 0;
      $discountPrice = 0;
 
