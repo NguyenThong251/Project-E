@@ -23,7 +23,6 @@ if (!isset($_GET['pg'])) {
 }
 else {
     switch ($_GET['pg']) {
-
         case 'product':
             //search
                 $kyw="";
@@ -37,6 +36,10 @@ else {
             $dsbrand =  get_brand_name();
             include "View/shop.php";
             break;
+        case 'cart':
+            include "View/cart.php";
+            break;
+
     
         
             default:

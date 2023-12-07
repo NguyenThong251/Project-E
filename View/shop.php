@@ -52,14 +52,14 @@ else $title='Tất cả sản phẩm'
 </section>
 
 <!-- CONTENT -->
-<div class="container shop-content max-[640px]:mx-6">
+<div class="container shop-content p-4 lg:p-0">
     <div class="content-inner">
         <!-- FILTER -->
         <div class="filter-container lg:flex lg:justify-between lg:items-center">
             <div class="letf-filter sm:flex sm:justify-between sm:items-center sm:gap-4 sm:mb-4 lg:mb-0 lg:w-2/4">
                 <!-- SELECT OPTIONS -->
-                <div class="  select-container w-full">
-                    <select class="select-box border-2 border-primary w-full p-4 rounded-box w-1/2">
+                <div class="  select-container w-full mb-4 lg:mb-0">
+                    <select class="select-box border-2 border-primary w-full rounded-box w-1/2">
                         <?=$html_dm?>
                     </select>
 
@@ -69,7 +69,7 @@ else $title='Tất cả sản phẩm'
                 </div>
                 <!-- SELECT OPTIONS -->
                 <div class="select-container w-full">
-                    <select class="select-box border-2 border-primary w-full p-4 rounded-box">
+                    <select class="select-box border-2 border-primary w-full rounded-box">
                         <?=$html_brand?>
                     </select>
 
@@ -126,28 +126,36 @@ else $title='Tất cả sản phẩm'
 </div>
 
 <!-- BANNER -->
-<div>
-    <div class="container banner-container p-16 mt-24 mb-28">
+<section class="mt-24">
+      <div class="container banner-container p-16">
         <div>
-            <!-- UPPER -->
-            <div class="text-white flex items-center gap-3 font-bold">
-                <div class=" w-12  rounded-full flex items-center justify-center h-12 bg-primary  text-white">
-                    <i class="fa-solid fa-envelope text-xl"></i>
-                </div>
-                <p>Newsletter</p>
+          <!-- UPPER -->
+          <div class="text-white flex items-center gap-3 font-bold">
+            <div
+              class="w-12 rounded-full flex items-center justify-center h-12 bg-primary text-white"
+            >
+              <i class="fa-solid fa-envelope text-xl"></i>
             </div>
-            <h1 class="text-primary text-h1 font-bold">Get weekly update</h1>
+            <p>Newsletter</p>
+          </div>
+          <h1 class="text-primary md:text-h1 font-bold text-xl my-8">
+            Get weekly update
+          </h1>
 
-            <!-- LOWER -->
-            <div class="mt-4 flex gap-2">
-                <div class="flex items-center gap-3 bg-white w-fit px-6 py-3 rounded-button">
-                    <i class="fa-solid fa-envelope text-xl"></i>
-                    <input type="text" placeholder="example@gmail.com">
-                </div>
-                <div class="w-fit px-6 py-4 bg-primary text-white rounded-button">
-                    Subcribe
-                </div>
+          <!-- LOWER -->
+          <div class="mt-4 flex flex-col items-center md:flex-row gap-2">
+            <div
+              class="flex gap-3 bg-white w-full md:w-fit px-4 py-3 rounded-button"
+            >
+              <i class="fa-solid fa-envelope text-xl mt-1"></i>
+              <input type="text" placeholder="example@gmail.com" />
             </div>
+            <div
+              class="w-full text-center md:w-fit px-6 py-4 bg-primary text-white rounded-button"
+            >
+              Subcribe
+            </div>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </section>

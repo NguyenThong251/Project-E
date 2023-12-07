@@ -12,8 +12,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $flag = array_search($productName,array_column($_SESSION['cart'], 'name'));
 
-    
-
     if ($flag !== false) {
         $_SESSION['cart'][$flag]['quantity'] += 1;
     } else {
@@ -27,11 +25,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
         ];
         $_SESSION['cart'][] = $product;
     };
-
-   // Trả về dữ liệu session dưới dạng JSON
-//    header('Content-Type: application/json');
-//    echo json_encode($_SESSION['cart']);
-
 }
     
 

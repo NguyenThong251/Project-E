@@ -107,7 +107,6 @@ function show_product($dssp)
     $html_dssp = '';
     foreach ($dssp as $sp) {
         extract($sp);
-
         // Tính phần trăm giảm giá
         $percent_discount = ($price - $price_sale) / $price * 100;
         if ($sale > 0 && $sale < 100) {
@@ -141,11 +140,11 @@ function show_product($dssp)
         </a>
         <div
             class="absolute z-99 bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-            <div
+            <button onclick="addToCart(this)"
                 class="cursor-pointer hover:scale-125 transition duration-300 addToCart flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <p class="text-white hidden xl:block">Add To cart</p>
-            </div>
+            </button>
             <div
                 class="hover:scale-125 transition duration-300 flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-regular fa-eye"></i>
@@ -284,12 +283,12 @@ src="' . $img . '" alt="">
 
             <div
                 class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                <div
+                <button onclick="addToCart(this)"
                     class="addToCart cursor-pointer flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-solid fa-basket-shopping"></i>
                     <p class="text-white hidden xl:block">Add To cart</p>
 
-                </div>
+                </button>
                 <div
                     class="cursor-pointer flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-regular fa-eye"></i>
