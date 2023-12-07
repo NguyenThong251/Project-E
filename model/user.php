@@ -7,21 +7,21 @@ function user_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai
     pdo_execute($sql, $ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat == 1, $vai_tro == 1);
 }
 
-function user_update($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro)
+function user_update($img, $fullname, $password, $email, $phone, $address, $status, $role, $id)
 {
-    $sql = "UPDATE user SET mat_khau=?,ho_ten=?,email=?,hinh=?,kich_hoat=?,vai_tro=? WHERE ma_kh=?";
-    pdo_execute($sql, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat == 1, $vai_tro == 1, $ma_kh);
+    $sql = "UPDATE user SET user_img=?, full_name=?, password=?, email=?, phone=?, address=?, status=?, role=? WHERE id=?";
+    pdo_execute($sql, $img, $fullname, $password, $email, $phone, $address, $status, $role, $id);
 }
 
-function user_delete($ma_kh)
+function user_delete($id)
 {
-    $sql = "DELETE FROM user  WHERE ma_kh=?";
-    if (is_array($ma_kh)) {
-        foreach ($ma_kh as $ma) {
+    $sql = "DELETE FROM user  WHERE id=?";
+    if (is_array($id)) {
+        foreach ($id as $ma) {
             pdo_execute($sql, $ma);
         }
     } else {
-        pdo_execute($sql, $ma_kh);
+        pdo_execute($sql, $id);
     }
 }
 
@@ -53,4 +53,15 @@ function user_change_password($ma_kh, $mat_khau_moi)
 {
     $sql = "UPDATE user SET mat_khau=? WHERE ma_kh=?";
     pdo_execute($sql, $mat_khau_moi, $ma_kh);
+}
+
+function user_count_all()
+{
+    $sql = "SELECT count(*) FROM user";
+    return pdo_query_value($sql);
+}
+function user_select_by_id($id)
+{
+    $sql = "SELECT * FROM user WHERE id=?";
+    return pdo_query_one($sql, $id);
 }

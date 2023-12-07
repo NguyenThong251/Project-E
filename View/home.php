@@ -1,5 +1,7 @@
 <?php 
 // session_unset();
+// echo var_dump($_SESSION['cart']);
+
 //product_hot
 $html_product_hot = show_product($product_hot);
 //product_new

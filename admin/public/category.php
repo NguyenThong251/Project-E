@@ -67,7 +67,7 @@
                   <input id="category_up" name="category_name" type="text" placeholder="Nhập tên danh mục">
                 </td>
                 <td>
-                  <button class="button" id="btnUpCategory" type="button">Chỉnh sửa danh mục</button>
+                  <button class="button" id="btnUpCategory" type="button" onclick="categoryUp(this)">Chỉnh sửa danh mục</button>
                 </td>
               </tr>
             </tbody>

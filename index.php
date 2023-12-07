@@ -16,6 +16,21 @@ if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
+if (!isset($_SESSION['user'])) {
+    $_SESSION['user'] = [
+        'id' => NULL,
+        'username' => "",
+        'pass' => "",
+        'name' => "",
+        'avatar' => "",
+        'email' => "",
+        'location' => "",
+        'phone' => "",
+        'active' => "",
+        'role' => ""
+    ];
+}
+
 
 // $product_sale = get_product_sale(4);
 include "View/header.php";
@@ -24,7 +39,6 @@ if (!isset($_GET['pg'])) {
 }
 else {
     switch ($_GET['pg']) {
-
         case 'product':
             //search
                 $kyw="";
@@ -38,6 +52,7 @@ else {
             $dsbrand =  get_brand_name();
             include "View/shop.php";
             break;
+
         case 'blog':
             $ds_news_hot = get_news_highligh(2);
             $ds_news_lasest = get_news_all(3);
@@ -70,6 +85,28 @@ else {
             break;
 
         
+
+        case 'cart':
+            include "View/cart.php";
+            break;
+
+        case 'checkout' :
+            include "View/checkout.php";
+            if (isset($_POST['submit'])) {
+                $idUser = $_SESSION['user']['id'];
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $location = $_POST['location'];
+                $phone = $_POST['phone'];
+                $note = $_POST['note'];
+                $total = $_SESSION['lastprice'];
+                // NHET ZO BILL
+                
+                // NHET SESSION CART ZO GIO HANG
+               
+            } 
+            break;
+
             default:
         include "View/home.php";
             break;
