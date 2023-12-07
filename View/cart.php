@@ -133,7 +133,7 @@ foreach ($_SESSION['cart'] as $key) {
                         </div>
                     </div>
 
-                        <a class="block border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7 border-2 hover:bg-transparent hover:border-primary hover:text-primary transitio duration-300" href="#">CHECK OUT</a>
+                        <a class="block border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7 border-2 hover:bg-transparent hover:border-primary hover:text-primary transitio duration-300" href="index.php?pg=checkout">CHECK OUT</a>
                 </div>
 
             </div>
