@@ -25,7 +25,7 @@ foreach ($_SESSION['cart'] as $key) {
 
     $html_cart .= '
     <div class="flex gap-4 my-2 lg:h-44 ">
-              <div class="w-16 p-1 lg:w-fit bg-box rounded-box">
+              <div class="w-16 p-1 lg:w-1/6 bg-box rounded-box">
                   <img class=" h-full object-contain" src="'.$img.'" alt="">
                </div>
                <div class="flex flex-col justify-between">
