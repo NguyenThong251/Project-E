@@ -45,7 +45,7 @@ else $title='Tất cả sản phẩm'
             </div>
             <!-- IMG -->
             <div class="w-2/12">
-                <img src="/layout/assets/img/cucShit.png" alt="">
+                <img src="./Uploads/cucShit.png" alt="">
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@ else $title='Tất cả sản phẩm'
             <div class="letf-filter sm:flex sm:justify-between sm:items-center sm:gap-4 sm:mb-4 lg:mb-0 lg:w-2/4">
                 <!-- SELECT OPTIONS -->
                 <div class="  select-container w-full">
-                    <select class="select-box border-2 border-primary w-full p-4 rounded-box w-1/2">
+                    <select class="select-box border-2 border-primary w-full rounded-box w-1/2">
                         <?=$html_dm?>
                     </select>
 
@@ -69,7 +69,7 @@ else $title='Tất cả sản phẩm'
                 </div>
                 <!-- SELECT OPTIONS -->
                 <div class="select-container w-full">
-                    <select class="select-box border-2 border-primary w-full p-4 rounded-box">
+                    <select class="select-box border-2 border-primary w-full rounded-box">
                         <?=$html_brand?>
                     </select>
 
@@ -111,11 +111,11 @@ else $title='Tất cả sản phẩm'
 
         <h3 class="text-center text-lg pt-5 font-semibold" id="change-text"><?=$title?></h3>
         <!-- PRODUCT ROW -->
-        <div class="container loading flex-center">
-            <img src="../Uploads/Loading.gif" alt="" id="loader">
-        </div>
+        <!-- <div class="container loading flex-center">
+            <img src="./Uploads/Loading.gif" alt="" id="loader" style="display: none;">
+        </div> -->
 
-        <div class="grid grid-cols sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-12" id="result_filter">
+        <div class="grid grid-cols sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-12 relative" id="result_filter">
 
             <?=$html_dssp?>
         </div>

@@ -41,7 +41,7 @@ if (isset($_POST['action'])) {
                 $item_sale = '';
             }
             if ($img != "") $img = PATH_IMG . $img;
-            $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
+            $link = "index.php?pg=detail&idpro=" . $id;
             $output .=
                 ' <div class="overflow-hidden group">
     
@@ -89,14 +89,15 @@ if (isset($_POST['action'])) {
         }
     }
     else {
-        // $output= ' 
-        // ';
-        echo '<script>handleShowAndHideToast("error");</script>';
+        $output= '<h3 class="absolute top-1/2 left-1/2 text-xl font-bold
+        -translate-x-1/2 
+        -translate-y/1/2"> Không có sản phẩm được lọc</h3>';
+        // echo '<script>handleShowAndHideToast("success");</script>';
         // echo $output;
     // print_r($sql);   
     }
     echo $output; 
-    echo '<script>handleShowAndHideToast("success");</script>';
+    // echo '<script>handleShowAndHideToast("error", "Item has been deleted.");</script>';
     // print_r($sql);   
 
 }

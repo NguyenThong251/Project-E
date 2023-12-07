@@ -175,8 +175,8 @@ $(document).ready(function() {
                 // console.log(response);
                 $("#result_filter").html(response);
                 $("#loader").show();
-                $("#change-text").text("Filter Products");
-                // handleShowAndHideToast("success");
+                $("#change-text").text("Sản phẩm được lọc");
+                // handleShowAndHideToast("success")
             }
         })
 
