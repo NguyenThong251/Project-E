@@ -74,13 +74,13 @@ if (isset($_POST['discard'])) {
  $sql='';    
  $sql = "SELECT * FROM `voucher` WHERE `promo_code` = '$promoCode' AND `expiration_date` >= '$currentDate'";
  $result = $conn->query($sql);
-
-if ($row = $result->rowCount()> 0) {
+ if ($row = $result->rowCount()> 0) {
     $row=$result->fetch(PDO::FETCH_ASSOC);
 
     // Voucher is valid, you can apply it here
      $discountPercentage = $row['discount'];
-     $totalCartAfterDiscount  =0;
+     $_SESSION['voucherSalePercent']['sale'] = $discountedAmount;
+     $totalCartAfterDiscount  = 0;
      $discountPrice = 0;
 
      $discountedAmount = $totalCart * ($discountPercentage / 100);
@@ -94,6 +94,7 @@ if ($row = $result->rowCount()> 0) {
 }
 //  lấy discount price - total price
 //  echo ra totalprice --> tính discount price ở cart.php bằng cách lấy total price mới - total price cũ 
+
 
 
 }
