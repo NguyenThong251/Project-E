@@ -96,12 +96,38 @@ function get_product_view($limi)
     LIMIT " . $limi;
     return pdo_query($sql);
 }
+function get_product_relate($iddm,$id,$limi)
+{
+    $sql = "SELECT p.*, b.name as brand_name 
+    FROM product p
+    JOIN brand b ON p.id_brand = b.id
+    WHERE p.id_category=? AND p.id<>?
+    ORDER BY p.id ASC
+    LIMIT " . $limi;
+    return pdo_query($sql,$iddm,$id);
+}
 
-// function hang_hoa_select_by_id($ma_hh){
-//     $sql = "SELECT * FROM hang_hoa WHERE ma_hh=?";
-//     return pdo_query_one($sql, $ma_hh);
-// }
-//function product_primary
+function get_product_by_id($id) {
+    $sql = "SELECT 
+                product.*,
+                brand.name AS brand_name,
+                category.name AS category_name,
+                product_detail.img_1,
+                product_detail.img_2,
+                product_detail.img_3,
+                product_detail.img_4
+            FROM 
+                product
+            JOIN 
+                brand ON product.id_brand = brand.id
+            JOIN 
+                category ON product.id_category = category.id
+            JOIN 
+                product_detail ON product.id = product_detail.id_product
+            WHERE 
+                product.id=?";
+    return pdo_query_one($sql, $id);
+}
 function show_product($dssp)
 {
     $html_dssp = '';
@@ -117,7 +143,7 @@ function show_product($dssp)
             $item_sale = '';
         }
         if ($img != "") $img = PATH_IMG . $img;
-        $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
+        $link = "index.php?pg=detail&idpro=" . $id;
         $html_dssp .=
             ' <div class="overflow-hidden group">
 

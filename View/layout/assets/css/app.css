@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -41,9 +40,7 @@ body {
 }
 
 .banner-container {
-
-  background: url(../img/bg-banner.png) no-repeat 100%/cover;
-
+  background: url(../img/bg-banner.png) no-repeat 100% / cover;
 }
 
 input:focus ~ .input-text {
@@ -108,9 +105,8 @@ span {
 }
 
 .footer-show {
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
-
 
 .cart-hide {
   translate: 100% 0%;
@@ -118,7 +114,6 @@ span {
 
 .nav-active-top {
   stroke-dashoffset: -81px !important;
-  
 }
 
 .nav-active-middle {
@@ -174,27 +169,24 @@ span {
 
 /* CATEGORIES */
 
-
 .cate-laptop {
-
-  background: url(../img/bg-lap.png) no-repeat 100%/cover;
+  background: url(../img/bg-lap.png) no-repeat 100% / cover;
 }
 
 .cate-phone {
-  background: url(../img/bg-phone.png) no-repeat 100%/cover;
+  background: url(../img/bg-phone.png) no-repeat 100% / cover;
 }
 
 .cate-keyboard {
-  background: url(../img/bg-keyboard.png) no-repeat 100%/cover;
+  background: url(../img/bg-keyboard.png) no-repeat 100% / cover;
 }
 
 .cate-headphone {
-  background: url(../img/bg-headphone.png) no-repeat 100%/cover;
+  background: url(../img/bg-headphone.png) no-repeat 100% / cover;
 }
 
 .cate-mouse {
-  background: url(../img/bg-mouse.png) no-repeat 100%/cover;
-
+  background: url(../img/bg-mouse.png) no-repeat 100% / cover;
 }
 
 /* BANNER */
@@ -202,15 +194,12 @@ span {
   width: 600px;
 }
 
-
 .banner-1 {
-
-  background: url(../img/banner-1.png) no-repeat 10%/cover;
+  background: url(../img/banner-1.png) no-repeat 10% / cover;
 }
 
 .banner-2 {
-  background: url(../img/banner-2.png) no-repeat 100%/cover;
-
+  background: url(../img/banner-2.png) no-repeat 100% / cover;
 }
 /*# sourceMappingURL=app.css.map */
 
@@ -250,7 +239,6 @@ span {
 .select-box option {
   margin-top: 10px;
 }
-
 
 .product {
   display: flex;
