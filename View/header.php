@@ -194,7 +194,7 @@
 
                             </div>
                             <div class="flex flex-col items-center gap-2 mt-4">
-                                <a class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH TOÁN</a>
+                                <a href="index.php?pg=checkout" class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH TOÁN</a>
                                 <a href="index.php?pg=cart" class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">GIỎ HÀNG</a>
 
                             </div>
