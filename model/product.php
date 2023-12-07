@@ -415,10 +415,22 @@ function product_detail_insert($img_1, $img_2, $img_3, $img_4, $id_product)
 function product_delete($id)
 {
     $sql = "DELETE FROM `product` WHERE `product`.`id` = ?";
-    pdo_execute($sql, $id);
+    if (is_array($id)) {
+        foreach ($id as $ma) {
+            pdo_execute($sql, $ma);
+        }
+    } else {
+        pdo_execute($sql, $id);
+    }
 }
 function product_detail_delete($id)
 {
     $sql = "DELETE FROM `product_detail` WHERE `product_detail`.`id_product` = ?";
-    pdo_execute($sql, $id);
+    if (is_array($id)) {
+        foreach ($id as $ma) {
+            pdo_execute($sql, $ma);
+        }
+    } else {
+        pdo_execute($sql, $id);
+    }
 }

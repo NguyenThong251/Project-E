@@ -92,6 +92,10 @@ if ($_GET['func'] == "show") {
       $filter = " AND role = 1";
     } else if ($filter == 2) {
       $filter = " AND role = 2";
+    } else if ($filter == 3) {
+      $filter = " AND status = 1";
+    } else if ($filter == 4) {
+      $filter = " AND status = 0";
     } else {
       $filter = "";
     }

@@ -10,6 +10,8 @@
         <option value="0">Người dùng</option>
         <option value="1">Quản lí</option>
         <option value="2">Nhân viên</option>
+        <option value="3">Hoạt động</option>
+        <option value="4">Bị cấm</option>
       </select>
     </div>
     <div class="filter-search">
