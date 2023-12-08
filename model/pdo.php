@@ -76,6 +76,7 @@ function pdo_query_one($sql)
         unset($conn);
     }
 }
+
 /**
  * Thực thi câu lệnh sql truy vấn một giá trị
  * @param string $sql câu lệnh sql

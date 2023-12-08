@@ -10,6 +10,8 @@ function displayProfileImage($userImage)
 
 if (isset($_SESSION['s_user']) && count($_SESSION['s_user']) > 0) {
     extract($_SESSION['s_user']);
+    $userinfo = get_user($id);
+    extract($userinfo);
     $user_img = isset($user_img) ? $user_img : '';
     if ($user_img != "") {
         $user_img = PATH_IMG . $user_img;
@@ -77,7 +79,7 @@ if (isset($_SESSION['s_user']) && count($_SESSION['s_user']) > 0) {
                 </ul>
             </navbar>
         </div>
-        <form class="col-span-6 flex flex-col gap-8" action="index.php?pg=updateUser" method="post">
+        <form class="col-span-6 flex flex-col gap-8" action="index.php?pg=updateUser" method="method">
             <div class="grid grid-cols-2 gap-8">
                 <label class="flex relative flex-col">
                     <span class="pb-2">Họ và tên</span>
@@ -117,19 +119,13 @@ if (isset($_SESSION['s_user']) && count($_SESSION['s_user']) > 0) {
                     <option value="1">VietNam </option>
                     <option value="1">USA</option>
                 </select> -->
-            </label><span class="text-gray">Đây sẽ là cách tên của bạn sẽ được hiển thị trong phần tài khoản và trong
+            <!-- </label><span class="text-gray">Đây sẽ là cách tên của bạn sẽ được hiển thị trong phần tài khoản và trong
                 đánh giá</span>
-            <p class="text-third font-bold">Thay đổi mật khẩu</p>
-            <label class="flex relative flex-col">
-                <span class="pb-2">Thay đổi mật khẩu</span>
-                <input
-                    class="pass-new w-full text-sm bg-white rounded-lg border-gray border-opacity-50 py-3 px-3 outline-none border-2 transition duration-200 focus:border-blue-500 focus:text-primary"
-                    type="password" name="updatepassword" value="<?=$password?>" />
-            </label>
+            <p class="text-third font-bold">Thay đổi mật khẩu</p> -->
             <input type="hidden" name="id" value="<?=$id?>">
-            <input type="submit" name="updateAccount"
-                class="bg-primary py-2 rounded-lg font-bold w-36 inline-block px-8 text-white text-center transition duration motion-safe:hover:scale-110"
-                value="Cập nhật">
+            <a href="index.php?pg=account" type="submit" name="updateAccount"
+                class="bg-primary py-2 rounded-lg font-bold w-36 inline-block px-8 text-white text-center transition duration motion-safe:hover:scale-110">Cập
+                nhật</a>
         </form>
     </div>
 </section>

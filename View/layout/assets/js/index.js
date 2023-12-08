@@ -360,3 +360,4 @@ togglePassword.addEventListener("click", () => {
     togglePassword.setAttribute("name", "eye-outline");
   }
 });
+//validate
