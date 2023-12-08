@@ -7,6 +7,7 @@ include "View/global.php";
 include "model/pdo.php";
 include "model/product.php";
 include "model/news.php";
+include "model/user.php";
 $product_hot = get_product_hot(4);
 $product_new = get_product_new(4);
 $product_view = get_product_view(4);
@@ -117,12 +118,71 @@ else {
             } 
             break;
         
-        case 'signin' :
+        case 'dangnhap' :
+            if (isset($_POST['login'])&&($_POST['login'])) {
+                
+                $email=$_POST['email'];
+                $password=$_POST['password'];
+                //kiemtra
+                $checkuser = checkuser($email,$password);
+                // echo var_dump($checkuser);
+                if (is_array($checkuser) && (count($checkuser))){
+                    $_SESSION['s_user'] = $checkuser;
+                    header('location:index.php?pg');
+                    echo 'đúng';
+                }else {
+                    $tb = "Tài khoản không tồn tại"; 
+                    
+                    $_SESSION['tb_dangnhap']=$tb;
+                    header('location: index.php?pg=signin');
+                }
 
-            include "View/sigin.php";
+                //ouitput
+            }
+
+            break;
+        case 'signin':
+            include "View/signin.php";
+        break;
+        case 'adduser':
+            if (isset($_POST['dangky'])&&($_POST['dangky'])) {
+                $username = $_POST['username'];
+                $email = $_POST['email'];
+                $password = $_POST['ForgotPassword'];
+                echo var_dump($username,$email,$password);
+                //xử lí
+                user_insert($username, $password, $email);
+                
+            }
+            include "View/signin.php";
             
             break;
-        
+        case 'signup':
+            include_once "View/signup.php";
+        break;
+        case 'logout':
+            if (isset($_SESSION['s_user']) && count($_SESSION['s_user'])>0){
+                unset($_SESSION['s_user']);
+            };
+            header('location:index.php?pg');
+            break;
+        case 'account':
+            if (isset($_SESSION['s_user']) && count($_SESSION['s_user'])>0){
+                include "View/account.php";
+            };
+            break;
+        case 'updateUser':
+            if (isset($_POST['updateAccount'])&&($_POST['updateAccount'])){
+            $fullname=$_POST["fullname"];
+            $phone=$_POST["phone"];
+            $address=$_POST["address"];
+            $password=$_POST["updatepassword"];
+            $id=$_POST["id"];
+            $role=0;
+            acount_update($fullname,$phone,$address,$password,$role,$id);
+            include "View/account_confirm.php";
+        }
+        break;
             default:
         include "View/home.php";
             break;

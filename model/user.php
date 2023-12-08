@@ -1,10 +1,29 @@
 <?php
 require_once 'pdo.php';
-
-function user_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro)
+//userloginlogout
+function checkuser($email, $password)
 {
-    $sql = "INSERT INTO user(ma_kh, mat_khau, ho_ten, email, hinh, kich_hoat, vai_tro) VALUES (?, ?, ?, ?, ?, ?, ?)";
-    pdo_execute($sql, $ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat == 1, $vai_tro == 1);
+    $sql = "SELECT * FROM user WHERE email=? and password=?";
+    return pdo_query_one($sql, $email, $password);
+    // if (is_array($kq) && (count($kq))) {
+    //     return $kq["id_user"];
+    // } else {
+    //     return 0;
+    // }
+}
+function  acount_update($fullname,$phone,$address,$password,$role,$id){
+    $sql = "UPDATE user SET full_name=?, phone=?, address=?, password=?, role=? WHERE id=?";
+    pdo_execute($sql, $fullname,$phone,$address,$password,$role,$id);
+
+}
+function get_user($id){
+    $sql = "SELECT * FROM user WHERE id=?";
+    return pdo_query_one($sql,$id);
+}
+function user_insert($username, $password, $email)
+{
+    $sql = "INSERT INTO user(username,password,email) VALUES (?, ?, ?)";
+    pdo_execute($sql, $username, $password, $email);
 }
 
 function user_update($img, $fullname, $password, $email, $phone, $address, $status, $role, $id)
