@@ -8,10 +8,9 @@
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+        rel="stylesheet" />
     <!-- CSS -->
-
     <link rel="stylesheet" href="View/layout/assets/css/app.css" />
     <!-- PLUGIN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -28,9 +27,9 @@
         </form>
     </div>
     <!-- Toast Message  -->
-    <!-- <div id="toast">
+    <div id="toast">
 
-    </div> -->
+    </div>
     <!-- SEARCH -->
     <header>
         <div>
@@ -55,10 +54,8 @@
                                 href="index.php?pg=contact">Liên hệ</a>
                         </li>
                         <li class="nav-items group">
-
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="index.php?pg=about">Về chúng tôi</a>
-
+                                href="index.php?pg=about">Về tụi tôi</a>
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
@@ -71,18 +68,17 @@
                     <ul class="flex items-center gap-2 md:gap-6">
                         <li class="w-6">
                             <a href="#" class="group flex relative site-container items-center">
-
-                                <ion-icon name="search-outline" class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
-
+                                <ion-icon name="search-outline"
+                                    class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
                             </a>
                         </li>
 
                         <li class="w-6">
                             <a href="#" class="group relative site-container block flex items-center rounded-full">
                                 <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
-
-                                <ion-icon name="heart-outline" class="site-link_heart text-2xl group-hover:text-white transition duration-300"></ion-icon>
-
+                                <ion-icon name="heart-outline"
+                                    class="site-link_heart text-2xl group-hover:text-white transition duration-300">
+                                </ion-icon>
                                 <!-- <i class="mb-px fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300 site-link_heart"></i> -->
                             </a>
                         </li>
@@ -190,7 +186,8 @@
                         stroke-dasharray: 30px, 88px;
                         stroke-dashoffset: 0px;
                       "></path>
-                                    <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 " style="
+                                    <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 "
+                                        style="
                         stroke-dasharray: 30px, 30px;
                         stroke-dashoffset: 0px;
                       "></path>
@@ -212,29 +209,29 @@
             <div class="modal-cart fixed top-0 left-0 h-screen w-full bg-primary z-40 opacity-25 hidden"></div>
             <!-- CART NOFICATION -->
             <div data-lenis-prevent-wheel>
-
-                <div class="w-full lg:w-1/4 fixed top-0 h-screen right-0 bg-white z-50 cart-nofi transition-all duration-500 delay-75 cart-hide">
-
+                <div
+                    class="w-full lg:w-1/4 fixed top-0 h-screen right-0 bg-white z-50 cart-nofi transition-all duration-500 delay-75 cart-hide">
                     <div class="flex flex-col h-screen">
                         <div class="bg-box px-8 py-4 flex items-center gap-12 text-3xl">
                             Giỏ hàng
                             <div class="text-sm w-fit h-fit py-2 px-4 bg-white rounded-box">
-
                                 <span class="totalCart-modal">
-                                <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
+                                    <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
 
                                 </span>
                                 <span>
-                                     Sản phẩm
+                                    Sản phẩm
                                 </span>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="close-cart ml-auto text-primary hover:scale-125 delay-75 h-5 w-5 cursor-pointer duration-150">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                stroke="currentColor"
+                                class="close-cart ml-auto text-primary hover:scale-125 delay-75 h-5 w-5 cursor-pointer duration-150">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </div>
 
                         <div class="p-8 flex-col flex  relative overflow-y-auto cart-box">
-                                    <!-- BOX CART HERE -->
+                            <!-- BOX CART HERE -->
                         </div>
 
                         <div class="bg-box w-full mt-auto px-8 py-12">
@@ -244,9 +241,12 @@
 
                             </div>
                             <div class="flex flex-col items-center gap-2 mt-4">
-                                <a href="index.php?pg=checkout" class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH TOÁN</a>
-                                <a href="index.php?pg=cart" class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">GIỎ HÀNG</a>
-
+                                <a href="index.php?pg=checkout"
+                                    class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH
+                                    TOÁN</a>
+                                <a href="index.php?pg=cart"
+                                    class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">GIỎ
+                                    HÀNG</a>
 
                             </div>
                         </div>

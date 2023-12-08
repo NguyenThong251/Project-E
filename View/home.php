@@ -53,6 +53,7 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
     </div>
 </section>
 
+
 <section class="mt-20">
     <div>
         <div class="container">
@@ -495,9 +496,9 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
                         class="text-white absolute bottom-1/2 translate-x-1/2 translate-y-1/2 left-1/4 xl:right-1/4 text-sm md:text-h3 ">
                         Âm thanh phong phú
                         <div
-                            class="flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
-                            <p class="text-gray">Bộ sưu tập</p>
-                            <i class="fa-solid fa-arrow-right"></i>
+                            class="pt-4 flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
+                            <p class="text-gray  text-lg">Bộ sưu tập</p>
+                            <i class="fa-solid fa-arrow-right text-lg"></i>
                         </div>
                     </div>
                 </div>
@@ -509,10 +510,10 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
                         class="text-white absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-1/4 text-sm md:text-h3">
                         Âm thanh phong phú
                         <div
-                            class="flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
-                            <p class="text-gray">Bộ sưu tập</p>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                            class="pt-4 flex items-center gap-2 text-gray hover:gap-4 transition-all duration-300 mt-px text-sm">
+                            <p class="text-gray  text-lg">Bộ sưu tập</p>
+                            <i class="fa-solid fa-arrow-right text-lg"></i>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -537,7 +538,7 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
 
             <!-- LOWER -->
             <div class="mt-4 flex flex-col lg:flex-row gap-2 items-center w-fit mx-auto lg:mx-0">
-                <div class="text-sm lg:text-xl flex gap-3 bg-white  lg:w-fit p-4 py-3 rounded-button">
+                <div class="text-sm lg:text-xl flex gap-3 bg-white  lg:w-fit p-4 py-3 rounded-button items-center">
                     <i class="fa-solid fa-envelope text-sm lg:text-xl  mt-1"></i>
                     <input type="text" placeholder="example@gmail.com" />
                 </div>

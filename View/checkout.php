@@ -102,8 +102,8 @@ if($_SESSION['logged'] == 0) {
                 <!-- SINGLE -->
                 <!-- PRODUCT -->
             </div>
-            <p class="mt-8 text-lg font-medium">Shipping Methods</p>
-            <form class="mt-5 grid gap-6" method="post" action="index.php">
+            <p class="mt-8 text-lg font-medium mb-5">Shipping Methods</p>
+            <form class="mt-5 grid gap-6 " method="post" action="index.php">
                 <div class="relative">
                     <input class="peer hidden" id="radio_1" type="radio" name="radio" value="0" checked />
                     <span

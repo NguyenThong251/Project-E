@@ -215,7 +215,7 @@ function show_product_new($pr_new)
                 </div>
                 <h1 class="text-8xl font-bold mt-4 w-96">' . $name . '</h1>
             </div>
-            <p class="w-2/4 my-8">' . $des . '</p>
+            
             <a href="' . $link . '"class=" mt-4 cursor-pointer border-2 hover:bg-transparent 
                                 hover:text-primary hover:border-primary transition 
                                 duration-300 px-20 py-4 text-h2 bg-primary text-white 
