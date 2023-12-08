@@ -114,10 +114,15 @@ else {
                 // NHET ZO BILL
                 
                 // NHET SESSION CART ZO GIO HANG
-               
             } 
             break;
+        
+        case 'signin' :
 
+            include "View/sigin.php";
+            
+            break;
+        
             default:
         include "View/home.php";
             break;
