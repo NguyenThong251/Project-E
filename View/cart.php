@@ -25,7 +25,7 @@ foreach ($_SESSION['cart'] as $key) {
 
     $html_cart .= '
     <div class="flex gap-4 my-2 lg:h-44 ">
-              <div class="w-16 p-1 lg:w-fit bg-box rounded-box">
+              <div class="w-16 p-1 lg:w-1/6 bg-box rounded-box">
                   <img class=" h-full object-contain" src="'.$img.'" alt="">
                </div>
                <div class="flex flex-col justify-between">
@@ -65,86 +65,88 @@ foreach ($_SESSION['cart'] as $key) {
 ?>
 
 <section class="my-16">
-        <div class="banner-content bg-primary">
-            <div class="container py-4 flex justify-between items-center">
+    <div class="banner-content bg-primary">
+        <div class="container py-4 flex justify-between items-center">
+            <div>
+                <!-- UPPER -->
+                <div class="flex text-white">
+                    <a class="mr-4 text-grey-500 relative after:content-[''] after:absolute after:top-1/4 after:-right-2 after:w-px after:px-px after:h-4 after:bg-gray-500 after:block"
+                        href="#">Home</a>
+                    <p class="text-white">Shop</p>
+                </div>
+                <!-- LOWER -->
                 <div>
-                    <!-- UPPER -->
-                    <div class="flex text-white">
-                        <a class="mr-4 text-grey-500 relative after:content-[''] after:absolute after:top-1/4 after:-right-2 after:w-px after:px-px after:h-4 after:bg-gray-500 after:block"
-                            href="#">Home</a>
-                        <p class="text-white">Shop</p>
-                    </div>
-                    <!-- LOWER -->
-                    <div>
-                        <h1 class="banner-text text-h1 text-white font-bold mt-2">Explore All Products</h1>
-                    </div>
+                    <h1 class="banner-text text-h1 text-white font-bold mt-2">Explore All Products</h1>
                 </div>
-                <!-- IMG -->
-                <div class="w-2/12">
-                    <img src="/layout/assets/img/cucShit.png" alt="">
-                </div>
+            </div>
+            <!-- IMG -->
+            <div class="w-2/12">
+                <img src="/layout/assets/img/cucShit.png" alt="">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CONTENT -->
-    <div id="content">
-        <div class="cart-container flex flex-col justify-between lg:flex-row max-[640px]:m-4 md:m-4 lg:mx-16 ">
-            <!-- CART -->
-            <div
-                class="cart lg:w-2/3 py-8 px-8 w-full">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 class="text-2xl">Your Cart</h2>
-                    <span class="opacity-70 text-sm"><i class='bx bx-x'></i> Clear cart</span>
-                </div>
-
-                <!--START: SINGLE PRODUCT -->
-                <?=$html_cart?>
-
-
+<!-- CONTENT -->
+<div id="content">
+    <div class="cart-container flex flex-col justify-between lg:flex-row max-[640px]:m-4 md:m-4 lg:mx-16 ">
+        <!-- CART -->
+        <div class="cart lg:w-2/3 py-8 px-8 w-full">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl">Your Cart</h2>
+                <span class="opacity-70 text-sm"><i class='bx bx-x'></i> Clear cart</span>
             </div>
 
-            <!-- TOTAL BOARD -->
-            <div class="mt-8 lg:flex lg:items-start lg:w-1/3 lg:ml-8 ">
-                <div class="checkout w-full">
-                    <div>
+            <!--START: SINGLE PRODUCT -->
+            <?=$html_cart?>
+
+
+        </div>
+
+        <!-- TOTAL BOARD -->
+        <div class="mt-8 lg:flex lg:items-start lg:w-1/3 lg:ml-8 ">
+            <div class="checkout w-full">
+                <div>
                     <p class="font-semibold text-lg">Promo code</p>
-                    <input class="border-2 rounded-button px-4 py-1 mt-4 promoteCode" type="text" name="promoteCode" placeholder="Type here...">
+                    <input class="border-2 rounded-button px-4 py-1 mt-4 promoteCode" type="text" name="promoteCode"
+                        placeholder="Type here...">
                     <button class="promodeApply">
-                        <div class=" ml-4 px-6 py-1.5 bg-primary rounded-button hover:bg-transparent border-2 hover:border-primary  transition duration-300 text-white hover:text-primary">
+                        <div
+                            class=" ml-4 px-6 py-1.5 bg-primary rounded-button hover:bg-transparent border-2 hover:border-primary  transition duration-300 text-white hover:text-primary">
                             Apply
                         </div>
                     </button>
-                    </div>
- 
-
-                    <div class="border-t-2 pt-6 mt-6">
-
-                        <div class="text-lg font-bold flex justify-between items-center  my-5">
-                            <p>Giảm giá</p>
-                            <div class="flex">
-                                <p class="priceDiscount mr-1 "></p>
-                                <p>VND</p>
-                            </div>
-                        </div>
-
-                        <div class="flex justify-between items-center text-lg font-bold ">
-                            <p>Tổng</p>
-                            <div class="flex w-fit  items-center">
-                                <div class="overflow-y-hidden text-right">
-                                <p class="total-cart-discounted -translate-y-8 mr-1">450000</p>
-                                <p class="totalCart  -translate-y-3.5 mr-1"><?=$totalPrice?></p>
-                                </div>
-                            <span class=" top-0 right-0">VND</span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                        <a class="block border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7 border-2 hover:bg-transparent hover:border-primary hover:text-primary transitio duration-300" href="index.php?pg=checkout">CHECK OUT</a>
                 </div>
 
-            </div>
-        </div>
 
+                <div class="border-t-2 pt-6 mt-6">
+
+                    <div class="text-lg font-bold flex justify-between items-center  my-5">
+                        <p>Giảm giá</p>
+                        <div class="flex">
+                            <p class="priceDiscount mr-1 "></p>
+                            <p>VND</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center text-lg font-bold ">
+                        <p>Tổng</p>
+                        <div class="flex w-fit  items-center">
+                            <div class="overflow-y-hidden text-right">
+                                <p class="total-cart-discounted -translate-y-8 mr-1">450000</p>
+                                <p class="totalCart  -translate-y-3.5 mr-1"><?=$totalPrice?></p>
+                            </div>
+                            <span class=" top-0 right-0">VND</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <a class="block border-2 rounded-md bg-bl text-white text-sm font-semibold py-3 text-center mt-7 border-2 hover:bg-transparent hover:border-primary hover:text-primary transitio duration-300"
+                    href="index.php?pg=checkout">CHECK OUT</a>
+            </div>
+
+        </div>
     </div>
+
+</div>

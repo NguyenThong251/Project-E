@@ -148,18 +148,11 @@ function show_product($dssp)
             ' <div class="overflow-hidden group">
 
     <div class="bg-box relative z-10 flex items-center  h-3/4 lg:h-96  justify-center pb-20">
-<<<<<<< HEAD
     <input type="hidden" class="inputImg" name="img" value="' . $img . '">
     <input type="hidden" name="name" value="' . $name . '">
     <input type="hidden" name="brand" value="' . $brand_name . '">
     <input type="hidden" name="price" value="' . $price . '">
     <input type="hidden" name="price_sale" value="' . $price_sale . '"> 
-=======
-    <input type="hidden" class="inputImg" name="img" value="' . $img . '">
-    <input type="hidden" name="name" value="' . $name . '">
-    <input type="hidden" name="price" value="' . $price . '">
-    <input type="hidden" name="price_sale" value="' . $price_sale . '"> 
->>>>>>> Lang
         <a href="' . $link . '" >
                 <img class="group-hover:scale-125 h-64 object-contain group-hover:blur-sm  transition duration-500" 
         src="' . $img . '" alt="">
@@ -288,7 +281,6 @@ function show_product_view_secondary($dssp)
     <!-- SINGLE PRODUCT -->
     <div class="overflow-hidden w-full group rounded-box">
         <div class="bg-box relative slider-box flex justify-center pb-16">
-<<<<<<< HEAD
         <input type="hidden" name="img" value="' . $img . '">
         <input type="hidden" name="name" value="' . $name . '">
         <input type="hidden" name="brand" value="' . $brand_name . '">
@@ -296,14 +288,6 @@ function show_product_view_secondary($dssp)
         <input type="hidden" name="price_sale" value="' . $price . '"> 
         <a  href="' . $link . '" >
         <img class="group-hover:scale-125  group-hover:blur-sm  transition duration-500" 
-=======
-        <input type="hidden" name="img" value="' . $img . '">
-        <input type="hidden" name="name" value="' . $name . '">
-        <input type="hidden" name="price" value="' . $price . '">
-        <input type="hidden" name="price_sale" value="' . $price_sale . '"> 
-        <a href="' . $link . '" >
-        <img class="group-hover:scale-125  group-hover:blur-sm h-3/4 transition duration-500" 
->>>>>>> Lang
 src="' . $img . '" alt="">
 </a>
 

@@ -465,8 +465,7 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
             </div>
 
             <div>
-                <div
-                    class="mt-12 hidden justify-center lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-4">
+                <div class="mt-12 hidden justify-center lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-4">
                     <!-- SINGLE PRODUCT -->
                     <?=$html_product_view?>
 
