@@ -1,70 +1,49 @@
 <footer class="mt-12">
-    <div class="container mb-8 mt-24 grid grid-cols-1 mx-auto md:grid-cols-2 lg:grid-cols-4 mt-22">
-        <div class="flex items-center lg:mx-0 md:mx-0">
-            <div class="img w-24 h-24">
+    <div class="policy items-center place-content-between mt-22 md:flex md:justify-between md:items-center">
+        <div class="px-16 py-12 flex flex-col items-center justify-center" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+            <div class="img w-16 h-16"><img src="./Uploads/fast-delivery.webp" alt=""></div>
+            <p class="mt-4 font-extrabold text-base">Giao Hàng</p>
+            <p class="font-extrabold text-base">Nhanh Chóng</p>
+        </div>          
 
-                <img src="view/layout/assets/img/delivery.png" alt="" />
+        <div class="px-16 py-12 flex flex-col items-center justify-center mt-4 md:mt-0" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+            <div class="img w-16 h-16"><img src="./Uploads/money-back.webp" alt=""></div>
+            <p class="mt-4 font-extrabold text-base">Chính Sách</p>
+            <p class="font-extrabold text-base">Hoàn Tiền</p>
+        </div>  
 
-            </div>
+        <div class="px-16 py-12 flex flex-col items-center justify-center mt-4 md:mt-0" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+            <div class="img w-16 h-16"><img src="./Uploads/return-policy.webp" alt=""></div>
+            <p class="mt-4 font-extrabold text-base">Chính Sách</p>
+            <p class="font-extrabold text-base">Đổi Trả</p>
+        </div> 
 
-            <div class="info ml-4 mb-2">
-                <p class="font-extrabold text-xl">Fast & Secure delivery</p>
-                <p class="text-sm">Tell about your service</p>
-            </div>
-        </div>
+        <div class="px-16 py-12 flex flex-col items-center justify-center mt-4 md:mt-0" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+            <div class="img w-16 h-16"><img src="./Uploads/promo.webp" alt=""></div>
+            <p class="mt-4 font-extrabold text-base">Ưu Đãi</p>
+            <p class="font-extrabold text-base">Hấp Dẫn</p>
+        </div> 
 
-        <div class="flex items-center lg:mx-0">
-            <div class="img w-24 h-24">
-
-                <img src="view/layout/assets/img/money back.png" alt="" />
-
-            </div>
-
-            <div class="info ml-4 mb-2">
-                <p class="font-extrabold text-xl">Fast & Secure delivery</p>
-                <p class="text-sm">Within 10 days.</p>
-            </div>
-        </div>
-
-        <div class="flex items-center lg:mx-0">
-            <div class="img w-24 h-24">
-
-                <img src="view/layout/assets/img/return.png" alt="" />
-
-            </div>
-
-            <div class="info ml-4 mb-2">
-                <p class="font-extrabold text-xl">Fast & Secure delivery</p>
-                <p class="text-sm">No question ask.</p>
-            </div>
-        </div>
-
-        <div class="flex items-center lg:mx-0">
-            <div class="img w-24 h-24">
-
-                <img src="view/layout/assets/img/support.png" alt="" />
-
-            </div>
-
-            <div class="info ml-4 mb-2">
-                <p class="font-extrabold text-xl">Fast & Secure delivery</p>
-                <p class="text-sm">24/7 Live support.</p>
-            </div>
-        </div>
+        <div class="px-16 py-12 flex flex-col items-center justify-center mt-4 md:mt-0" style="border: 1px solid rgba(0, 0, 0, 0.1);">
+            <div class="img w-16 h-16"><img src="./Uploads/support.webp" alt=""></div>
+            <p class="mt-4 font-extrabold text-base">Hỗ Trợ</p>
+            <p class="font-extrabold text-base">24/7</p>
+        </div> 
     </div>
-    <div>
-        <div class="container grid-cols-1 lg:grid-cols-4 grid border-y-2 py-10 border-gray px-2 gap-4 lg:gap-0">
+
+    <div class="mt-10">
+        <div class="container grid-cols-1 lg:flex lg:justify-between border-y-2 py-10 border-gray px-2 gap-4 lg:gap-0">
             <div class="flex flex-col justify-between">
-                <h1 class="font-bold text-h2 text-lg ">Support</h1>
+                <h1 class="font-bold text-h2 text-lg ">Liên hệ hỗ trợ</h1>
                 <p class=" mt-2 lg:mt-0 w-56 color-777">
-                    QTSC 9 Building, To Ky Street Ho Chi Minh City
+                    <!-- QTSC 9 Building, To Ky Street Ho Chi Minh City -->
                 </p>
 
                 <div class="mt-4 lg:mt-0">
                     <div>
 
                         <img class="inline-block mr-4" src="view/layout/assets/img/mail.png" alt="" />
-                        <span class="color-777">example@domain.com</span>
+                        <span class="color-777">etrade@domain.com</span>
                     </div>
 
                     <div>
@@ -77,39 +56,39 @@
             </div>
             <div class="">
                 <div class="flex gap-2">
-                    <h1 class="font-bold text-h2 text-lg">Account</h1>
+                    <h1 class="font-bold text-h2 text-lg">Tài khoản</h1>
                     <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </div>
 
                 <div class="mt-2 leading-9 cursor-pointer h-0 lg:h-fit footer-show overflow-hidden ">
-                    <p class="color-777">My Account</p>
-                    <p class="color-777">Login</p>
-                    <p class="color-777">Cart</p>
+                    <p class="color-777">Tài khoản của tôi</p>
+                    <p class="color-777">Đăng nhập</p>
+                    <p class="color-777">Giỏ hàng</p>
                     <p class="color-777">Wislish</p>
-                    <p class="color-777">Shop</p>
+                    <p class="color-777">Sản phẩm</p>
                 </div>
             </div>
 
             <div class="">
                 <div class="flex gap-2">
-                    <h1 class="font-bold text-h2 text-lg ">Quick Link</h1>
+                    <h1 class="font-bold text-h2 text-lg ">Liên kết</h1>
                     <button class="block lg:hidden footer-btn-show rotate-0 transition duraiton-400">
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
                 </div>
 
                 <div class="mt-2 leading-9 cursor-pointer h-0 lg:h-fit footer-show overflow-hidden">
-                    <p class="color-777">About Us</p>
-                    <p class="color-777">Privacy Policy</p>
-                    <p class="color-777">Terms Of Use</p>
-                    <p class="color-777">Contact</p>
+                    <p class="color-777">Giới thiệu</p>
+                    <p class="color-777">Chính sách bảo mật</p>
+                    <p class="color-777">Điều khoản sử dụng</p>
+                    <p class="color-777">Liên hệ</p>
                 </div>
             </div>
 
             <div class="">
-                <h1 class="font-bold text-h2 text-lg">Follow Us</h1>
+                <h1 class="font-bold text-h2 text-lg">Theo dõi chúng tôi</h1>
                 <div class="mt-2">
                     <div class="flex gap-4 cursor-pointer">
 
@@ -125,7 +104,7 @@
         <div class="container arr flex flex-col lg:flex-row justify-between items-center py-4 text-sm">
             <p class="color-777">© 2023. All rights reserved</p>
             <div class="payment">
-                <p class="color-777">Accept For</p>
+                <p class="color-777">Thanh toán qua:</p>
 
                 <div class="payment_img flex justify-between items-center ml-4">
 
