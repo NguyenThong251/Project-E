@@ -16,6 +16,32 @@ function  acount_update($fullname,$phone,$address,$password,$role,$id){
     pdo_execute($sql, $fullname,$phone,$address,$password,$role,$id);
 
 }
+function pdo_re_pass($sql)
+{
+    $sql_args = array_slice(func_get_args(), 1);
+    try {
+        $conn = pdo_get_connection();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($sql_args);
+    } catch (PDOException $e) {
+        echo "PDOException: " . $e->getMessage(); // In thông điệp lỗi
+        throw $e;
+    } finally {
+        unset($conn);
+    }
+}
+function reset_pass($reset_token, $reset_token_ex, $email){
+    $sql = "UPDATE user SET reset_token=?, reset_token_ex=? WHERE email=?";
+    $stmt = pdo_get_connection()->prepare($sql);
+    $result = $stmt->execute([$reset_token, $reset_token_ex, $email]);
+    
+    if ($result) {
+        return $stmt->rowCount(); // Số dòng đã cập nhật
+    } else {
+        return false;
+    }
+}
+
 function get_user($id){
     $sql = "SELECT * FROM user WHERE id=?";
     return pdo_query_one($sql,$id);
@@ -31,7 +57,12 @@ function user_update($img, $fullname, $password, $email, $phone, $address, $stat
     $sql = "UPDATE user SET user_img=?, full_name=?, password=?, email=?, phone=?, address=?, status=?, role=? WHERE id=?";
     pdo_execute($sql, $img, $fullname, $password, $email, $phone, $address, $status, $role, $id);
 }
-
+// checkmail 
+function user_email_exists($email)
+{
+    $sql = "SELECT count(*) FROM user WHERE email=?";
+    return pdo_query_value($sql, $email) > 0;
+}
 function user_delete($id)
 {
     $sql = "DELETE FROM user  WHERE id=?";
