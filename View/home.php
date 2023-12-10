@@ -17,6 +17,7 @@ $html_product_view_secondary = show_product_view_secondary($product_view);
 
 ?>
 
+<p class="totalPriceEach hidden"></p>
 <section class="mt-12">
     <div>
         <div class="">
