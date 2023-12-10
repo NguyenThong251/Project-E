@@ -68,7 +68,7 @@
                     </path>
                 </svg>
             </div>
-            Login
+            Đăng nhập
         </a>
     </li>
     <li class="font-medium">
@@ -83,7 +83,7 @@
                     </path>
                 </svg>
             </div>
-            Signup
+            Đăng ký
         </a>
     </li>
 </ul>';
@@ -120,176 +120,182 @@
 </head>
 
 <body>
-    <!-- SEARCH -->
-    <div class="model">
-        <form action="index.php?pg=product" method="post">
-            <input type="text" name="kyw" id="" placeholder="Nhập sản phẩm muốn tìm kiếm">
-            <input class="InputSearch" type="submit" name="timkiem" value="Tìm kiếm">
-        </form>
-    </div>
-    <!-- Toast Message  -->
-    <div id="toast">
+    
 
-    </div>
-    <!-- SEARCH -->
-    <a class="right-1" href="">Sign in</a>
-    <header>
-        <div>
-            <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
-                <!-- LOGO -->
-                <div class="w-32 md:w-auto">
-                    <img src="view/layout/assets/img/logo.png" alt="Logo Web" />
-                </div>
-                <!-- NAV -->
-                <div class="hidden xl:block">
-                    <ul class="flex text-lg gap-12">
-                        <li class="nav-items group">
-                            <a class="before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500  before:bg-primary nav-links relative "
-                                href="index.php?pg=home">Trang chủ</a>
-                        </li>
-                        <li class="nav-items group">
-                            <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="index.php?pg=product">Sản phẩm</a>
-                        </li>
-                        <li class="nav-items group">
-                            <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="index.php?pg=contact">Liên hệ</a>
-                        </li>
-                        <li class="nav-items group">
-                            <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="index.php?pg=about">Giới thiệu</a>
-                        </li>
-                        <li class="nav-items group">
-                            <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="index.php?pg=blog">Tin tức</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- SITE LINK -->
-                <div>
-                    <ul class="flex items-center gap-2 md:gap-6">
-                        <li class="w-6">
-                            <a href="#" class="group flex relative site-container items-center">
-                                <ion-icon name="search-outline"
-                                    class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
-                            </a>
-                        </li>
+    <div id="container-header">
+        <!-- SEARCH -->
+        <div class="model">
+            <form action="index.php?pg=product" method="post">
+                <input type="text" name="kyw" id="" placeholder="Nhập sản phẩm muốn tìm kiếm">
+                <input class="InputSearch" type="submit" name="timkiem" value="Tìm kiếm">
+            </form>
+        </div>
+        <!-- Toast Message  -->
+        <div id="toast">
 
-                        <li class="w-6">
-                            <a href="#" class="group relative site-container block flex items-center rounded-full">
-                                <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
-                                <ion-icon name="heart-outline"
-                                    class="site-link_heart text-2xl group-hover:text-white transition duration-300">
-                                </ion-icon>
-                                <!-- <i class="mb-px fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300 site-link_heart"></i> -->
-                            </a>
-                        </li>
 
-                        <li class="w-6">
+        </div>
+        <!-- SEARCH -->
+        <a class="right-1" href="">Sign in</a>
 
-                            <a href="#" class="open-cart group text-2xl relative site-container flex items-center">
-                                <div
-                                    class="items-cart text-sm absolute -top-2 -right-3 bg-box w-5 h-5 rounded-full text-center">
+        <header>
+            <div>
+                <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
+                    <!-- LOGO -->
+                    <div class="w-32 md:w-auto">
+                        <img src="view/layout/assets/img/logo.png" alt="Logo Web" />
+                    </div>
+                    <!-- NAV -->
+                    <div class="hidden xl:block">
+                        <ul class="flex text-lg gap-12">
+                            <li class="nav-items group">
+                                <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
+                                    href="index.php?pg=home">Trang chủ</a>
+                            </li>
+                            <li class="nav-items group">
+                                <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
+                                    href="index.php?pg=product">Sản phẩm</a>
+                            </li>
+                            <li class="nav-items group">
+                                <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
+                                    href="index.php?pg=contact">Liên hệ</a>
+                            </li>
+                            <li class="nav-items group">
+                                <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
+                                    href="index.php?pg=about">Giới thiệu</a>
+                            </li>
+                            <li class="nav-items group">
+                                <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
+                                    href="index.php?pg=blog">Tin tức</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- SITE LINK -->
+                    <div>
+                        <ul class="flex items-center gap-2 md:gap-6">
+                            <li class="w-6">
+                                <a href="#" class="group flex relative site-container items-center">
+                                    <ion-icon name="search-outline"
+                                        class="site-link_search group-hover:text-white transition duration-300"></ion-icon>
+                                </a>
+                            </li>
 
-                                    <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
-                                </div>
-                                <ion-icon name="cart-outline"
-                                    class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
-                            </a>
-                        </li>
-                        
-                        <li class="">
-                            <div class="flex justify-center relative z-10 mt-1 -mr-2">
-                                <div x-data="{ open: false }" class="">
-                                    <div @click="open = !open" class="relative border-b-4 border-transparent"
-                                        :class="{'.$html_user. ': open}"
-                                        x-transition:enter-end="transform opacity-100 scale-100"
-                                        x-transition:leave="transition ease-in duration-75"
-                                        x-transition:leave-start="transform opacity-100 scale-100">
-                                        <div class="flex justify-center items-center space-x-3 cursor-pointer">
-                                            <div class="w-6 h-6 rounded-full overflow-hidden border-2 border-gray-900">
-                                                <img src="view/layout/assets/img/icon-user.png" alt=""
-                                                    class="w-full h-full object-cover" />
-                                            </div>
-                                        </div>
-                                        <div x-show="open" x-transition:enter="transition ease-out duration-100"
-                                            x-transition:enter-start="transform opacity-0 scale-95"
+                            <li class="w-6">
+                                <a href="#" class="group relative site-container block flex items-center rounded-full">
+                                    <!-- <div class="absolute -z-10 top-0 -translate-x-1 left-px rounded-full scale-0 group-hover:scale-125 transition duration-300 bg-primary w-7 h-7 "></div> -->
+                                    <ion-icon name="heart-outline"
+                                        class="site-link_heart text-2xl group-hover:text-white transition duration-300">
+                                    </ion-icon>
+                                    <!-- <i class="mb-px fa-regular fa-heart text-xl text-primary group-hover:text-white transition duration-300 site-link_heart"></i> -->
+                                </a>
+                            </li>
+
+                            <li class="w-6">
+
+                                <a href="#" class="open-cart group text-2xl relative site-container flex items-center">
+                                    <div
+                                        class="items-cart text-sm absolute -top-2 -right-3 bg-box w-5 h-5 rounded-full text-center">
+
+                                        <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
+                                    </div>
+                                    <ion-icon name="cart-outline"
+                                        class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
+                                </a>
+                            </li>
+                            
+                            <li class="">
+                                <div class="flex justify-center relative z-10 mt-1 -mr-2">
+                                    <div x-data="{ open: false }" class="">
+                                        <div @click="open = !open" class="relative border-b-4 border-transparent"
+                                            :class="{'.$html_user. ': open}"
                                             x-transition:enter-end="transform opacity-100 scale-100"
                                             x-transition:leave="transition ease-in duration-75"
-                                            x-transition:leave-start="transform opacity-100 scale-100"
-                                            x-transition:leave-end="transform opacity-0 scale-95"
-                                            class="right-0 absolute w-40 md:w-60 px-5 py-3 bg-white rounded-lg shadow border mt-5">
-                                            <?=$html_account?>
+                                            x-transition:leave-start="transform opacity-100 scale-100">
+                                            <div class="flex justify-center items-center space-x-3 cursor-pointer">
+                                                <div class="w-6 h-6 rounded-full overflow-hidden border-2 border-gray-900">
+                                                    <img src="view/layout/assets/img/icon-user.png" alt=""
+                                                        class="w-full h-full object-cover" />
+                                                </div>
+                                            </div>
+                                            <div x-show="open" x-transition:enter="transition ease-out duration-100"
+                                                x-transition:enter-start="transform opacity-0 scale-95"
+                                                x-transition:enter-end="transform opacity-100 scale-100"
+                                                x-transition:leave="transition ease-in duration-75"
+                                                x-transition:leave-start="transform opacity-100 scale-100"
+                                                x-transition:leave-end="transform opacity-0 scale-95"
+                                                class="right-0 absolute w-40 md:w-60 px-5 py-3 bg-white rounded-lg shadow border mt-5">
+                                                <?=$html_account?>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li class="block xl:hidden mt-2">
-                            <div class="svgContainer cursor-pointer">
-                                <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}'
-                                    style="transform: translate(0px, 0px); opacity: 1">
-                                    <path id="path-top" class="transition-all duration-500 delay-75"
-                                        d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"
-                                        style="
-                        stroke-dasharray: 30px, 88px;
-                        stroke-dashoffset: 0px;
-                      "></path>
-                                    <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 "
-                                        style="
-                        stroke-dasharray: 30px, 30px;
-                        stroke-dashoffset: 0px;
-                      "></path>
-                                    <path id="path-bottom" class="transition-all duration-500 delay-125"
-                                        d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"
-                                        style="
-                        stroke-dasharray: 30px, 88.1px;
-                        stroke-dashoffset: -88px;
-                      "></path>
-                                </svg>
-                            </div>
-                        </li>
-                    </ul>
+                            <li class="block xl:hidden mt-2">
+                                <div class="svgContainer cursor-pointer">
+                                    <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}'
+                                        style="transform: translate(0px, 0px); opacity: 1">
+                                        <path id="path-top" class="transition-all duration-500 delay-75"
+                                            d="M20,25c0,0,22,0,30,0c16,0,18.89,40.71-.15,21.75C38.7,35.65,19.9,16.8,19.9,16.8"
+                                            style="
+                            stroke-dasharray: 30px, 88px;
+                            stroke-dashoffset: 0px;
+                        "></path>
+                                        <path id="path-middle" d="M20,32h30" class="transition-all duration-500 delay-100 "
+                                            style="
+                            stroke-dasharray: 30px, 30px;
+                            stroke-dashoffset: 0px;
+                        "></path>
+                                        <path id="path-bottom" class="transition-all duration-500 delay-125"
+                                            d="M19.9,46.98c0,0,18.8-18.85,29.95-29.95C68.89-1.92,66,38.78,50,38.78c-8,0-30,0-30,0"
+                                            style="
+                            stroke-dasharray: 30px, 88.1px;
+                            stroke-dashoffset: -88px;
+                        "></path>
+                                    </svg>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="">
-            <!-- MODAL CART -->
-            <div class="modal-cart fixed top-0 left-0 h-screen w-full bg-primary z-40 opacity-25 hidden"></div>
-            <!-- CART NOFICATION -->
-            <div data-lenis-prevent-wheel>
-                <div
-                    class="w-full lg:w-1/4 fixed top-0 h-screen right-0 bg-white z-50 cart-nofi transition-all duration-500 delay-75 cart-hide">
-                    <div class="flex flex-col h-screen">
-                        <div class="bg-box px-8 py-4 flex items-center gap-12 text-3xl">
-                            Giỏ hàng
-                            <div class="text-sm w-fit h-fit py-2 px-4 bg-white rounded-box">
-                                <span class="totalCart-modal">
-                                    <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
+            <div class="">
+                <!-- MODAL CART -->
+                <div class="modal-cart fixed top-0 left-0 h-screen w-full bg-primary z-40 opacity-25 hidden"></div>
+                <!-- CART NOFICATION -->
+                <div data-lenis-prevent-wheel>
+                    <div
+                        class="w-full lg:w-1/4 fixed top-0 h-screen right-0 bg-white z-50 cart-nofi transition-all duration-500 delay-75 cart-hide">
+                        <div class="flex flex-col h-screen">
+                            <div class="bg-box px-8 py-4 flex items-center gap-12 text-3xl">
+                                Giỏ hàng
+                                <div class="text-sm w-fit h-fit py-2 px-4 bg-white rounded-box">
+                                    <span class="totalCart-modal">
+                                        <?= !empty($_SESSION['cart']) ? count($_SESSION['cart']) : 0 ?>
 
-                                </span>
-                                <span>
-                                    Sản phẩm
-                                </span>
+                                    </span>
+                                    <span>
+                                        Sản phẩm
+                                    </span>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                                    stroke="currentColor"
+                                    class="close-cart ml-auto text-primary hover:scale-125 delay-75 h-5 w-5 cursor-pointer duration-150">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                                stroke="currentColor"
-                                class="close-cart ml-auto text-primary hover:scale-125 delay-75 h-5 w-5 cursor-pointer duration-150">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </div>
 
-                        <div class="p-8 flex-col flex  relative overflow-y-auto cart-box">
-                            <!-- BOX CART HERE -->
-                        </div>
+                            <div class="p-8 flex-col flex  relative overflow-y-auto cart-box">
+                                <!-- BOX CART HERE -->
+                            </div>
 
-                        <div class="bg-box w-full mt-auto px-8 py-12">
-                            <div class="flex justify-between  text-xl font-bold">
-                                <h1 class="">Subtotal</h1>
-                                <p class="font-medium total-price"></p>
+                            <div class="bg-box w-full mt-auto px-8 py-12">
+                                <div class="flex justify-between  text-xl font-bold">
+                                    <h1 class="">Subtotal</h1>
+                                    <p class="font-medium total-price"></p>
+
 
                             </div>
                             <div class="flex flex-col items-center gap-2 mt-4">
@@ -299,16 +305,17 @@
                                 <a href="index.php?pg=checkout"
                                     class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH
                                     TOÁN</a>
-
+                                </div>
                             </div>
+
+
+
                         </div>
-
-
-
                     </div>
                 </div>
+
+
             </div>
-
-
-        </div>
-    </header>
+        </header>
+    </div>
+    
