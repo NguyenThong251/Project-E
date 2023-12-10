@@ -95,6 +95,17 @@ function updateCartContent(cartData) {
   let lastprice = 0;
   let VND = "";
   totalPrice = 0;
+
+  if (cartData.length == 0) {
+    productHtml.innerHTML =
+      '<img class="w-full mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">';
+    $(".cart-items-container").html(
+      '<img class="w-2/4 mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">'
+    );
+  } else {
+    productHtml.innerHTML = htmlCode;
+  }
+
   for (let index = 0; index < cartData.length; index++) {
     if (cartData[index].saleprice == "") {
       lastprice = cartData[index].price;
@@ -107,48 +118,58 @@ function updateCartContent(cartData) {
     }
     totalPrice += lastprice * cartData[index].quantity;
     htmlCode += `
-          <div class="flex gap-4 my-2 ">
-              <div class="w-1/4 bg-box rounded-box">
-                  <img src="${cartData[index].img}" alt="">
-               </div>
-               <div class="flex flex-col justify-between">
-                   <div>
-                       <div class="text-p font-bold">${
-                         cartData[index].name
-                       }</div>
-                       <div class="text-sm text-customGray">${
-                         cartData[index].brand
-                       }</div>
-                   </div>
-                   <div class="flex flex-col">
-                       <div class=" text-lg text-primary font-bold">${lastprice} VND</div>
-                       <del class=" text-sm text-customGray">${
-                         price + VND
-                       }</del>
-                   </div>
-               </div>
-               <div class="ml-auto flex flex-col justify-between">
-               <button onclick="handleDeleteButtonClick(this)">
-                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="delete-cart ml-auto text-primary hover:scale-125 delay-75 h-5 w-5 cursor-pointer duration-150">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                   </svg>
-               </button>
- 
- 
-                   <div class="flex items-center justify-center gap-3 text-sm py-1.5 w-20 text-customGray border-2 border-box rounded-lg">
-                       <button onclick="minusQuantity(this)">
-                          <i class="minus-quantity fa-solid fa-minus"></i>
-                       </button>
-                       <span class="">${cartData[index].quantity}</span>
-                       <button onclick="plusQuantity(this)">
-                          <i class="plus-quantity fa-solid fa-plus"></i>
-                       </button>
-                   </div>
-               </div>
-           </div>
-       `;
+            <div class="flex gap-4 my-2 ">
+                <div class="w-1/4 bg-box rounded-box">
+                    <img src="${cartData[index].img}" alt="">
+                 </div>
+                 <div class="flex flex-col justify-between">
+                     <div>
+                         <div class="text-p font-bold">${
+                           cartData[index].name
+                         }</div>
+                         <div class="text-sm text-customGray">${
+                           cartData[index].brand
+                         }</div>
+                     </div>
+                     <div class="flex flex-col">
+                         <div class=" text-lg text-primary font-bold">${lastprice} VND</div>
+                         <del class=" text-sm text-customGray">${
+                           price + VND
+                         }</del>
+                     </div>
+                 </div>
+                 <div class="ml-auto flex flex-col justify-between items-center">
+                 <button onclick="handleDeleteButtonClick(this)">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="delete-cart ml-auto text-primary hover:scale-125 delay-75 h-5 w-5 cursor-pointer duration-150">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                     </svg>
+                 </button>
+   
+                        <div class="flex items-center justify-center gap-3 text-sm py-1.5 w-20 text-customGray border-2 border-box rounded-lg">
+                        <button onclick="minusQuantity(this)">
+                           <i class="minus-quantity fa-solid fa-minus"></i>
+                        </button>
+                        <span class="">${cartData[index].quantity}</span>
+                        <button onclick="plusQuantity(this)">
+                           <i class="plus-quantity fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <p>Tổng: ${cartData[index].quantity * lastprice} VND</p>
+                 </div>
+             </div>
+         `;
   }
-  productHtml.innerHTML = htmlCode;
+
+  if (cartData.length == 0) {
+    productHtml.innerHTML =
+      '<img class="w-full mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">';
+    $(".cart-items-container").html(
+      '<img class="w-2/4 mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">'
+    );
+  } else {
+    productHtml.innerHTML = htmlCode;
+  }
+
   $(".total-price").text(totalPrice + " VND");
   totalCart.text(totalPrice);
   totalCartAfterDiscount.text(totalPrice);
@@ -203,7 +224,7 @@ function handleDeleteButtonClick(button) {
   setTimeout(function () {
     $.ajax({
       type: "POST",
-      url: "model/updateCart.php",
+      url: "model/action.php",
 
       data: {
         action: action,
@@ -222,12 +243,59 @@ function handleDeleteButtonClick(button) {
   }, 500);
 }
 
+$(".clear-cart-btn").click(() => {
+  let clear = "clear";
+  let emtyCartHtml = `<img class="w-2/4 mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">`;
+  let emtyCartModalHtml = `<img class="w-full mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">`;
+
+  $.ajax({
+    type: "POST",
+    url: "model/action.php",
+
+    data: {
+      clear: clear,
+    },
+    success: function () {
+      $(".cart-items-container").html(
+        `<img class="w-2/4 mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">`
+      );
+      $(".cart-box").html(
+        `<img class="w-full mx-auto filter grayscale" src="uploads/empy-cart.png" alt="emty-cart">`
+      );
+      totalCartModal.text(0);
+      itemsCart.text(0);
+      $(".totalCart").text(0);
+    },
+    error: function (error) {
+      console.log(error);
+    },
+  });
+});
 // == 7. UPDATE QUANTITY CART ==
 
 // MINUS
 function minusQuantity(button) {
+  // Identifier for the operation (minus)
   let minus = "minus";
+
+  // Get the price of the product
+  let productPrice = $(button)
+    .parent()
+    .parent()
+    .parent()
+    .parent()
+    .children()
+    .eq(1)
+    .children()
+    .eq(1)
+    .children()
+    .eq(0)
+    .text();
+
+  // Get the parent container of the product
   let boxProduct = $(button).parent().parent().parent();
+
+  // Get the name of the product
   let productName = $(button)
     .parent()
     .parent()
@@ -237,39 +305,59 @@ function minusQuantity(button) {
     .children()
     .eq(0)
     .text();
+
+  // Get the current quantity of the product and convert it to an integer
   let productQuantity = parseInt($(button).next().text());
 
+  // Decrement the product quantity if it's greater than 0
   if (productQuantity > 0) {
     productQuantity--;
   } else {
+    // If the quantity is already 0, hide the product container
     boxProduct.slideUp("slow");
   }
 
+  // Update the total price for the product
+  $(button)
+    .parent()
+    .next()
+    .text(productPrice * productQuantity + " VND");
+
+  // Update the displayed quantity
   $(button).next().text(productQuantity);
 
+  // Send an AJAX request to update the cart on the server
   $.ajax({
     type: "POST",
-    url: "model/updateCart.php",
-
+    url: "model/action.php",
     data: {
       minus: "minus",
       productQuantity: productQuantity,
       productName: productName,
     },
     success: function (response) {
+      // Handle the successful response from the server
       updateCartContent(response);
+
+      // Update the total number of items in the cart
       itemsCart.text(response.length);
       totalCartModal.text(response.length);
     },
     error: function (error) {
+      // Log any errors that occur during the AJAX request
       console.log(error);
     },
   });
 }
 
 function plusQuantity(button) {
+  // Get the parent container of the product
   let boxProduct = $(button).parent().parent().parent();
+
+  // Get the current quantity of the product and convert it to an integer
   let productQuantity = parseInt($(button).prev().text());
+
+  // Get the name of the product
   let productName = $(button)
     .parent()
     .parent()
@@ -279,33 +367,60 @@ function plusQuantity(button) {
     .children()
     .eq(0)
     .text();
+
+  // Identifier for the operation (plus)
   let plus = "plus";
 
+  // Get the price of the product
+  let productPrice = $(button)
+    .parent()
+    .parent()
+    .parent()
+    .parent()
+    .children()
+    .eq(1)
+    .children()
+    .eq(1)
+    .children()
+    .eq(0)
+    .text();
+
+  // Increment the product quantity if it's less than 10
   if (productQuantity < 10) {
     productQuantity++;
   }
+
+  // Update the displayed quantity
   $(button).prev().text(productQuantity);
 
+  // Update the total price for the product
+  $(button)
+    .parent()
+    .next()
+    .text(productPrice * productQuantity + " VND");
+
+  // Send an AJAX request to update the cart on the server
   $.ajax({
     type: "POST",
-    url: "model/updateCart.php",
-
+    url: "model/action.php",
     data: {
       plus: "plus",
       productQuantity: productQuantity,
       productName: productName,
     },
     success: function (response) {
+      // Handle the successful response from the server
       updateCartContent(response);
     },
     error: function (error) {
+      // Log any errors that occur during the AJAX request
       console.log(error);
     },
   });
 }
 
 // == 8. VOUCHER ==
-
+// FOR USER
 function applyPromoCode() {
   let promoCode = $(".promoteCode").val();
   let totalPriceNum = totalCart.text();
@@ -321,15 +436,27 @@ function applyPromoCode() {
 
   $.ajax({
     type: "POST",
-    url: "model/updateCart.php",
+    url: "model/action.php",
     data: {
       discard: "discard",
       promoCode: promoCode,
       totalCart: totalPriceNum,
     },
     success: function (response) {
-      totalCartAfterDiscount.text(response);
-      $(".priceDiscount").text(totalPrice - response);
+      switch (response[0]) {
+        case 1:
+          totalCartAfterDiscount.text(response[1]);
+          $(".priceDiscount").text(response[2] - response[1]);
+        case 2:
+          console.log("Voucher đã được sử dụng");
+          break;
+        case 3:
+          console.log("Voucher k tồn tại hoặc đã sử dụng");
+          break;
+        default:
+          break;
+      }
+      console.log(response);
     },
     error: function (error) {
       console.log(error);
@@ -347,7 +474,232 @@ $(".promoteCode").on("keyup", function (event) {
   }
 });
 
-// == 9. PASSWORD TOGGLE ==
+// FOR mấy thằng xài voucher chùa
+
+function applyPromoCodeNotUser() {
+  $(".promoteCodeNotUser").css({ "border-color": "red" });
+  $(".notUser-text").removeClass("hidden");
+}
+
+$(".promodeApplyNotUser").on("click", applyPromoCodeNotUser);
+
+// PRESS ENTER
+$(".promoteCodeNotUser").on("keyup", function (event) {
+  if (event.key === "Enter") {
+    applyPromoCodeNotUser();
+  }
+});
+
+// == 9. CHECK OUT
+
+function isValidEmail(email) {
+  // Regular expression for a simple email validation
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function validateForm(
+  receiverName,
+  receiverAddress,
+  receiverEmail,
+  receiverPhone
+) {
+  const $alertInputName = $(".alertInputName");
+  const $alertInputAddress = $(".alertInputAddress");
+  const $alertInputEmail = $(".alertInputEmail");
+  const $alertInputPhone = $(".alertInputPhone");
+
+  const isBlank = (value, $alert) => {
+    if (value.trim() === "") {
+      $alert.text("Vui lòng nhập thông tin.");
+      return true;
+    }
+    $alert.text("");
+    return false;
+  };
+
+  if (isBlank(receiverName, $alertInputName)) return false;
+  if (isBlank(receiverAddress, $alertInputAddress)) return false;
+  if (isBlank(receiverEmail, $alertInputEmail)) return false;
+
+  if (!isValidEmail(receiverEmail)) {
+    $alertInputEmail.text("Vui lòng nhập một địa chỉ email hợp lệ.");
+    return false;
+  }
+  $alertInputEmail.text("");
+
+  if (isBlank(receiverPhone, $alertInputPhone)) return false;
+
+  return true;
+}
+
+function placeOrder() {
+  let receiverName = $(".inputName").val(),
+  receiverAddress = $(".inputAddress").val(),
+  receiverEmail = $(".inputEmail").val(),
+  receiverPhone = $(".inputPhone").val(),
+  receiverNote = $(".inputNote").val(),
+  otherReceiverName = $(".other-receiver-name").val(),
+  otherReceiverEmail = $(".other-receiver-name").val(),
+  otherReceiverPhone = $(".other-receiver-phone").val(),
+  otherReceiverAddress = $(".other-receiver-address").val();
+
+      // If otherReceiver fields are empty, use receiver fields
+      if (
+        otherReceiverName === "" &&
+        otherReceiverAddress === "" &&
+        otherReceiverPhone === "" &&
+        otherReceiverEmail === ""
+    ) {
+        otherReceiverName = receiverName;
+        otherReceiverEmail = receiverEmail;
+        otherReceiverPhone = receiverPhone;
+        otherReceiverAddress = receiverAddress;
+    }
+
+    // CHECK FORM
+
+    if (!validateForm(receiverName,receiverAddress,receiverEmail,receiverPhone)) {
+      return;
+    } 
+    
+
+// MODAL
+$('.name').text(receiverName);
+$('.address').text(receiverAddress);
+$('.email').text(receiverEmail);
+$('.phone').text(receiverPhone);
+$('.note').text(receiverNote);
+$('.receiver-name').text(otherReceiverName);
+$('.receiver-email').text(otherReceiverEmail);
+$('.receiver-phone').text(otherReceiverPhone);
+$('.receiver-address').text(otherReceiverAddress);
+
+$('.modal-sumary').addClass('sumaryCartShow');
+$('.sumary-box').addClass('sumaryBoxShow');
+
+setTimeout(gsapButton,1000);
+
+  $.ajax({
+    type: "POST",
+    url: "model/action.php",
+
+    data: {
+      order: "order",
+      receiverName:  receiverName ,
+      receiverAddress:  receiverAddress ,
+      receiverEmail:  receiverEmail ,
+      receiverPhone:  receiverPhone ,
+      receiverNote:  receiverNote ,
+      otherReceiverName:  otherReceiverName ,
+      otherReceiverEmail:  otherReceiverEmail ,
+      otherReceiverPhone:  otherReceiverPhone ,
+      otherReceiverAddress:  otherReceiverAddress ,
+    },
+    success: function (response) {
+      console.log(response);
+    },
+    error: function (error) {
+      console.log(error);
+    },
+  });
+}
+
+$(".placeOrder").click(placeOrder);
+
+$(".notForMe").click(() => {
+  $(".notFotMe-hidden").toggleClass("h-96");
+});
+
+function gsapButton() {
+  document.querySelectorAll('.truck-button').forEach(button => {
+    // e.preventDefault();
+    let box = button.querySelector('.box'),
+        truck = button.querySelector('.truck');
+    if (!button.classList.contains('done')) {
+        if (!button.classList.contains('animation')) {
+            button.classList.add('animation');
+            gsap.to(button, {
+                '--box-s': 1,
+                '--box-o': 1,
+                duration: .3,
+                delay: .5
+            });
+            gsap.to(box, {
+                x: 0,
+                duration: .4,
+                delay: .7
+            });
+            gsap.to(button, {
+                '--hx': -5,
+                '--bx': 50,
+                duration: .18,
+                delay: .92
+            });
+            gsap.to(box, {
+                y: 0,
+                duration: .1,
+                delay: 1.15
+            });
+            gsap.set(button, {
+                '--truck-y': 0,
+                '--truck-y-n': -26
+            });
+            gsap.to(button, {
+                '--truck-y': 1,
+                '--truck-y-n': -25,
+                duration: .2,
+                delay: 1.25,
+                onComplete() {
+                    gsap.timeline({
+                        onComplete() {
+                            button.classList.add('done');
+                        }
+                    }).to(truck, {
+                        x: 0,
+                        duration: .4
+                    }).to(truck, {
+                        x: 40,
+                        duration: 1
+                    }).to(truck, {
+                        x: 20,
+                        duration: .6
+                    }).to(truck, {
+                        x: 96,
+                        duration: .4
+                    });
+                    gsap.to(button, {
+                        '--progress': 1,
+                        duration: 2.4,
+                        ease: "power2.in"
+                    });
+                }
+            });
+        }
+    } else {
+        button.classList.remove('animation', 'done');
+        gsap.set(truck, {
+            x: 4
+        });
+        gsap.set(button, {
+            '--progress': 0,
+            '--hx': 0,
+            '--bx': 0,
+            '--box-s': .5,
+            '--box-o': 0,
+            '--truck-y': 0,
+            '--truck-y-n': -26
+        });
+        gsap.set(box, {
+            x: -24,
+            y: -6
+        });
+    }
+});
+};
+
+
+// == 10. PASSWORD TOGGLE ==
 const passwordInput = document.getElementById("passwordInput");
 const togglePassword = document.getElementById("togglePassword");
 

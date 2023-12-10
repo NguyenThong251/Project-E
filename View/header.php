@@ -1,5 +1,5 @@
 <?php 
-    if (isset($_SESSION['s_user']) && (count($_SESSION['s_user'])>0)){
+    if ((count($_SESSION['s_user'])>0)){
         extract($_SESSION['s_user']);
         $html_account = ' <ul class="space-y-3">
         <li class="font-medium">
@@ -283,12 +283,12 @@
 
                             </div>
                             <div class="flex flex-col items-center gap-2 mt-4">
-                                <a href="index.php?pg=checkout"
-                                    class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH
-                                    TOÁN</a>
                                 <a href="index.php?pg=cart"
                                     class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">GIỎ
                                     HÀNG</a>
+                                <a href="index.php?pg=checkout"
+                                    class="w-full text-white text-center font-bold text-xl bg-primary rounded-button px-4 py-2">THANH
+                                    TOÁN</a>
 
                             </div>
                         </div>
