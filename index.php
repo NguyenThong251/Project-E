@@ -1,6 +1,7 @@
 <?php
     session_start();
     ob_start();
+    // session_unset();
 
 
 include "View/global.php";
@@ -12,35 +13,21 @@ $product_hot = get_product_hot(4);
 $product_new = get_product_new(4);
 $product_view = get_product_view(4);
 
+if(!isset($_SESSION['s_user'])) {
+    $_SESSION['s_user'] = [];
+}
 
 if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
-
-// USER
-if (!isset($_SESSION['user'])) {
-    $_SESSION['user'] = [
-        'id' => NULL,
-        'username' => "",
-        'pass' => "",
-        'name' => "",
-        'avatar' => "",
-        'email' => "",
-        'location' => "",
-        'phone' => "",
-        'active' => "",
-        'role' => ""
-    ];
-}
-// LOGGED
-if(!isset($_SESSION['logged'])) {
-    $_SESSION['logged'] = 0;
-}
-
 if(!isset($_SESSION['voucherSalePercent'])) {
     $_SESSION['voucherSalePercent'] = [
         'sale' => 0,
     ];
+}
+
+if(!isset($_SESSION['promodeCode'])) {
+   $_SESSION['promodeCode'] = NULL;
 }
 
 
@@ -104,20 +91,10 @@ else {
 
         case 'checkout' :
             include "View/checkout.php";
-            if (isset($_POST['submit'])) {
-                $idUser = $_SESSION['user']['id'];
-                $name = $_POST['name'];
-                $email = $_POST['email'];
-                $location = $_POST['location'];
-                $phone = $_POST['phone'];
-                $note = $_POST['note'];
-                $total = $_SESSION['lastprice'];
-                // NHET ZO BILL
-                
-                // NHET SESSION CART ZO GIO HANG
-            } 
             break;
-        
+        case 'checkoutDone' :
+            include "View/orderdone.php";
+            break;
         case 'dangnhap' :
             if (isset($_POST['login'])&&($_POST['login'])) {
                 
@@ -196,7 +173,7 @@ else {
         break;
         case 'logout':
             if (isset($_SESSION['s_user']) && count($_SESSION['s_user'])>0){
-                unset($_SESSION['s_user']);
+                $_SESSION['s_user'] = [];
             };
             header('location:index.php?pg');
             break;

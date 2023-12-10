@@ -76,8 +76,7 @@ function get_product_new($limi)
     $sql = "SELECT p.*, b.name as brand_name 
     FROM product p
     JOIN brand b ON p.id_brand = b.id
-    WHERE p.new = 1
-    ORDER BY p.id ASC
+    ORDER BY p.id DESC
     LIMIT " . $limi;
     return pdo_query($sql);
 }
@@ -160,7 +159,7 @@ function show_product($dssp)
         <div
             class="absolute z-99 bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
             <button onclick="addToCart(this)"
-                class="cursor-pointer hover:scale-125 transition duration-300 addToCart flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+                class="cursor-pointer hover:scale-125 transition duration-300 addToCart flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-36  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <p class="text-white hidden xl:block">Add To cart</p>
             </button>

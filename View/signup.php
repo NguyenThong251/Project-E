@@ -32,29 +32,29 @@
                         class="py-12 px-16 h-fit w-fit flex flex-col gap-2 bg-detail border rounded-lg border-white shadow-primary">
                         <div class="images"> <img class="w-6/12" src="./Uploads/logo.png" alt="" /></div>
                         <h1 class="text-h1 color-primary font-bold">ĐĂNG KÍ</h1>
-                        <label class="flex flex-col gap-2" for="username"><span class="text-small">Username</span>
+                        <label class="flex flex-col gap-2" for="username"><span class="text-small">Tên đăng nhập</span>
                             <input
-                                class="bg-white w-80 border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm .focus:outline-none.focus:border-sky-500.focus:ring-sky-500.focus:ring-1.sm:text-sm"
-                                type="text" id="username" name="username" placeholder="Username" />
+                                class="bg-white w-80 border border-slate-300 rounded-md py-2 px-3 shadow-sm .focus:outline-none.focus:border-sky-500.focus:ring-sky-500.focus:ring-1.sm:text-sm"
+                                type="text" id="username" name="username" placeholder="Tên đăng nhập" />
                         </label>
                         <label class="flex flex-col gap-2" for="email"><span class="text-small">Email</span>
                             <input
-                                class="bg-white w-80 border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm .focus:outline-none.focus:border-sky-500.focus:ring-sky-500.focus:ring-1.sm:text-sm"
+                                class="bg-white w-80 border border-slate-300 rounded-md py-2 px-3 shadow-sm .focus:outline-none.focus:border-sky-500.focus:ring-sky-500.focus:ring-1.sm:text-sm"
                                 type="email" id="email" name="email" placeholder="Email" required />
                         </label>
-                        <label class="flex flex-col gap-2" for="password"><span class="text-small">Password</span>
+                        <label class="flex flex-col gap-2" for="password"><span class="text-small">Mật khẩu</span>
                             <div
+
                                 class="input-field bg-white w-80 border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm flex items-center justify-between">
                                 <input type="password" name="passworddemo" placeholder="Password" id="passwordInput"
                                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
                                 <ion-icon name="eye-outline" id="togglePassword"></ion-icon>
                             </div>
                         </label>
-                        <label class="flex flex-col gap-2 pb-4" for="ForgotPassword"><span class="text-small">Forgot
-                                Password</span>
+                        <label class="flex flex-col gap-2 pb-4" for="ForgotPassword"><span class="text-small">Nhập lại mật khẩu</span>
                             <div
-                                class="input-field bg-white w-80 border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm flex items-center justify-between">
-                                <input type="password" name="ForgotPassword" placeholder="ForgotPassword"
+                                class="input-field bg-white w-80 border border-slate-300 rounded-md py-2 px-3 shadow-sm flex items-center justify-between">
+                                <input type="password" name="ForgotPassword" placeholder="Nhập lại mật khẩu"
                                     id="forgotPasswordInput" />
                                 <ion-icon name="eye-outline" id="togglePassword"></ion-icon>
                             </div>
