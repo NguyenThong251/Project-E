@@ -579,6 +579,7 @@ $('.modal-sumary').addClass('sumaryCartShow');
 $('.sumary-box').addClass('sumaryBoxShow');
 
 setTimeout(gsapButton,1000);
+// setInterval(gsapButton,300)
 
   $.ajax({
     type: "POST",

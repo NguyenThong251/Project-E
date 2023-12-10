@@ -1,7 +1,4 @@
 <?php
-
-
-
 $html_cart = "";
 $lastprice = 0;
 $totalPrice = 0;
@@ -51,6 +48,7 @@ foreach ($_SESSION['cart'] as $key) {
 
 
 ?>
+>
 
 <form action="" method="" class="my-8">
     <div class="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">

@@ -108,6 +108,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="View/layout/assets/js/toast.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/e5ff98b392.js" crossorigin="anonymous"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -134,7 +143,7 @@
                 <div class="hidden xl:block">
                     <ul class="flex text-lg gap-12">
                         <li class="nav-items group">
-                            <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
+                            <a class="before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500  before:bg-primary nav-links relative "
                                 href="index.php?pg=home">Trang chủ</a>
                         </li>
                         <li class="nav-items group">
