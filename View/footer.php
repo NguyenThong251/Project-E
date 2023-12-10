@@ -36,7 +36,7 @@
             <div class="flex flex-col justify-between">
                 <h1 class="font-bold text-h2 text-lg ">Liên hệ hỗ trợ</h1>
                 <p class=" mt-2 lg:mt-0 w-56 color-777">
-                    <!-- QTSC 9 Building, To Ky Street Ho Chi Minh City -->
+                    QTSC 9 Building, To Ky Street Ho Chi Minh City
                 </p>
 
                 <div class="mt-4 lg:mt-0">
