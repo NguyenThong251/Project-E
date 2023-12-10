@@ -132,6 +132,7 @@
 
     </div>
     <!-- SEARCH -->
+    <a class="right-1" href="">Sign in</a>
     <header>
         <div>
             <div class="md:w-3/4 px-8 container rounded-15 mt-8 flex items-center justify-between">
@@ -156,7 +157,7 @@
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
-                                href="index.php?pg=about">Về tụi tôi</a>
+                                href="index.php?pg=about">Giới thiệu</a>
                         </li>
                         <li class="nav-items group">
                             <a class="nav-links relative before:content[''] before:absolute before:w-0 before:h-0.5 before:-bottom-1 group-hover:before:w-full before:transition-all before:duration-500 before:bg-primary"
@@ -196,7 +197,7 @@
                                     class="site-link_cart group-hover:text-white transition duration-300"></ion-icon>
                             </a>
                         </li>
-
+                        
                         <li class="">
                             <div class="flex justify-center relative z-10 mt-1 -mr-2">
                                 <div x-data="{ open: false }" class="">

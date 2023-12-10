@@ -121,12 +121,46 @@ else {
         case 'signin':
             include "View/signin.php";
         break;
+        case 'forgotpass':
+            include "View/forgot-password.php";
+        break;
+        case 'send-password-reset':
+            if (isset($_POST['resetpass']) && ($_POST['resetpass'])) {
+                $email = $_POST['email'];
+                $token = bin2hex(random_bytes(16));
+                $reset_token = hash("sha256", $token);
+                $reset_token_ex = date("Y-m-d H:i:s", time() + 60 * 30);
+        
+                // Perform the database update
+                $updateResult = reset_pass($reset_token, $reset_token_ex, $email);
+                if ($updateResult) {
+                    $mail = require __DIR__ . "/model/mailer.php";
+        
+                    $mail->setFrom("noreply@example.com");
+                    $mail->addAddress($email);
+                    $mail->Subject = "Password Reset";
+                    $mail->Body = <<<END
+                        Click <a href="http://example.com/reset-password.php?token=$token">here</a> 
+                        to reset your password.
+                    END;
+        
+                    try {
+                        $mail->send();
+                        echo "Thư đã được gửi, vui lòng kiểm tra hộp thư đến của bạn.";
+                    } catch (Exception $e) {
+                        echo "Không thể gửi thư. Lỗi Mailer: {$mail->ErrorInfo}";
+                    }
+                }
+                    else {
+                    echo "Lỗi khi cập nhật cơ sở dữ liệu. Vui lòng thử lại.";
+                }
+            }
+            break;
         case 'adduser':
             if (isset($_POST['dangky'])&&($_POST['dangky'])) {
                 $username = $_POST['username'];
                 $email = $_POST['email'];
                 $password = $_POST['ForgotPassword'];
-                echo var_dump($username,$email,$password);
                 //xử lí
                 user_insert($username, $password, $email);
                 

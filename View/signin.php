@@ -57,7 +57,7 @@ if (isset($_SESSION['tb_dangnhap']) && ($_SESSION['tb_dangnhap'] != "")) {
                                 <ion-icon name="eye-outline" id="togglePassword"></ion-icon>
                             </div>
                         </label>
-                        <a class="text-span pb-4" href="#">Quên mật khẩu?</a>
+                        <a class="text-span pb-4" href="index.php?pg=forgotpass">Quên mật khẩu?</a>
                         <input type="submit" name="login"
                             class="bg-primary py-2 rounded-lg font-bold w-100 inline-block px-8 text-white text-center transition duration border-hover hover:bg-detail hover:text-primary"
                             value="Đăng nhập">

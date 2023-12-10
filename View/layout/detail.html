@@ -20,6 +20,12 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/iconfont.min.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -179,19 +185,19 @@
               <!-- IMG -->
               <div class="relative w-1/2 flex justify-center items-center flex-col b">
                 <div class="rounded-lg">
-                    <img src="/layout/assets/img/banphimcuibap.png" alt="">
+                    <img src="/view/layout/assets/img/banphimcuibap.png" alt="">
                 </div>
                 <div class="flex gap-4 w-3/5 mt-8 absolute -bottom-32">
                     <div>
-                        <img src="/layout/assets/img/banphimcuibap.png" alt="">
+                        <img src="/view/layout/assets/img/banphimcuibap.png" alt="">
                     </div>
 
                     <div>
-                        <img src="/layout/assets/img/banphimcuibap-1.png" alt="">
+                        <img src="/view/layout/assets/img/banphimcuibap-1.png" alt="">
                     </div>
 
                     <div>
-                        <img src="/layout/assets/img/banphimcuibap-2.png" alt="">
+                        <img src="/view/layout/assets/img/banphimcuibap-2.png" alt="">
                     </div>
                 </div>
 
@@ -226,17 +232,106 @@
                     <div class="px-4 py-2 bg-primary rounded-button">
                         <ion-icon name="cart-outline" class="text-2xl text-white flex items-center"></ion-icon>
                     </div>
+                </div>                
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- BOX COMMENT -->
+    <section>
+        <div>
+            <div class="container">
+                <h1 class="text-h3 font-bold mb-4">Đánh giá sản phẩm</h1>
+
+                <!-- HEAD COMMENT -->
+                <div class="flex justify-between items-center py-6 px-6 rounded-md" style="background-color: #f7f7f7;">
+                    <div class="flex justify-between items-center gap-4">
+                        <div class="star-container flex gap-1">
+                            <img class="w-4" src="./assets/img/newstar.png" alt="">
+                            <img class="w-4" src="./assets/img/newstar.png" alt="">
+                            <img class="w-4" src="./assets/img/newstar.png" alt="">
+                            <img class="w-4" src="./assets/img/newstar.png" alt="">
+                            <img class="w-4" src="./assets/img/newstar.png" alt="">
+                        </div>
+                        <p>Based on 2 reviews</p>
+                    </div>
+
+                    <button class="review-button bg-primary text-white text-sm font-semibold px-8 py-2 rounded-md transform hover:scale-110 transition duration-300">Đánh giá ngay</button>
                 </div>
 
-                
-              </div>
+                <!-- WRITE A REVIEW -->
+                <div class="write-review-section">
+                    <h2 class="text-lg font-bold my-4">Viết đánh giá</h2>
+                    <form action="">
+                        <div>
+                            <label for="">Rating</label>
+                            <div class="star-container flex gap-1 mb-4 mt-2">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <label for="">Đánh giá</label> <br>
+                            <textarea class="w-full border mt-2 px-4 py-4" name="" id="" cols="30" rows="10" placeholder="Nội dung đánh giá"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- BODY COMMENT -->
+                <div>
+                    <div class="flex gap-2 mt-6 pb-4" style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                        <div class="w-8 h-8 rounded-full bg-blue-500"></div>
+
+                        <div class="">
+                            <div class="flex items-center gap-4">
+                                <p class="font-bold">Anh Tèo Non</p>
+                                <p class="text-sm color-777">9/12/2023</p>
+                            </div>
+
+                            <div class="star-container flex gap-1 mb-4 mt-1">
+                                <img class="w-4" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                            </div>
+
+                            <p>Hàng dỏm đừng có mua!</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2 mt-6 pb-4" style="border-bottom: 1px solid rgba(0, 0, 0, 0.1);">
+                        <div class="w-8 h-8 rounded-full bg-blue-500"></div>
+
+                        <div class="">
+                            <div class="flex items-center gap-4">
+                                <p class="font-bold">Chị thuồn luồn</p>
+                                <p class="text-sm color-777">9/12/2023</p>
+                            </div>
+
+                            <div class="star-container flex gap-1 mb-4 mt-1">
+                                <img class="w-4" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                                <img class="w-4 grayscale" src="./assets/img/newstar.png" alt="">
+                            </div>
+
+                            <p>Sản phẩm cùi bắp</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section>
         <div>
-
             <div class="container">
                 <!-- SINGLE PRODUCT -->
                 <h1 class="text-h3 font-bold mb-4">Relate Product</h1>
@@ -407,8 +502,24 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lấy phần tử chứa phần WRITE A REVIEW
+            const reviewSection = document.querySelector('.write-review-section');
+
+            // Lấy nút Đánh giá ngay
+            const reviewButton = document.querySelector('.review-button');
+
+            // Thêm sự kiện click cho nút
+            reviewButton.addEventListener('click', function () {
+                // Toggle lớp 'hidden' cho phần tử chứa phần WRITE A REVIEW
+                reviewSection.classList.toggle('hidden');
+            });
+        });
+    </script>
 </body>
-<script src="/layout/assets/js/tailwind.js"></script>
-<script src="/layout/assets/js/index.js"></script>
+<script src="/view/layout/assets/js/tailwind.js"></script>
+<script src="/view/layout/assets/js/index.js"></script>
 
 </html>
