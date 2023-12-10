@@ -46,7 +46,7 @@
                             <div
                                 class="input-field bg-white w-80 border border-slate-300 rounded-md py-2 pl-6 pr-6 shadow-sm flex items-center justify-between">
                                 <input type="password" name="passworddemo" placeholder="Password" id="passwordInput"
-                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+                                    required />
                                 <ion-icon name="eye-outline" id="togglePassword"></ion-icon>
                             </div>
                         </label>

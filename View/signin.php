@@ -35,11 +35,11 @@
                         </div>
                         <h2 class="text-red-600">
                             <?php
-if (isset($_SESSION['tb_dangnhap']) && ($_SESSION['tb_dangnhap'] != "")) {
-   echo $_SESSION['tb_dangnhap']; 
-   unset($_SESSION['tb_dangnhap']);
-} 
-?>
+                                if (isset($_SESSION['tb_dangnhap']) && ($_SESSION['tb_dangnhap'] != "")) {
+                                echo $_SESSION['tb_dangnhap']; 
+                                unset($_SESSION['tb_dangnhap']);
+                                } 
+                            ?>
                         </h2>
                         <h1 class="text-h1 color-primary font-bold">ĐĂNG NHẬP</h1>
                         <label class="flex flex-col gap-2" for="email">

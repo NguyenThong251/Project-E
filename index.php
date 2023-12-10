@@ -12,6 +12,9 @@ $product_hot = get_product_hot(4);
 $product_new = get_product_new(4);
 $product_view = get_product_view(4);
 
+$hideHeader = true; 
+$hideFooter = true; 
+
 
 if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
@@ -118,31 +121,30 @@ else {
             } 
             break;
         
-        case 'dangnhap' :
-            if (isset($_POST['login'])&&($_POST['login'])) {
-                
-                $email=$_POST['email'];
-                $password=$_POST['password'];
-                //kiemtra
-                $checkuser = checkuser($email,$password);
-                // echo var_dump($checkuser);
-                if (is_array($checkuser) && (count($checkuser))){
-                    $_SESSION['s_user'] = $checkuser;
-                    header('location:index.php?pg');
-                    echo 'đúng';
-                }else {
-                    $tb = "Tài khoản không tồn tại"; 
-                    
-                    $_SESSION['tb_dangnhap']=$tb;
-                    header('location: index.php?pg=signin');
-                }
+        case 'dangnhap':
+            $username = $_POST['username'];
+            $password = $_POST['password'];
 
-                //ouitput
+            // Kiểm tra tài khoản
+            $checkuser = checkuser($username, $password);
+
+            if (is_array($checkuser) && count($checkuser) > 0) {
+                // Đăng nhập thành công, thiết lập session và chuyển hướng
+                $_SESSION['s_user'] = $checkuser;
+                header('location:index.php?pg');
+            } else {
+                // Tài khoản không tồn tại, thiết lập thông báo lỗi và chuyển hướng
+                $tb = "Tài khoản không tồn tại";
+                $_SESSION['tb_dangnhap'] = $tb;
+                header('location: index.php?pg=signin');
             }
 
-            break;
+
+        break;
         case 'signin':
-            include "View/signin.php";
+
+            // output
+            include "View/Asignin.php";
         break;
         case 'forgotpass':
             include "View/forgot-password.php";
@@ -188,12 +190,16 @@ else {
                 user_insert($username, $password, $email);
                 
             }
-            include "View/signin.php";
+            
+            include "View/Asignin.php";
             
             break;
         case 'signup':
-            include_once "View/signup.php";
-        break;
+            include_once "View/Asignup.php";
+            break;
+        case 'forgetPass':
+            include_once "View/Aforgetpass.php";
+            break;
         case 'logout':
             if (isset($_SESSION['s_user']) && count($_SESSION['s_user'])>0){
                 unset($_SESSION['s_user']);

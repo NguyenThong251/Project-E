@@ -1,10 +1,10 @@
 <?php
 require_once 'pdo.php';
 //userloginlogout
-function checkuser($email, $password)
+function checkuser($username, $password)
 {
-    $sql = "SELECT * FROM user WHERE email=? and password=?";
-    return pdo_query_one($sql, $email, $password);
+    $sql = "SELECT * FROM user WHERE username=? and password=?";
+    return pdo_query_one($sql, $username, $password);
     // if (is_array($kq) && (count($kq))) {
     //     return $kq["id_user"];
     // } else {
