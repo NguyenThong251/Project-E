@@ -15,7 +15,7 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 // == 2. NAV HEADER ==
-const navIcon = $(".svgContainer");
+const navIcon = $(".nav-off");
 const pathTop = $("#path-top");
 const pathMiddle = $("#path-middle");
 const pathBottom = $("#path-bottom");
@@ -24,7 +24,26 @@ navIcon.click(function () {
   pathTop.toggleClass("nav-active-top");
   pathMiddle.toggleClass("nav-active-middle");
   pathBottom.toggleClass("nav-active-bottom");
+  $("body").toggleClass("overflow-hidden");
+  navIcon.toggleClass('nav-off');
+  $('.nav-mobile').toggleClass("blurAnimate");
+  $('.nav-mobile').toggle('slidein');
+  navIcon.removeClass('nav-off');
+  navIcon.toggleClass('nav-on');
+  navIcon.attr("data-lenis-stop");
+
+  $(this).toggleClass("stop-scroll");
+  if ($(this).hasClass("stop-scroll")) {
+    lenis.stop();
+  } else {
+    lenis.start();
+  }
 });
+
+
+
+
+
 
 // == 3. ANIMATION FOOTER MOBILE ==
 const footerBtnShow = document.querySelectorAll(".footer-btn-show");
@@ -193,7 +212,6 @@ openBtn.on("click", () => {
   $("body").toggleClass("overflow-hidden");
   overlayCart.toggleClass("hidden");
   overlayCart.toggleClass("overflow-hidden");
-
   cartNofication.toggleClass("cart-hide");
 });
 

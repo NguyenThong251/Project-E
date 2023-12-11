@@ -16,6 +16,7 @@ function  acount_update($fullname,$phone,$address,$password,$role,$id){
     pdo_execute($sql, $fullname,$phone,$address,$password,$role,$id);
 
 }
+
 function pdo_re_pass($sql)
 {
     $sql_args = array_slice(func_get_args(), 1);
@@ -30,6 +31,7 @@ function pdo_re_pass($sql)
         unset($conn);
     }
 }
+
 function reset_pass($reset_token, $reset_token_ex, $email){
     $sql = "UPDATE user SET reset_token=?, reset_token_ex=? WHERE email=?";
     $stmt = pdo_get_connection()->prepare($sql);

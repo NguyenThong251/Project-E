@@ -132,6 +132,33 @@ span {
   width: 42rem;
 }
 
+.blurAnimate {
+	backdrop-filter: blur(15px);
+	animation: blurUp 1s ease;
+}
+
+.stopBlurAnimate {
+	backdrop-filter: blur(0px);
+
+}
+
+@keyframes blurUp {
+	from {
+		backdrop-filter: blur(0px);
+	}
+	to {
+		backdrop-filter: blur(15px);
+	}
+}
+@keyframes stopBlur {
+	from {
+		backdrop-filter: blur(15px);
+	}
+	to {
+		backdrop-filter: blur(0px);
+	}
+}
+
 .site-container::before {
   content: "";
   position: absolute;
