@@ -1,6 +1,51 @@
 <?php
 require_once 'pdo.php';
 
+//userloginlogout
+function checkuser($username, $password)
+{
+    $sql = "SELECT * FROM user WHERE username=? and password=?";
+    return pdo_query_one($sql, $username, $password);
+    // if (is_array($kq) && (count($kq))) {
+    //     return $kq["id_user"];
+    // } else {
+    //     return 0;
+    // }
+}
+function  acount_update($fullname,$phone,$address,$password,$role,$id){
+    $sql = "UPDATE user SET full_name=?, phone=?, address=?, password=?, role=? WHERE id=?";
+    pdo_execute($sql, $fullname,$phone,$address,$password,$role,$id);
+
+}
+
+function pdo_re_pass($sql)
+{
+    $sql_args = array_slice(func_get_args(), 1);
+    try {
+        $conn = pdo_get_connection();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($sql_args);
+    } catch (PDOException $e) {
+        echo "PDOException: " . $e->getMessage(); // In thông điệp lỗi
+        throw $e;
+    } finally {
+        unset($conn);
+    }
+}
+
+function reset_pass($reset_token, $reset_token_ex, $email){
+    $sql = "UPDATE user SET reset_token=?, reset_token_ex=? WHERE email=?";
+    $stmt = pdo_get_connection()->prepare($sql);
+    $result = $stmt->execute([$reset_token, $reset_token_ex, $email]);
+    
+    if ($result) {
+        return $stmt->rowCount(); // Số dòng đã cập nhật
+    } else {
+        return false;
+    }
+}
+
+
 function user_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro)
 {
     $sql = "INSERT INTO user(ma_kh, mat_khau, ho_ten, email, hinh, kich_hoat, vai_tro) VALUES (?, ?, ?, ?, ?, ?, ?)";

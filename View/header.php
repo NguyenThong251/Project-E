@@ -231,8 +231,8 @@
                                 </div>
                             </li>
 
-                            <li class="block xl:hidden mt-2">
-                                <div class="svgContainer cursor-pointer">
+                            <li data-lenis-toggle class="block xl:hidden mt-2 relative  z-50">
+                                <div class="svgContainer cursor-pointer nav-off">
                                     <svg class="fancynavbar-toggler-icon" viewBox="0 0 70 70"
                                         xmlns="http://www.w3.org/2000/svg"
                                         data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.5}'
@@ -261,6 +261,22 @@
                     </div>
                 </div>
             </div>
+            <!-- NAV MOBILE -->
+            <div>
+                <!-- <div class="absolute nav-modal top-0 right-0 left-0 bottom-0 w-screen bg-white z-10 opacity-75 "></div> -->
+                <div class="nav-mobile top-0 absolute h-screen w-screen z-20 hidden">
+                <div class="flex flex-col gap-8 text-primary font-bold h-screen mx-auto text-5xl justify-center items-center">
+                        <p class="text-lg">Menu</p>
+                        <a href="index.php">Trang chủ</a>
+                        <a href="index.php?pg=product">Sản phẩm</a>
+                        <a href="index.php?pg=contact">Liên hệ</a>
+                        <a href="index.php?pg=about">Giới thiệu</a>
+                        <a href="index.php?pg=blog">Tin tức</a>
+                    </div>
+            </div>
+            </div>
+
+
             <div class="">
                 <!-- MODAL CART -->
                 <div class="modal-cart fixed top-0 left-0 h-screen w-full bg-primary z-40 opacity-25 hidden"></div>
