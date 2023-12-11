@@ -184,6 +184,14 @@ if (isset($_POST['order'])) {
 
     $result = $conn->query($sql);
 
+    if ($idUser !== NULL) {
+        // Insert data into the 'voucher_used' table
+        $voucherID = $_SESSION['promodeCode'];
+        $sqlVoucherUsed = "INSERT INTO `voucher_used` (`id_user`, `id_voucher`) VALUES ('$idUser', '$voucherID')";
+        $resultVoucherUsed = $conn->query($sqlVoucherUsed);
+    }
+
+
     if ($result) {
         echo $idVoucher;
     } else {

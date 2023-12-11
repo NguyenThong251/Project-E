@@ -20,7 +20,7 @@ $hideFooter = true;
 
 if(!isset($_SESSION['s_user'])) {
     $_SESSION['s_user'] = [];
-
+}
 
 if(!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];

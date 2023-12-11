@@ -123,6 +123,7 @@ foreach ($_SESSION['cart'] as $key) {
                         <p class="font-semibold text-lg">Promo code</p>
                         <input class="border-2 rounded-button px-4 py-1 mt-4 promoteCode" type="text" name="promoteCode"
                             placeholder="Type here...">
+                            <span class="transition duration-300 alert-text absolute -bottom-6 left-1 text-red-500"></span>
                         <button class="promodeApply">
                             <div
                                 class=" ml-4 px-6 py-1.5 bg-primary rounded-button hover:bg-transparent border-2 hover:border-primary  transition duration-300 text-white hover:text-primary">
@@ -151,7 +152,7 @@ foreach ($_SESSION['cart'] as $key) {
                     <div class="text-lg font-bold flex justify-between items-center  my-5">
                         <p>Giảm giá</p>
                         <div class="flex">
-                            <p class="priceDiscount mr-1 "><?= round($totalPrice * ($discountPercentage / 100)) ?></p>
+                            <p class="priceDiscount mr-1 ">0</p>
                             <p>VND</p>
                         </div>
                     </div>
