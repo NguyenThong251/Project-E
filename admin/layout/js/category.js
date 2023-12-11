@@ -130,6 +130,12 @@ function categoryAdd() {
             }
           },
         });
+      } else if (data.result == "null") {
+        Swal.fire({
+          icon: "error",
+          title: "Thêm thất bại!",
+          text: "Vui lòng nhập tên danh mục.",
+        });
       } else {
         Swal.fire({
           icon: "error",

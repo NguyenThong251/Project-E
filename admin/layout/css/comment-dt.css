@@ -1,5 +1,15 @@
+.img-detail {
+  width: 260px;
+  height: 240px;
+}
+.img-detail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
 .comment tr {
-  grid-template-columns: 1fr 1fr 2fr 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
 }
 .comment ion-icon {
   font-size: 24px;

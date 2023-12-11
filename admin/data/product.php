@@ -22,7 +22,7 @@ function show_table_product($products)
     }
     $showProduct .= '<tr>
                       <td>
-                        <div class="product-image"> <img srcset="' . $img . '" alt="product"></div>
+                        <div class="product-image"> <img src="' . $img . '" alt="product"></div>
                       </td>
                       <td>
                         <div class="product-name">
@@ -67,7 +67,7 @@ function show_table_product($products)
 
 if ($_GET['func'] == "show") {
   if (isset($_POST['page'])) {
-    $page = ($_POST['page'] - 1) * 8;
+    $page = ($_POST['page'] - 1) * 6;
   } else {
     $page = 0;
   }
@@ -84,24 +84,26 @@ if ($_GET['func'] == "show") {
   OR category.name LIKE '%" . $name . "%'
   OR brand.name LIKE '%" . $name . "%'
   ORDER BY product.id DESC
-  LIMIT 8 OFFSET " . $page . ";
+  LIMIT 6 OFFSET " . $page . ";
   ";
 
   $products = pdo_query($sql);
   $showProduct = show_table_product($products);
   print_r($showProduct);
 }
+
 if ($_GET['func'] == 'page') {
   $pages = product_count_all();
-  $pages = (int)$pages + 1;
-  $page = ceil($pages / 8);
+  $pages = (int)$pages;
+  $page = ceil($pages / 6);
   // print_r($page);
   $showPageIndex = '';
   for ($i = 1; $i <= $page; $i++) {
     $showPageIndex .= '<a class="button table-page-button" value="' . $i . '" onclick="loadProductInPage(this)" href="#"><span>' . $i . '</span></a>';
   }
-  echo $showPageIndex;
+  print_r($showPageIndex);
 }
+
 if ($_GET['func'] == 'up') {
   if (isset($_POST['id'])) {
     $product_detail = product_detail($_POST['id']);
@@ -276,7 +278,7 @@ if ($_GET['func'] == 'up') {
                             <div class="product-form-input-container">
                               <div>
                                 <label for="entry-date">Ngày nhập hàng:</label>
-                                <input type="text" name="entry_date" placeholder="Ngày nhập" value="' . $product_detail['entry_date'] . '">
+                                <input type="text" name="entry_date" placeholder="Ngày nhập sản phẩm:" value="' . $product_detail['entry_date'] . '">
                               </div>
                               <div>
                                 <label for="quantity">Số lượng:</label>
@@ -284,7 +286,7 @@ if ($_GET['func'] == 'up') {
                               </div>
                             </div>
                             <label>Lượt xem:</label>
-                            <input class="product-form-input" type="text" name="view" placeholder="Nhập giá sản phẩm" value="' . $product_detail['view'] . '">
+                            <input class="product-form-input" type="text" name="view" placeholder="Lượt xem sản phẩm" value="' . $product_detail['view'] . '">
                             <label>Mô tả sản phẩm:</label><textarea id="editor-up" name="description">' . $product_detail['des'] . '</textarea>
                             <button class="product-form-button button" type="submit" id="' . $product_detail['id_product'] . '" onclick="updateProduct(this)">Chỉnh sửa sản phẩm</button>
                           </div>';
@@ -299,27 +301,36 @@ if ($_GET['func'] == 'upProd') {
   $id_product = $_GET['id'];
   $product_detail = product_select_by_id($id_product);
   $product_detail_img = product_detail_select_by_id($id_product);
+  $products_different = products_select_different($id_product);
+  $product_detail_different = products_detail_select_different($id_product);
+  $response = array();
 
   $id_category = $_POST['category'];
   $id_brand = $_POST['brand'];
   if ($_FILES['img_main']['name'] != "") {
-    if (file_exists('../' . PATH_PRODUCT_ADMIN . $product_detail['img']) && $_FILES['img_main']['name'] != 'no-image.jpeg') {
-      unlink('../' . PATH_PRODUCT_ADMIN . $product_detail['img']);
+    foreach ($products_different as $product_different) {
+      if ($product_different['img'] == $_FILES['img_main']['name']) {
+        $img_main = "no-image";
+        $response['imgmain'] = 'fail';
+      } else {
+        $img_main = $_FILES['img_main']['name'];
+        $img_tmp_main = $_FILES['img_main']['tmp_name'];
+      }
     }
-    $img_main = $_FILES['img_main']['name'];
-    $img_tmp_main = $_FILES['img_main']['tmp_name'];
-    move_uploaded_file($img_tmp_main, '../' . PATH_PRODUCT_ADMIN . $img_main);
   } else {
     $img_main = $product_detail['img'];
   }
   for ($i = 1; $i <= 4; $i++) {
     if ($_FILES['img_' . $i]['name'] != "") {
-      if (file_exists('../' . PATH_PRODUCT_ADMIN . $product_detail_img['img_' . $i]) && $_FILES['img_' . $i]['name'] != 'no-image.jpeg') {
-        unlink('../' . PATH_PRODUCT_ADMIN . $product_detail_img['img_' . $i]);
+      foreach ($product_detail_different as $product_detail_different) {
+        if ($product_detail_different['img_' . $i] == $_FILES['img_' . $i]['name']) {
+          ${'img_' . $i} = "";
+          $response['imgsub'] = 'fail';
+        } else {
+          ${'img_' . $i} = $_FILES['img_' . $i]['name'];
+          ${'img_tmp_' . $i} = $_FILES['img_' . $i]['tmp_name'];
+        }
       }
-      ${'img_' . $i} = $_FILES['img_' . $i]['name'];
-      ${'img_tmp_' . $i} = $_FILES['img_' . $i]['tmp_name'];
-      move_uploaded_file(${'img_tmp_' . $i}, '../' . PATH_PRODUCT_ADMIN . ${'img_' . $i});
     } else {
       ${'img_' . $i} = $product_detail_img['img_' . $i];
     }
@@ -335,17 +346,31 @@ if ($_GET['func'] == 'upProd') {
   $entry_date = $_POST['entry_date'];
   $quantity = $_POST['quantity'];
 
-
-  $response = array();
-  if (product_update($id_product, $img_main, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity)) {
-    $response['result'] = 'fail';
-  } else {
-    $response['result'] = 'success';
-  }
-  if (product_detail_update($img_1, $img_2, $img_3, $img_4, $id_product)) {
-    $response['result'] = 'fail';
-  } else {
-    $response['result'] = 'success';
+  if (!($response['imgmain'] == 'fail' || $response['imgsub'] == 'fail')) {
+    if (product_update($id_product, $img_main, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity)) {
+      $response['result'] = 'fail';
+    } else {
+      if ($_FILES['img_main']['name'] != "") {
+        if (file_exists('../' . PATH_PRODUCT_ADMIN . $product_detail['img']) && $_FILES['img_main']['name'] != 'no-image.jpeg') {
+          unlink('../' . PATH_PRODUCT_ADMIN . $product_detail['img']);
+        }
+        move_uploaded_file($img_tmp_main, '../' . PATH_PRODUCT_ADMIN . $img_main);
+      }
+      $response['result'] = 'success';
+    }
+    if (product_detail_update($img_1, $img_2, $img_3, $img_4, $id_product)) {
+      $response['result'] = 'fail';
+    } else {
+      $response['result'] = 'success';
+      for ($i = 1; $i <= 4; $i++) {
+        if ($_FILES['img_' . $i]['name'] != "") {
+          if (file_exists('../' . PATH_PRODUCT_ADMIN . $product_detail_img['img_' . $i]) && $_FILES['img_' . $i]['name'] != 'no-image.jpeg') {
+            unlink('../' . PATH_PRODUCT_ADMIN . $product_detail_img['img_' . $i]);
+          }
+          move_uploaded_file(${'img_tmp_' . $i}, '../' . PATH_PRODUCT_ADMIN . ${'img_' . $i});
+        }
+      }
+    }
   }
 
   $sql = "SELECT product.*, category.name AS category_name, brand.name AS brand_name
@@ -353,7 +378,7 @@ if ($_GET['func'] == 'upProd') {
   JOIN category ON product.id_category = category.id
   JOIN brand ON product.id_brand = brand.id
   ORDER BY product.id DESC
-  LIMIT 8 OFFSET 0;
+  LIMIT 6 OFFSET 0;
   ";
 
   $products = pdo_query($sql);
@@ -372,9 +397,7 @@ if ($_GET['func'] == "addProd") {
     if (file_exists('../' . PATH_PRODUCT_ADMIN . $img_main)) {
       $img_main = "no-image.jpeg";
       $response['imgmain'] = 'fail';
-    } else {
-      move_uploaded_file($img_tmp_main, '../' . PATH_PRODUCT_ADMIN . $img_main);
-    };
+    }
   } else {
     $img_main = "no-image.jpeg";
     $response['result'] = 'fail';
@@ -386,8 +409,6 @@ if ($_GET['func'] == "addProd") {
       if (file_exists('../' . PATH_PRODUCT_ADMIN . ${'img_' . $i})) {
         $response['imgsub'] = 'fail';
         ${'img_' . $i} = "";
-      } else {
-        move_uploaded_file(${'img_tmp_' . $i}, '../' . PATH_PRODUCT_ADMIN . ${'img_' . $i});
       }
     } else {
       ${'img_' . $i} = "";
@@ -404,24 +425,30 @@ if ($_GET['func'] == "addProd") {
   $des = $_POST['description'];
   $entry_date = $_POST['entry-date'];
   $quantity = $_POST['quantity'];
-  if (product_insert($id_product, $img_main, $name, $price, $price_sale, $sale, $hot, $status, $view, $category, $brand, $des, $entry_date, $quantity)) {
-    $response['result'] = 'fail';
-  } else {
-    $response['result'] = 'success';
-    if (product_detail_insert($img_1, $img_2, $img_3, $img_4, $id_product)) {
+
+  if (!($response['imgmain'] == 'fail' || $response['imgsub'] == 'fail')) {
+    if (product_insert($id_product, $img_main, $name, $price, $price_sale, $sale, $hot, $status, $view, $category, $brand, $des, $entry_date, $quantity)) {
       $response['result'] = 'fail';
     } else {
+      move_uploaded_file($img_tmp_main, '../' . PATH_PRODUCT_ADMIN . $img_main);
+      for ($i = 1; $i <= 4; $i++) {
+        move_uploaded_file(${'img_tmp_' . $i}, '../' . PATH_PRODUCT_ADMIN . ${'img_' . $i});
+      }
       $response['result'] = 'success';
+      if (product_detail_insert($img_1, $img_2, $img_3, $img_4, $id_product)) {
+        $response['result'] = 'fail';
+      } else {
+        $response['result'] = 'success';
+      }
     }
   }
-
 
   $sql = "SELECT product.*, category.name AS category_name, brand.name AS brand_name
   FROM product
   JOIN category ON product.id_category = category.id
   JOIN brand ON product.id_brand = brand.id
   ORDER BY product.id DESC
-  LIMIT 8 OFFSET 0;
+  LIMIT 6 OFFSET 0;
   ";
 
   $products = pdo_query($sql);
@@ -452,11 +479,20 @@ if ($_GET['func'] == 'delProd') {
     JOIN category ON product.id_category = category.id
     JOIN brand ON product.id_brand = brand.id
     ORDER BY product.id DESC
-    LIMIT 8 OFFSET 0;
+    LIMIT 6 OFFSET 0;
     ";
 
     $products = pdo_query($sql);
     $response['html'] = show_table_product($products);
+
+    $pages = product_count_all();
+    $pages = (int)$pages;
+    $page = ceil($pages / 6);
+    $showPageIndex = '';
+    for ($i = 1; $i <= $page; $i++) {
+      $showPageIndex .= '<a class="button table-page-button" value="' . $i . '" onclick="loadProductInPage(this)" href="#"><span>' . $i . '</span></a>';
+    }
+    $response['page'] = $showPageIndex;
   }
   echo json_encode($response);
 }

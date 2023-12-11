@@ -22,8 +22,12 @@ if ($_GET['func'] == "up") {
     $brand_name = $_POST['brand_name'];
     $brand = brand_exist($brand_name);
     if ($brand != 1) {
-      brand_update($brand_id, $brand_name);
-      echo json_encode(['result' => "success"]);
+      if (strlen($brand_name) < 4) {
+        echo json_encode(['result' => "null"]);
+      } else {
+        brand_update($brand_id, $brand_name);
+        echo json_encode(['result' => "success"]);
+      }
     } else {
       echo json_encode(['result' => "error"]);
     }

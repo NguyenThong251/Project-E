@@ -76,7 +76,8 @@ function get_product_new($limi)
     $sql = "SELECT p.*, b.name as brand_name 
     FROM product p
     JOIN brand b ON p.id_brand = b.id
-    ORDER BY p.id DESC
+    WHERE p.new = 1
+    ORDER BY p.id ASC
     LIMIT " . $limi;
     return pdo_query($sql);
 }
@@ -95,43 +96,18 @@ function get_product_view($limi)
     LIMIT " . $limi;
     return pdo_query($sql);
 }
-function get_product_relate($iddm,$id,$limi)
-{
-    $sql = "SELECT p.*, b.name as brand_name 
-    FROM product p
-    JOIN brand b ON p.id_brand = b.id
-    WHERE p.id_category=? AND p.id<>?
-    ORDER BY p.id ASC
-    LIMIT " . $limi;
-    return pdo_query($sql,$iddm,$id);
-}
 
-function get_product_by_id($id) {
-    $sql = "SELECT 
-                product.*,
-                brand.name AS brand_name,
-                category.name AS category_name,
-                product_detail.img_1,
-                product_detail.img_2,
-                product_detail.img_3,
-                product_detail.img_4
-            FROM 
-                product
-            JOIN 
-                brand ON product.id_brand = brand.id
-            JOIN 
-                category ON product.id_category = category.id
-            JOIN 
-                product_detail ON product.id = product_detail.id_product
-            WHERE 
-                product.id=?";
-    return pdo_query_one($sql, $id);
-}
+// function hang_hoa_select_by_id($ma_hh){
+//     $sql = "SELECT * FROM hang_hoa WHERE ma_hh=?";
+//     return pdo_query_one($sql, $ma_hh);
+// }
+//function product_primary
 function show_product($dssp)
 {
     $html_dssp = '';
     foreach ($dssp as $sp) {
         extract($sp);
+
         // Tính phần trăm giảm giá
         $percent_discount = ($price - $price_sale) / $price * 100;
         if ($sale > 0 && $sale < 100) {
@@ -142,7 +118,7 @@ function show_product($dssp)
             $item_sale = '';
         }
         if ($img != "") $img = PATH_IMG . $img;
-        $link = "index.php?pg=detail&idpro=" . $id;
+        $link = "index.php?pg=sanphamchitiet&idpro=" . $id;
         $html_dssp .=
             ' <div class="overflow-hidden group">
 
@@ -158,11 +134,11 @@ function show_product($dssp)
         </a>
         <div
             class="absolute z-99 bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-            <button onclick="addToCart(this)"
-                class="cursor-pointer hover:scale-125 transition duration-300 addToCart flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-36  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
+            <div
+                class="cursor-pointer hover:scale-125 transition duration-300 addToCart flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <p class="text-white hidden xl:block">Add To cart</p>
-            </button>
+            </div>
             <div
                 class="hover:scale-125 transition duration-300 flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                 <i class="fa-regular fa-eye"></i>
@@ -214,7 +190,7 @@ function show_product_new($pr_new)
                 </div>
                 <h1 class="text-8xl font-bold mt-4 w-96">' . $name . '</h1>
             </div>
-            
+            <p class="w-2/4 my-8">' . $des . '</p>
             <a href="' . $link . '"class=" mt-4 cursor-pointer border-2 hover:bg-transparent 
                                 hover:text-primary hover:border-primary transition 
                                 duration-300 px-20 py-4 text-h2 bg-primary text-white 
@@ -292,12 +268,12 @@ src="' . $img . '" alt="">
 
             <div
                 class="absolute bottom-0 flex gap-2  mb-4 xl:mb-0 items-center justify-center lg:flex xl:block xl:bottom-1/2 xl:right-1/2 xl:translate-x-1/2 xl:translate-y-1/2  xl:opacity-0 xl:group-hover:opacity-100 transition-all duration-300">
-                <button onclick="addToCart(this)"
+                <div
                     class="addToCart cursor-pointer flex items-center justify-center gap-2 bg-primary text-white h-8 w-8 xl:h-auto xl:w-auto  p-2 rounded-box xl:translate-x-4 group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-solid fa-basket-shopping"></i>
                     <p class="text-white hidden xl:block">Add To cart</p>
 
-                </button>
+                </div>
                 <div
                     class="cursor-pointer flex items-center justify-center gap-2 xl:mt-2 bg-primary text-white h-8 w-8 xl:h-fit xl:w-fit p-2 rounded-box xl:-translate-x-4 xl:group-hover:translate-x-0 transition duration-300 delay-75">
                     <i class="fa-regular fa-eye"></i>
@@ -387,18 +363,18 @@ function product_detail($id)
     $sql = "SELECT p.*, d.* 
     FROM product p 
     JOIN product_detail d ON p.id = d.id_product
-    WHERE p.id = " . $id;
-    return pdo_query_one($sql);
+    WHERE p.id = ?";
+    return pdo_query_one($sql, $id);
 }
 function product_select_by_id($id)
 {
-    $sql = "SELECT * FROM product WHERE id = " . $id;
-    return pdo_query_one($sql);
+    $sql = "SELECT * FROM product WHERE id = ?";
+    return pdo_query_one($sql, $id);
 }
 function product_detail_select_by_id($id)
 {
-    $sql = "SELECT * FROM product_detail WHERE id_product = " . $id;
-    return pdo_query_one($sql);
+    $sql = "SELECT * FROM product_detail WHERE id_product = ?";
+    return pdo_query_one($sql, $id);
 }
 function product_update($id, $img, $name, $price, $price_sale, $sale, $hot, $status, $view, $id_category, $id_brand, $des, $entry_date, $quantity)
 {
@@ -423,22 +399,22 @@ function product_detail_insert($img_1, $img_2, $img_3, $img_4, $id_product)
 function product_delete($id)
 {
     $sql = "DELETE FROM `product` WHERE `product`.`id` = ?";
-    if (is_array($id)) {
-        foreach ($id as $ma) {
-            pdo_execute($sql, $ma);
-        }
-    } else {
-        pdo_execute($sql, $id);
-    }
+    pdo_execute($sql, $id);
 }
 function product_detail_delete($id)
 {
     $sql = "DELETE FROM `product_detail` WHERE `product_detail`.`id_product` = ?";
-    if (is_array($id)) {
-        foreach ($id as $ma) {
-            pdo_execute($sql, $ma);
-        }
-    } else {
-        pdo_execute($sql, $id);
-    }
+    pdo_execute($sql, $id);
+}
+
+function products_select_different($id)
+{
+    $sql = "SELECT * FROM product WHERE id != ?";
+    return pdo_query($sql, $id);
+}
+
+function products_detail_select_different($id)
+{
+    $sql = "SELECT * FROM product_detail WHERE id_product != ?";
+    return pdo_query($sql, $id);
 }
