@@ -211,6 +211,7 @@ function delAcc(e) {
               timer: 1500,
             });
             $(".table-body").html(data.html);
+            $(".table-page").html(data.page);
           } else {
             Swal.fire({
               icon: "error",

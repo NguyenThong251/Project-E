@@ -146,15 +146,15 @@ foreach ($brand as $item) {
           <div class="product-form-input-container">
             <div>
               <label for="entry-date">Ngày nhập hàng:</label>
-              <input type="text" name="entry-date" placeholder="Người nhập hàng:">
+              <input type="text" name="entry-date" placeholder="Ngày nhập sản phẩm">
             </div>
             <div>
               <label for="quantity">Số lượng:</label>
-              <input type="text" name="quantity" placeholder="Nhập số lượng">
+              <input type="text" name="quantity" placeholder="Nhập số lượng sản phẩm">
             </div>
           </div>
           <label>Lượt xem:</label>
-          <input class="product-form-input" name="view" type="text" placeholder="Nhập tên sản phẩm">
+          <input class="product-form-input" name="view" type="text" placeholder="Lượt xem sản phẩm">
           <label>Mô tả sản phẩm:</label><textarea id="editor-add" name="description"></textarea>
           <button class="product-form-button button" type="submit" onclick="addProductBtn()">Thêm sản phẩm</button>
         </div>

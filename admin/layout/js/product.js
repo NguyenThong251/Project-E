@@ -93,8 +93,9 @@ function loadProductInPage(e) {
     method: "POST",
     cache: false,
     data: { page: page },
-    dataType: "",
+    // dataType: "json",
     success: function (data) {
+      // console.log(data);
       $(".table-body").html(data);
     },
   });
@@ -123,7 +124,7 @@ $(document).ready(function () {
     dataType: "",
     success: function (data) {
       // console.log(data);
-      $(".table-page").html(data.html);
+      $(".table-page").html(data);
     },
   });
 });
@@ -188,27 +189,60 @@ function updateProduct(e) {
     contentType: false,
     cache: false,
     success: function (data) {
-      // console.log(data.result);
-      if (data.result == "success") {
-        $(".table-body").html(data.html);
-        $(".product-form-container").removeClass("open-form");
-        $(".product-form-container").addClass("remove-form");
-        setTimeout(() => {
-          $(".product-form").css("display", "none");
-        }, 250);
-        Swal.fire({
-          icon: "success",
-          title: "Chỉnh sửa thành công!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      } else {
+      if (data.imgmain == "fail") {
         Swal.fire({
           icon: "error",
-          title: "Chỉnh sửa thất bại!",
-          showConfirmButton: false,
-          timer: 1500,
+          title: "Trùng lặp hình ảnh!",
+          text: "Vui lòng cập nhật lại tên ảnh chính!",
         });
+        var notimain = "fail";
+      } else {
+        var notimain = "success";
+      }
+      if (data.imgsub == "fail") {
+        Swal.fire({
+          icon: "error",
+          title: "Trùng lặp hình ảnh!",
+          text: "Vui lòng cập nhật lại tên ảnh phụ!",
+        });
+        var notisub = "fail";
+      } else {
+        var notisub = "success";
+      }
+      if (data.imgmain == "fail" && data.imgsub == "fail") {
+        Swal.fire({
+          icon: "error",
+          title: "Trùng lặp hình ảnh!",
+          text: "Vui lòng cập nhật lại tên ảnh chính và ảnh phụ!",
+        });
+      }
+      // console.log(data.result);
+      // console.log(data.imgmain);
+      // console.log(data.imgsub);
+      // console.log(notimain);
+      // console.log(notisub);
+      if (notimain == "success" && notisub == "success") {
+        if (data.result == "success") {
+          $(".table-body").html(data.html);
+          $(".product-form-container").removeClass("open-form");
+          $(".product-form-container").addClass("remove-form");
+          setTimeout(() => {
+            $(".product-form").css("display", "none");
+          }, 250);
+          Swal.fire({
+            icon: "success",
+            title: "Chỉnh sửa thành công!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Chỉnh sửa thất bại!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+        }
       }
     },
   });
@@ -227,65 +261,80 @@ function addProductBtn() {
     contentType: false,
     cache: false,
     success: function (data) {
-      // console.log(data);
+      // console.log(data.imgmain);
+      // console.log(data.imgsub);
       if (data.imgmain == "fail") {
         Swal.fire({
           icon: "error",
-          title: "Trùng lặp!",
-          text: "Vui lòng kiểm tra lại tên ảnh chính!",
-          showConfirmButton: false,
-          timer: 1500,
+          title: "Trùng lặp hình ảnh!",
+          text: "Vui lòng cập nhật lại tên ảnh chính!",
         });
+        var notimain = "fail";
+      } else {
+        var notimain = "success";
       }
       if (data.imgsub == "fail") {
         Swal.fire({
           icon: "error",
-          title: "Trùng lặp!",
-          text: "Vui lòng kiểm tra lại tên ảnh phụ!",
-          showConfirmButton: false,
-          timer: 1500,
+          title: "Trùng lặp hình ảnh!",
+          text: "Vui lòng cập nhật lại tên ảnh phụ!",
         });
-      }
-      if (data.result == "success") {
-        $(".table-body").html(data.html);
-        $(".product-form-container").removeClass("open-form");
-        $(".product-form-container").addClass("remove-form");
-        setTimeout(() => {
-          $(".product-form").css("display", "none");
-        }, 250);
-        $('select[name="category"]').val("-- Danh mục --");
-        $('select[name="brand"]').val("-- Thương hiệu --");
-        $('input[name="name"]').val("");
-        $('input[type="file"]').val("");
-        $(".show-image").css("display", "none");
-        $('input[name="price"]').val("");
-        $('input[name="price_sale"]').val("");
-        $('input[name="entry-date"]').val("");
-        $('input[name="quantity"]').val("");
-        $('input[name="view"]').val("");
-        $('input[name="sale"][value="1"]').prop("checked", true);
-        $('input[name="hot"][value="1"]').prop("checked", true);
-        $('input[name="status"][value="1"]').prop("checked", true);
-        CKEDITOR.instances["editor-add"].setData("");
-        Swal.fire({
-          icon: "success",
-          title: "Thêm sản phẩm thành công!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
+        var notisub = "fail";
       } else {
+        var notisub = "success";
+      }
+      if (data.imgmain == "fail" && data.imgsub == "fail") {
         Swal.fire({
           icon: "error",
-          title: "Thêm thất bại!",
-          text: "Vui lòng kiểm tra lại thông tin!",
+          title: "Trùng lặp hình ảnh!",
+          text: "Vui lòng cập nhật lại tên ảnh chính và ảnh phụ!",
         });
+      }
+      if (notimain == "success" && notisub == "success") {
+        if (data.result == "success") {
+          // console.log(noti);
+
+          Swal.fire({
+            icon: "success",
+            title: "Thêm sản phẩm thành công!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+
+          $(".table-body").html(data.html);
+          $(".product-form-container").removeClass("open-form");
+          $(".product-form-container").addClass("remove-form");
+          setTimeout(() => {
+            $(".product-form").css("display", "none");
+          }, 250);
+          $('select[name="category"]').val("-- Danh mục --");
+          $('select[name="brand"]').val("-- Thương hiệu --");
+          $('input[name="name"]').val("");
+          $('input[type="file"]').val("");
+          $(".show-image").css("display", "none");
+          $('input[name="price"]').val("");
+          $('input[name="price_sale"]').val("");
+          $('input[name="entry-date"]').val("");
+          $('input[name="quantity"]').val("");
+          $('input[name="view"]').val("");
+          $('input[name="sale"][value="1"]').prop("checked", true);
+          $('input[name="hot"][value="1"]').prop("checked", true);
+          $('input[name="status"][value="1"]').prop("checked", true);
+          CKEDITOR.instances["editor-add"].setData("");
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Thêm sản phẩm thất bại!",
+            text: "Vui lòng kiểm tra lại và điền đầy đủ thông tin!",
+          });
+        }
       }
     },
     error: function () {
       Swal.fire({
         icon: "error",
-        title: "Thêm thất bại!",
-        text: "Vui lòng kiểm tra lại thông tin!",
+        title: "Thêm sản phẩm thất bại!",
+        text: "Vui lòng kiểm tra lại và điền đầy đủ thông tin!",
       });
     },
   });
@@ -320,6 +369,7 @@ function deleteProduct(e) {
               timer: 1500,
             });
             $(".table-body").html(data.html);
+            $(".table-page").html(data.page);
           }
         },
       });

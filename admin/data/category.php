@@ -10,8 +10,12 @@ if ($_GET['func'] == "add") {
   $category_name = $_POST['category_name'];
   $category = category_exist($category_name);
   if ($category != 1) {
-    category_insert($category_name);
-    echo json_encode(['result' => "success"]);
+    if (strlen($category_name) < 4) {
+      echo json_encode(['result' => "null"]);
+    } else {
+      category_insert($category_name);
+      echo json_encode(['result' => "success"]);
+    }
   } else {
     echo json_encode(['result' => "error"]);
   }

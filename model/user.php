@@ -1,5 +1,6 @@
 <?php
 require_once 'pdo.php';
+
 //userloginlogout
 function checkuser($username, $password)
 {
@@ -44,14 +45,11 @@ function reset_pass($reset_token, $reset_token_ex, $email){
     }
 }
 
-function get_user($id){
-    $sql = "SELECT * FROM user WHERE id=?";
-    return pdo_query_one($sql,$id);
-}
-function user_insert($username, $password, $email)
+
+function user_insert($ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat, $vai_tro)
 {
-    $sql = "INSERT INTO user(username,password,email) VALUES (?, ?, ?)";
-    pdo_execute($sql, $username, $password, $email);
+    $sql = "INSERT INTO user(ma_kh, mat_khau, ho_ten, email, hinh, kich_hoat, vai_tro) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    pdo_execute($sql, $ma_kh, $mat_khau, $ho_ten, $email, $hinh, $kich_hoat == 1, $vai_tro == 1);
 }
 
 function user_update($img, $fullname, $password, $email, $phone, $address, $status, $role, $id)
@@ -59,12 +57,7 @@ function user_update($img, $fullname, $password, $email, $phone, $address, $stat
     $sql = "UPDATE user SET user_img=?, full_name=?, password=?, email=?, phone=?, address=?, status=?, role=? WHERE id=?";
     pdo_execute($sql, $img, $fullname, $password, $email, $phone, $address, $status, $role, $id);
 }
-// checkmail 
-function user_email_exists($email)
-{
-    $sql = "SELECT count(*) FROM user WHERE email=?";
-    return pdo_query_value($sql, $email) > 0;
-}
+
 function user_delete($id)
 {
     $sql = "DELETE FROM user  WHERE id=?";

@@ -83,6 +83,8 @@ if ($_GET['func'] == "show") {
   }
   if (isset($_POST['search'])) {
     $search = $_POST['search'];
+  } else {
+    $search = '';
   }
   if (isset($_POST['filter'])) {
     $filter = $_POST['filter'];
@@ -121,7 +123,7 @@ if ($_GET['func'] == "show") {
 
 if ($_GET['func'] == "page") {
   $pages = user_count_all();
-  $pages = (int)$pages + 1;
+  $pages = (int)$pages;
   $page = ceil($pages / 6);
   // print_r($page);
   $showPageIndex = '';
@@ -217,9 +219,17 @@ if ($_GET['func'] == "update") {
   if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $account = user_select_by_id($id);
+    $response = array();
 
     if ($_FILES['img_main']['name'] != '') {
       $img = $_FILES['img_main']['name'];
+      $img_tmp = $_FILES['img_main']['tmp_name'];
+      if (file_exists('../' . PATH_ACCOUNT_ADMIN . $account['user_img'])) {
+        $response['img'] = 'fail';
+      } else {
+        move_uploaded_file($img_tmp, '../' . PATH_ACCOUNT_ADMIN . $img);
+        $response['img'] = 'success';
+      }
     } else {
       $img = '';
     }
@@ -267,7 +277,6 @@ if ($_GET['func'] == "update") {
     }
   }
 
-  $response = array();
   if (user_update($img, $fullname, $password, $email, $phone, $address, $status, $role, $id)) {
     $response['result'] = 'error';
   } else {
@@ -290,6 +299,15 @@ if ($_GET['func'] == "delete") {
     $sql = "SELECT * FROM user ORDER BY id DESC LIMIT 6";
     $accounts = pdo_query($sql);
     $response['html'] = show_account($accounts);
+
+    $pages = user_count_all();
+    $pages = (int)$pages;
+    $page = ceil($pages / 6);
+    $showPageIndex = '';
+    for ($i = 1; $i <= $page; $i++) {
+      $showPageIndex .= '<a class="button table-page-button" value="' . $i . '" onclick="loadAccInPage(this)" href="#"><span>' . $i . '</span></a>';
+    }
+    $response['page'] = $showPageIndex;
   }
   echo json_encode($response);
 }

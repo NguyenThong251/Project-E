@@ -144,7 +144,7 @@
 .show-image-up {
   width: 100%;
   max-width: 400px;
-  max-height: 400px;
+  height: 260px;
   margin-bottom: 24px;
   position: relative;
   /* display: none; */
