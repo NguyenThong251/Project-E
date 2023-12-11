@@ -447,13 +447,19 @@ function applyPromoCode() {
         case 1:
           totalCartAfterDiscount.text(response[1]);
           $(".priceDiscount").text(response[2] - response[1]);
+          $('.alert-text').text("");
+          break;
         case 2:
+          $('.alert-text').text("Voucher đã được sử dụng");
+          totalCartAfterDiscount.text(response[2]);
+          $(".priceDiscount").text(0);
           console.log("Voucher đã được sử dụng");
           break;
         case 3:
-          console.log("Voucher k tồn tại hoặc đã sử dụng");
-          break;
-        default:
+          $('.alert-text').text("Voucher không tồn tại hoặc quá hạn");
+          totalCartAfterDiscount.text(response[2]);
+          $(".priceDiscount").text(0);
+          console.log("Voucher đã chimto");
           break;
       }
       console.log(response);
@@ -494,8 +500,13 @@ $(".promoteCodeNotUser").on("keyup", function (event) {
 
 function isValidEmail(email) {
   // Regular expression for a simple email validation
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+function isValidPhone(phone) {
+  const phonePattern = /^\d{10}$/;
+  return phonePattern.test(phone);
 }
 
 function validateForm(
@@ -527,8 +538,13 @@ function validateForm(
     return false;
   }
   $alertInputEmail.text("");
+  
 
-  if (isBlank(receiverPhone, $alertInputPhone)) return false;
+  if (!isValidEmail(receiverPhone)) {
+    $alertInputPhone.text("Vui lòng nhập số điện thoại hợp lệ.");
+    return false;
+  }
+  $alertInputPhone.text("");
 
   return true;
 }
