@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
@@ -10,30 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
-      rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+        rel="stylesheet"
     />
     <script
-      src="https://kit.fontawesome.com/e5ff98b392.js"
-      crossorigin="anonymous"
+        src="https://kit.fontawesome.com/e5ff98b392.js"
+        crossorigin="anonymous"
     ></script>
     <!-- ICON -->
     <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
     />
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/app.css">
-
 </head>
 <body>
     <div id="container">
         <!-- HEAD -->
         <div class="head flex justify-between items-center absolute w-full px-24 mt-8">
             <img class="ml-4" src="./assets/img/logo.png" alt="">
-
             <div class="flex justify-between items-center gap-12">
                 <a class="text-sm font-bold" href="">Đã có tài khoản?</a>
                 <button class="px-8 py-4 rounded-md text-white font-bold transform hover:scale-110 transition duration-300" style="background-color: #FF497c;">Đăng nhập ngay</button>
@@ -48,39 +46,78 @@
                 </div>
             </div>
 
-            <!-- SIGNIN FORM -->
+            <!-- SIGNUP FORM -->
             <div class="right w-1/2 flex items-center">
                 <div class="w-2/4">
                     <h1 class="text-4xl font-bold">Đăng kí</h1>
-                    <form action="">
+                    <form action="" onsubmit="return validateForm(event)">
+                        <!-- USERNAME -->
                         <div class="mt-10">
-                            <label class="text-sm">Tên đăng nhập</label> <br>
-                            <input class="w-full border px-6 py-4 rounded-md mt-2" type="text" placeholder="admin123" style="border: 1px solid #ccd3d8;">
+                            <label for="username">Tên đăng nhập</label> <br>
+                            <input class="w-full border px-6 py-4 rounded-md mt-2" type="text" id="username" name="username" placeholder="admin123" style="border: 1px solid #ccd3d8;">
+                            <p class="text-red-600 text-sm" id="username-error"></p> <!-- Display error message here -->
                         </div>
 
-                        <div class="mt-4">
-                            <label class="text-sm">Email</label> <br>
-                            <input class="w-full border px-6 py-4 rounded-md mt-2" type="text" placeholder="etrade@gmail.com" style="border: 1px solid #ccd3d8;">
+                        <!-- EMAIL -->
+                        <div class="mt-6">
+                            <label for="email">Email</label> <br>
+                            <input class="w-full border px-6 py-4 rounded-md mt-2" type="email" id="email" name="email" placeholder="user@example.com" style="border: 1px solid #ccd3d8;">
+                            <p class="text-red-600 text-sm" id="email-error"></p> <!-- Display error message here -->
                         </div>
 
-                        <div class="mt-4">
-                            <label class="text-sm">Mật khẩu</label> <br>
+                        <!-- MẬT KHẨU -->
+                        <div class="mt-6">
+                            <label for="password">Mật khẩu</label> <br>
                             <div class="w-full px-6 py-4 rounded-md mt-2 flex justify-between items-center" style="border: 1px solid #ccd3d8;">
-                                <input class="w-full" type="password" placeholder="****" style="border: none;"> 
+                                <input class="w-full" type="password" name="password" id="passwordInput" placeholder="****" style="border: none;">
                                 <!-- <i class="fa-regular fa-eye-slash"></i> -->
                             </div>
+                            <p class="text-red-600 text-sm" id="password-error"></p> <!-- Display error message here -->
+                        </div>
+
+                        <div class="flex justify-between items-center mt-8">
+                            <button class="px-8 py-4 rounded-md text-white font-bold transform hover:scale-110 transition duration-300" style="background-color: #4676e8;">Tạo tài khoản</button>
                         </div>
                     </form>
-
-                    <div class="flex justify-between items-center mt-8">
-                        <button class="px-8 py-4 rounded-md text-white font-bold transform hover:scale-110 transition duration-300" style="background-color: #4676e8;">Tạo tài khoản</button>                      
-                    </div>
                 </div>
-                
             </div>
         </div>
-        
-    </div>    
+    </div>
+
+    <script>
+        // CHECK FORM
+        function validateForm(event) {
+            event.preventDefault(); // Prevent the form from submitting by default
+
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('passwordInput').value;
+            var usernameError = document.getElementById('username-error');
+            var emailError = document.getElementById('email-error');
+            var passwordError = document.getElementById('password-error');
+
+            // Reset error messages
+            usernameError.textContent = '';
+            emailError.textContent = ''; // Fixed the variable name here
+            passwordError.textContent = '';
+
+            // Check if fields are empty
+            if (username.trim() === '') {
+                usernameError.textContent = 'Vui lòng nhập tên đăng nhập.';
+            }
+
+            if (email.trim() === '') {
+                emailError.textContent = 'Vui lòng nhập email.';
+            }
+
+            if (password.trim() === '') {
+                passwordError.textContent = 'Vui lòng nhập mật khẩu.';
+            }
+
+            // If validation passed, you can submit the form
+            return true;
+        }
+    </script>
 </body>
 <script src="/view/layout/assets/js/tailwind.js"></script>
 </html>
